@@ -1,0 +1,66 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX ubbont: <http://data.ub.uib.no/ontology/> 
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX bibo: <http://purl.org/ontology/bibo/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX event: <http://purl.org/NET/c4dm/event.owl#> 
+
+CONSTRUCT { 
+  ?sR rdf:type ?classLabel . 
+  ?sR dct:identifier ?identifier . 
+  ?sR rdfs:label ?label . 
+  ?sR dct:isPartOf ?collection . 
+  ?sR event:producedIn ?event . 
+  ?sR dct:description ?description . 
+  ?sR foaf:maker ?maker . 
+  ?sR dct:spatial ?spatial . 
+  ?sR dct:created ?created . 
+  ?sR dct:subject ?topic . 
+  ?sR dct:relation ?relation . 
+  ?sR ubbont:hasThumbnail ?thumb . 
+  ?sR ubbont:image ?image} 
+WHERE { { GRAPH <urn:x-arq:UnionGraph> { 
+      ?s rdf:type dct:Image . 
+      ?s rdf:type ?class 
+      OPTIONAL { ?s dct:identifier ?identifier} 
+      OPTIONAL { ?s dct:created ?created0} 
+      OPTIONAL { ?s dct:title ?title} 
+      OPTIONAL { ?s rdfs:label ?label2} 
+      OPTIONAL { ?s skos:prefLabel ?prefLabel} 
+      OPTIONAL { ?s dct:spatial/skos:prefLabel ?spatial} 
+      OPTIONAL { ?s dct:description ?description}
+      OPTIONAL { ?s dct:relation/foaf:name ?relation}
+      OPTIONAL { ?s dct:subject/skos:prefLabel ?topic} 
+      OPTIONAL { ?s foaf:maker/foaf:name ?maker} 
+      OPTIONAL { ?s dct:isPartOf/dct:title ?collection} 
+      OPTIONAL { ?s event:producedIn/skos:prefLabel ?event} 
+      OPTIONAL { ?s ubbont:hasThumbnail ?thumbTH } 
+      OPTIONAL { ?s ubbont:hasRepresentation/dct:hasPart/ubbont:hasXSView ?thumbXS} 
+      OPTIONAL { ?s ubbont:hasRepresentation/dct:hasPart/ubbont:hasSMView ?thumbSM} 
+      OPTIONAL { ?s ubbont:hasRepresentation/dct:hasPart/ubbont:hasMDView ?thumbMD} 
+      
+BIND(str(?created0) AS ?created) BIND(iri(replace(str(?s), "data.ub.uib.no", "marcus.uib.no")) AS ?sR) BIND(coalesce(?title, ?label2, ?prefLabel, ?identifier) AS ?label) BIND(coalesce(?thumbXS, ?thumbSM, ?thumbTH) AS ?thumb) BIND(coalesce(?thumbMD, ?thumbSM) AS ?image) } 
+    GRAPH ubbont:ubbont { ?class rdfs:label ?classLabel FILTER langMatches(lang(?classLabel), "") } } 
+  UNION { GRAPH <urn:x-arq:UnionGraph> { 
+      ?subclass (rdfs:subClassOf)* dct:Image . 
+        ?s rdf:type ?subclass 
+        OPTIONAL { ?s dct:identifier ?identifier} 
+        OPTIONAL { ?s dct:created ?created0} 
+        OPTIONAL { ?s dct:title ?title} 
+        OPTIONAL { ?s rdfs:label ?label2} 
+        OPTIONAL { ?s skos:prefLabel ?prefLabel} 
+        OPTIONAL { ?s dct:spatial/skos:prefLabel ?spatial} 
+        OPTIONAL { ?s dct:description ?description} 
+        OPTIONAL { ?s dct:relation/foaf:name ?relation} 
+        OPTIONAL { ?s dct:subject/skos:prefLabel ?topic} 
+        OPTIONAL { ?s foaf:maker/foaf:name ?maker} 
+        OPTIONAL { ?s dct:isPartOf/dct:title ?collection} 
+        OPTIONAL { ?s event:producedIn/skos:prefLabel ?event} 
+        OPTIONAL { ?s ubbont:hasThumbnail ?thumbTH } 
+        OPTIONAL { ?s ubbont:hasRepresentation/dct:hasPart/ubbont:hasXSView ?thumbXS} OPTIONAL { ?s ubbont:hasRepresentation/dct:hasPart/ubbont:hasSMView ?thumbSM} OPTIONAL { ?s ubbont:hasRepresentation/dct:hasPart/ubbont:hasMDView ?thumbMD} MINUS { ?s rdf:type ubbont:Page} BIND(str(?created0) AS ?created) BIND(iri(replace(str(?s), "data.ub.uib.no", "marcus.uib.no")) AS ?sR) BIND(coalesce(?title, ?label2, ?prefLabel, ?identifier) AS ?label) BIND(coalesce(?thumbXS, ?thumbSM, ?thumbTH) AS ?thumb) BIND(coalesce(?thumbMD, ?thumbSM) AS ?image) } GRAPH ubbont:ubbont { ?subclass rdfs:label ?classLabel FILTER langMatches(lang(?classLabel), "") } } } 
+LIMIT 1000

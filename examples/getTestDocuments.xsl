@@ -45,10 +45,10 @@
     </xsl:template>
 
     <xsl:template name="getDocumentsFromSparqlQuery">
-        <xsl:param name="offset" select="0"/>
-        <xsl:param name="limit" select="3"/>
+        <xsl:param name="offset" select="0" as="xs:integer"/>
+        <xsl:param name="limit" select="200" as="xs:integer"/>
         <xsl:param name="class"/>
-        <xsl:param name="max-documents-per-type" select="3"/>
+        <xsl:param name="max-documents-per-type" as="xs:integer?"/>
         <xsl:variable name="document-without-image">
             PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
             PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#> 

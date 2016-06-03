@@ -11,7 +11,8 @@
          Bruker saxon:discard-document som er tilgjengelig i Saxon 9.1-B, men ikke nyere HE versjoner av Saxon. Kan også bruke PE og EE.
          -->
     <xsl:output method="xml" indent="yes"/>
-    <xsl:variable name="blacklist" select="'http://data.ub.uib.no/ontology/Page'"/>
+    <xsl:include href="lib/types.xsl"/>
+    <xsl:variable name="blacklist" select="'Side','Segl','Album'" as="xs:string*"/>
     <xsl:variable name="class-sparql-query">
         PREFIX bibo: &lt;http://purl.org/ontology/bibo/>
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -39,7 +40,9 @@
         <xsl:for-each select="$types/descendant::*:binding[@name='class' and not(some $x in $blacklist satisfies $x =.)]">
             <xsl:call-template name="getDocumentsFromSparqlQuery">
                 <xsl:with-param name="class" select="*/."/>
-            </xsl:call-template>
+                <xsl:with-param name="limit" select="2"/>
+                <xsl:with-param name="max-documents-per-type" select="2"/>
+                            </xsl:call-template>
         </xsl:for-each>
         </results>
     </xsl:template>
@@ -98,24 +101,24 @@
             }         
         </xsl:variable>
         <xsl:variable name="result" select="document(concat($sparql-endpoint,encode-for-uri($document-without-image),$sparql-output-suffix))" as="node()"/>
-        <xsl:if test="$class='http://purl.org/ontology/bibo/Manuscript'">
-            <xsl:message><xsl:value-of select="$document-without-image"/></xsl:message>
-        </xsl:if>
-        <xsl:choose>
+         <xsl:choose>
+            <xsl:when test="not($result/descendant-or-self::rdf:RDF)">
+                <xsl:message terminate="yes">sparql endpoint returnerte ikke resultat. Avslutter.</xsl:message>
+            </xsl:when>
             <xsl:when test="not($result/descendant-or-self::rdf:RDF/*) and $offset = 0">
                 <xsl:message>Klasse <xsl:value-of select="."/> har ingen objekt å mappe.</xsl:message>
             </xsl:when>
             <xsl:when test="not($result/descendant-or-self::rdf:RDF/*)"></xsl:when>
             <xsl:otherwise>
-                <xsl:sequence select="$result"/>            
+                <xsl:sequence select="$result"/>       
                 <xsl:if test="$max-documents-per-type >$limit+$offset or not($max-documents-per-type)">
                     <xsl:call-template name="getDocumentsFromSparqlQuery">
-                        <xsl:with-param name="offset" select="$offset+100"/>
+                        <xsl:with-param name="offset" select="$offset+$limit"/>
                         <xsl:with-param name="class" select="$class"/>
                     </xsl:call-template>
                 </xsl:if>
             </xsl:otherwise>
-        </xsl:choose>                 
+        </xsl:choose>            
     </xsl:template>
-    
+        
 </xsl:stylesheet>

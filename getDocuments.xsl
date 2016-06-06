@@ -23,7 +23,7 @@
                     WHERE {
                     GRAPH ?g {
                     <!-- mulig at owl:Class også skulle vært med her, men for nå finnes det ingen underklasser av bibo:Document som er owl:Class-->
-                    ?class a rdfs:Class.
+                    ?class a rdfs:Class.                    
                     ?class (rdfs:subClassOf)* bibo:Document.
                     }
                     }                    

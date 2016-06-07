@@ -35,6 +35,7 @@
         <ref name="header"/>
         <ref name="metadata"/>
     </define>
+  
     <define name="identifier">
         <element name="identifier">
             <data type="ID"/>
@@ -51,15 +52,301 @@
             <ref name="links"/>
             <ref name="sort"/>
             <ref name="addata"/>
+            <ref name="ranking"/>
         </element>
     </define>
 
-    <define name="control">
-        <element name="control"> </element>
-    </define>
-    
     <define name="display">
         <element name="display">
+            <optional>
+                <element name="availinstitution">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The library-level availability status, which includes availability
+                    information per Primo library or sub-location, in addition to location
+                    information. The field is structured with subfields as follows: *$$I —
+                    institution code (required) *$$L — library code (required) *$$1 — sub-location
+                    *$$2 — call number *$$S — availability status (available, unavailable,
+                    check_holdings) (required) *$$3 — number of items *$$4 — number of unavailable
+                    items *$$5 — multi-volume flag: Y/N *$$6 — number of loans (for ranking
+                    purposes) *$$9 — indicates that the location represents online material. For
+                    more information, refer to Adding $$9ONLINE to Library Level Availability. *$$X
+                    — source institution code (required for OvP) *$$Y — source library code
+                    (required for OvP) *$$Z — source sublocation code (not required for OvP) </a:documentation>
+                <element name="availlibrary">
+                    <text/>
+
+                </element>
+
+            </optional>
+            <optional>
+                <a:documentation> The availability PNX. Calculated by Primo from all
+                    availinstitution fields in the Display section, using the following logic: Primo
+                    takes all availinstitution fields and merges the availability status from $$S as
+                    follows: *If one of the statuses is check_holdings or available, Primo sets
+                    availpnx to available. *If the above condition does not exist, Primo sets
+                    availpnx to unavailable. This field is used in the UI when filtering by
+                    availability. </a:documentation>
+                <element name="availpnx">
+                    <text/>
+
+                </element>
+
+            </optional>
+            <optional>
+                <a:documentation> The contributor is an entity that is responsible for making a
+                    contribution to the content of the resource. Multiple occurrences are
+                    concatenated with a semicolon. Example of source data: *MARC21: 700/710/711
+                    fields, stripping subfield $$d, and stripping from subfield $$t to the end. It
+                    is possible to reverse the author's last and first name by using a special
+                    routine (for example, Stephans, Mary to Mary Stephans). *The display form of the
+                    contributor also serves as a hyperlink to search for additional records. It is
+                    important that all the strings in the display also be added to the
+                    creatorcontrib field in the Search section. </a:documentation>
+                <element name="contributor">
+                    <text/>
+
+                </element>
+
+            </optional>
+            <optional>
+                <a:documentation> The extent or scope of the content of the resource. </a:documentation>
+                <element name="coverage">
+                    <text/>
+
+                </element>
+
+            </optional>
+            <optional>
+                <a:documentation> The date or year when the resource was created or the year when
+                    the resource was published or manufactured. Multiple occurrences are
+                    concatenated with a semicolon. Example of source data: *MARC21: 008/07-10; 260
+                    $$c. </a:documentation>
+                <element name="creationdate">
+                    <text/>
+
+                </element>
+
+            </optional>
+            <optional>
+                <a:documentation> The content creator is an entity that is responsible for creating
+                    the content of the resource. Multiple occurrences are concatenated with a
+                    semicolon. An example of source data: *MARC21: 245 subfields $$c OR if 245 $$c
+                    is not present, 1XX, stripping subfield $$d, and stripping from subfield $$t to
+                    the end. It is possible to reverse the author's last and first name (for
+                    example, Stephans, Mary to Mary Stephans) by using a special routine. *The
+                    display form of the creator also serves as a hyperlink to search for additional
+                    records. It is important that all the strings in the display also be added to
+                    the creatorcontrib field in the Search section. </a:documentation>
+                <element name="creator">
+                    <text/>
+
+                </element>
+
+            </optional>
+            <optional>
+                <a:documentation>The description is any information that describes the content of
+                    the resource. This can be an abstract, contents notes, summary, and so forth.
+                    Multiple occurrences are not concatenated. Example of source data: *MARC21: 502,
+                    505, 520 fields.</a:documentation>
+                <element name="description">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation>Course reserve information.</a:documentation>
+                <element name="crsinfo">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The edition of the resource. This is one of the fields of the PNX
+                    record that is not derived from Dublin Core. The edition field is a key element
+                    in grouping bibliographic records. Example of source data: *MARC21: 250 $a and
+                    $b. </a:documentation>
+                <element name="edition">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The physical format—physical description, extent, or digital
+                    manifestation of the resource. Multiple occurrences are concatenated with a
+                    semicolon. Example of source data: *MARC21: 300 and 340 fields. Can also be
+                    created from the control data in the leader and 008, 006 fields. </a:documentation>
+                <element name="format">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> Any unique identifier of the record. Dublin Core defines this as
+                    an unambiguous reference to the resource within a given context. In the context
+                    of the PNX record, this is intended to be used for standard identifiers like
+                    ISBN and ISSN. Multiple occurrences are concatenated with a semicolon. Examples
+                    of source data (MARC21): *020 $$a: prefix the value with ISBN. *022 $$a: prefix
+                    the value with ISSN. </a:documentation>
+                <element name="identifier">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The resource from which this resource is derived (for example, in
+                    an article from a journal - the journal is the source). Multiple occurrences are
+                    not concatenated. This type of relationship has been added as a specific
+                    relationship so it can be displayed as part of the brief results display.
+                    Example of source data: *MARC21: 773. </a:documentation>
+                <element name="ispartof">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The language of the resource. The language is stored in coded form
+                    (ISO 639-2) and is translated in the UI. Multiple occurrences are concatenated
+                    with a semicolon. If the language is not in ISO 639-2 form, the normalization
+                    process attempts to convert it to this form. If this is not possible, the
+                    language is unknown (using the und code). Example of source data: *MARC21:
+                    008/35-37; if blank, use 041 subfield $$a. </a:documentation>
+                <element name="language">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> Intended for use by Primo Central to indicate whether a record is
+                    open access or not. </a:documentation>
+                <element name="oa">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> An entity that is responsible for making the resource available.
+                    Multiple occurrences are concatenated with a semicolon. Example of source data:
+                    *MARC21: 260 subfields $a and $b. </a:documentation>
+                <element name="publisher">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> A reference to a related resource. Multiple occurrences are not
+                    concatenated. Example of source data: *MARC21: 440, 830, 760-787 except for 773. </a:documentation>
+                <element name="relation">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> Information about the rights of the resource. </a:documentation>
+                <element name="rights">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The source repository from which the record was derived. </a:documentation>
+                <element name="source">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The topic of the resource’s content. Multiple occurrences are
+                    concatenated with a semicolon. Example of source data: *MARC21: 6XX fields *The
+                    display form of the subject also serves as a hyperlink to search for additional
+                    records. It is important that all the strings in the display also be added to
+                    the search index. </a:documentation>
+                <element name="subject">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The name that is given to a resource. The title can be created
+                    from a number of fields and subfields from the source record. Multiple
+                    occurrences are not concatenated. Example of source data: *MARC21: 245 subfields
+                    $$a and $$b. </a:documentation>
+                <element name="title">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The resource type that represents the main format of the record or
+                    the type, based on a master list of main record types. It is recommended to
+                    include only a minimum number of types (~10). Primo sites are able to modify
+                    this list so that it is suited to the content of its repository and its users.
+                    The type is used to determine which icon displays next to the record in the
+                    brief and full results list. Every record must have a single type field. The
+                    default resource type list includes book, journal, article, text_resource
+                    (includes text resources that cannot be identified as a book, journal, or
+                    article), image, video, audio, map, score, and other (includes records that
+                    cannot be classified as any other resource type). Example of source data:
+                    *MARC21: Mapping based on the leader position 6 and the 007 and 008 fields. </a:documentation>
+                <element name="type">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The uniform title will be displayed with the title of the resource
+                    when the merged FRBR record is displayed. Example of source data: *MARC21: 240
+                    subfields a, d,m,n, p, r, s </a:documentation>
+                <element name="unititle">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> A rank or score that is assigned by the end user for the resource. </a:documentation>
+                <element name="userrank">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The user review, which is added by the end user. </a:documentation>
+                <element name="userreview">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation> The vernacular title is used when the record contains both a
+                    transliterated title and a title in the vernacular (as in the MARC format).
+                    Example of source data: *MARC21: 880 with subfield 6 =245 and subfields a and b. </a:documentation>
+                <element name="vertitle">
+                    <text/>
+                </element>
+            </optional>
+                           <!--<optional>
+               <element name="lds01 - lds50"><text/>
+               </element>
+               </optional>
+                           
+                           Local display fields.
+                    -->
+        </element>
+    </define>
+
+    <define name="ranking">
+        <optional>
+            <a:documentation>The amount of boost that is applied to a record. By default, no boost
+                is given to a record. The amount of boost is determined by the following booster
+                settings: *No boost – Assign a value of 1. *Negative boost – Assign a value greater
+                than 0 and less than 1. Lower values provide less boost (such as .1). Note that 0 is
+                not a valid setting. *Positive boost – Assign a value greater than 1. Higher values
+                provide more boost.</a:documentation>
+            <element name="booster1">
+                <text/>
+            </element>
+        </optional>
+        <optional>
+            <a:documentation>Not in use.</a:documentation>
+            <element name="booster2">
+                <text/>
+            </element>
+        </optional>
+        <optional>
+            <a:documentation>Primo Central grouping type. This field is used in the selection of the
+                preferred record in Primo Central FRBR groups.</a:documentation>
+            <element name="pcg_type">
+                <text/>
+            </element>
+        </optional>
+    </define>
+
+    <define name="control">
+        <element name="control">
             <optional>
                 <a:documentation>The source ID identifies the source repository in Primo. Every
                     source repository has a configuration file in which the sourceid and other
@@ -134,7 +421,7 @@
           </optional>-->
         </element>
     </define>
-  
+
     <define name="facet">
         <element name="facet">
             <!--  classificationlcc
@@ -143,192 +430,189 @@
         classificationrvk
         
         Classification (LCC/DDC/UDC/RVK). The classification facet can be used to create a subject browse list based on the main subject classes of the classification scheme. The classification code is translated into a description in the enrichment phase. The field is updated by the system.
-  -->      <optional>
-               <a:documentation>The collection (physical, digital, electronic, or logical) to which the resource belongs. The collection facet is a code that is translated in the UI.
-        Examples of source data:
-        *MARC21: 852 $b $c.</a:documentation>
-               <element name="collection">
-                    <text/>
-               </element>
-          </optional>
+  -->
             <optional>
-               <a:documentation>The creation date normalized to four digits. BCE dates are preceded by a minus sign. If the creation date cannot be normalized, the field will not be created.
-        Examples of source data:
-        *MARC21: 008/07-10; 260 $$c.
-        The Creation Date facet is created dynamically based on the results set. Note that it is created from all results, not just the top 200 results as done for dynamic facets. The system creates this facet as follows:
-        1 During normalization, creation dates are normalized as follows for each PNX record:
-        * Dates before 1899 are normalized as their century. For example, 1826 is normalized to 1800.
-        *Dates between 1900 and 1949 are normalized by decade. For example, 1945 is normalized to 1940.
-        *Dates after 1950 are not changed.
-        2 During a search, the system counts the number of different creation dates found in the search results and split the dates into five groups. For example, if the following 10 dates were found during a search:
-        1994, 1996, 1998, 2000, 2001, 2002, 2004, 2006, 2007, and 2008
-        The system will display the following facets groups and the total number of records for each group:
-        Before 1998 (500)
-        1998 To 2001 (300)
-        2001 To 2004 (250)
-        2004 To 2007 (1,020)
-        After 2007 (8234)
-        *If the system finds less than five dates during a search, the Creation Date facet will not be displayed.</a:documentation>
-               <element name="creationdate">
+                <a:documentation>The collection (physical, digital, electronic, or logical) to which
+                    the resource belongs. The collection facet is a code that is translated in the
+                    UI. Examples of source data: *MARC21: 852 $b $c.</a:documentation>
+                <element name="collection">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>Creator/Contributor. This facet attempts to normalize personal names so that the field contains the last name and the first letter of first name (since this is common in many databases).
-        Example of source data:
-        *MARC21: 100/110/111 and 700/710/711 fields.
-        If the author is a person, the field contains the last name and the first letter of each of the first names:
-        *The second and third characters of the tag are 00.
-        *The first indicator is 1 (for example, 1001).
-        *Use subfield $$a only.
-        *The first name is each word after the comma.
-        If the author is a conference, the field contains only the conference name, and not particulars on time or place:
-        *The second and third characters of the tag are 11 (for example, 711).
-        *Use subfield $$a only.
-        In all other cases, the entire field is used.</a:documentation>
-               <element name="creatorcontrib">
+                <a:documentation>The creation date normalized to four digits. BCE dates are preceded
+                    by a minus sign. If the creation date cannot be normalized, the field will not
+                    be created. Examples of source data: *MARC21: 008/07-10; 260 $$c. The Creation
+                    Date facet is created dynamically based on the results set. Note that it is
+                    created from all results, not just the top 200 results as done for dynamic
+                    facets. The system creates this facet as follows: 1 During normalization,
+                    creation dates are normalized as follows for each PNX record: * Dates before
+                    1899 are normalized as their century. For example, 1826 is normalized to 1800.
+                    *Dates between 1900 and 1949 are normalized by decade. For example, 1945 is
+                    normalized to 1940. *Dates after 1950 are not changed. 2 During a search, the
+                    system counts the number of different creation dates found in the search results
+                    and split the dates into five groups. For example, if the following 10 dates
+                    were found during a search: 1994, 1996, 1998, 2000, 2001, 2002, 2004, 2006,
+                    2007, and 2008 The system will display the following facets groups and the total
+                    number of records for each group: Before 1998 (500) 1998 To 2001 (300) 2001 To
+                    2004 (250) 2004 To 2007 (1,020) After 2007 (8234) *If the system finds less than
+                    five dates during a search, the Creation Date facet will not be
+                    displayed.</a:documentation>
+                <element name="creationdate">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The course department.</a:documentation>
-               <element name="crsdept">
+                <a:documentation>Creator/Contributor. This facet attempts to normalize personal
+                    names so that the field contains the last name and the first letter of first
+                    name (since this is common in many databases). Example of source data: *MARC21:
+                    100/110/111 and 700/710/711 fields. If the author is a person, the field
+                    contains the last name and the first letter of each of the first names: *The
+                    second and third characters of the tag are 00. *The first indicator is 1 (for
+                    example, 1001). *Use subfield $$a only. *The first name is each word after the
+                    comma. If the author is a conference, the field contains only the conference
+                    name, and not particulars on time or place: *The second and third characters of
+                    the tag are 11 (for example, 711). *Use subfield $$a only. In all other cases,
+                    the entire field is used.</a:documentation>
+                <element name="creatorcontrib">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The course ID.</a:documentation>
-               <element name="crsid">
+                <a:documentation>The course department.</a:documentation>
+                <element name="crsdept">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The course instructor.</a:documentation>
-               <element name="crsinstrc">
+                <a:documentation>The course ID.</a:documentation>
+                <element name="crsid">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The course name.</a:documentation>
-               <element name="crsname">
+                <a:documentation>The course instructor.</a:documentation>
+                <element name="crsinstrc">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The size of the file for digital objects.</a:documentation>
-               <element name="filesize">
+                <a:documentation>The course name.</a:documentation>
+                <element name="crsname">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>Physical format. The physical format or file type.
-        Examples of source data:
-        *MARC21: Can be based on the 007 control field.</a:documentation>
-               <element name="format">
+                <a:documentation>The size of the file for digital objects.</a:documentation>
+                <element name="filesize">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The genre of the resource.
-        Examples of source data:
-        *MARC21: 655 and subfield v from all 6XX.</a:documentation>
-               <element name="genre">
+                <a:documentation>Physical format. The physical format or file type. Examples of
+                    source data: *MARC21: Can be based on the 007 control field.</a:documentation>
+                <element name="format">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The journal title. This facet can be used in PNX records that represent articles.
-        Sample source data: MARC21: 773 $$t</a:documentation>
-               <element name="jtitle">
+                <a:documentation>The genre of the resource. Examples of source data: *MARC21: 655
+                    and subfield v from all 6XX.</a:documentation>
+                <element name="genre">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The language of the resource. The language is stored in coded form (ISO 639-2) and translated in the UI.
-        If the language is not coded, the normalization process attempts to convert it to coded form. If this is not possible, a language facet is not created.
-        Examples of source data:
-        *MARC21: 008/35-37; if blank, use 041 subfield $$a.</a:documentation>
-               <element name="language">
+                <a:documentation>The journal title. This facet can be used in PNX records that
+                    represent articles. Sample source data: MARC21: 773 $$t</a:documentation>
+                <element name="jtitle">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The facet for physical libraries, which can be used instead of or in addition to the collection facet. The Library facet has a special feature intended for multi-institution sites. It allows you to configure the facet so that it is split between libraries that belong to the user's institution and libraries that belong to all other institutions.
-        In addition to the number of hits and alphabetical sort, the library facet allows the following sort options:
-        *By user institution and then by size
-        *By user institution and then alphanumerically
-        *By user institution only
-        If any of the sort options are selected, two 'Library' facets will display. The first includes libraries that belong to the user's institution, and the second includes all libraries from other institutions.</a:documentation>
-               <element name="library">
+                <a:documentation>The language of the resource. The language is stored in coded form
+                    (ISO 639-2) and translated in the UI. If the language is not coded, the
+                    normalization process attempts to convert it to coded form. If this is not
+                    possible, a language facet is not created. Examples of source data: *MARC21:
+                    008/35-37; if blank, use 041 subfield $$a.</a:documentation>
+                <element name="language">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The search pre-filter that is available in the Primo UI and must be mapped as a facet. The default list of pre-filters is based on the Resource Type field in the display:
-        *Book -> Books (books)
-        *Journal -> Journals (journals)
-        *Article -> Articles (articles)
-        *Text Resource -> Books (books)
-        *Image -> Images (images)
-        *Video -> Audio-Video (audio-video)
-        *Audio -> Audio-Video (audio-video)
-        *Maps -> Maps (maps)
-        *Score -> Scores (scores)</a:documentation>
-               <element name="prefilter">
+                <a:documentation>The facet for physical libraries, which can be used instead of or
+                    in addition to the collection facet. The Library facet has a special feature
+                    intended for multi-institution sites. It allows you to configure the facet so
+                    that it is split between libraries that belong to the user's institution and
+                    libraries that belong to all other institutions. In addition to the number of
+                    hits and alphabetical sort, the library facet allows the following sort options:
+                    *By user institution and then by size *By user institution and then
+                    alphanumerically *By user institution only If any of the sort options are
+                    selected, two 'Library' facets will display. The first includes libraries that
+                    belong to the user's institution, and the second includes all libraries from
+                    other institutions.</a:documentation>
+                <element name="library">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>Related records—not in use.</a:documentation>
-               <element name="related">
+                <a:documentation>The search pre-filter that is available in the Primo UI and must be
+                    mapped as a facet. The default list of pre-filters is based on the Resource Type
+                    field in the display: *Book -> Books (books) *Journal -> Journals (journals)
+                    *Article -> Articles (articles) *Text Resource -> Books (books) *Image -> Images
+                    (images) *Video -> Audio-Video (audio-video) *Audio -> Audio-Video (audio-video)
+                    *Maps -> Maps (maps) *Score -> Scores (scores)</a:documentation>
+                <element name="prefilter">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>The nature or genre of the resource. This field is based on the rsrctype field in the Display section:
-        *Book -> books
-        *Journal -> journals
-        *Article -> articles
-        *Text Resource -> text resources
-        *Image -> images
-        *Audio -> media
-        *Video -> media
-        *Score -> scores
-        *Map -> maps
-        *Other -> others</a:documentation>
-               <element name="rsrctype">
+                <a:documentation>Related records—not in use.</a:documentation>
+                <element name="related">
                     <text/>
-               </element>
-          </optional>
+                </element>
+            </optional>
             <optional>
-               <a:documentation>Enables the display of topics (subjects) on three levels. Every level is separate by a hyphen with a 3-byte Unicode representation. In the UI, only three levels are used.
-        Examples of source data:
-        *MARC21: 6XX (all fields which begin with the digit 6) fields:
-        First facet level (topic 1) is all data up to the first occurrence of subfield $$v, x, y, or z. Each subfield division (v, x, y, or z) constitutes the next level. The string is truncated after three levels.
-        toplevel
-        
-        The facet that displays on top of the results set, which is shown only in the Primo UI. The top-level facet includes the following values:
-        *Online Resources—assigned if the delivery category is Online Resource.
-        *Available in library—assigned if the availability_pnx field from the Display section is available.
-        *Multiple top-level facet values may be assigned to a single PNX record.</a:documentation>
-               <element name="topic">
+                <a:documentation>The nature or genre of the resource. This field is based on the
+                    rsrctype field in the Display section: *Book -> books *Journal -> journals
+                    *Article -> articles *Text Resource -> text resources *Image -> images *Audio ->
+                    media *Video -> media *Score -> scores *Map -> maps *Other ->
+                    others</a:documentation>
+                <element name="rsrctype">
                     <text/>
-               </element>
-          </optional>
-          <a:documentation>local fields not defined.</a:documentation>
+                </element>
+            </optional>
+            <optional>
+                <a:documentation>Enables the display of topics (subjects) on three levels. Every
+                    level is separate by a hyphen with a 3-byte Unicode representation. In the UI,
+                    only three levels are used. Examples of source data: *MARC21: 6XX (all fields
+                    which begin with the digit 6) fields: First facet level (topic 1) is all data up
+                    to the first occurrence of subfield $$v, x, y, or z. Each subfield division (v,
+                    x, y, or z) constitutes the next level. The string is truncated after three
+                    levels. toplevel The facet that displays on top of the results set, which is
+                    shown only in the Primo UI. The top-level facet includes the following values:
+                    *Online Resources—assigned if the delivery category is Online Resource.
+                    *Available in library—assigned if the availability_pnx field from the Display
+                    section is available. *Multiple top-level facet values may be assigned to a
+                    single PNX record.</a:documentation>
+                <element name="topic">
+                    <text/>
+                </element>
+            </optional>
+            <a:documentation>local fields not defined.</a:documentation>
             <!--lfc01 - lfc50        
         Local facet fields.-->
         </element>
     </define>
-  
-    <define name="search">       
+
+    <define name="search">
         <element name="search"/>
     </define>
-   
+
     <define name="delivery">
         <element name="delivery"/>
     </define>
-    
+
     <define name="links">
         <element name="links">
             <optional>

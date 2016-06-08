@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results xmlns:saxon="http://saxon.sf.net/"
+         xmlns:flub="http://data.ub.uib.no/ns/function-library/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/manuscript/ubb-ms-0167-09-103-a">
+         <dct:subject>Laugsarkivet</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-a/jpg/ubb-ms-0167-09-103-a_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Bergenske laugs-arkiver</dct:subject>
+         <dct:spatial>Bergen</dct:spatial>
+         <foaf:maker>Repslagerlauget i Bergen</foaf:maker>
+         <rdfs:label>Repslagerlaugets privilegier 14.08.1753</rdfs:label>
+         <dct:identifier>ubb-ms-0167-09-103-a</dct:identifier>
+         <rdf:type>Manuskript</rdf:type>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/manuscript/ubb-ms-0199-a-08">
+         <dct:identifier>ubb-ms-0199-a-08</dct:identifier>
+         <dct:subject>Bergen</dct:subject>
+         <dct:subject>Historisk-antikvariske notater</dct:subject>
+         <dct:subject>Historie</dct:subject>
+         <rdfs:label>Antegnelser - væsentlig Antikvariske 8</rdfs:label>
+         <dct:description>Avskrift af Snorre Sturlassons Heimskringa</dct:description>
+         <rdf:type>Manuskript</rdf:type>
+         <dct:subject>Vitenskapshistorie</dct:subject>
+         <dct:subject>Vitenskap</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0199/ubb-ms-0199-a/ubb-ms-0199-a-08/jpg/ubb-ms-0199-a-08_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>1800-tallet</dct:subject>
+         <foaf:maker>Ukjent</foaf:maker>
+         <dct:isPartOf>ubb-ms-0199-a</dct:isPartOf>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/letter/ubb-ms-1201-29-1">
+         <dct:subject>Kunst</dct:subject>
+         <dct:subject>Jølster</dct:subject>
+         <foaf:maker>Nikolai Astrup</foaf:maker>
+         <dct:subject>Maling</dct:subject>
+         <dct:identifier>ubb-ms-1201-29-1</dct:identifier>
+         <dct:isPartOf>ubb-ms-1201-29</dct:isPartOf>
+         <dct:subject>Vestlandet</dct:subject>
+         <dct:created>1917</dct:created>
+         <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
+         <rdfs:label>[Brev fra Nikolai Johannes Astrup til Haakon Shetelig, 1917]</rdfs:label>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1201/ubb-ms-1201-29/ubb-ms-1201-29-1/jpg/ubb-ms-1201-29-1_p001_th.jpg</ubbont:hasThumbnail>
+         <rdf:type>Brev</rdf:type>
+         <dct:subject>Norge</dct:subject>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/letter/ubb-ms-1006-a">
+         <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
+         <foaf:maker>Nikolai Astrup</foaf:maker>
+         <rdfs:label>[Brev fra Nikolai Johannes Astrup til Olav Georg Martinius Rusti, 1909]</rdfs:label>
+         <dct:created>1909</dct:created>
+         <dct:subject>Jølster</dct:subject>
+         <dct:identifier>ubb-ms-1006-a</dct:identifier>
+         <dct:subject>Vestlandet</dct:subject>
+         <dct:subject>Maling</dct:subject>
+         <rdf:type>Brev</rdf:type>
+         <dct:subject>Norge</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1006/ubb-ms-1006-a/jpg/ubb-ms-1006-a_p001_th.jpg</ubbont:hasThumbnail>
+         <dct:isPartOf>ubb-ms-1006</dct:isPartOf>
+         <dct:subject>Kunst</dct:subject>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/book/ubb-adr-bergen-1902">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-adr/ubb-adr-bergen/ubb-adr-bergen-1902/jpg/ubb-adr-bergen-1902_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:spatial>Bergen</dct:spatial>
+         <rdfs:label>Griegs Adressekalender for Bergen 1902</rdfs:label>
+         <dct:identifier>ubb-adr-bergen-1902</dct:identifier>
+         <rdf:type>Bok</rdf:type>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/book/ubb-adr-bergen-1903">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-adr/ubb-adr-bergen/ubb-adr-bergen-1903/jpg/ubb-adr-bergen-1903_p0001_th.jpg</ubbont:hasThumbnail>
+         <rdfs:label>Griegs Adressebog for Bergen 1903</rdfs:label>
+         <dct:identifier>ubb-adr-bergen-1903</dct:identifier>
+         <rdf:type>Bok</rdf:type>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/bookofminutes/ubb-ms-0167-01-01">
+         <rdf:type>Forhandlingsprotokoll</rdf:type>
+         <dct:subject>1600-tallet</dct:subject>
+         <dct:identifier>ubb-ms-0167-01-01</dct:identifier>
+         <foaf:maker>Bakerlauget</foaf:maker>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-01/ubb-ms-0167-01-01/jpg/ubb-ms-0167-01-01_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Bakerlauget</dct:subject>
+         <dct:subject>Bergens bakerlaug</dct:subject>
+         <dct:subject>1700-tallet</dct:subject>
+         <dct:subject>Laug</dct:subject>
+         <rdfs:label>Bakerlaugets Forhandlingsprotokol 1683-1724 og Kopibok 1703-1767</rdfs:label>
+         <dct:subject>Laugsvesen</dct:subject>
+         <dct:isPartOf>ubb-ms-0167</dct:isPartOf>
+         <dct:subject>Bergen</dct:subject>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/bookofminutes/ubb-ms-0167-01-02-a">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-01/ubb-ms-0167-01-02/ubb-ms-0167-01-02-a/jpg/ubb-ms-0167-01-02-a_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>1700-tallet</dct:subject>
+         <dct:identifier>ubb-ms-0167-01-02-a</dct:identifier>
+         <dct:subject>Laugsvesen</dct:subject>
+         <dct:subject>Laug</dct:subject>
+         <dct:subject>Bergen</dct:subject>
+         <rdfs:label>Bakerlaugets Forhandlingsprotokol 1725-1749 og Kopibok 1814-1834</rdfs:label>
+         <dct:subject>1800-tallet</dct:subject>
+         <rdf:type>Forhandlingsprotokoll</rdf:type>
+         <dct:subject>Bakerlauget</dct:subject>
+         <dct:description>Pergamentsbind</dct:description>
+         <dct:subject>Bergens bakerlaug</dct:subject>
+         <foaf:maker>Bakerlauget</foaf:maker>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/cashbook/ubb-ms-0664-02">
+         <dct:subject>Harmonien</dct:subject>
+         <dct:spatial>Bergen</dct:spatial>
+         <dct:created>1845</dct:created>
+         <rdfs:label>Kassabok for  Selskab i Bergen (Harmonien) 1845.</rdfs:label>
+         <dct:subject>Kulturliv</dct:subject>
+         <dct:subject>Symfoniorkester</dct:subject>
+         <dct:subject>1800-tallet</dct:subject>
+         <rdf:type>Kassebok</rdf:type>
+         <dct:description>Løse innlegg</dct:description>
+         <dct:subject>Bergen Filharmoniske Orkester</dct:subject>
+         <dct:subject>Musikk</dct:subject>
+         <dct:subject>Det Harmoniske Selskab</dct:subject>
+         <dct:subject>Kulturhistorie</dct:subject>
+         <dct:subject>Bergen</dct:subject>
+         <dct:isPartOf>ubb-ms-0664</dct:isPartOf>
+         <dct:subject>Musikkhistorie</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0664/ubb-ms-0664-02/jpg/ubb-ms-0664-02_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:identifier>ubb-ms-0664-02</dct:identifier>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/charter/ubb-1570">
+         <dct:subject xml:lang="no">Salg ; (jord)</dct:subject>
+         <dct:spatial xml:lang="no">Gloppen</dct:spatial>
+         <rdfs:label>1570, uten dato Sogn og Fjordane, Gloppen kunngjøring ; (salg)</rdfs:label>
+         <dct:subject xml:lang="no">Jord, kjøp og salg</dct:subject>
+         <dct:spatial xml:lang="no">Åland</dct:spatial>
+         <dct:created>1570</dct:created>
+         <rdf:type>Diplom</rdf:type>
+         <dct:subject xml:lang="no">Kunngjøring</dct:subject>
+         <dct:relation>Olaf Håkonsson på Fitje</dct:relation>
+         <dct:description xml:lang="no">Olaf Håkonsson på Fitje i Gloppen kunngjør at han har solgt til Jetmund Simonsson 4 månedsmatbol i Åland i Utvik og mottatt betalingen.</dct:description>
+         <dct:relation>Jetmund Simonsson</dct:relation>
+         <dct:subject xml:lang="no">Eiendomshandel</dct:subject>
+         <dct:subject xml:lang="no">Betaling</dct:subject>
+         <dct:subject xml:lang="no">Gård</dct:subject>
+         <dct:isPartOf>Diplomsamlingen</dct:isPartOf>
+         <dct:spatial xml:lang="no">Fitje</dct:spatial>
+         <dct:identifier xml:lang="no">ubb-1570</dct:identifier>
+         <ubbont:hasThumbnail>http://marcus.uib.no/files/spesial/ubb/diplom/smaa/UBB-1570/UBB-1570_thumb.jpg</ubbont:hasThumbnail>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/charter/sab-1570">
+         <ubbont:hasThumbnail>http://marcus.uib.no/files/spesial/ubb/diplom/smaa/SAB-1570/SAB-1570_1_thumb.jpg</ubbont:hasThumbnail>
+         <rdf:type>Diplom</rdf:type>
+         <dct:subject xml:lang="no">Salg ; (gård)</dct:subject>
+         <rdfs:label>1570 Sogn og Fjordane, Innvik, Åland skjøte</rdfs:label>
+         <dct:subject xml:lang="no">Skjøte ;</dct:subject>
+         <dct:created>1570</dct:created>
+         <dct:spatial xml:lang="no">Åland</dct:spatial>
+         <dct:identifier xml:lang="no">sab-1570</dct:identifier>
+         <dct:subject xml:lang="no">Gård</dct:subject>
+         <dct:subject xml:lang="no">Eiendomshandel</dct:subject>
+         <dct:subject xml:lang="no">Skjøte</dct:subject>
+         <dct:isPartOf>Diplomsamlingen</dct:isPartOf>
+         <dct:subject xml:lang="no">Skjøte)</dct:subject>
+         <dct:description xml:lang="no">Skjøte på Åland i Innvik.</dct:description>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/contract/ubb-ms-0167-09-103-b-01">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-01/jpg/ubb-ms-0167-09-103-b-01_p0001_th.jpg</ubbont:hasThumbnail>
+         <foaf:maker>Repslagerlauget i Bergen</foaf:maker>
+         <dct:relation>August Mohr</dct:relation>
+         <rdf:type>Kontrakt</rdf:type>
+         <dct:subject>Repslager</dct:subject>
+         <rdfs:label>Repslagerlauget, Lære-Contract, 1866</rdfs:label>
+         <dct:created>1866-05-19</dct:created>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-01/jpg/ubb-ms-0167-09-103-b-01_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:identifier>ubb-ms-0167-09-103-b-01</dct:identifier>
+         <dct:relation>Knud Jensen</dct:relation>
+         <dct:spatial>Møhlenpris</dct:spatial>
+         <dct:subject>Laugsarkivet</dct:subject>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/contract/ubb-ms-0167-09-103-b-02">
+         <dct:subject>Repslager</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-02/jpg/ubb-ms-0167-09-103-b-02_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:identifier>ubb-ms-0167-09-103-b-02</dct:identifier>
+         <rdfs:label>Repslagerlauget, Lære-Contract, 1865</rdfs:label>
+         <dct:subject>Bergenske laugs-arkiver</dct:subject>
+         <dct:subject>Laug</dct:subject>
+         <rdf:type>Kontrakt</rdf:type>
+         <dct:created>1865-11-11</dct:created>
+         <foaf:maker>Repslagerlauget i Bergen</foaf:maker>
+         <dct:spatial>Sandviken</dct:spatial>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/diary/ubb-ms-0008">
+         <dct:subject>Pirater</dct:subject>
+         <rdf:type>Dagbok</rdf:type>
+         <rdfs:label>Wm. Davidson’s Bloody Journal, 3/12-1788 – 6/9 1789.</rdfs:label>
+         <dct:subject>Kapervirksomhet</dct:subject>
+         <dct:subject>Søvæsen vedk.</dct:subject>
+         <dct:subject>Journal of a priveteer</dct:subject>
+         <dct:subject>Reiseskildringer</dct:subject>
+         <dct:subject>England vedk.</dct:subject>
+         <dct:subject>Sørøvertogt</dct:subject>
+         <foaf:maker>William Davidson</foaf:maker>
+         <dct:identifier>ubb-ms-0008</dct:identifier>
+         <dct:subject>Tyrkia</dct:subject>
+         <dct:subject>Krigshistorie</dct:subject>
+         <dct:subject>Avskriftssamling fra 16- og 17-tallet</dct:subject>
+         <dct:subject>1700-tallet</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0008/jpg/ubb-ms-0008_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Sjørøveri</dct:subject>
+         <dct:subject>Dagboksoptegnelser</dct:subject>
+         <dct:subject>Russland</dct:subject>
+         <dct:description>Indeholder ”A Jurnall of a Priveteer”, hvorom der oplyses: ”The following journal was found in the Chest of Wm. Davidson a 
+seaman who deserted from H. M. ship the Niger, when under my command in the year 1793."
+
+Journalen er beretningen om et sjørøvertogt i Middelhavet. Indbunden i smukt skindbind med 
+indskutte rene blader, der er fabrikert 1824</dct:description>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/document/ubb-ms-utst-0016-c">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-utst/ubb-ms-utst-0016/ubb-ms-utst-0016-c/jpg/ubb-ms-utst-0016-c_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:created>1865-02-12</dct:created>
+         <foaf:maker>Abraham Lincoln</foaf:maker>
+         <dct:description>12. februar 1865, to måneder før han tragisk ble skutt i Fordteateret i Washington 15. april, skrev president Abraham Lincoln et håndskrevet notat til Senatet og Representantenes hus, der han informerte om den internasjonale fiskeriutstillingen som skulle holdes i Bergen, Norge, kommende sommer.   Han oversendte diplomatisk korrespondanse fra Utenriksdepartement og USAs representasjon i Stockholm om utstillingens program. Videre ba han Kongressen om å vurdere nødvendigheten av lovgivning på det aktuelle feltet. Orienteringen ble lest opp i utenrikskomiteen i Kongressen 14. februar og besluttet "trykket".  3. mars vedtok Kongressen en resolusjon der de påla presidenten å bekjentgjøre den internasjonale utstillingen for det amerikanske folk gjennom proklamasjon eller på annen måte han måtte ønske.  I notatet fra "Minister Resident of the United States of America at Stockholm" Mr. Campbell, til den Norsk-Svenske utenriksminister Grev Manderstrøm, ble det påpekt at utstillingens tema hadde stor betydning for verdiskaping og fremskritt i "New England"-statene i USA, såvel som for De forente kongeriker Sverige og Norge. Videre skrev Campbell at utstillingen umulig kunne mislykkes å bli av betydning og interesse for begge lands folk, og at det skulle bli en glede å gjøre hans eget lands regjering spesiell oppmerksom på et så interessant formål. Det vedlagte programmet var undertegnet C. Von Tangen på vegne av arrangørene.   Interessen for den "Den Internasjonale fiskeriudstilling i Bergen 1865» skulle altså vise seg å bli så stor at selveste president Lincoln og den amerikanske Kongressen engasjerte seg i saken.</dct:description>
+         <rdfs:label>Abraham Lincoln to U.S. Congress</rdfs:label>
+         <dct:identifier>ubb-ms-utst-0016-c</dct:identifier>
+         <rdf:type>Dokument</rdf:type>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/document/ubb-ms-0972-i-27-b-1-2">
+         <foaf:maker>Nikolai Astrup</foaf:maker>
+         <rdfs:label/>
+         <dct:subject>Vestlandet</dct:subject>
+         <dct:identifier>ubb-ms-0972-i-27-b-1-2</dct:identifier>
+         <dct:subject>Norge</dct:subject>
+         <dct:subject>Maling</dct:subject>
+         <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
+         <dct:isPartOf>ubb-ms-0972-i-27-b-1</dct:isPartOf>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0972/ubb-ms-0972-i/ubb-ms-0972-i-27/ubb-ms-0972-i-27-b/ubb-ms-0972-i-27-b-1/ubb-ms-0972-i-27-b-1-2/jpg/ubb-ms-0972-i-27-b-1-2_p001_th.jpg</ubbont:hasThumbnail>
+         <rdf:type>Dokument</rdf:type>
+         <dct:subject>Jølster</dct:subject>
+         <dct:subject>Kunst</dct:subject>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/drawing/ubb-ras-ib-038">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ras/ubb-ras-ib/ubb-ras-ib-038/jpg/ubb-ras-ib-038_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Tegning</dct:subject>
+         <foaf:maker>Ukjent</foaf:maker>
+         <rdfs:label>Portrait d`Ibsen en 1860 communique par M. Lugné-Poë</rdfs:label>
+         <dct:identifier>ubb-ras-ib-038</dct:identifier>
+         <rdf:type>Tegning</rdf:type>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/drawing/ubb-ms-0199-a-02">
+         <foaf:maker>Jacob Neumann</foaf:maker>
+         <dct:subject>Vitenskap</dct:subject>
+         <dct:subject>1800-tallet</dct:subject>
+         <rdfs:label>Antegnelser - væsentlig Antikvariske 2</rdfs:label>
+         <dct:description>Tegning</dct:description>
+         <dct:subject>Vitenskapshistorie</dct:subject>
+         <rdf:type>Tegning</rdf:type>
+         <dct:subject>Bergen</dct:subject>
+         <dct:identifier>ubb-ms-0199-a-02</dct:identifier>
+         <dct:subject>Historie</dct:subject>
+         <dct:subject>Historisk-antikvariske notater</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0199/ubb-ms-0199-a/ubb-ms-0199-a-02/jpg/ubb-ms-0199-a-02_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:isPartOf>ubb-ms-0199-a</dct:isPartOf>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/fragment/ubb-ms-1808-k-1-3">
+         <dct:isPartOf>ubb-ms-1808-k-1</dct:isPartOf>
+         <dct:subject>Jølster</dct:subject>
+         <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
+         <dct:created>1926</dct:created>
+         <dct:subject>Vestlandet</dct:subject>
+         <dct:subject>Norge</dct:subject>
+         <dct:identifier>ubb-ms-1808-k-1-3</dct:identifier>
+         <rdfs:label/>
+         <dct:subject>Kunst</dct:subject>
+         <dct:subject>Maling</dct:subject>
+         <rdf:type>Fragment</rdf:type>
+         <foaf:maker>Nikolai Astrup</foaf:maker>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1808/ubb-ms-1808-k/ubb-ms-1808-k-1/ubb-ms-1808-k-1-3/jpg/ubb-ms-1808-k-1-3_p001_th.jpg</ubbont:hasThumbnail>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/graphicart/ubb-ms-utst-0016-d">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-utst/ubb-ms-utst-0016/ubb-ms-utst-0016-d/jpg/ubb-ms-utst-0016-d_th.jpg</ubbont:hasThumbnail>
+         <foaf:maker>John Chester Buttre</foaf:maker>
+         <dct:description>Gravering laget av J. C. Buttre etter et fotografi av den kjente amerikanske fotografen Mathew Brady. (Reminiscences of Abraham Lincoln : by distinguised men of his time, Rice, Allen Thorndike, 1886) </dct:description>
+         <rdfs:label>Portrett av Abraham Lincoln.</rdfs:label>
+         <dct:identifier>ubb-ms-utst-0016-d</dct:identifier>
+         <rdf:type>Grafikk</rdf:type>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/graphicart/ubb-bs-fol-01460-000">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01460/ubb-bs-fol-01460-000/jpg/ubb-bs-fol-01460-000_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Lepra</dct:subject>
+         <dct:description>Omslag til plansjene. Illustrasjoner til Daniel Cornelius Danielssen og Carl Wilhelm Boecks monografi "Om Spedalskhed" utgitt i 1847</dct:description>
+         <rdfs:label>Atlas colorie de spedalskhed.</rdfs:label>
+         <dct:identifier>ubb-bs-fol-01460-000</dct:identifier>
+         <rdf:type>Grafikk</rdf:type>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/journeylog/ubb-ms-0227-a">
+         <dct:subject>Dagbok</dct:subject>
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:subject>Historie</dct:subject>
+         <dct:subject>Kulturhistorie</dct:subject>
+         <foaf:maker>Wilhelm Frimann Koren Christie</foaf:maker>
+         <dct:identifier>ubb-ms-0227-a</dct:identifier>
+         <dct:subject>Reiseskildring</dct:subject>
+         <rdfs:label>Dagbog paa Udenlandsreisen 1823</rdfs:label>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0227/ubb-ms-0227-a/jpg/ubb-ms-0227-a_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:description>Avskrift av W. M. Schjelderup. Originalen tilhører dr. Christie, Kristiania.</dct:description>
+         <rdf:type>Reisedagbok</rdf:type>
+         <dct:created>1823</dct:created>
+         <dct:isPartOf>ubb-ms-0227</dct:isPartOf>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/journeylog/ubb-ms-0227-b">
+         <dct:spatial>Nordfjord</dct:spatial>
+         <dct:subject>Norge</dct:subject>
+         <dct:created>1846</dct:created>
+         <foaf:maker>Wilhelm Frimann Koren Christie</foaf:maker>
+         <dct:identifier>ubb-ms-0227-b</dct:identifier>
+         <dct:subject>Historie</dct:subject>
+         <rdf:type>Reisedagbok</rdf:type>
+         <dct:subject>Kulturhistorie</dct:subject>
+         <rdfs:label>Dagbog paa Reise til Søndfjord, Sogn og Nordfjord Sommeren 1846</rdfs:label>
+         <dct:spatial>Sogn</dct:spatial>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0227/ubb-ms-0227-b/jpg/ubb-ms-0227-b_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Reiseskildring</dct:subject>
+         <dct:spatial>Søndfjord</dct:spatial>
+         <dct:subject>Dagbok</dct:subject>
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:description>Avskrift av W. M. Schjelderup. Originalen tilhører dr. Christie, Kristiania.</dct:description>
+         <dct:spatial>Sunnfjord</dct:spatial>
+         <dct:isPartOf>ubb-ms-0227</dct:isPartOf>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/landsurvey/ubb-ms-0994-3">
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:identifier>ubb-ms-0994-3</dct:identifier>
+         <dct:subject>Eiendomshistorie</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-3/jpg/ubb-ms-0994-3_p001_th.jpg</ubbont:hasThumbnail>
+         <dct:spatial>Vetrlidsalmenning</dct:spatial>
+         <rdfs:label>Oppmåling av tomten, dat. 3.12. 1818.</rdfs:label>
+         <dct:subject>Historie</dct:subject>
+         <dct:spatial>Bergen</dct:spatial>
+         <dct:spatial>Rodenummer 33.</dct:spatial>
+         <dct:subject>Bergen</dct:subject>
+         <dct:created>1818-12</dct:created>
+         <dct:subject>Eiendomshandel</dct:subject>
+         <dct:spatial>Hollendergaten</dct:spatial>
+         <dct:spatial>Rode 20.</dct:spatial>
+         <rdf:type>Oppmålingsdokument</rdf:type>
+         <dct:isPartOf>ubb-ms-0994</dct:isPartOf>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/map/ubb-bs-fol-01808-002">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01808/ubb-bs-fol-01808-002/jpg/ubb-bs-fol-01808-002_th.jpg</ubbont:hasThumbnail>
+         <dct:spatial>Byfjellene</dct:spatial>
+         <dct:spatial>Nygårdstangen</dct:spatial>
+         <dct:description>Opmaalt og lithografert af Det Private Kontor for Opmaalings og Kartarbeider i Kristiania 1883</dct:description>
+         <rdf:type>Kart</rdf:type>
+         <dct:spatial>Bergen</dct:spatial>
+         <dct:spatial>Store Lungegårdsvann</dct:spatial>
+         <foaf:maker>Det Private Kontor for Opmaalings og Kartarbeider</foaf:maker>
+         <dct:subject>Litografi</dct:subject>
+         <dct:identifier>ubb-bs-fol-01808-002</dct:identifier>
+         <rdfs:label>Kart over Bergen i maalestok 1:5000 af sand störrelse</rdfs:label>
+         <dct:subject>Kart</dct:subject>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/map/ubb-bs-fol-01808-001">
+         <dct:subject>Kart</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01808/ubb-bs-fol-01808-001/jpg/ubb-bs-fol-01808-001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Litografi</dct:subject>
+         <dct:spatial>Bergen</dct:spatial>
+         <foaf:maker>Det Private Kontor for Opmaalings og Kartarbeider</foaf:maker>
+         <dct:description>Opmaalt og lithografert af Det Private Kontor for Opmaalings og Kartarbeider i Kristiania 1883</dct:description>
+         <rdfs:label>Kart over Bergen i maalestok 1:5000 af sand störrelse</rdfs:label>
+         <dct:identifier>ubb-bs-fol-01808-001</dct:identifier>
+         <rdf:type>Kart</rdf:type>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/note/ubb-ms-0972-i-27-a">
+         <dct:subject>Kunst</dct:subject>
+         <dct:subject>Vestlandet</dct:subject>
+         <dct:isPartOf>ubb-ms-0972-i-27</dct:isPartOf>
+         <rdfs:label>[Notat av Nikolai Johannes Astrup]</rdfs:label>
+         <rdf:type>Notat</rdf:type>
+         <dct:subject>Maling</dct:subject>
+         <dct:identifier>ubb-ms-0972-i-27-a</dct:identifier>
+         <dct:subject>Norge</dct:subject>
+         <foaf:maker>Nikolai Astrup</foaf:maker>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0972/ubb-ms-0972-i/ubb-ms-0972-i-27/ubb-ms-0972-i-27-a/jpg/ubb-ms-0972-i-27-a_p1588_th.jpg</ubbont:hasThumbnail>
+         <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
+         <dct:subject>Jølster</dct:subject>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/note/ubb-ms-0198-b-03">
+         <rdfs:label>Noticer vedk. Bergens Museum i Tiden ca 1830 - 1840. 003</rdfs:label>
+         <dct:isPartOf>ubb-ms-0198-b</dct:isPartOf>
+         <dct:identifier>ubb-ms-0198-b-03</dct:identifier>
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:subject>Museumshistorie</dct:subject>
+         <dct:subject>Bergen</dct:subject>
+         <dct:description>Oversikt over mynter</dct:description>
+         <rdf:type>Notat</rdf:type>
+         <dct:subject>Historie</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0198/ubb-ms-0198-b/ubb-ms-0198-b-03/jpg/ubb-ms-0198-b-03_p0001_th.jpg</ubbont:hasThumbnail>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/photograph/ubb-bs-ok-19374">
+         <dct:subject>Jente</dct:subject>
+         <dct:spatial>Sandnes</dct:spatial>
+         <foaf:maker>Ukjent</foaf:maker>
+         <rdfs:label>[Strandgaten, Sandnes]</rdfs:label>
+         <rdf:type>Fotografi</rdf:type>
+         <dct:subject>Trapp</dct:subject>
+         <dct:description>Huset ble senere påbygd en ekstra etasje og hoveddøren flyttet.</dct:description>
+         <dct:subject>Bolighus</dct:subject>
+         <dct:subject>Barn</dct:subject>
+         <dct:identifier>ubb-bs-ok-19374</dct:identifier>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-ok/ubb-bs-ok-19374/jpg/ubb-bs-ok-19374_th.jpg</ubbont:hasThumbnail>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/photograph/ubb-bs-fol-01797-015-a">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01797/ubb-bs-fol-01797-015/ubb-bs-fol-01797-015-a/jpg/ubb-bs-fol-01797-015-a_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Trebygning</dct:subject>
+         <dct:subject>Kjole</dct:subject>
+         <dct:spatial>Dombås</dct:spatial>
+         <rdf:type>Fotografi</rdf:type>
+         <dct:identifier>ubb-bs-fol-01797-015-a</dct:identifier>
+         <dct:subject>Gjerde</dct:subject>
+         <rdfs:label>Dombaas 1923.</rdfs:label>
+         <foaf:maker>Astrid Monssen</foaf:maker>
+         <dct:subject>Kvinne</dct:subject>
+         <dct:subject>Hoteller</dct:subject>
+         <dct:spatial>Dombås Turisthotell</dct:spatial>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/postcard/ubb-bs-pkb-00167">
+         <dct:spatial>Nygårdsgaten</dct:spatial>
+         <rdfs:label>Nygaardsgaden. Bergen</rdfs:label>
+         <rdf:type>Postkort</rdf:type>
+         <dct:identifier>ubb-bs-pkb-00167</dct:identifier>
+         <foaf:maker>Ukjent</foaf:maker>
+         <dct:subject>Apotek</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-pkb/ubb-bs-pkb-00167/jpg/ubb-bs-pkb-00167_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Postkort</dct:subject>
+         <dct:spatial>Apoteket Ørnen, Nygårdsgaten 2</dct:spatial>
+         <dct:subject>Gate</dct:subject>
+         <dct:subject>By- og småsteder</dct:subject>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/postcard/ubb-bs-pkb-00161">
+         <dct:subject>Folkeliv</dct:subject>
+         <dct:subject>Hestekjøretøy</dct:subject>
+         <rdfs:label>Torvet med Christies Støtte</rdfs:label>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-pkb/ubb-bs-pkb-00161/jpg/ubb-bs-pkb-00161_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>By- og småsteder</dct:subject>
+         <rdf:type>Postkort</rdf:type>
+         <foaf:maker>Ukjent</foaf:maker>
+         <dct:spatial>Torgallmenningen</dct:spatial>
+         <dct:subject>Postkort</dct:subject>
+         <dct:spatial>Nedre Torget</dct:spatial>
+         <dct:identifier>ubb-bs-pkb-00161</dct:identifier>
+         <dct:subject>Allmenning</dct:subject>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/poster/ubb-uib-ela-002">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-002/jpg/ubb-uib-ela-002_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>E-poetry</dct:subject>
+         <dct:spatial>University Paris 8</dct:spatial>
+         <foaf:maker>Luc Dall'Armellina</foaf:maker>
+         <dct:description xml:lang="en"/>
+         <rdfs:label xml:lang="en">E-poetry (2007)</rdfs:label>
+         <dct:identifier>ubb-uib-ela-002</dct:identifier>
+         <rdf:type>Plakat</rdf:type>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/poster/ubb-uib-ela-003">
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-003/jpg/ubb-uib-ela-003_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Electronic Literature Collection</dct:subject>
+         <dct:spatial>Bergen offentlige Bibliotek</dct:spatial>
+         <foaf:maker>Christina Malitius </foaf:maker>
+         <dct:description/>
+         <rdfs:label xml:lang="en">Electronic Literature Collection. Volume 2 : Launch at the Bergen Public Library</rdfs:label>
+         <dct:identifier>ubb-uib-ela-003</dct:identifier>
+         <rdf:type>Plakat</rdf:type>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/prayerbook/ubb-ms-0504">
+         <dct:subject>Liturgi</dct:subject>
+         <dct:subject>Sang, kirkelig</dct:subject>
+         <dct:subject>Religiøse skrifter m.m.</dct:subject>
+         <dct:subject>1470-årene</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0504/jpg/ubb-ms-0504_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Frankrike</dct:subject>
+         <dct:subject>Frankrike vedk.</dct:subject>
+         <dct:description>Bønnebok paa Pergament skrevet i Frankrik ca. 1350 (paa latin)
+Begynder med en kalender, der er paa fransk, og viser tydelig manuskriptets herkomst. 8°. 86
+beskrevne blader. H.
+Datering 1470-1480 (David Ganz, Mara Hofmann, England)
+”Style is clearly Rouen. Use is clearly Rouen. Ms was intended for a woman.
+(figure in the margin at the beginning of the hours)”</dct:description>
+         <dct:spatial>Rouen</dct:spatial>
+         <dct:subject>Middelalderen</dct:subject>
+         <dct:subject>Musikk</dct:subject>
+         <dct:subject>Bønnebøker (gamle)</dct:subject>
+         <dct:subject>Bønn</dct:subject>
+         <rdf:type>Bønnebok</rdf:type>
+         <dct:subject>Fransk</dct:subject>
+         <dct:spatial>Frankrike</dct:spatial>
+         <dct:subject>Sang</dct:subject>
+         <rdfs:label>Bønnebok paa Pergament skrevet i Frankrike ca. 1350 (paa latin)</rdfs:label>
+         <dct:subject>Teologi</dct:subject>
+         <dct:identifier>ubb-ms-0504</dct:identifier>
+         <dct:subject>1480-årene</dct:subject>
+         <dct:subject>Religion vedk</dct:subject>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/protocol/ubb-ms-0527-a">
+         <rdfs:label>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</rdfs:label>
+         <dct:subject>Symfoniorkester</dct:subject>
+         <dct:spatial>Bergen</dct:spatial>
+         <dct:subject>Det Harmoniske Selskab</dct:subject>
+         <dct:description>Gave i 1914 fra hr. redaktør Kyrre Grepp, som i sin tid havde faaet manuskriptet hos JohanBøgh, der igjen havde det fra sin bror Christopher B. I hans besiddelse blev det noget medtataf ildebrand, som udbrød, mens han som politimester var i Skien.Manuskriptet indeholder beretninger om Harmoniens samlinger og beslutninger etc. Kjendesikke av forf. der har tidligere behandlet selskapets historie.F. 90 beskrevne blader</dct:description>
+         <dct:subject>1700-tallet</dct:subject>
+         <dct:subject>Musikk</dct:subject>
+         <dct:subject>Bergen</dct:subject>
+         <dct:subject>Bergen Filharmoniske Orkester</dct:subject>
+         <dct:subject>Harmonien</dct:subject>
+         <dct:subject>Musikkhistorie</dct:subject>
+         <dct:identifier>ubb-ms-0527-a</dct:identifier>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0527/ubb-ms-0527-a/jpg/ubb-ms-0527-a_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:spatial>Skien</dct:spatial>
+         <dct:subject>Kulturliv</dct:subject>
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:subject>Kulturhistorie</dct:subject>
+         <dct:isPartOf>ubb-ms-0527</dct:isPartOf>
+         <rdf:type>Protokoll</rdf:type>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/protocol/ubb-ms-0664-01">
+         <dct:subject>Symfoniorkester</dct:subject>
+         <dct:subject>Kulturliv</dct:subject>
+         <rdf:type>Protokoll</rdf:type>
+         <dct:description>Gave fra kjøbmand Vilhelm Behrens i 1920</dct:description>
+         <rdfs:label>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</rdfs:label>
+         <dct:identifier>ubb-ms-0664-01</dct:identifier>
+         <dct:subject>Musikkhistorie</dct:subject>
+         <dct:spatial>Bergen</dct:spatial>
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:subject>Bergen Filharmoniske Orkester</dct:subject>
+         <dct:subject>Harmonien</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0664/ubb-ms-0664-01/jpg/ubb-ms-0664-01_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Musikk</dct:subject>
+         <dct:subject>Det Harmoniske Selskab</dct:subject>
+         <dct:subject>Kulturhistorie</dct:subject>
+         <dct:isPartOf>ubb-ms-0664</dct:isPartOf>
+         <dct:subject>Bergen</dct:subject>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/receipt/ubb-ms-1808-e-16">
+         <rdf:type>Kvittering</rdf:type>
+         <dct:isPartOf>ubb-ms-1808-e</dct:isPartOf>
+         <rdfs:label/>
+         <foaf:maker>Nikolai Astrup</foaf:maker>
+         <dct:subject>Norge</dct:subject>
+         <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
+         <dct:subject>Jølster</dct:subject>
+         <dct:identifier>ubb-ms-1808-e-16</dct:identifier>
+         <dct:created>1920-05-25</dct:created>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1808/ubb-ms-1808-e/ubb-ms-1808-e-16/jpg/ubb-ms-1808-e-16_p001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Maling</dct:subject>
+         <dct:subject>Kunst</dct:subject>
+         <dct:subject>Vestlandet</dct:subject>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/receipt/ubb-ms-0198-a-010">
+         <dct:identifier>ubb-ms-0198-a-010</dct:identifier>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0198/ubb-ms-0198-a/ubb-ms-0198-a-010/jpg/ubb-ms-0198-a-010_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Historie</dct:subject>
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:isPartOf>ubb-ms-0198-a</dct:isPartOf>
+         <foaf:maker>Wilhelm Worsøe</foaf:maker>
+         <dct:subject>Trondheim</dct:subject>
+         <rdfs:label>Et brev fra en Samling Brever (ca 100 stk.) til Toldkasserer W. H. Christie vedk. Bergens Museum i Tiden 1833 - 1846. (Enkelte av brevene er til W. F. K. Christie). 011</rdfs:label>
+         <dct:created>1835-06-29</dct:created>
+         <rdf:type>Kvittering</rdf:type>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/saledeed/ubb-ms-0994-2">
+         <dct:isPartOf>ubb-ms-0994</dct:isPartOf>
+         <dct:spatial>Hollendergaten</dct:spatial>
+         <dct:subject>Eiendomshandel</dct:subject>
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:spatial>Rode 20.</dct:spatial>
+         <dct:spatial>Rodenummer 33.</dct:spatial>
+         <dct:subject>Bergen</dct:subject>
+         <dct:spatial>Bergen</dct:spatial>
+         <dct:subject>Eiendomshistorie</dct:subject>
+         <dct:subject>Historie</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-2/jpg/ubb-ms-0994-2_p001_th.jpg</ubbont:hasThumbnail>
+         <rdfs:label>Johan Henrich Hesselmann kjøper eiendommen av Christen Hansen Maartmann. Skjøte dat. 2.6. 1818.</rdfs:label>
+         <dct:created>1818-06</dct:created>
+         <dct:identifier>ubb-ms-0994-2</dct:identifier>
+         <rdf:type>Salgsskjøte</rdf:type>
+         <dct:spatial>Vetrlidsalmenning</dct:spatial>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/saledeed/ubb-ms-0994-1">
+         <dct:created>1724</dct:created>
+         <dct:identifier>ubb-ms-0994-1</dct:identifier>
+         <rdf:type>Salgsskjøte</rdf:type>
+         <dct:spatial>Vetrlidsalmenning</dct:spatial>
+         <dct:spatial>Rode 20.</dct:spatial>
+         <dct:spatial>Rodenummer 33.</dct:spatial>
+         <dct:spatial>Bergen</dct:spatial>
+         <dct:subject>Bergen</dct:subject>
+         <dct:subject>Historie</dct:subject>
+         <dct:spatial>Hollendergaten</dct:spatial>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-1/jpg/ubb-ms-0994-1_p001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Eiendomshandel</dct:subject>
+         <dct:isPartOf>ubb-ms-0994</dct:isPartOf>
+         <rdfs:label>Johann von Gulich selger eiendommen til Christen Hansen Maartmann. Skjøte dat. 1724.</rdfs:label>
+         <dct:subject>1700-tallet</dct:subject>
+         <dct:subject>Eiendomshistorie</dct:subject>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/speech/ubb-ms-0811-a-05-a">
+         <dct:subject>1800-tallet</dct:subject>
+         <rdf:type>Tale</rdf:type>
+         <dct:subject>Quodlibet</dct:subject>
+         <dct:isPartOf>ubb-ms-0811-a-05</dct:isPartOf>
+         <rdfs:label>Stiftsamtmann W. F. K. Christies taler i klubbmøtene i tiden 1813 – 30/4 1827 [Daterte] - 01</rdfs:label>
+         <foaf:maker>Wilhelm Frimann Koren Christie</foaf:maker>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-05/ubb-ms-0811-a-05-a/jpg/ubb-ms-0811-a-05-a_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:identifier>ubb-ms-0811-a-05-a</dct:identifier>
+         <dct:subject>Tale</dct:subject>
+         <dct:created>1813-12</dct:created>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/speech/ubb-ms-0811-a-05-b">
+         <dct:subject>Tale</dct:subject>
+         <foaf:maker>Wilhelm Frimann Koren Christie</foaf:maker>
+         <dct:subject>1800-tallet</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-05/ubb-ms-0811-a-05-b/jpg/ubb-ms-0811-a-05-b_p0001_th.jpg</ubbont:hasThumbnail>
+         <rdf:type>Tale</rdf:type>
+         <dct:created>1819-01-21</dct:created>
+         <rdfs:label>Stiftsamtmann W. F. K. Christies taler i klubbmøtene i tiden 1813 – 30/4 1827 [Daterte] - 02</rdfs:label>
+         <dct:identifier>ubb-ms-0811-a-05-b</dct:identifier>
+         <dct:isPartOf>ubb-ms-0811-a-05</dct:isPartOf>
+         <dct:subject>Quodlibet</dct:subject>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/telegram/ubb-ms-0550-d-b-08">
+         <dct:subject>Kulturhistorie</dct:subject>
+         <dct:identifier>ubb-ms-0550-d-b-08</dct:identifier>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0550/ubb-ms-0550-d/ubb-ms-0550-d-b/ubb-ms-0550-d-b-08/jpg/ubb-ms-0550-d-b-08_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Harmonien</dct:subject>
+         <rdfs:label>Arkivsaker vedk. Musikforeningen Harmonien 16</rdfs:label>
+         <dct:subject>Bergen Filharmoniske Orkester</dct:subject>
+         <dct:isPartOf>ubb-ms-0550-d-b</dct:isPartOf>
+         <dct:subject>Symfoniorkester</dct:subject>
+         <dct:subject>Det Harmoniske Selskab</dct:subject>
+         <rdf:type>Telegram</rdf:type>
+         <dct:created>1901-03-26</dct:created>
+         <dct:subject>Bergen</dct:subject>
+         <dct:subject>1900-tallet</dct:subject>
+         <foaf:maker>Christel Ebering</foaf:maker>
+         <dct:subject>Musikkhistorie</dct:subject>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/telegram/ubb-ms-0550-d-b-07">
+         <dct:subject>1900-tallet</dct:subject>
+         <dct:subject>Harmonien</dct:subject>
+         <dct:identifier>ubb-ms-0550-d-b-07</dct:identifier>
+         <dct:created>1901-03-25</dct:created>
+         <dct:subject>Bergen Filharmoniske Orkester</dct:subject>
+         <rdfs:label>Arkivsaker vedk. Musikforeningen Harmonien 15</rdfs:label>
+         <foaf:maker>Christel Ebering</foaf:maker>
+         <dct:subject>Musikkhistorie</dct:subject>
+         <dct:isPartOf>ubb-ms-0550-d-b</dct:isPartOf>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0550/ubb-ms-0550-d/ubb-ms-0550-d-b/ubb-ms-0550-d-b-07/jpg/ubb-ms-0550-d-b-07_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>Symfoniorkester</dct:subject>
+         <dct:subject>Det Harmoniske Selskab</dct:subject>
+         <rdf:type>Telegram</rdf:type>
+         <dct:subject>Kulturhistorie</dct:subject>
+         <dct:subject>Bergen</dct:subject>
+      </rdf:Description>
+   </rdf:RDF>
+   <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:ubbont="http://data.ub.uib.no/ontology/"
+            xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+            xmlns:bibo="http://purl.org/ontology/bibo/"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/transcription/ubb-ms-0186-b-2">
+         <dct:subject>Norge</dct:subject>
+         <dct:subject>Litteraturhistorie</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0186/ubb-ms-0186-b/ubb-ms-0186-b-2/jpg/ubb-ms-0186-b-2_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>1600-tallet</dct:subject>
+         <foaf:maker>Dorothea Engelbrektsdatter</foaf:maker>
+         <dct:isPartOf>ubb-ms-0186-b</dct:isPartOf>
+         <rdfs:label>Digt fra Dorthe Engelbrechtsdatter Hardenbeck.</rdfs:label>
+         <dct:identifier>ubb-ms-0186-b-2</dct:identifier>
+         <rdf:type>Transkripsjon</rdf:type>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/transcription/ubb-ms-0811-a-04-2-1">
+         <dct:subject>Quodlibet</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-04/ubb-ms-0811-a-04-2/ubb-ms-0811-a-04-2-1/jpg/ubb-ms-0811-a-04-2-1_p0001_th.jpg</ubbont:hasThumbnail>
+         <dct:subject>1800-tallet</dct:subject>
+         <dct:created>1822</dct:created>
+         <dct:isPartOf>ubb-ms-0811-a-04-2</dct:isPartOf>
+         <rdfs:label>Quodlibet - Taler 01</rdfs:label>
+         <dct:identifier>ubb-ms-0811-a-04-2-1</dct:identifier>
+         <rdf:type>Transkripsjon</rdf:type>
+      </rdf:Description>
+   </rdf:RDF>
+</results>

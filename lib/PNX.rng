@@ -2,13 +2,16 @@
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xsl="test"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <a:documentation>Documentations are copied from
+        https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide and supplied
+        with comments when fields are used which are not yet documented in the Technical
+        guide.</a:documentation>
     <start>
         <element name="OAI-PMH">
-            <element name="Listrecords">
+            <element name="ListRecords">
                 <oneOrMore>
                     <ref name="record"/>
                 </oneOrMore>
-
             </element>
         </element>
     </start>
@@ -35,10 +38,10 @@
         <ref name="header"/>
         <ref name="metadata"/>
     </define>
-  
+
     <define name="identifier">
         <element name="identifier">
-            <data type="ID"/>
+            <text/>
         </element>
     </define>
 
@@ -64,7 +67,7 @@
                 </element>
             </optional>
             <optional>
-                <a:documentation> The library-level availability status, which includes availability
+                <a:documentation>The library-level availability status, which includes availability
                     information per Primo library or sub-location, in addition to location
                     information. The field is structured with subfields as follows: *$$I —
                     institution code (required) *$$L — library code (required) *$$1 — sub-location
@@ -74,29 +77,28 @@
                     purposes) *$$9 — indicates that the location represents online material. For
                     more information, refer to Adding $$9ONLINE to Library Level Availability. *$$X
                     — source institution code (required for OvP) *$$Y — source library code
-                    (required for OvP) *$$Z — source sublocation code (not required for OvP) </a:documentation>
+                    (required for OvP) *$$Z — source sublocation code (not required for
+                    OvP)</a:documentation>
                 <element name="availlibrary">
                     <text/>
-
                 </element>
 
             </optional>
             <optional>
-                <a:documentation> The availability PNX. Calculated by Primo from all
-                    availinstitution fields in the Display section, using the following logic: Primo
-                    takes all availinstitution fields and merges the availability status from $$S as
-                    follows: *If one of the statuses is check_holdings or available, Primo sets
-                    availpnx to available. *If the above condition does not exist, Primo sets
-                    availpnx to unavailable. This field is used in the UI when filtering by
-                    availability. </a:documentation>
+                <a:documentation>The availability PNX. Calculated by Primo from all availinstitution
+                    fields in the Display section, using the following logic: Primo takes all
+                    availinstitution fields and merges the availability status from $$S as follows:
+                    *If one of the statuses is check_holdings or available, Primo sets availpnx to
+                    available. *If the above condition does not exist, Primo sets availpnx to
+                    unavailable. This field is used in the UI when filtering by
+                    availability.</a:documentation>
                 <element name="availpnx">
                     <text/>
-
                 </element>
 
             </optional>
             <optional>
-                <a:documentation> The contributor is an entity that is responsible for making a
+                <a:documentation>The contributor is an entity that is responsible for making a
                     contribution to the content of the resource. Multiple occurrences are
                     concatenated with a semicolon. Example of source data: *MARC21: 700/710/711
                     fields, stripping subfield $$d, and stripping from subfield $$t to the end. It
@@ -104,34 +106,29 @@
                     routine (for example, Stephans, Mary to Mary Stephans). *The display form of the
                     contributor also serves as a hyperlink to search for additional records. It is
                     important that all the strings in the display also be added to the
-                    creatorcontrib field in the Search section. </a:documentation>
+                    creatorcontrib field in the Search section.</a:documentation>
                 <element name="contributor">
                     <text/>
-
                 </element>
-
             </optional>
             <optional>
-                <a:documentation> The extent or scope of the content of the resource. </a:documentation>
+                <a:documentation>The extent or scope of the content of the
+                    resource.</a:documentation>
                 <element name="coverage">
                     <text/>
-
                 </element>
-
             </optional>
             <optional>
-                <a:documentation> The date or year when the resource was created or the year when
-                    the resource was published or manufactured. Multiple occurrences are
-                    concatenated with a semicolon. Example of source data: *MARC21: 008/07-10; 260
-                    $$c. </a:documentation>
+                <a:documentation>The date or year when the resource was created or the year when the
+                    resource was published or manufactured. Multiple occurrences are concatenated
+                    with a semicolon. Example of source data: *MARC21: 008/07-10; 260
+                    $$c.</a:documentation>
                 <element name="creationdate">
                     <text/>
-
                 </element>
-
             </optional>
             <optional>
-                <a:documentation> The content creator is an entity that is responsible for creating
+                <a:documentation>The content creator is an entity that is responsible for creating
                     the content of the resource. Multiple occurrences are concatenated with a
                     semicolon. An example of source data: *MARC21: 245 subfields $$c OR if 245 $$c
                     is not present, 1XX, stripping subfield $$d, and stripping from subfield $$t to
@@ -139,12 +136,10 @@
                     example, Stephans, Mary to Mary Stephans) by using a special routine. *The
                     display form of the creator also serves as a hyperlink to search for additional
                     records. It is important that all the strings in the display also be added to
-                    the creatorcontrib field in the Search section. </a:documentation>
+                    the creatorcontrib field in the Search section.</a:documentation>
                 <element name="creator">
                     <text/>
-
                 </element>
-
             </optional>
             <optional>
                 <a:documentation>The description is any information that describes the content of
@@ -162,110 +157,113 @@
                 </element>
             </optional>
             <optional>
-                <a:documentation> The edition of the resource. This is one of the fields of the PNX
+                <a:documentation>The edition of the resource. This is one of the fields of the PNX
                     record that is not derived from Dublin Core. The edition field is a key element
                     in grouping bibliographic records. Example of source data: *MARC21: 250 $a and
-                    $b. </a:documentation>
+                    $b.</a:documentation>
                 <element name="edition">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The physical format—physical description, extent, or digital
+                <a:documentation>The physical format—physical description, extent, or digital
                     manifestation of the resource. Multiple occurrences are concatenated with a
                     semicolon. Example of source data: *MARC21: 300 and 340 fields. Can also be
-                    created from the control data in the leader and 008, 006 fields. </a:documentation>
+                    created from the control data in the leader and 008, 006
+                    fields.</a:documentation>
                 <element name="format">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> Any unique identifier of the record. Dublin Core defines this as
-                    an unambiguous reference to the resource within a given context. In the context
-                    of the PNX record, this is intended to be used for standard identifiers like
-                    ISBN and ISSN. Multiple occurrences are concatenated with a semicolon. Examples
-                    of source data (MARC21): *020 $$a: prefix the value with ISBN. *022 $$a: prefix
-                    the value with ISSN. </a:documentation>
+                <a:documentation>Any unique identifier of the record. Dublin Core defines this as an
+                    unambiguous reference to the resource within a given context. In the context of
+                    the PNX record, this is intended to be used for standard identifiers like ISBN
+                    and ISSN. Multiple occurrences are concatenated with a semicolon. Examples of
+                    source data (MARC21): *020 $$a: prefix the value with ISBN. *022 $$a: prefix the
+                    value with ISSN.</a:documentation>
                 <element name="identifier">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The resource from which this resource is derived (for example, in
+                <a:documentation>The resource from which this resource is derived (for example, in
                     an article from a journal - the journal is the source). Multiple occurrences are
                     not concatenated. This type of relationship has been added as a specific
                     relationship so it can be displayed as part of the brief results display.
-                    Example of source data: *MARC21: 773. </a:documentation>
+                    Example of source data: *MARC21: 773.</a:documentation>
                 <element name="ispartof">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The language of the resource. The language is stored in coded form
+                <a:documentation>The language of the resource. The language is stored in coded form
                     (ISO 639-2) and is translated in the UI. Multiple occurrences are concatenated
                     with a semicolon. If the language is not in ISO 639-2 form, the normalization
                     process attempts to convert it to this form. If this is not possible, the
                     language is unknown (using the und code). Example of source data: *MARC21:
-                    008/35-37; if blank, use 041 subfield $$a. </a:documentation>
+                    008/35-37; if blank, use 041 subfield $$a.</a:documentation>
                 <element name="language">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> Intended for use by Primo Central to indicate whether a record is
-                    open access or not. </a:documentation>
+                <a:documentation>Intended for use by Primo Central to indicate whether a record is
+                    open access or not.</a:documentation>
                 <element name="oa">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> An entity that is responsible for making the resource available.
+                <a:documentation>An entity that is responsible for making the resource available.
                     Multiple occurrences are concatenated with a semicolon. Example of source data:
-                    *MARC21: 260 subfields $a and $b. </a:documentation>
+                    *MARC21: 260 subfields $a and $b.</a:documentation>
                 <element name="publisher">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> A reference to a related resource. Multiple occurrences are not
-                    concatenated. Example of source data: *MARC21: 440, 830, 760-787 except for 773. </a:documentation>
+                <a:documentation>A reference to a related resource. Multiple occurrences are not
+                    concatenated. Example of source data: *MARC21: 440, 830, 760-787 except for
+                    773.</a:documentation>
                 <element name="relation">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> Information about the rights of the resource. </a:documentation>
+                <a:documentation>Information about the rights of the resource.</a:documentation>
                 <element name="rights">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The source repository from which the record was derived. </a:documentation>
+                <a:documentation>The source repository from which the record was
+                    derived.</a:documentation>
                 <element name="source">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The topic of the resource’s content. Multiple occurrences are
+                <a:documentation>The topic of the resource’s content. Multiple occurrences are
                     concatenated with a semicolon. Example of source data: *MARC21: 6XX fields *The
                     display form of the subject also serves as a hyperlink to search for additional
                     records. It is important that all the strings in the display also be added to
-                    the search index. </a:documentation>
+                    the search index.</a:documentation>
                 <element name="subject">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The name that is given to a resource. The title can be created
-                    from a number of fields and subfields from the source record. Multiple
-                    occurrences are not concatenated. Example of source data: *MARC21: 245 subfields
-                    $$a and $$b. </a:documentation>
+                <a:documentation>The name that is given to a resource. The title can be created from
+                    a number of fields and subfields from the source record. Multiple occurrences
+                    are not concatenated. Example of source data: *MARC21: 245 subfields $$a and
+                    $$b.</a:documentation>
                 <element name="title">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The resource type that represents the main format of the record or
+                <a:documentation>The resource type that represents the main format of the record or
                     the type, based on a master list of main record types. It is recommended to
                     include only a minimum number of types (~10). Primo sites are able to modify
                     this list so that it is suited to the content of its repository and its users.
@@ -275,40 +273,43 @@
                     (includes text resources that cannot be identified as a book, journal, or
                     article), image, video, audio, map, score, and other (includes records that
                     cannot be classified as any other resource type). Example of source data:
-                    *MARC21: Mapping based on the leader position 6 and the 007 and 008 fields. </a:documentation>
+                    *MARC21: Mapping based on the leader position 6 and the 007 and 008
+                    fields.</a:documentation>
                 <element name="type">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The uniform title will be displayed with the title of the resource
+                <a:documentation>The uniform title will be displayed with the title of the resource
                     when the merged FRBR record is displayed. Example of source data: *MARC21: 240
-                    subfields a, d,m,n, p, r, s </a:documentation>
+                    subfields a, d,m,n, p, r, s</a:documentation>
                 <element name="unititle">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> A rank or score that is assigned by the end user for the resource. </a:documentation>
+                <a:documentation>A rank or score that is assigned by the end user for the
+                    resource.</a:documentation>
                 <element name="userrank">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The user review, which is added by the end user. </a:documentation>
+                <a:documentation>The user review, which is added by the end user.</a:documentation>
                 <element name="userreview">
                     <text/>
                 </element>
             </optional>
             <optional>
-                <a:documentation> The vernacular title is used when the record contains both a
+                <a:documentation>The vernacular title is used when the record contains both a
                     transliterated title and a title in the vernacular (as in the MARC format).
-                    Example of source data: *MARC21: 880 with subfield 6 =245 and subfields a and b. </a:documentation>
+                    Example of source data: *MARC21: 880 with subfield 6 =245 and subfields a and
+                    b.</a:documentation>
                 <element name="vertitle">
                     <text/>
                 </element>
             </optional>
-                           <!--<optional>
+            <!--<optional>
                <element name="lds01 - lds50"><text/>
                </element>
                </optional>
@@ -318,6 +319,7 @@
         </element>
     </define>
 
+    <a:documentation>*All fields of the Ranking section. 0-1.</a:documentation>
     <define name="ranking">
         <optional>
             <a:documentation>The amount of boost that is applied to a record. By default, no boost
@@ -346,15 +348,16 @@
     </define>
 
     <define name="control">
-        <element name="control">
-            <optional>
+        <a:documentation>In some cases, the system will take only one of the following fields: 
+            *All fields of the Control section.</a:documentation>
+        <element name="control">            
                 <a:documentation>The source ID identifies the source repository in Primo. Every
                     source repository has a configuration file in which the sourceid and other
                     information about the source repository are recorded.</a:documentation>
                 <element name="sourceid">
                     <text/>
                 </element>
-            </optional>
+            
             <optional>
                 <a:documentation>This ID identifies the source repository in the source system. This
                     is not necessarily the same as the source repository's identifier in Primo—for
@@ -363,7 +366,7 @@
                     <text/>
                 </element>
             </optional>
-            <optional>
+           
                 <a:documentation>This ID identifies the record in the source repository (such as an
                     ALEPH system number supplied in MARC21 tag 001). This ID must be unique and
                     persistent within the source repository. It is derived from the OAI
@@ -371,42 +374,40 @@
                 <element name="sourcerecordid">
                     <text/>
                 </element>
-            </optional>
+            
             <optional>
                 <a:documentation>This ID identifies an additional ID of the source
                     record.</a:documentation>
                 <element name="addsrcrecordid">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </optional>            
                 <a:documentation>The record ID is a unique identifier of the record in the Primo
                     repository. The sourceid and sourcerecordid are concatenated to create the
                     recordid (for example, ALEPH system number + tag 001).</a:documentation>
                 <element name="recordid">
                     <text/>
-                </element>
-            </optional>
+                </element>            
             <optional>
                 <a:documentation>Source type—not in use.</a:documentation>
                 <element name="sourcetype">
                     <text/>
                 </element>
             </optional>
-            <optional>
+            
                 <a:documentation>The source format identifies the original format of the source
                     record (such as MARC21, Dublin Core, and MAB2).</a:documentation>
                 <element name="sourceformat">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            
+          
                 <a:documentation>The source system identifies the system used by the source
                     repository (such as ALEPH, ADAM, MetaLib, SFX, and Digitool).</a:documentation>
                 <element name="sourcesystem">
                     <text/>
                 </element>
-            </optional>
+            
             <!--  <optional>
                <a:documentation>Record type—not in use.</a:documentation>
                <element name="recordtype">
@@ -414,7 +415,7 @@
                </element>
           </optional>-->
             <!-- <optional>
-               <a:documentation>Date last modified—not in use. </a:documentation>
+               <a:documentation>Date last modified—not in use.</a:documentation>
                <element name="lastmodified">
                     <text/>
                </element>
@@ -424,231 +425,578 @@
 
     <define name="facet">
         <element name="facet">
-            <!--  classificationlcc
-        classificationddc
-        classificationudc
-        classificationrvk
-        
-        Classification (LCC/DDC/UDC/RVK). The classification facet can be used to create a subject browse list based on the main subject classes of the classification scheme. The classification code is translated into a description in the enrichment phase. The field is updated by the system.
-  -->
-            <optional>
-                <a:documentation>The collection (physical, digital, electronic, or logical) to which
-                    the resource belongs. The collection facet is a code that is translated in the
-                    UI. Examples of source data: *MARC21: 852 $b $c.</a:documentation>
-                <element name="collection">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The creation date normalized to four digits. BCE dates are preceded
-                    by a minus sign. If the creation date cannot be normalized, the field will not
-                    be created. Examples of source data: *MARC21: 008/07-10; 260 $$c. The Creation
-                    Date facet is created dynamically based on the results set. Note that it is
-                    created from all results, not just the top 200 results as done for dynamic
-                    facets. The system creates this facet as follows: 1 During normalization,
-                    creation dates are normalized as follows for each PNX record: * Dates before
-                    1899 are normalized as their century. For example, 1826 is normalized to 1800.
-                    *Dates between 1900 and 1949 are normalized by decade. For example, 1945 is
-                    normalized to 1940. *Dates after 1950 are not changed. 2 During a search, the
-                    system counts the number of different creation dates found in the search results
-                    and split the dates into five groups. For example, if the following 10 dates
-                    were found during a search: 1994, 1996, 1998, 2000, 2001, 2002, 2004, 2006,
-                    2007, and 2008 The system will display the following facets groups and the total
-                    number of records for each group: Before 1998 (500) 1998 To 2001 (300) 2001 To
-                    2004 (250) 2004 To 2007 (1,020) After 2007 (8234) *If the system finds less than
-                    five dates during a search, the Creation Date facet will not be
-                    displayed.</a:documentation>
-                <element name="creationdate">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>Creator/Contributor. This facet attempts to normalize personal
-                    names so that the field contains the last name and the first letter of first
-                    name (since this is common in many databases). Example of source data: *MARC21:
-                    100/110/111 and 700/710/711 fields. If the author is a person, the field
-                    contains the last name and the first letter of each of the first names: *The
-                    second and third characters of the tag are 00. *The first indicator is 1 (for
-                    example, 1001). *Use subfield $$a only. *The first name is each word after the
-                    comma. If the author is a conference, the field contains only the conference
-                    name, and not particulars on time or place: *The second and third characters of
-                    the tag are 11 (for example, 711). *Use subfield $$a only. In all other cases,
-                    the entire field is used.</a:documentation>
-                <element name="creatorcontrib">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The course department.</a:documentation>
-                <element name="crsdept">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The course ID.</a:documentation>
-                <element name="crsid">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The course instructor.</a:documentation>
-                <element name="crsinstrc">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The course name.</a:documentation>
-                <element name="crsname">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The size of the file for digital objects.</a:documentation>
-                <element name="filesize">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>Physical format. The physical format or file type. Examples of
-                    source data: *MARC21: Can be based on the 007 control field.</a:documentation>
-                <element name="format">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The genre of the resource. Examples of source data: *MARC21: 655
-                    and subfield v from all 6XX.</a:documentation>
-                <element name="genre">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The journal title. This facet can be used in PNX records that
-                    represent articles. Sample source data: MARC21: 773 $$t</a:documentation>
-                <element name="jtitle">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The language of the resource. The language is stored in coded form
-                    (ISO 639-2) and translated in the UI. If the language is not coded, the
-                    normalization process attempts to convert it to coded form. If this is not
-                    possible, a language facet is not created. Examples of source data: *MARC21:
-                    008/35-37; if blank, use 041 subfield $$a.</a:documentation>
-                <element name="language">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The facet for physical libraries, which can be used instead of or
-                    in addition to the collection facet. The Library facet has a special feature
-                    intended for multi-institution sites. It allows you to configure the facet so
-                    that it is split between libraries that belong to the user's institution and
-                    libraries that belong to all other institutions. In addition to the number of
-                    hits and alphabetical sort, the library facet allows the following sort options:
-                    *By user institution and then by size *By user institution and then
-                    alphanumerically *By user institution only If any of the sort options are
-                    selected, two 'Library' facets will display. The first includes libraries that
-                    belong to the user's institution, and the second includes all libraries from
-                    other institutions.</a:documentation>
-                <element name="library">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The search pre-filter that is available in the Primo UI and must be
-                    mapped as a facet. The default list of pre-filters is based on the Resource Type
-                    field in the display: *Book -> Books (books) *Journal -> Journals (journals)
-                    *Article -> Articles (articles) *Text Resource -> Books (books) *Image -> Images
-                    (images) *Video -> Audio-Video (audio-video) *Audio -> Audio-Video (audio-video)
-                    *Maps -> Maps (maps) *Score -> Scores (scores)</a:documentation>
-                <element name="prefilter">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>Related records—not in use.</a:documentation>
-                <element name="related">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>The nature or genre of the resource. This field is based on the
-                    rsrctype field in the Display section: *Book -> books *Journal -> journals
-                    *Article -> articles *Text Resource -> text resources *Image -> images *Audio ->
-                    media *Video -> media *Score -> scores *Map -> maps *Other ->
-                    others</a:documentation>
-                <element name="rsrctype">
-                    <text/>
-                </element>
-            </optional>
-            <optional>
-                <a:documentation>Enables the display of topics (subjects) on three levels. Every
-                    level is separate by a hyphen with a 3-byte Unicode representation. In the UI,
-                    only three levels are used. Examples of source data: *MARC21: 6XX (all fields
-                    which begin with the digit 6) fields: First facet level (topic 1) is all data up
-                    to the first occurrence of subfield $$v, x, y, or z. Each subfield division (v,
-                    x, y, or z) constitutes the next level. The string is truncated after three
-                    levels. toplevel The facet that displays on top of the results set, which is
-                    shown only in the Primo UI. The top-level facet includes the following values:
-                    *Online Resources—assigned if the delivery category is Online Resource.
-                    *Available in library—assigned if the availability_pnx field from the Display
-                    section is available. *Multiple top-level facet values may be assigned to a
-                    single PNX record.</a:documentation>
-                <element name="topic">
-                    <text/>
-                </element>
-            </optional>
-            <a:documentation>local fields not defined.</a:documentation>
-            <!--lfc01 - lfc50        
+            <interleave>
+                <zeroOrMore>
+                    <a:documentation>Classification (LCC/DDC/UDC/RVK). The classification facet can
+                        be used to create a subject browse list based on the main subject classes of
+                        the classification scheme. The classification code is translated into a
+                        description in the enrichment phase. The field is updated by the system. </a:documentation>
+                    <element name="classificationlcc">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>Classification (LCC/DDC/UDC/RVK). The classification facet can
+                        be used to create a subject browse list based on the main subject classes of
+                        the classification scheme. The classification code is translated into a
+                        description in the enrichment phase. The field is updated by the system. </a:documentation>
+                    <element name="classificationddc">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>Classification (LCC/DDC/UDC/RVK). The classification facet can
+                        be used to create a subject browse list based on the main subject classes of
+                        the classification scheme. The classification code is translated into a
+                        description in the enrichment phase. The field is updated by the system. </a:documentation>
+                    <element name="classificationudc">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>Classification (LCC/DDC/UDC/RVK). The classification facet can
+                        be used to create a subject browse list based on the main subject classes of
+                        the classification scheme. The classification code is translated into a
+                        description in the enrichment phase. The field is updated by the system. </a:documentation>
+                    <element name="classificationrvk">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The collection (physical, digital, electronic, or logical) to
+                        which the resource belongs. The collection facet is a code that is
+                        translated in the UI. Examples of source data: *MARC21: 852 $b
+                        $c.</a:documentation>
+                    <element name="collection">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The creation date normalized to four digits. BCE dates are
+                        preceded by a minus sign. If the creation date cannot be normalized, the
+                        field will not be created. Examples of source data: *MARC21: 008/07-10; 260
+                        $$c. The Creation Date facet is created dynamically based on the results
+                        set. Note that it is created from all results, not just the top 200 results
+                        as done for dynamic facets. The system creates this facet as follows: 1
+                        During normalization, creation dates are normalized as follows for each PNX
+                        record: * Dates before 1899 are normalized as their century. For example,
+                        1826 is normalized to 1800. *Dates between 1900 and 1949 are normalized by
+                        decade. For example, 1945 is normalized to 1940. *Dates after 1950 are not
+                        changed. 2 During a search, the system counts the number of different
+                        creation dates found in the search results and split the dates into five
+                        groups. For example, if the following 10 dates were found during a search:
+                        1994, 1996, 1998, 2000, 2001, 2002, 2004, 2006, 2007, and 2008 The system
+                        will display the following facets groups and the total number of records for
+                        each group: Before 1998 (500) 1998 To 2001 (300) 2001 To 2004 (250) 2004 To
+                        2007 (1,020) After 2007 (8234) *If the system finds less than five dates
+                        during a search, the Creation Date facet will not be
+                        displayed.</a:documentation>
+                    <element name="creationdate">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>Creator/Contributor. This facet attempts to normalize personal
+                        names so that the field contains the last name and the first letter of first
+                        name (since this is common in many databases). Example of source data:
+                        *MARC21: 100/110/111 and 700/710/711 fields. If the author is a person, the
+                        field contains the last name and the first letter of each of the first
+                        names: *The second and third characters of the tag are 00. *The first
+                        indicator is 1 (for example, 1001). *Use subfield $$a only. *The first name
+                        is each word after the comma. If the author is a conference, the field
+                        contains only the conference name, and not particulars on time or place:
+                        *The second and third characters of the tag are 11 (for example, 711). *Use
+                        subfield $$a only. In all other cases, the entire field is
+                        used.</a:documentation>
+                    <element name="creatorcontrib">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The course department.</a:documentation>
+                    <element name="crsdept">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The course ID.</a:documentation>
+                    <element name="crsid">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The course instructor.</a:documentation>
+                    <element name="crsinstrc">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The course name.</a:documentation>
+                    <element name="crsname">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The size of the file for digital objects.</a:documentation>
+                    <element name="filesize">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>Physical format. The physical format or file type. Examples of
+                        source data: *MARC21: Can be based on the 007 control
+                        field.</a:documentation>
+                    <element name="format">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The genre of the resource. Examples of source data: *MARC21:
+                        655 and subfield v from all 6XX.</a:documentation>
+                    <element name="genre">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The journal title. This facet can be used in PNX records that
+                        represent articles. Sample source data: MARC21: 773 $$t</a:documentation>
+                    <element name="jtitle">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The language of the resource. The language is stored in coded
+                        form (ISO 639-2) and translated in the UI. If the language is not coded, the
+                        normalization process attempts to convert it to coded form. If this is not
+                        possible, a language facet is not created. Examples of source data: *MARC21:
+                        008/35-37; if blank, use 041 subfield $$a.</a:documentation>
+                    <element name="language">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The facet for physical libraries, which can be used instead of
+                        or in addition to the collection facet. The Library facet has a special
+                        feature intended for multi-institution sites. It allows you to configure the
+                        facet so that it is split between libraries that belong to the user's
+                        institution and libraries that belong to all other institutions. In addition
+                        to the number of hits and alphabetical sort, the library facet allows the
+                        following sort options: *By user institution and then by size *By user
+                        institution and then alphanumerically *By user institution only If any of
+                        the sort options are selected, two 'Library' facets will display. The first
+                        includes libraries that belong to the user's institution, and the second
+                        includes all libraries from other institutions.</a:documentation>
+                    <element name="library">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The search pre-filter that is available in the Primo UI and
+                        must be mapped as a facet. The default list of pre-filters is based on the
+                        Resource Type field in the display: *Book -> Books (books) *Journal ->
+                        Journals (journals) *Article -> Articles (articles) *Text Resource -> Books
+                        (books) *Image -> Images (images) *Video -> Audio-Video (audio-video) *Audio
+                        -> Audio-Video (audio-video) *Maps -> Maps (maps) *Score -> Scores
+                        (scores)</a:documentation>
+                    <element name="prefilter">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>Related records—not in use.</a:documentation>
+                    <element name="related">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>The nature or genre of the resource. This field is based on the
+                        rsrctype field in the Display section: *Book -> books *Journal -> journals
+                        *Article -> articles *Text Resource -> text resources *Image -> images
+                        *Audio -> media *Video -> media *Score -> scores *Map -> maps *Other ->
+                        others</a:documentation>
+                    <element name="rsrctype">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation>Enables the display of topics (subjects) on three levels. Every
+                        level is separate by a hyphen with a 3-byte Unicode representation. In the
+                        UI, only three levels are used. Examples of source data: *MARC21: 6XX (all
+                        fields which begin with the digit 6) fields: First facet level (topic 1) is
+                        all data up to the first occurrence of subfield $$v, x, y, or z. Each
+                        subfield division (v, x, y, or z) constitutes the next level. The string is
+                        truncated after three levels. toplevel The facet that displays on top of the
+                        results set, which is shown only in the Primo UI. The top-level facet
+                        includes the following values: *Online Resources—assigned if the delivery
+                        category is Online Resource. *Available in library—assigned if the
+                        availability_pnx field from the Display section is available. *Multiple
+                        top-level facet values may be assigned to a single PNX
+                        record.</a:documentation>
+                    <element name="topic">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation xml:lang="no">Ikke funnet i primo
+                        dokumentasjon.</a:documentation>
+                    <element name="pnxdate">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <a:documentation> The facet that displays on top of the results set, which is
+                        shown only in the Primo UI. The top-level facet includes the following
+                        values: *Online Resources—assigned if the delivery category is Online
+                        Resource. *Available in library—assigned if the availability_pnx field from
+                        the Display section is available. *Multiple top-level facet values may be
+                        assigned to a single PNX record.></a:documentation>
+                    <element name="toplevel">
+                        <text/>
+                    </element>
+                </zeroOrMore>
+                <a:documentation>local fields not defined.</a:documentation>
+                <!--lfc01 - lfc50        
         Local facet fields.-->
+            </interleave>
         </element>
     </define>
 
     <define name="search">
-        <element name="search"/>
+        <element name="search">
+
+            <zeroOrMore>
+                <a:documentation>The index that is created from the additional source record ID from
+                    the Control section.</a:documentation>
+                <element name="addsrcrecordid">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>This field contains additional titles that are related to the
+                    record. Examples of MARC21 source data: 440 subfield $$a 830 subfield
+                    $$a</a:documentation>
+                <element name="addtitle">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The alternative titles. Examples of MARC21 source data: MARC21:
+                    130, 210, 240, 246</a:documentation>
+                <element name="alttitle">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>This field contains the publication date, which is the year when
+                    either the resource was created or the resource was published or manufactured.
+                    Valid years are one to four digits (0 - 9). For example: 1, 75, 910, and 2016.
+                    BCE dates are preceded by a minus sign. For example: -5. Multiple occurrences of
+                    this field are possible. The creation dates are used during searches and when
+                    refining dates with the date slider. The following notes apply to the date
+                    slider: The initial date ranges that display in the date slider are based on the
+                    ranges in the creation date facet (see facets section), not the dates from this
+                    field. Out of the box, the Creation Date facet ranges are hidden. If you want to
+                    display the facet ranges, change display:none to display:block in the following
+                    line of your local CSS file: .EXLFacetContainer ol li.EXLHiddenFacetCreationDate
+                    {display:none;}</a:documentation>
+                <element name="creationdate">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The normalized form of authors created for the facets. Examples of
+                    MARC21 source data: MARC21:1XX and 700/710/711 fields.</a:documentation>
+                <element name="creatorcontrib">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The course department.</a:documentation>
+                <element name="crsdept">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The course ID.</a:documentation>
+                <element name="crsid">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The course instructor.</a:documentation>
+                <element name="crsinstrc">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The course name.</a:documentation>
+                <element name="crsname">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Description of the content of the resource. This includes abstract,
+                    contents notes, summary, and so forth. Examples of MARC21 source data: MARC21:
+                    502, 505, 520 fields.</a:documentation>
+                <element name="description">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Contains the end date in date ranges. For more information, see the
+                    Configuring Date Ranges section in the Primo Back Office
+                    Guide.</a:documentation>
+                <element name="enddate">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The ID assigned to records following the FRBRization process. The
+                    field is updated by the system.</a:documentation>
+                <element name="frbrid">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Words from the full-text that were added in the enrichment
+                    phase.</a:documentation>
+                <element name="fulltext">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>A general index for fields that have not yet been added to any of
+                    the specific indexes and should be. For example, publisher.</a:documentation>
+                <element name="general">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The ISBN of the item. Example of MARC21 source data:
+                    MARC21:020.</a:documentation>
+                <element name="isbn">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The ISSN of the item. Example of source data: MARC21:
+                    022.</a:documentation>
+                <element name="issn">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The ID assigned to records following the duplicate detection
+                    process. The field is updated by the system.</a:documentation>
+                <element name="matchid">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The ORCID ID.</a:documentation>
+                <element name="orcidid">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>An internal Primo index that defines the type of PNX record. The
+                    field is updated by the system.</a:documentation>
+                <element name="pnxtype">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The recordid field from the Control section, which is used to
+                    locate a specific record. This is an internal Primo index.</a:documentation>
+                <element name="recordid">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Record type—not in use.</a:documentation>
+                <element name="recordtype">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The restricted search scope, used to limit discovery of certain PNX
+                    records to specific user groups. In order to limit discovery, the records should
+                    be assigned a denied search scope. Access is enabled based on the denied search
+                    scopes defined in a Back Office table. Access can be enabled based on
+                    institution, on-off campus, and user group. This field is copied to the scope
+                    field for indexing by the search engine.</a:documentation>
+                <element name="ressearscope">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The type field from the Display section.</a:documentation>
+                <element name="rsrctype">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Used in creating search scopes and denied search scopes. The values
+                    from the search scope and restricted search scope fields above should be copied
+                    to the scope field.</a:documentation>
+                <element name="scope">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Used to create search scopes values for use in Primo views. This
+                    field is copied to the scope field for indexing by the search
+                    engine.</a:documentation>
+                <element name="searchscope">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Based on the sourceid field from the Control section. It may be
+                    required to filter out certain records and is an internal Primo
+                    index.</a:documentation>
+                <element name="sourceid">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Contains the start date in date ranges. For more information, see
+                    the Configuring Date Ranges section in the Primo Back Office
+                    Guide.</a:documentation>
+                <element name="startdate">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The topic of the content of the resource. Example of source data:
+                    MARC21: 6XX fields.</a:documentation>
+                <element name="subject">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Used for abstracts and other data loaded from Syndetics. This field
+                    is updated by the system.</a:documentation>
+                <element name="syndetics_fulltext">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Used for table of contents data loaded from Syndetics. This field
+                    is updated by the system.</a:documentation>
+                <element name="syndetics_toc">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The main title. Examples of source data: MARC21: 245 subfields $$a
+                    and $$b.</a:documentation>
+                <element name="title">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>This field contains words from the table of
+                    contents.</a:documentation>
+                <element name="toc">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>This field contains end-user tags. This field is updated by the
+                    system.</a:documentation>
+                <element name="usertag">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <!--  lsr01 - lsr50
+            
+            Local search fields.
+            Primo Central uses some local search fields, but their use should not affect users.-->
+        </element>
     </define>
 
     <define name="delivery">
-        <element name="delivery"/>
+        <element name="delivery">
+            
+                <a:documentation>The delivery resource categories for which delivery may function
+                    differently. The following are supported categories: *Physical Item – all
+                    physical items except for microforms. *Microform *SFX Resources *Online
+                    Resources *MetaLib Resource—records from the MetaLib Knowledgebase *Remote
+                    Search Resources—records retrieved via MetaLib. This field is required. A record
+                    that does not have a delivery category will fail and display the following error
+                    message in the back office: Invalid content was found starting with element
+                    'ranking'. One of '{"":delivery}' is expected. If you define another category in
+                    this field, delivery related functionality will not be available for this
+                    record. This means that there will be no availability status or GetIt
+                    tabs.</a:documentation>
+                <element name="delcategory">
+                    <text/>
+                </element>
+            
+            <zeroOrMore>
+                <a:documentation>Indicates that there is online full-text for the resource, which is
+                    used for remote search resources.</a:documentation>
+                <element name="fulltext">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>The institution to which the resource belongs.</a:documentation>
+                <element name="institution">
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <element name="resdelscope">
+                    <text/>
+                </element>
+
+                <a:documentation>Restricted delivery scope that is used to define access
+                    restrictions for online resources. The restrictions (based on institution,
+                    on/off campus, user group) are defined in a table in the Back Office. Lack of a
+                    restricted delivery scope field in the PNX indicates that there are no
+                    restrictions.</a:documentation>
+            </zeroOrMore>
+        </element>
     </define>
 
     <define name="links">
         <element name="links">
-            <optional>
+            <zeroOrMore>
                 <a:documentation>Additional links that are relevant to the
                     resource.</a:documentation>
                 <element name="additionallinks">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link back to the original record in the source
                     repository.</a:documentation>
                 <element name="backlink">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to the item's abstract.</a:documentation>
                 <element name="linktoabstract">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to an extract or first chapter of the
                     item.</a:documentation>
-                <element name="Linktoextract">
+                <element name="linktoextract">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to a finding aid.</a:documentation>
                 <element name="linktofindingaid">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to the holdings display and request options in the source
                     system. For multi-institution sites, the following links can be used:
                     *linktoholdings_avail—A link to the holdings display and request options in the
@@ -661,72 +1009,72 @@
                 <element name="linktoholdings">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to the item's price.</a:documentation>
                 <element name="linktoprice">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to a form or page on which a user can place a
                     request.</a:documentation>
                 <element name="linktorequest">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to the item's review.</a:documentation>
                 <element name="linktoreview">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to the resource itself (for example, to the full-text or
                     image).</a:documentation>
                 <element name="linktorsrc">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to the item's table of contents.</a:documentation>
                 <element name="linktotoc">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to a Union Catalog (such as WorldCat).</a:documentation>
                 <element name="linktouc">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>This URL can be created by Primo for the metadata in the
                     PNX.</a:documentation>
                 <element name="openurl">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>An open URL that is limited to the full-text
                     service.</a:documentation>
                 <element name="openurlfullt">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>An open URL that is limited to a specific service other then the
                     full-text service.</a:documentation>
                 <element name="openurlservice">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>A link to the item's thumbnail.</a:documentation>
                 <element name="thumbnail">
                     <text/>
                 </element>
-            </optional>
+            </zeroOrMore>
 
         </element>
     </define>
@@ -772,386 +1120,386 @@
 
     <define name="addata">
         <element name="addata">
-            <optional>
+            <zeroOrMore>
                 <a:documentation>orcidid</a:documentation>
                 <element name="orcidid">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Author last name</a:documentation>
                 <element name="aulast">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Author first name</a:documentation>
                 <element name="aufirst">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Author initials</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Author initials</a:documentation>
                 <element name="auinit">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Author first initial</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Author first initial</a:documentation>
                 <element name="auinit1">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Author middle initial</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Author middle initial</a:documentation>
                 <element name="auinitm">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Author suffix</a:documentation>
                 <element name="ausuffix">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Author</a:documentation>
                 <element name="au">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Corporate author</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Corporate author</a:documentation>
                 <element name="aucorp">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Additional author</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Additional author</a:documentation>
                 <element name="addau">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Series author</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Series author</a:documentation>
                 <element name="seriesau">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Book title</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Book title</a:documentation>
                 <element name="btitle">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Article title</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Article title</a:documentation>
                 <element name="atitle">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Journal title</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Journal title</a:documentation>
                 <element name="jtitle">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Short title</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Short title</a:documentation>
                 <element name="stitle">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Additional title</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Additional title</a:documentation>
                 <element name="addtitle">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Series title</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Series title</a:documentation>
                 <element name="seriestitle">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Date</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Date</a:documentation>
                 <element name="date">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> RISDate</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>RISDate</a:documentation>
                 <element name="risdate">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Additional Date</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Additional Date</a:documentation>
                 <element name="adddate">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Volume</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Volume</a:documentation>
                 <element name="volume">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Issue</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Issue</a:documentation>
                 <element name="issue">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Part</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Part</a:documentation>
                 <element name="part">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Season</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Season</a:documentation>
                 <element name="ssn">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Quarter</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Quarter</a:documentation>
                 <element name="quarter">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Start page</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Start page</a:documentation>
                 <element name="spage">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> End page</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>End page</a:documentation>
                 <element name="epage">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> pages</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>pages</a:documentation>
                 <element name="pages">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Article number</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Article number</a:documentation>
                 <element name="artnum">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>ISSN</a:documentation>
                 <element name="issn">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>EISSN</a:documentation>
                 <element name="eissn">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>ISBN</a:documentation>
                 <element name="isbn">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>EISBN</a:documentation>
                 <element name="eisbn">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> CODEN</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>CODEN</a:documentation>
                 <element name="coden">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>SICI</a:documentation>
                 <element name="sici">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Metadata format</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Metadata format</a:documentation>
                 <element name="format">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Genre</a:documentation>
                 <element name="genre">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>RISType</a:documentation>
                 <element name="ristype">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Notes</a:documentation>
                 <element name="notes">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Abstract</a:documentation>
                 <element name="abstract">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i primo documentation, co? country of
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i primo documentation, co? country of
                     publication??</a:documentation>
                 <element name="cop">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> Publisher?</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>Publisher?</a:documentation>
                 <element name="pub">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Miscellaneous1</a:documentation>
                 <element name="mis1">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Miscellaneous2</a:documentation>
                 <element name="mis2">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Miscellaneous3</a:documentation>
                 <element name="mis3">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>OCLC ID</a:documentation>
                 <element name="oclcid">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>DOI</a:documentation>
                 <element name="doi">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> URL</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>URL</a:documentation>
                 <element name="url">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>Object ID</a:documentation>
                 <element name="objectid">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i
                     https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide/The_PNX_Record/The_Additional_Data_Section#ww1050167</a:documentation>
                 <element name="lccn">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>PMID</a:documentation>
                 <element name="pmid">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i dokumentasjon</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i dokumentasjon</a:documentation>
                 <element name="ericid">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i dokumentasjon</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i dokumentasjon</a:documentation>
                 <element name="bibcode">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i dokumentasjon</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i dokumentasjon</a:documentation>
                 <element name="hdlid">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i dokumentasjon</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i dokumentasjon</a:documentation>
                 <element name="oai">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> co – country of publication</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>co – country of publication</a:documentation>
                 <element name="co">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> cc – country of publication code</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>cc – country of publication code</a:documentation>
                 <element name="cc">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>inst – institution that issues dissertation</a:documentation>
                 <element name="inst">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>advisor – dissertation advisor</a:documentation>
                 <element name="advisor">
                     <text/>
                 </element>
-            </optional>
-            <optional>
+            </zeroOrMore>
+            <zeroOrMore>
                 <a:documentation>degree – degree conferred for the dissertation</a:documentation>
                 <element name="degree">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i dokumentasjon</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i dokumentasjon</a:documentation>
                 <element name="tpages">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i dokumentasjon</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i dokumentasjon</a:documentation>
                 <element name="edition">
                     <text/>
                 </element>
-            </optional>
-            <optional>
-                <a:documentation> finner ikke i dokumentasjon</a:documentation>
+            </zeroOrMore>
+            <zeroOrMore>
+                <a:documentation>finner ikke i dokumentasjon</a:documentation>
                 <element name="bici">
                     <text/>
                 </element>
-            </optional>
+            </zeroOrMore>
         </element>
     </define>
 

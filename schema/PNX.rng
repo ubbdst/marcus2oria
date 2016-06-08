@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
-    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xsl="test"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     <a:documentation>Documentations are copied from
         https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide and supplied
@@ -321,6 +321,7 @@
 
     <a:documentation>*All fields of the Ranking section. 0-1.</a:documentation>
     <define name="ranking">
+        <element name="ranking">
         <optional>
             <a:documentation>The amount of boost that is applied to a record. By default, no boost
                 is given to a record. The amount of boost is determined by the following booster
@@ -345,6 +346,7 @@
                 <text/>
             </element>
         </optional>
+        </element>
     </define>
 
     <define name="control">

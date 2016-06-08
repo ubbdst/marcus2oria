@@ -40,6 +40,7 @@
             <marcus-label primo-type="">Segl</marcus-label>-->            
         </types>
     </xsl:variable>
+    
     <xsl:function name="flub:getPrimoTypeFromRdfTypeLabel">
         <xsl:param name="rdfTypeLabel"/>
         <xsl:variable name="oria-type" select="key('primo-type-from-marcus',$rdfTypeLabel,$types-table)"/>

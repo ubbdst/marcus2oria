@@ -12,7 +12,7 @@
          -->
     <xsl:output method="xml" indent="yes"/>
     <xsl:include href="lib/types.xsl"/>
-    <xsl:variable name="blacklist" select="'Side','Segl','Album'" as="xs:string*"/>
+    <xsl:variable name="blacklist" select="'http://data.ub.uib.no/ontology/Album','http://data.ub.uib.no/ontology/Seal','http://data.ub.uib.no/ontology/Page'" as="xs:string*"/>
     <xsl:variable name="class-sparql-query">
         PREFIX bibo: &lt;http://purl.org/ontology/bibo/>
         PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -37,7 +37,7 @@
     <xsl:template match="/"> 
        
         <results>
-        <xsl:for-each select="$types/descendant::*:binding[@name='class' and not(some $x in $blacklist satisfies $x =.)]">
+            <xsl:for-each select="$types/descendant::*:binding[@name='class' and not(some $x in $blacklist satisfies $x =*/.)]">
             <xsl:call-template name="getDocumentsFromSparqlQuery">
                 <xsl:with-param name="class" select="*/."/>
                 <xsl:with-param name="limit" select="2"/>
@@ -79,7 +79,8 @@
             { GRAPH  &lt;urn:x-arq:UnionGraph> 
             {   {
             SELECT ?s {?s a &lt;<xsl:value-of select="$class"/>>.
-            FILTER  EXISTS{?s  &lt;http://data.ub.uib.no/ontology/hasThumbnail> ?thumbN.}
+            FILTER  EXISTS{?s  &lt;http://data.ub.uib.no/ontology/hasThumbnail> ?thumbN.
+            ?s dct:identifier ?id.}
             
             } LIMIT <xsl:value-of select="$limit"/> OFFSET <xsl:value-of select="$offset"/>}
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/identifier> ?identifier }

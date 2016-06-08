@@ -7,7 +7,7 @@
     version="2.0">
     
     <xsl:key name="primo-type-from-marcus" match="@primo-type" use="parent::marcus-label/text()"/>
-    <xsl:variable name="types-table" as="node()">
+    <xsl:variable name="types-table">
         <types>
             <marcus-label primo-type="book">Manuskript</marcus-label>
             <marcus-label primo-type="text_resource">Brev</marcus-label>
@@ -49,5 +49,42 @@
         </xsl:if>
         <xsl:value-of select="$oria-type"/>
        </xsl:function>
+    
+    <xsl:function name="flub:getRsrcTypeFromRdfTypeLabel">
+        <xsl:param name="rdfTypeLabel"/>
+        <xsl:variable name="primoType" select="flub:getPrimoTypeFromRdfTypeLabel($rdfTypeLabel)"/>
+        <xsl:choose>
+            <xsl:when test="$primoType = 'book'">
+                <xsl:value-of select="'books'"/>
+            </xsl:when>
+            <xsl:when test="$primoType = 'journal'">
+                <xsl:value-of select="'journals'"/>
+            </xsl:when>
+            <xsl:when test="$primoType = 'article'">
+                <xsl:value-of select="'articles'"/>
+            </xsl:when>
+            <xsl:when test="$primoType = 'text_resource'">
+                <xsl:value-of select="'text resources'"/>
+            </xsl:when>
+            <xsl:when test="$primoType = 'image'">
+                <xsl:value-of select="'images'"/>
+            </xsl:when>
+            <xsl:when test="$primoType = 'audio'">
+                <xsl:value-of select="'media'"/>
+            </xsl:when>
+            <xsl:when test="$primoType = 'video '">
+                <xsl:value-of select="'media'"/>
+            </xsl:when>
+            <xsl:when test="$primoType = 'score'">
+                <xsl:value-of select="' scores'"/>
+            </xsl:when>
+            <xsl:when test="$primoType ='map'">
+                <xsl:value-of select="'maps'"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'others'"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
     
 </xsl:stylesheet>

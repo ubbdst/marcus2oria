@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2" exclude-result-prefixes="xs">
      <!--Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng 2016-06-08+02:00-->
  
      <!--     In some cases, the system will take only one of the following fields: 
@@ -14,7 +14,7 @@
            <xsl:param name="sourcetype" as="xs:string?"/>
            <xsl:param name="sourceformat" as="xs:string"/>
            <xsl:param name="sourcesystem" as="xs:string"/>
-
+           <control>
            <!--The source ID identifies the source repository in Primo. Every
                     source repository has a configuration file in which the sourceid and other
                     information about the source repository are recorded.-->           
@@ -104,7 +104,8 @@
                        <xsl:value-of select="."/>
                  </sourcesystem>
            </xsl:for-each>
-     </xsl:template>
+          </control>
+</xsl:template>
 
      <xsl:template name="display">
            <xsl:param name="availinstitution" as="xs:string?"/>
@@ -133,7 +134,7 @@
            <xsl:param name="userrank" as="xs:string?"/>
            <xsl:param name="userreview" as="xs:string?"/>
            <xsl:param name="vertitle" as="xs:string?"/>
-
+           <display>
            <xsl:for-each select="$availinstitution[string(.)]">
                  <availinstitution>
                        <xsl:value-of select="."/>
@@ -405,7 +406,8 @@
                        <xsl:value-of select="."/>
                  </vertitle>
            </xsl:for-each>
-     </xsl:template>
+          </display>
+</xsl:template>
 
      <xsl:template name="facet">
            <xsl:param name="classificationlcc" as="xs:string*"/>
@@ -431,7 +433,7 @@
            <xsl:param name="topic" as="xs:string*"/>
            <xsl:param name="pnxdate" as="xs:string*"/>
            <xsl:param name="toplevel" as="xs:string*"/>
-
+           <facet>
            <!--Classification (LCC/DDC/UDC/RVK). The classification facet can
                         be used to create a subject browse list based on the main subject classes of
                         the classification scheme. The classification code is translated into a
@@ -682,7 +684,8 @@
                        <xsl:value-of select="."/>
                  </toplevel>
            </xsl:for-each>
-     </xsl:template>
+          </facet>
+</xsl:template>
 
      <xsl:template name="search">
            <xsl:param name="addsrcrecordid" as="xs:string*"/>
@@ -718,7 +721,7 @@
            <xsl:param name="title" as="xs:string*"/>
            <xsl:param name="toc" as="xs:string*"/>
            <xsl:param name="usertag" as="xs:string*"/>
-
+           <search>
            <!--The index that is created from the additional source record ID from
                     the Control section.-->           
            <xsl:for-each select="$addsrcrecordid[string(.)]">
@@ -996,14 +999,15 @@
                        <xsl:value-of select="."/>
                  </usertag>
            </xsl:for-each>
-     </xsl:template>
+          </search>
+</xsl:template>
 
      <xsl:template name="delivery">
            <xsl:param name="delcategory" as="xs:string"/>
            <xsl:param name="fulltext" as="xs:string*"/>
            <xsl:param name="institution" as="xs:string*"/>
            <xsl:param name="resdelscope" as="xs:string*"/>
-
+           <delivery>
            <!--The delivery resource categories for which delivery may function
                     differently. The following are supported categories: *Physical Item – all
                     physical items except for microforms. *Microform *SFX Resources *Online
@@ -1041,7 +1045,8 @@
                        <xsl:value-of select="."/>
                  </resdelscope>
            </xsl:for-each>
-     </xsl:template>
+          </delivery>
+</xsl:template>
 
      <xsl:template name="links">
            <xsl:param name="additionallinks" as="xs:string*"/>
@@ -1060,7 +1065,7 @@
            <xsl:param name="openurlfullt" as="xs:string*"/>
            <xsl:param name="openurlservice" as="xs:string*"/>
            <xsl:param name="thumbnail" as="xs:string*"/>
-
+           <links>
            <!--Additional links that are relevant to the
                     resource.-->           
            <xsl:for-each select="$additionallinks[string(.)]">
@@ -1188,14 +1193,15 @@
                        <xsl:value-of select="."/>
                  </thumbnail>
            </xsl:for-each>
-     </xsl:template>
+          </links>
+</xsl:template>
 
      <xsl:template name="sort">
            <xsl:param name="author" as="xs:string?"/>
            <xsl:param name="creationdate" as="xs:string?"/>
            <xsl:param name="popularity" as="xs:string?"/>
            <xsl:param name="title" as="xs:string?"/>
-
+           <sort>
            <!--The author of the record. Only one author field should be created.
                     Sample source data: MARC21: 100 $$a-->           
            <xsl:for-each select="$author[string(.)]">
@@ -1227,7 +1233,8 @@
                        <xsl:value-of select="."/>
                  </title>
            </xsl:for-each>
-     </xsl:template>
+          </sort>
+</xsl:template>
 
      <xsl:template name="addata">
            <xsl:param name="orcidid" as="xs:string*"/>
@@ -1293,7 +1300,7 @@
            <xsl:param name="tpages" as="xs:string*"/>
            <xsl:param name="edition" as="xs:string*"/>
            <xsl:param name="bici" as="xs:string*"/>
-
+           <addata>
            <!--orcidid-->           
            <xsl:for-each select="$orcidid[string(.)]">
                  <orcidid>
@@ -1736,13 +1743,14 @@
                        <xsl:value-of select="."/>
                  </bici>
            </xsl:for-each>
-     </xsl:template>
+          </addata>
+</xsl:template>
 
      <xsl:template name="ranking">
            <xsl:param name="booster1" as="xs:string?"/>
            <xsl:param name="booster2" as="xs:string?"/>
            <xsl:param name="pcg_type" as="xs:string?"/>
-
+           <ranking>
            <!--The amount of boost that is applied to a record. By default, no boost
                 is given to a record. The amount of boost is determined by the following booster
                 settings: *No boost – Assign a value of 1. *Negative boost – Assign a value greater
@@ -1769,5 +1777,6 @@
                        <xsl:value-of select="."/>
                  </pcg_type>
            </xsl:for-each>
-     </xsl:template>
+          </ranking>
+</xsl:template>
 </xsl:stylesheet>

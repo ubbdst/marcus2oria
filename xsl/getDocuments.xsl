@@ -79,10 +79,13 @@
             { GRAPH  &lt;urn:x-arq:UnionGraph> 
             {   {
             SELECT ?s {?s a &lt;<xsl:value-of select="$class"/>>.
-            FILTER  EXISTS{?s  &lt;http://data.ub.uib.no/ontology/hasThumbnail> ?thumb .}
+            FILTER  EXISTS{?s  &lt;http://data.ub.uib.no/ontology/hasThumbnail> ?thumbN.}
             
             } LIMIT <xsl:value-of select="$limit"/> OFFSET <xsl:value-of select="$offset"/>}
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/identifier> ?identifier }
+            {?s  &lt;http://data.ub.uib.no/ontology/hasThumbnail> ?thumbnail.}
+            <!--Skriv om thumbnail til https://-->
+            BIND (REPLACE(str(?thumbnail),"http://data.ub.","https://marcus.","i") AS ?thumb)
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/created> ?created0 } 
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/title> ?label } 
             OPTIONAL { ?s  &lt;http://www.w3.org/2000/01/rdf-schema#label> ?label } 
@@ -92,8 +95,7 @@
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/description> ?description } 
             OPTIONAL { ?s  &lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?label } 
             OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://data.ub.uib.no/ontology/invertedName> ?maker } 
-            OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/name> ?maker. } 
-            
+            OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/name> ?maker. }             
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/isPartOf>/&lt;http://www.w3.org/2000/01/rdf-schema#label> ?collection}
             BIND (str(?created0) AS ?created)
             BIND (iri(replace(str(?s), "data.ub.uib.no", "marcus.uib.no")) AS ?sR ) }

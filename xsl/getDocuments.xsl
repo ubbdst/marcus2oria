@@ -106,7 +106,7 @@
            <!-- binding names for facets-->
            BIND (IF(bound(?familyNameMaker) &amp;&amp; bound(?firstNameMaker),
            CONCAT(?familyNameMaker,", ",?firstNameMaker),
-           cascade(?invName,?maker))
+           coalesce(?invName,?maker))
            AS ?invMaker)
             <!-- binding variables for result variables-->
             BIND (str(?created0) 

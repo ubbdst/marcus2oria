@@ -49,6 +49,7 @@
                 <!-- ?? http://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide/Mapping_to_the_Normalized_Record/Adding_%24%249ONLINE_to_Library_Level_Availability#ww1157297-->
                 <xsl:with-param name="availlibrary" select="'$$9ONLINE'"/>
                 <xsl:with-param name="creationdate" select="$creation_date"/>
+                <!-- kanskje ta med fornavn etternavn og slå sammen? lastname, firstname, så bruke -->
                 <xsl:with-param name="creator" select="$display_maker"/>
                 <!--?? Multiple occurrences are not concatenated. Betyr dette at vi kan ha flere beskrivelsesfelt eller at man kun har en beskrivelse? står mange steder-->
                 <xsl:with-param name="description" select="dct:description[1]"/>
@@ -60,8 +61,7 @@
                 <xsl:with-param name="source" select="$source-repository"/>
                 <xsl:with-param name="subject" select="$display_subject"/>
                 <xsl:with-param name="title" select="$main_title"/>
-                <xsl:with-param name="type" select="flub:getPrimoTypeFromRdfTypeLabel(rdf:type[1])"/>
-                <xsl:with-param name="unititle" select="$main_title"/>                
+                <xsl:with-param name="type" select="flub:getPrimoTypeFromRdfTypeLabel(rdf:type[1])"/>                               
             </xsl:call-template>
            
             <xsl:variable name="rsrctype" select="flub:getRsrcTypeFromRdfTypeLabel(rdf:type[1])"/>
@@ -72,7 +72,7 @@
                 <xsl:with-param name="creationdate" select="$creation_date"/>
                 <!--@todo tror dct:contributor er med i ontology, men ikke særlig i bruk, tar bare med skapere-->
                 <!-- ?? kan navn taes inn slik de er, (fornavn etternavn) for å så normaliseres??-->
-                <xsl:with-param name="creatorcontrib" select="foaf:maker"/>
+                <xsl:with-param name="creatorcontrib" select="ubbont:invertedName"/>
                 <xsl:with-param name="rsrctype" select="$rsrctype"/>
                 <xsl:with-param name="toplevel" select="'Online Resources'"/>
             </xsl:call-template>

@@ -53,6 +53,7 @@
         <xsl:param name="class"/>
         <xsl:param name="max-documents-per-type" as="xs:integer?"/>
         <xsl:variable name="document-without-image">
+            <!-- namespace prefix-->
             PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
             PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#> 
             PREFIX xsd:&lt;http://www.w3.org/2001/XMLSchema#> 
@@ -63,6 +64,7 @@
             PREFIX bibo:&lt;http://purl.org/ontology/bibo/> 
             PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#> 
             PREFIX ubbont: &lt;http://data.ub.uib.no/ontology/> 
+            <!-- construct fields-->
             CONSTRUCT { ?sR a ?classLabel . ?sR 
             &lt;http://purl.org/dc/terms/identifier> ?identifier . 
             ?sR &lt;http://www.w3.org/2000/01/rdf-schema#label> ?label .
@@ -74,6 +76,7 @@
             ?sR  &lt;http://purl.org/dc/terms/subject> ?topic.
             ?sR  &lt;http://purl.org/dc/terms/relation> ?relation.
             ?sR  &lt;http://data.ub.uib.no/ontology/hasThumbnail> ?thumb.
+            ?sR &lt;http://data.ub.uib.no/ontology/invertedName> ?invMaker.
             } 
             WHERE {
             { GRAPH  &lt;urn:x-arq:UnionGraph> 
@@ -95,11 +98,21 @@
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/subject>/ &lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?topic }
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/description> ?description } 
             OPTIONAL { ?s  &lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?label } 
-            OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://data.ub.uib.no/ontology/invertedName> ?maker } 
+            OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://data.ub.uib.no/ontology/invertedName> ?invName } 
             OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/name> ?maker. }             
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/isPartOf>/&lt;http://www.w3.org/2000/01/rdf-schema#label> ?collection}
-            BIND (str(?created0) AS ?created)
-            BIND (iri(replace(str(?s), "data.ub.uib.no", "marcus.uib.no")) AS ?sR ) }
+            OPTIONAL {  ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/firstName> ?firstNameMaker. 
+            ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/familyName> ?familyNameMaker. }
+           <!-- binding names for facets-->
+           BIND (IF(bound(?familyNameMaker) &amp;&amp; bound(?firstNameMaker),
+           CONCAT(?familyNameMaker,", ",?firstNameMaker),
+           cascade(?invName,?maker))
+           AS ?invMaker)
+            <!-- binding variables for result variables-->
+            BIND (str(?created0) 
+            AS ?created)
+            BIND (iri(replace(str(?s), "data.ub.uib.no", "marcus.uib.no")) 
+            AS ?sR ) }
             }                 GRAPH ubbont:ubbont { &lt;<xsl:value-of select="$class"/>> rdfs:label ?classLabel . FILTER (langMatches(lang(?classLabel),"")) } 
             }         
         </xsl:variable>

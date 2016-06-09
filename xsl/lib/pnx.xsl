@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2" exclude-result-prefixes="xs">
-     <!--Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng 2016-06-08+02:00-->
+     <!--Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng 2016-06-09+02:00-->
  
      <!--     In some cases, the system will take only one of the following fields: 
             *All fields of the Control section.-->
@@ -409,7 +409,7 @@
           </display>
 </xsl:template>
 
-     <xsl:template name="facet">
+     <xsl:template name="facets">
            <xsl:param name="classificationlcc" as="xs:string*"/>
            <xsl:param name="classificationddc" as="xs:string*"/>
            <xsl:param name="classificationudc" as="xs:string*"/>
@@ -433,7 +433,7 @@
            <xsl:param name="topic" as="xs:string*"/>
            <xsl:param name="pnxdate" as="xs:string*"/>
            <xsl:param name="toplevel" as="xs:string*"/>
-           <facet>
+           <facets>
            <!--Classification (LCC/DDC/UDC/RVK). The classification facet can
                         be used to create a subject browse list based on the main subject classes of
                         the classification scheme. The classification code is translated into a
@@ -684,7 +684,7 @@
                        <xsl:value-of select="."/>
                  </toplevel>
            </xsl:for-each>
-          </facet>
+          </facets>
 </xsl:template>
 
      <xsl:template name="search">

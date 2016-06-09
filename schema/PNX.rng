@@ -49,7 +49,7 @@
         <element name="metadata">
             <ref name="control"/>
             <ref name="display"/>
-            <ref name="facet"/>
+            <ref name="facets"/>
             <ref name="search"/>
             <ref name="delivery"/>
             <ref name="links"/>
@@ -425,8 +425,8 @@
         </element>
     </define>
 
-    <define name="facet">
-        <element name="facet">
+    <define name="facets">
+        <element name="facets">
             <interleave>
                 <zeroOrMore>
                     <a:documentation>Classification (LCC/DDC/UDC/RVK). The classification facet can

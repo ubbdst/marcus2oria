@@ -77,6 +77,7 @@
             ?sR  &lt;http://purl.org/dc/terms/relation> ?relation.
             ?sR  &lt;http://data.ub.uib.no/ontology/hasThumbnail> ?thumb.
             ?sR &lt;http://data.ub.uib.no/ontology/invertedName> ?invMaker.
+            ?sR &lt;http://data.ub.uib.no/ontology/collectionTitle> ?colLabel.
             } 
             WHERE {
             { GRAPH  &lt;urn:x-arq:UnionGraph> 
@@ -101,9 +102,20 @@
             OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://data.ub.uib.no/ontology/invertedName> ?invName } 
             OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/name> ?maker. }             
             OPTIONAL { ?s  &lt;http://purl.org/dc/terms/isPartOf>/&lt;http://www.w3.org/2000/01/rdf-schema#label> ?collection}
-            OPTIONAL {  ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/firstName> ?firstNameMaker. 
-            ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/familyName> ?familyNameMaker. }
-           <!-- binding names for facets-->
+            OPTIONAL {  
+            ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/firstName> ?firstNameMaker. 
+            ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/familyName> ?familyNameMaker.
+            }
+            <!-- top collection name start, for construct ?sR ?colLabel1-->
+            OPTIONAL {?s (dct:isPartOf)* ?topCollection.
+            NOT EXISTS {?topCollection dct:isPartOf ?part}}
+            OPTIONAL {?topCollection rdfs:label ?colLabel0.}
+            OPTIONAL {          ?topCollection dct:title ?colLabel1.}
+            BIND (
+            COALESCE(?colLabel0,?colLabel1)
+            as ?colLabel)
+            <!-- end-->
+           <!-- binding names for inverse name in facets section-->
            BIND (IF(bound(?familyNameMaker) &amp;&amp; bound(?firstNameMaker),
            CONCAT(?familyNameMaker,", ",?firstNameMaker),
            coalesce(?invName,?maker))

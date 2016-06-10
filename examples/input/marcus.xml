@@ -12,14 +12,17 @@
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/manuscript/ubb-ms-0167-09-103-a">
+         <ubbont:invertedName>Repslagerlauget i Bergen</ubbont:invertedName>
          <dct:subject>Laugsarkivet</dct:subject>
-         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-a/jpg/ubb-ms-0167-09-103-a_p0001_th.jpg</ubbont:hasThumbnail>
-         <dct:subject>Bergenske laugs-arkiver</dct:subject>
          <dct:spatial>Bergen</dct:spatial>
-         <foaf:maker>Repslagerlauget i Bergen</foaf:maker>
-         <rdfs:label>Repslagerlaugets privilegier 14.08.1753</rdfs:label>
          <dct:identifier>ubb-ms-0167-09-103-a</dct:identifier>
+         <dct:subject>Bergenske laugs-arkiver</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
+         <foaf:maker>Repslagerlauget i Bergen</foaf:maker>
+         <ubbont:collectionTitle>De bergenske Laugsarkiver</ubbont:collectionTitle>
          <rdf:type>Manuskript</rdf:type>
+         <rdfs:label>Repslagerlaugets privilegier 14.08.1753</rdfs:label>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-a/jpg/ubb-ms-0167-09-103-a_p0001_th.jpg</ubbont:hasThumbnail>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/manuscript/ubb-ms-0199-a-08">
          <dct:identifier>ubb-ms-0199-a-08</dct:identifier>
@@ -28,10 +31,12 @@
          <dct:subject>Historie</dct:subject>
          <rdfs:label>Antegnelser - væsentlig Antikvariske 8</rdfs:label>
          <dct:description>Avskrift af Snorre Sturlassons Heimskringa</dct:description>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <rdf:type>Manuskript</rdf:type>
          <dct:subject>Vitenskapshistorie</dct:subject>
          <dct:subject>Vitenskap</dct:subject>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0199/ubb-ms-0199-a/ubb-ms-0199-a-08/jpg/ubb-ms-0199-a-08_p0001_th.jpg</ubbont:hasThumbnail>
+         <ubbont:invertedName>Ukjent</ubbont:invertedName>
          <dct:subject>1800-tallet</dct:subject>
          <foaf:maker>Ukjent</foaf:maker>
          <dct:isPartOf>ubb-ms-0199-a</dct:isPartOf>
@@ -47,21 +52,26 @@
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/letter/ubb-ms-1201-29-1">
-         <dct:subject>Kunst</dct:subject>
-         <dct:subject>Jølster</dct:subject>
          <foaf:maker>Nikolai Astrup</foaf:maker>
+         <dct:subject>Jølster</dct:subject>
+         <ubbont:collectionTitle>Astrup-samlingen</ubbont:collectionTitle>
          <dct:subject>Maling</dct:subject>
          <dct:identifier>ubb-ms-1201-29-1</dct:identifier>
          <dct:isPartOf>ubb-ms-1201-29</dct:isPartOf>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>Vestlandet</dct:subject>
          <dct:created>1917</dct:created>
          <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
          <rdfs:label>[Brev fra Nikolai Johannes Astrup til Haakon Shetelig, 1917]</rdfs:label>
+         <ubbont:invertedName>Astrup, Nikolai</ubbont:invertedName>
+         <ubbont:invertedName>Astrup, Nikolai Johannes</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1201/ubb-ms-1201-29/ubb-ms-1201-29-1/jpg/ubb-ms-1201-29-1_p001_th.jpg</ubbont:hasThumbnail>
          <rdf:type>Brev</rdf:type>
+         <dct:subject>Kunst</dct:subject>
          <dct:subject>Norge</dct:subject>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/letter/ubb-ms-1006-a">
+         <ubbont:collectionTitle>Astrup-samlingen</ubbont:collectionTitle>
          <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
          <foaf:maker>Nikolai Astrup</foaf:maker>
          <rdfs:label>[Brev fra Nikolai Johannes Astrup til Olav Georg Martinius Rusti, 1909]</rdfs:label>
@@ -72,7 +82,10 @@
          <dct:subject>Maling</dct:subject>
          <rdf:type>Brev</rdf:type>
          <dct:subject>Norge</dct:subject>
+         <ubbont:invertedName>Astrup, Nikolai Johannes</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1006/ubb-ms-1006-a/jpg/ubb-ms-1006-a_p001_th.jpg</ubbont:hasThumbnail>
+         <ubbont:invertedName>Astrup, Nikolai</ubbont:invertedName>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:isPartOf>ubb-ms-1006</dct:isPartOf>
          <dct:subject>Kunst</dct:subject>
       </rdf:Description>
@@ -87,6 +100,7 @@
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/book/ubb-adr-bergen-1902">
+         <ubbont:collectionTitle>Bergensiana</ubbont:collectionTitle>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-adr/ubb-adr-bergen/ubb-adr-bergen-1902/jpg/ubb-adr-bergen-1902_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:spatial>Bergen</dct:spatial>
          <rdfs:label>Griegs Adressekalender for Bergen 1902</rdfs:label>
@@ -94,6 +108,7 @@
          <rdf:type>Bok</rdf:type>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/book/ubb-adr-bergen-1903">
+         <ubbont:collectionTitle>Bergensiana</ubbont:collectionTitle>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-adr/ubb-adr-bergen/ubb-adr-bergen-1903/jpg/ubb-adr-bergen-1903_p0001_th.jpg</ubbont:hasThumbnail>
          <rdfs:label>Griegs Adressebog for Bergen 1903</rdfs:label>
          <dct:identifier>ubb-adr-bergen-1903</dct:identifier>
@@ -112,12 +127,15 @@
       <rdf:Description rdf:about="http://marcus.uib.no/instance/bookofminutes/ubb-ms-0167-01-01">
          <rdf:type>Forhandlingsprotokoll</rdf:type>
          <dct:subject>1600-tallet</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:identifier>ubb-ms-0167-01-01</dct:identifier>
          <foaf:maker>Bakerlauget</foaf:maker>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-01/ubb-ms-0167-01-01/jpg/ubb-ms-0167-01-01_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Bakerlauget</dct:subject>
          <dct:subject>Bergens bakerlaug</dct:subject>
          <dct:subject>1700-tallet</dct:subject>
+         <ubbont:invertedName>Bakerlauget</ubbont:invertedName>
+         <ubbont:collectionTitle>De bergenske Laugsarkiver</ubbont:collectionTitle>
          <dct:subject>Laug</dct:subject>
          <rdfs:label>Bakerlaugets Forhandlingsprotokol 1683-1724 og Kopibok 1703-1767</rdfs:label>
          <dct:subject>Laugsvesen</dct:subject>
@@ -126,6 +144,7 @@
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/bookofminutes/ubb-ms-0167-01-02-a">
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-01/ubb-ms-0167-01-02/ubb-ms-0167-01-02-a/jpg/ubb-ms-0167-01-02-a_p0001_th.jpg</ubbont:hasThumbnail>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>1700-tallet</dct:subject>
          <dct:identifier>ubb-ms-0167-01-02-a</dct:identifier>
          <dct:subject>Laugsvesen</dct:subject>
@@ -133,10 +152,12 @@
          <dct:subject>Bergen</dct:subject>
          <rdfs:label>Bakerlaugets Forhandlingsprotokol 1725-1749 og Kopibok 1814-1834</rdfs:label>
          <dct:subject>1800-tallet</dct:subject>
+         <ubbont:collectionTitle>De bergenske Laugsarkiver</ubbont:collectionTitle>
          <rdf:type>Forhandlingsprotokoll</rdf:type>
          <dct:subject>Bakerlauget</dct:subject>
          <dct:description>Pergamentsbind</dct:description>
          <dct:subject>Bergens bakerlaug</dct:subject>
+         <ubbont:invertedName>Bakerlauget</ubbont:invertedName>
          <foaf:maker>Bakerlauget</foaf:maker>
       </rdf:Description>
    </rdf:RDF>
@@ -150,7 +171,9 @@
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/cashbook/ubb-ms-0664-02">
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>Harmonien</dct:subject>
+         <ubbont:collectionTitle>Harmonien-samlingen</ubbont:collectionTitle>
          <dct:spatial>Bergen</dct:spatial>
          <dct:created>1845</dct:created>
          <rdfs:label>Kassabok for  Selskab i Bergen (Harmonien) 1845.</rdfs:label>
@@ -187,6 +210,7 @@
          <dct:spatial xml:lang="no">Åland</dct:spatial>
          <dct:created>1570</dct:created>
          <rdf:type>Diplom</rdf:type>
+         <ubbont:collectionTitle>Diplomsamlingen</ubbont:collectionTitle>
          <dct:subject xml:lang="no">Kunngjøring</dct:subject>
          <dct:relation>Olaf Håkonsson på Fitje</dct:relation>
          <dct:description xml:lang="no">Olaf Håkonsson på Fitje i Gloppen kunngjør at han har solgt til Jetmund Simonsson 4 månedsmatbol i Åland i Utvik og mottatt betalingen.</dct:description>
@@ -204,11 +228,12 @@
          <rdf:type>Diplom</rdf:type>
          <dct:subject xml:lang="no">Salg ; (gård)</dct:subject>
          <rdfs:label>1570 Sogn og Fjordane, Innvik, Åland skjøte</rdfs:label>
+         <ubbont:collectionTitle>Diplomsamlingen</ubbont:collectionTitle>
          <dct:subject xml:lang="no">Skjøte ;</dct:subject>
          <dct:created>1570</dct:created>
          <dct:spatial xml:lang="no">Åland</dct:spatial>
-         <dct:identifier xml:lang="no">sab-1570</dct:identifier>
          <dct:subject xml:lang="no">Gård</dct:subject>
+         <dct:identifier xml:lang="no">sab-1570</dct:identifier>
          <dct:subject xml:lang="no">Eiendomshandel</dct:subject>
          <dct:subject xml:lang="no">Skjøte</dct:subject>
          <dct:isPartOf>Diplomsamlingen</dct:isPartOf>
@@ -228,27 +253,33 @@
       <rdf:Description rdf:about="http://marcus.uib.no/instance/contract/ubb-ms-0167-09-103-b-01">
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-01/jpg/ubb-ms-0167-09-103-b-01_p0001_th.jpg</ubbont:hasThumbnail>
          <foaf:maker>Repslagerlauget i Bergen</foaf:maker>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:relation>August Mohr</dct:relation>
          <rdf:type>Kontrakt</rdf:type>
          <dct:subject>Repslager</dct:subject>
          <rdfs:label>Repslagerlauget, Lære-Contract, 1866</rdfs:label>
          <dct:created>1866-05-19</dct:created>
+         <ubbont:invertedName>Repslagerlauget i Bergen</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-01/jpg/ubb-ms-0167-09-103-b-01_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:identifier>ubb-ms-0167-09-103-b-01</dct:identifier>
          <dct:relation>Knud Jensen</dct:relation>
+         <ubbont:collectionTitle>De bergenske Laugsarkiver</ubbont:collectionTitle>
          <dct:spatial>Møhlenpris</dct:spatial>
          <dct:subject>Laugsarkivet</dct:subject>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/contract/ubb-ms-0167-09-103-b-02">
          <dct:subject>Repslager</dct:subject>
+         <ubbont:invertedName>Repslagerlauget i Bergen</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-02/jpg/ubb-ms-0167-09-103-b-02_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:identifier>ubb-ms-0167-09-103-b-02</dct:identifier>
          <rdfs:label>Repslagerlauget, Lære-Contract, 1865</rdfs:label>
          <dct:subject>Bergenske laugs-arkiver</dct:subject>
          <dct:subject>Laug</dct:subject>
          <rdf:type>Kontrakt</rdf:type>
+         <ubbont:collectionTitle>De bergenske Laugsarkiver</ubbont:collectionTitle>
          <dct:created>1865-11-11</dct:created>
          <foaf:maker>Repslagerlauget i Bergen</foaf:maker>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:spatial>Sandviken</dct:spatial>
       </rdf:Description>
    </rdf:RDF>
@@ -273,10 +304,12 @@
          <dct:subject>Sørøvertogt</dct:subject>
          <foaf:maker>William Davidson</foaf:maker>
          <dct:identifier>ubb-ms-0008</dct:identifier>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>Tyrkia</dct:subject>
          <dct:subject>Krigshistorie</dct:subject>
          <dct:subject>Avskriftssamling fra 16- og 17-tallet</dct:subject>
          <dct:subject>1700-tallet</dct:subject>
+         <ubbont:invertedName>Davidson, William</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0008/jpg/ubb-ms-0008_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Sjørøveri</dct:subject>
          <dct:subject>Dagboksoptegnelser</dct:subject>
@@ -298,6 +331,8 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/document/ubb-ms-utst-0016-c">
+         <ubbont:collectionTitle>«Hvalfart» til Bergens Museum 1865</ubbont:collectionTitle>
+         <ubbont:invertedName>Lincoln, Abraham</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-utst/ubb-ms-utst-0016/ubb-ms-utst-0016-c/jpg/ubb-ms-utst-0016-c_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:created>1865-02-12</dct:created>
          <foaf:maker>Abraham Lincoln</foaf:maker>
@@ -310,15 +345,19 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <foaf:maker>Nikolai Astrup</foaf:maker>
          <rdfs:label/>
          <dct:subject>Vestlandet</dct:subject>
+         <ubbont:invertedName>Astrup, Nikolai Johannes</ubbont:invertedName>
          <dct:identifier>ubb-ms-0972-i-27-b-1-2</dct:identifier>
+         <ubbont:collectionTitle>Astrup-samlingen</ubbont:collectionTitle>
          <dct:subject>Norge</dct:subject>
          <dct:subject>Maling</dct:subject>
          <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
          <dct:isPartOf>ubb-ms-0972-i-27-b-1</dct:isPartOf>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0972/ubb-ms-0972-i/ubb-ms-0972-i-27/ubb-ms-0972-i-27-b/ubb-ms-0972-i-27-b-1/ubb-ms-0972-i-27-b-1-2/jpg/ubb-ms-0972-i-27-b-1-2_p001_th.jpg</ubbont:hasThumbnail>
+         <ubbont:invertedName>Astrup, Nikolai</ubbont:invertedName>
          <rdf:type>Dokument</rdf:type>
          <dct:subject>Jølster</dct:subject>
          <dct:subject>Kunst</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
       </rdf:Description>
    </rdf:RDF>
    <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
@@ -331,6 +370,8 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/drawing/ubb-ras-ib-038">
+         <ubbont:collectionTitle>Fotografiske samlinger</ubbont:collectionTitle>
+         <ubbont:invertedName>Ukjent</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ras/ubb-ras-ib/ubb-ras-ib-038/jpg/ubb-ras-ib-038_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Tegning</dct:subject>
          <foaf:maker>Ukjent</foaf:maker>
@@ -345,9 +386,11 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <rdfs:label>Antegnelser - væsentlig Antikvariske 2</rdfs:label>
          <dct:description>Tegning</dct:description>
          <dct:subject>Vitenskapshistorie</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <rdf:type>Tegning</rdf:type>
          <dct:subject>Bergen</dct:subject>
          <dct:identifier>ubb-ms-0199-a-02</dct:identifier>
+         <ubbont:invertedName>Neumann, Jacob</ubbont:invertedName>
          <dct:subject>Historie</dct:subject>
          <dct:subject>Historisk-antikvariske notater</dct:subject>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0199/ubb-ms-0199-a/ubb-ms-0199-a-02/jpg/ubb-ms-0199-a-02_p0001_th.jpg</ubbont:hasThumbnail>
@@ -364,15 +407,19 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/fragment/ubb-ms-1808-k-1-3">
+         <ubbont:collectionTitle>Astrup-samlingen</ubbont:collectionTitle>
          <dct:isPartOf>ubb-ms-1808-k-1</dct:isPartOf>
          <dct:subject>Jølster</dct:subject>
          <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
          <dct:created>1926</dct:created>
+         <ubbont:invertedName>Astrup, Nikolai Johannes</ubbont:invertedName>
          <dct:subject>Vestlandet</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>Norge</dct:subject>
          <dct:identifier>ubb-ms-1808-k-1-3</dct:identifier>
          <rdfs:label/>
          <dct:subject>Kunst</dct:subject>
+         <ubbont:invertedName>Astrup, Nikolai</ubbont:invertedName>
          <dct:subject>Maling</dct:subject>
          <rdf:type>Fragment</rdf:type>
          <foaf:maker>Nikolai Astrup</foaf:maker>
@@ -389,6 +436,8 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/graphicart/ubb-ms-utst-0016-d">
+         <ubbont:collectionTitle>«Hvalfart» til Bergens Museum 1865</ubbont:collectionTitle>
+         <ubbont:invertedName>Buttre, John Chester</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-utst/ubb-ms-utst-0016/ubb-ms-utst-0016-d/jpg/ubb-ms-utst-0016-d_th.jpg</ubbont:hasThumbnail>
          <foaf:maker>John Chester Buttre</foaf:maker>
          <dct:description>Gravering laget av J. C. Buttre etter et fotografi av den kjente amerikanske fotografen Mathew Brady. (Reminiscences of Abraham Lincoln : by distinguised men of his time, Rice, Allen Thorndike, 1886) </dct:description>
@@ -396,13 +445,19 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <dct:identifier>ubb-ms-utst-0016-d</dct:identifier>
          <rdf:type>Grafikk</rdf:type>
       </rdf:Description>
-      <rdf:Description rdf:about="http://marcus.uib.no/instance/graphicart/ubb-bs-fol-01460-000">
-         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01460/ubb-bs-fol-01460-000/jpg/ubb-bs-fol-01460-000_th.jpg</ubbont:hasThumbnail>
-         <dct:subject>Lepra</dct:subject>
-         <dct:description>Omslag til plansjene. Illustrasjoner til Daniel Cornelius Danielssen og Carl Wilhelm Boecks monografi "Om Spedalskhed" utgitt i 1847</dct:description>
-         <rdfs:label>Atlas colorie de spedalskhed.</rdfs:label>
-         <dct:identifier>ubb-bs-fol-01460-000</dct:identifier>
+      <rdf:Description rdf:about="http://marcus.uib.no/instance/graphicart/ubb-bs-ok-19854">
+         <dct:subject>Lue</dct:subject>
+         <ubbont:collectionTitle>Fotografiske samlinger</ubbont:collectionTitle>
+         <foaf:maker>Ukjent</foaf:maker>
          <rdf:type>Grafikk</rdf:type>
+         <dct:identifier>ubb-bs-ok-19854</dct:identifier>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-ok/ubb-bs-ok-19854/jpg/ubb-bs-ok-19854_th.jpg</ubbont:hasThumbnail>
+         <rdfs:label>Et Spille-parti.</rdfs:label>
+         <ubbont:invertedName>Ukjent</ubbont:invertedName>
+         <dct:subject>Xylografi</dct:subject>
+         <dct:subject>Mann</dct:subject>
+         <dct:description>Etter fotografi av. Fra Illustreret Nyhedsblad side 176, årgang 1863</dct:description>
+         <dct:subject>Kortspill</dct:subject>
       </rdf:Description>
    </rdf:RDF>
    <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
@@ -428,6 +483,8 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <rdf:type>Reisedagbok</rdf:type>
          <dct:created>1823</dct:created>
          <dct:isPartOf>ubb-ms-0227</dct:isPartOf>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
+         <ubbont:invertedName>Christie, Wilhelm Frimann Koren</ubbont:invertedName>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/journeylog/ubb-ms-0227-b">
          <dct:spatial>Nordfjord</dct:spatial>
@@ -439,6 +496,7 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <rdf:type>Reisedagbok</rdf:type>
          <dct:subject>Kulturhistorie</dct:subject>
          <rdfs:label>Dagbog paa Reise til Søndfjord, Sogn og Nordfjord Sommeren 1846</rdfs:label>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:spatial>Sogn</dct:spatial>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0227/ubb-ms-0227-b/jpg/ubb-ms-0227-b_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Reiseskildring</dct:subject>
@@ -447,6 +505,7 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <dct:subject>1800-tallet</dct:subject>
          <dct:description>Avskrift av W. M. Schjelderup. Originalen tilhører dr. Christie, Kristiania.</dct:description>
          <dct:spatial>Sunnfjord</dct:spatial>
+         <ubbont:invertedName>Christie, Wilhelm Frimann Koren</ubbont:invertedName>
          <dct:isPartOf>ubb-ms-0227</dct:isPartOf>
       </rdf:Description>
    </rdf:RDF>
@@ -465,6 +524,7 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <dct:subject>Eiendomshistorie</dct:subject>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-3/jpg/ubb-ms-0994-3_p001_th.jpg</ubbont:hasThumbnail>
          <dct:spatial>Vetrlidsalmenning</dct:spatial>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <rdfs:label>Oppmåling av tomten, dat. 3.12. 1818.</rdfs:label>
          <dct:subject>Historie</dct:subject>
          <dct:spatial>Bergen</dct:spatial>
@@ -494,23 +554,29 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <dct:description>Opmaalt og lithografert af Det Private Kontor for Opmaalings og Kartarbeider i Kristiania 1883</dct:description>
          <rdf:type>Kart</rdf:type>
          <dct:spatial>Bergen</dct:spatial>
+         <ubbont:collectionTitle>Kart over Bergen i maalestok 1:5000 af sand störrelse</ubbont:collectionTitle>
          <dct:spatial>Store Lungegårdsvann</dct:spatial>
          <foaf:maker>Det Private Kontor for Opmaalings og Kartarbeider</foaf:maker>
          <dct:subject>Litografi</dct:subject>
+         <ubbont:invertedName>Det Private Kontor for Opmaalings og Kartarbeider</ubbont:invertedName>
          <dct:identifier>ubb-bs-fol-01808-002</dct:identifier>
-         <rdfs:label>Kart over Bergen i maalestok 1:5000 af sand störrelse</rdfs:label>
+         <ubbont:collectionTitle>Bergensiana</ubbont:collectionTitle>
          <dct:subject>Kart</dct:subject>
+         <rdfs:label>Kart over Bergen i maalestok 1:5000 af sand störrelse</rdfs:label>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/map/ubb-bs-fol-01808-001">
-         <dct:subject>Kart</dct:subject>
-         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01808/ubb-bs-fol-01808-001/jpg/ubb-bs-fol-01808-001_th.jpg</ubbont:hasThumbnail>
-         <dct:subject>Litografi</dct:subject>
+         <rdf:type>Kart</rdf:type>
          <dct:spatial>Bergen</dct:spatial>
+         <dct:identifier>ubb-bs-fol-01808-001</dct:identifier>
+         <ubbont:collectionTitle>Bergensiana</ubbont:collectionTitle>
+         <dct:subject>Litografi</dct:subject>
+         <rdfs:label>Kart over Bergen i maalestok 1:5000 af sand störrelse</rdfs:label>
+         <ubbont:invertedName>Det Private Kontor for Opmaalings og Kartarbeider</ubbont:invertedName>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01808/ubb-bs-fol-01808-001/jpg/ubb-bs-fol-01808-001_th.jpg</ubbont:hasThumbnail>
+         <ubbont:collectionTitle>Kart over Bergen i maalestok 1:5000 af sand störrelse</ubbont:collectionTitle>
+         <dct:subject>Kart</dct:subject>
          <foaf:maker>Det Private Kontor for Opmaalings og Kartarbeider</foaf:maker>
          <dct:description>Opmaalt og lithografert af Det Private Kontor for Opmaalings og Kartarbeider i Kristiania 1883</dct:description>
-         <rdfs:label>Kart over Bergen i maalestok 1:5000 af sand störrelse</rdfs:label>
-         <dct:identifier>ubb-bs-fol-01808-001</dct:identifier>
-         <rdf:type>Kart</rdf:type>
       </rdf:Description>
    </rdf:RDF>
    <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
@@ -525,6 +591,7 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/note/ubb-ms-0972-i-27-a">
          <dct:subject>Kunst</dct:subject>
          <dct:subject>Vestlandet</dct:subject>
+         <ubbont:invertedName>Astrup, Nikolai</ubbont:invertedName>
          <dct:isPartOf>ubb-ms-0972-i-27</dct:isPartOf>
          <rdfs:label>[Notat av Nikolai Johannes Astrup]</rdfs:label>
          <rdf:type>Notat</rdf:type>
@@ -534,6 +601,9 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <foaf:maker>Nikolai Astrup</foaf:maker>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0972/ubb-ms-0972-i/ubb-ms-0972-i-27/ubb-ms-0972-i-27-a/jpg/ubb-ms-0972-i-27-a_p1588_th.jpg</ubbont:hasThumbnail>
          <dct:isPartOf>Astrup-samlingen</dct:isPartOf>
+         <ubbont:invertedName>Astrup, Nikolai Johannes</ubbont:invertedName>
+         <ubbont:collectionTitle>Astrup-samlingen</ubbont:collectionTitle>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>Jølster</dct:subject>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/note/ubb-ms-0198-b-03">
@@ -542,6 +612,7 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <dct:identifier>ubb-ms-0198-b-03</dct:identifier>
          <dct:subject>1800-tallet</dct:subject>
          <dct:subject>Museumshistorie</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>Bergen</dct:subject>
          <dct:description>Oversikt over mynter</dct:description>
          <rdf:type>Notat</rdf:type>
@@ -559,11 +630,13 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/photograph/ubb-bs-ok-19374">
+         <ubbont:collectionTitle>[Strandgaten, Sandnes]</ubbont:collectionTitle>
          <dct:subject>Jente</dct:subject>
          <dct:spatial>Sandnes</dct:spatial>
          <foaf:maker>Ukjent</foaf:maker>
          <rdfs:label>[Strandgaten, Sandnes]</rdfs:label>
          <rdf:type>Fotografi</rdf:type>
+         <ubbont:invertedName>Ukjent</ubbont:invertedName>
          <dct:subject>Trapp</dct:subject>
          <dct:description>Huset ble senere påbygd en ekstra etasje og hoveddøren flyttet.</dct:description>
          <dct:subject>Bolighus</dct:subject>
@@ -572,17 +645,20 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-ok/ubb-bs-ok-19374/jpg/ubb-bs-ok-19374_th.jpg</ubbont:hasThumbnail>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/photograph/ubb-bs-fol-01797-015-a">
-         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01797/ubb-bs-fol-01797-015/ubb-bs-fol-01797-015-a/jpg/ubb-bs-fol-01797-015-a_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Trebygning</dct:subject>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01797/ubb-bs-fol-01797-015/ubb-bs-fol-01797-015-a/jpg/ubb-bs-fol-01797-015-a_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Kjole</dct:subject>
          <dct:spatial>Dombås</dct:spatial>
+         <ubbont:invertedName>Monssen, Astrid</ubbont:invertedName>
          <rdf:type>Fotografi</rdf:type>
-         <dct:identifier>ubb-bs-fol-01797-015-a</dct:identifier>
+         <ubbont:collectionTitle>Familiealbum Monssen 1922-30</ubbont:collectionTitle>
          <dct:subject>Gjerde</dct:subject>
          <rdfs:label>Dombaas 1923.</rdfs:label>
+         <dct:identifier>ubb-bs-fol-01797-015-a</dct:identifier>
          <foaf:maker>Astrid Monssen</foaf:maker>
          <dct:subject>Kvinne</dct:subject>
          <dct:subject>Hoteller</dct:subject>
+         <ubbont:collectionTitle>Fotografiske samlinger</ubbont:collectionTitle>
          <dct:spatial>Dombås Turisthotell</dct:spatial>
       </rdf:Description>
    </rdf:RDF>
@@ -599,6 +675,8 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <dct:spatial>Nygårdsgaten</dct:spatial>
          <rdfs:label>Nygaardsgaden. Bergen</rdfs:label>
          <rdf:type>Postkort</rdf:type>
+         <ubbont:invertedName>Ukjent</ubbont:invertedName>
+         <ubbont:collectionTitle>Fotografiske samlinger</ubbont:collectionTitle>
          <dct:identifier>ubb-bs-pkb-00167</dct:identifier>
          <foaf:maker>Ukjent</foaf:maker>
          <dct:subject>Apotek</dct:subject>
@@ -615,6 +693,8 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-pkb/ubb-bs-pkb-00161/jpg/ubb-bs-pkb-00161_th.jpg</ubbont:hasThumbnail>
          <dct:subject>By- og småsteder</dct:subject>
          <rdf:type>Postkort</rdf:type>
+         <ubbont:collectionTitle>Fotografiske samlinger</ubbont:collectionTitle>
+         <ubbont:invertedName>Ukjent</ubbont:invertedName>
          <foaf:maker>Ukjent</foaf:maker>
          <dct:spatial>Torgallmenningen</dct:spatial>
          <dct:subject>Postkort</dct:subject>
@@ -633,24 +713,28 @@ indskutte rene blader, der er fabrikert 1824</dct:description>
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/poster/ubb-uib-ela-002">
-         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-002/jpg/ubb-uib-ela-002_th.jpg</ubbont:hasThumbnail>
          <dct:subject>E-poetry</dct:subject>
          <dct:spatial>University Paris 8</dct:spatial>
-         <foaf:maker>Luc Dall'Armellina</foaf:maker>
          <dct:description xml:lang="en"/>
-         <rdfs:label xml:lang="en">E-poetry (2007)</rdfs:label>
          <dct:identifier>ubb-uib-ela-002</dct:identifier>
+         <ubbont:collectionTitle>Electronic Literature - posters</ubbont:collectionTitle>
+         <ubbont:invertedName>Dall'Armellina, Luc</ubbont:invertedName>
+         <rdfs:label xml:lang="en">E-poetry (2007)</rdfs:label>
          <rdf:type>Plakat</rdf:type>
+         <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-002/jpg/ubb-uib-ela-002_th.jpg</ubbont:hasThumbnail>
+         <foaf:maker>Luc Dall'Armellina</foaf:maker>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/poster/ubb-uib-ela-003">
          <ubbont:hasThumbnail>https://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-003/jpg/ubb-uib-ela-003_th.jpg</ubbont:hasThumbnail>
-         <dct:subject>Electronic Literature Collection</dct:subject>
-         <dct:spatial>Bergen offentlige Bibliotek</dct:spatial>
-         <foaf:maker>Christina Malitius </foaf:maker>
-         <dct:description/>
+         <rdf:type>Plakat</rdf:type>
          <rdfs:label xml:lang="en">Electronic Literature Collection. Volume 2 : Launch at the Bergen Public Library</rdfs:label>
          <dct:identifier>ubb-uib-ela-003</dct:identifier>
-         <rdf:type>Plakat</rdf:type>
+         <foaf:maker>Christina Malitius </foaf:maker>
+         <dct:description/>
+         <dct:spatial>Bergen offentlige Bibliotek</dct:spatial>
+         <ubbont:invertedName>Malitius , Christina </ubbont:invertedName>
+         <ubbont:collectionTitle>Electronic Literature - posters</ubbont:collectionTitle>
+         <dct:subject>Electronic Literature Collection</dct:subject>
       </rdf:Description>
    </rdf:RDF>
    <rdf:RDF xmlns:dct="http://purl.org/dc/terms/"
@@ -681,6 +765,7 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <dct:subject>Musikk</dct:subject>
          <dct:subject>Bønnebøker (gamle)</dct:subject>
          <dct:subject>Bønn</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <rdf:type>Bønnebok</rdf:type>
          <dct:subject>Fransk</dct:subject>
          <dct:spatial>Frankrike</dct:spatial>
@@ -714,9 +799,11 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <dct:subject>Harmonien</dct:subject>
          <dct:subject>Musikkhistorie</dct:subject>
          <dct:identifier>ubb-ms-0527-a</dct:identifier>
+         <ubbont:collectionTitle>Harmonien-samlingen</ubbont:collectionTitle>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0527/ubb-ms-0527-a/jpg/ubb-ms-0527-a_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:spatial>Skien</dct:spatial>
          <dct:subject>Kulturliv</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>1800-tallet</dct:subject>
          <dct:subject>Kulturhistorie</dct:subject>
          <dct:isPartOf>ubb-ms-0527</dct:isPartOf>
@@ -727,9 +814,10 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <dct:subject>Kulturliv</dct:subject>
          <rdf:type>Protokoll</rdf:type>
          <dct:description>Gave fra kjøbmand Vilhelm Behrens i 1920</dct:description>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <rdfs:label>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</rdfs:label>
-         <dct:identifier>ubb-ms-0664-01</dct:identifier>
          <dct:subject>Musikkhistorie</dct:subject>
+         <dct:identifier>ubb-ms-0664-01</dct:identifier>
          <dct:spatial>Bergen</dct:spatial>
          <dct:subject>1800-tallet</dct:subject>
          <dct:subject>Bergen Filharmoniske Orkester</dct:subject>
@@ -737,6 +825,7 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0664/ubb-ms-0664-01/jpg/ubb-ms-0664-01_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Musikk</dct:subject>
          <dct:subject>Det Harmoniske Selskab</dct:subject>
+         <ubbont:collectionTitle>Harmonien-samlingen</ubbont:collectionTitle>
          <dct:subject>Kulturhistorie</dct:subject>
          <dct:isPartOf>ubb-ms-0664</dct:isPartOf>
          <dct:subject>Bergen</dct:subject>
@@ -753,6 +842,7 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/receipt/ubb-ms-1808-e-16">
          <rdf:type>Kvittering</rdf:type>
+         <ubbont:invertedName>Astrup, Nikolai Johannes</ubbont:invertedName>
          <dct:isPartOf>ubb-ms-1808-e</dct:isPartOf>
          <rdfs:label/>
          <foaf:maker>Nikolai Astrup</foaf:maker>
@@ -763,6 +853,9 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <dct:created>1920-05-25</dct:created>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1808/ubb-ms-1808-e/ubb-ms-1808-e-16/jpg/ubb-ms-1808-e-16_p001_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Maling</dct:subject>
+         <ubbont:collectionTitle>Astrup-samlingen</ubbont:collectionTitle>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
+         <ubbont:invertedName>Astrup, Nikolai</ubbont:invertedName>
          <dct:subject>Kunst</dct:subject>
          <dct:subject>Vestlandet</dct:subject>
       </rdf:Description>
@@ -770,6 +863,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <dct:identifier>ubb-ms-0198-a-010</dct:identifier>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0198/ubb-ms-0198-a/ubb-ms-0198-a-010/jpg/ubb-ms-0198-a-010_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:subject>Historie</dct:subject>
+         <ubbont:invertedName>Worsøe, Wilhelm</ubbont:invertedName>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>1800-tallet</dct:subject>
          <dct:isPartOf>ubb-ms-0198-a</dct:isPartOf>
          <foaf:maker>Wilhelm Worsøe</foaf:maker>
@@ -789,6 +884,7 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/saledeed/ubb-ms-0994-2">
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:isPartOf>ubb-ms-0994</dct:isPartOf>
          <dct:spatial>Hollendergaten</dct:spatial>
          <dct:subject>Eiendomshandel</dct:subject>
@@ -821,6 +917,7 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <dct:subject>Eiendomshandel</dct:subject>
          <dct:isPartOf>ubb-ms-0994</dct:isPartOf>
          <rdfs:label>Johann von Gulich selger eiendommen til Christen Hansen Maartmann. Skjøte dat. 1724.</rdfs:label>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>1700-tallet</dct:subject>
          <dct:subject>Eiendomshistorie</dct:subject>
       </rdf:Description>
@@ -836,11 +933,13 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/speech/ubb-ms-0811-a-05-a">
          <dct:subject>1800-tallet</dct:subject>
-         <rdf:type>Tale</rdf:type>
          <dct:subject>Quodlibet</dct:subject>
+         <rdf:type>Tale</rdf:type>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:isPartOf>ubb-ms-0811-a-05</dct:isPartOf>
          <rdfs:label>Stiftsamtmann W. F. K. Christies taler i klubbmøtene i tiden 1813 – 30/4 1827 [Daterte] - 01</rdfs:label>
          <foaf:maker>Wilhelm Frimann Koren Christie</foaf:maker>
+         <ubbont:invertedName>Christie, Wilhelm Frimann Koren</ubbont:invertedName>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-05/ubb-ms-0811-a-05-a/jpg/ubb-ms-0811-a-05-a_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:identifier>ubb-ms-0811-a-05-a</dct:identifier>
          <dct:subject>Tale</dct:subject>
@@ -849,12 +948,14 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
       <rdf:Description rdf:about="http://marcus.uib.no/instance/speech/ubb-ms-0811-a-05-b">
          <dct:subject>Tale</dct:subject>
          <foaf:maker>Wilhelm Frimann Koren Christie</foaf:maker>
+         <ubbont:invertedName>Christie, Wilhelm Frimann Koren</ubbont:invertedName>
          <dct:subject>1800-tallet</dct:subject>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-05/ubb-ms-0811-a-05-b/jpg/ubb-ms-0811-a-05-b_p0001_th.jpg</ubbont:hasThumbnail>
          <rdf:type>Tale</rdf:type>
          <dct:created>1819-01-21</dct:created>
          <rdfs:label>Stiftsamtmann W. F. K. Christies taler i klubbmøtene i tiden 1813 – 30/4 1827 [Daterte] - 02</rdfs:label>
          <dct:identifier>ubb-ms-0811-a-05-b</dct:identifier>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:isPartOf>ubb-ms-0811-a-05</dct:isPartOf>
          <dct:subject>Quodlibet</dct:subject>
       </rdf:Description>
@@ -872,10 +973,12 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <dct:subject>Kulturhistorie</dct:subject>
          <dct:identifier>ubb-ms-0550-d-b-08</dct:identifier>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0550/ubb-ms-0550-d/ubb-ms-0550-d-b/ubb-ms-0550-d-b-08/jpg/ubb-ms-0550-d-b-08_th.jpg</ubbont:hasThumbnail>
+         <ubbont:invertedName>Ebering, Christel</ubbont:invertedName>
          <dct:subject>Harmonien</dct:subject>
          <rdfs:label>Arkivsaker vedk. Musikforeningen Harmonien 16</rdfs:label>
          <dct:subject>Bergen Filharmoniske Orkester</dct:subject>
          <dct:isPartOf>ubb-ms-0550-d-b</dct:isPartOf>
+         <ubbont:collectionTitle>Harmonien-samlingen</ubbont:collectionTitle>
          <dct:subject>Symfoniorkester</dct:subject>
          <dct:subject>Det Harmoniske Selskab</dct:subject>
          <rdf:type>Telegram</rdf:type>
@@ -884,15 +987,19 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
          <dct:subject>1900-tallet</dct:subject>
          <foaf:maker>Christel Ebering</foaf:maker>
          <dct:subject>Musikkhistorie</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/telegram/ubb-ms-0550-d-b-07">
          <dct:subject>1900-tallet</dct:subject>
+         <ubbont:collectionTitle>Harmonien-samlingen</ubbont:collectionTitle>
          <dct:subject>Harmonien</dct:subject>
          <dct:identifier>ubb-ms-0550-d-b-07</dct:identifier>
          <dct:created>1901-03-25</dct:created>
          <dct:subject>Bergen Filharmoniske Orkester</dct:subject>
+         <ubbont:invertedName>Ebering, Christel</ubbont:invertedName>
          <rdfs:label>Arkivsaker vedk. Musikforeningen Harmonien 15</rdfs:label>
          <foaf:maker>Christel Ebering</foaf:maker>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <dct:subject>Musikkhistorie</dct:subject>
          <dct:isPartOf>ubb-ms-0550-d-b</dct:isPartOf>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0550/ubb-ms-0550-d/ubb-ms-0550-d-b/ubb-ms-0550-d-b-07/jpg/ubb-ms-0550-d-b-07_th.jpg</ubbont:hasThumbnail>
@@ -913,18 +1020,21 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             xmlns:foaf="http://xmlns.com/foaf/0.1/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
       <rdf:Description rdf:about="http://marcus.uib.no/instance/transcription/ubb-ms-0186-b-2">
-         <dct:subject>Norge</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
+         <dct:subject>1600-tallet</dct:subject>
          <dct:subject>Litteraturhistorie</dct:subject>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0186/ubb-ms-0186-b/ubb-ms-0186-b-2/jpg/ubb-ms-0186-b-2_p0001_th.jpg</ubbont:hasThumbnail>
-         <dct:subject>1600-tallet</dct:subject>
+         <dct:subject>Norge</dct:subject>
          <foaf:maker>Dorothea Engelbrektsdatter</foaf:maker>
-         <dct:isPartOf>ubb-ms-0186-b</dct:isPartOf>
-         <rdfs:label>Digt fra Dorthe Engelbrechtsdatter Hardenbeck.</rdfs:label>
          <dct:identifier>ubb-ms-0186-b-2</dct:identifier>
+         <ubbont:invertedName>Engelbrektsdatter, Dorothea</ubbont:invertedName>
+         <dct:isPartOf>ubb-ms-0186-b</dct:isPartOf>
          <rdf:type>Transkripsjon</rdf:type>
+         <rdfs:label>Digt fra Dorthe Engelbrechtsdatter Hardenbeck.</rdfs:label>
       </rdf:Description>
       <rdf:Description rdf:about="http://marcus.uib.no/instance/transcription/ubb-ms-0811-a-04-2-1">
          <dct:subject>Quodlibet</dct:subject>
+         <ubbont:collectionTitle>Manuskriptsamlingen</ubbont:collectionTitle>
          <ubbont:hasThumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-04/ubb-ms-0811-a-04-2/ubb-ms-0811-a-04-2-1/jpg/ubb-ms-0811-a-04-2-1_p0001_th.jpg</ubbont:hasThumbnail>
          <dct:subject>1800-tallet</dct:subject>
          <dct:created>1822</dct:created>

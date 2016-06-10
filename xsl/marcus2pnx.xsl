@@ -10,9 +10,13 @@
     exclude-result-prefixes="ubbont xs flub foaf rdfs dct rdf"
     
     version="2.0">
+    
     <xsl:strip-space elements="*"/>
+    <!--parametre med uib default verdier-->
+    <xsl:param name="library" select="'1120109'"/>
     <xsl:param name="institution" select="'UBB'"/>
-    <xsl:param name="searchscope" select="'UBB_MARCUS'"/>
+    <!--?? opprette egen scope?-->
+    <xsl:param name="searchscope" select="'UBB_MARCUS'"/>    
     <xsl:param name="scope" select="'UBB_MARCUS'"/>
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     <xsl:include href="lib/pnx.xsl"/>
@@ -27,6 +31,7 @@
     </xsl:template>
     
     <xsl:template match="rdf:Description">
+        <!-- collectiontitle ubbont:collectionTitle-->
         <metadata>
             <xsl:variable name="sourceid" select="'UBB-MARCUS'"/>
             <!-- kanskje bruke nytt felt ubbont:uuid her? noen dubletter av dct:identifier.-->
@@ -34,6 +39,7 @@
             <xsl:variable name="source-repository" select="'Marcus'"/>
             <xsl:variable name="sourcerecordid" select="concat(rdf:type,'/',$identifier)"/>
             <xsl:variable name="recordid" select="concat($sourceid,'/',$sourcerecordid)"/>
+           <!-- create control section-->
             <xsl:call-template name="control">                
                 <xsl:with-param name="recordid" select="$recordid"/>
                 <xsl:with-param name="sourceformat" select="'PNX'"/>
@@ -41,12 +47,13 @@
                 <xsl:with-param name="sourcerecordid" select="$sourcerecordid"/>
                 <xsl:with-param name="sourcesystem" select="$source-repository"/>                                
             </xsl:call-template>
-            
-            <xsl:variable name="display_maker" select="string-join(foaf:maker,';')"/>
+            <!-- variables for display section-->
+            <xsl:variable name="display_maker" select="string-join(foaf:maker,'; ')"/>
             <xsl:variable name="creation_date" select="tokenize(dct:created,'-')[1]"/>
-            <xsl:variable name="display_subject" select="string-join(dct:subject,';')"/>
+            <xsl:variable name="display_subject" select="string-join(dct:subject,'; ')"/>
             <xsl:variable name="main_title" select="(rdfs:label[1],'[Uten Tittel]')[1]"/>
             
+            <!-- create display section-->
             <xsl:call-template name="display">                
                 <!-- ?? http://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide/Mapping_to_the_Normalized_Record/Adding_%24%249ONLINE_to_Library_Level_Availability#ww1157297-->
                 <xsl:with-param name="availlibrary" select="'$$9ONLINE'"/>
@@ -58,8 +65,10 @@
                 <!--@todo ta inn physdesc, dct:extent i spørring? og ta concat?
                 <xsl:with-param name="format"/>-->
                 <xsl:with-param name="identifier" select="$identifier"/>
-                <!--@todo bruke top collection her? se winterton http://search.library.northwestern.edu/primo_library/libweb/action/display.do?tabs=detailsTab&showPnx=true&ct=display&fn=search&doc=01NWU_WTON37&indx=4&recIds=01NWU_WTON37&recIdxs=3&elementId=&renderMode=poppedOut&displayMode=full&http://search.library.northwestern.edu:80/primo_library/libweb/action/expand.do?gathStatTab=true&dscnt=0&mode=Basic&vid=NULV&rfnGrp=1&tab=default_tab&dstmp=1465498593567&frbg=&rfnGrpCounter=1&frbrVersion=2&tb=t&fctV=images&srt=rank&fctN=facet_rtype&dum=true&vl(freeText0)=winterton&fromTabHeaderButtonPopout=true -->
+                <!--?? Flere top collections? bruke top collection her? se winterton http://search.library.northwestern.edu/primo_library/libweb/action/display.do?tabs=detailsTab&showPnx=true&ct=display&fn=search&doc=01NWU_WTON37&indx=4&recIds=01NWU_WTON37&recIdxs=3&elementId=&renderMode=poppedOut&displayMode=full&http://search.library.northwestern.edu:80/primo_library/libweb/action/expand.do?gathStatTab=true&dscnt=0&mode=Basic&vid=NULV&rfnGrp=1&tab=default_tab&dstmp=1465498593567&frbg=&rfnGrpCounter=1&frbrVersion=2&tb=t&fctV=images&srt=rank&fctN=facet_rtype&dum=true&vl(freeText0)=winterton&fromTabHeaderButtonPopout=true -->
                 <xsl:with-param name="ispartof" select="dct:isPartOf[1]"/>
+                <!--?? er dette riktig bruk av subfield for å få ut Universitetsbiblioteket i Bergen?--> 
+                <xsl:with-param name="publisher" select="flub:setSubfield('I','UBB')"/>
                 <!--@todo legg til publisher i sparql spørring, eller bruker global parameter i.e universitetsbiblioteket uib?-->
                 <!--@todo gjenbruke en global rights string i påvente av at det finnes internt i marcus?-->
                 <xsl:with-param name="source" select="$source-repository"/>
@@ -67,12 +76,16 @@
                 <xsl:with-param name="title" select="$main_title"/>
                 <xsl:with-param name="type" select="flub:getPrimoTypeFromRdfTypeLabel(rdf:type[1])"/>                               
             </xsl:call-template>
-           
+            
+            <!-- variables for facets-->
             <xsl:variable name="rsrctype" select="flub:getRsrcTypeFromRdfTypeLabel(rdf:type[1])"/>
            
+            <!-- create facets section-->
             <xsl:call-template name="facets">
-                <!--?? ta inn overordnet samling? i.e billedsamling, eller alle undersamlinger??
-                <xsl:with-param name="collection"/>-->
+                <!-- ta inn overordnet samling? i.e billedsamling, eller alle undersamlinger??
+                -->
+                <xsl:with-param name="collection" select="ubbont:collectionTitle"/>
+                <!--?? normaliser creationdate i etter regler i dokumentasjon?-->
                 <xsl:with-param name="creationdate" select="$creation_date"/>
                 <!--@todo tror dct:contributor er med i ontology, men ikke særlig i bruk, tar bare med skapere-->
                 <!-- Har satt inn to forsøk på inverted name (concat lastname,firstname, så property inverted name,
@@ -80,15 +93,14 @@
                 <xsl:with-param name="creatorcontrib" select="ubbont:invertedName"/>
                 <xsl:with-param name="rsrctype" select="$rsrctype"/>
                 <xsl:with-param name="prefilter" select="$rsrctype"/>
-                <xsl:with-param name="toplevel" select="('Online Resources','available')"/>
-                <!--todo library med ubbspes?-->
-                
-            </xsl:call-template>
-           
+                <xsl:with-param name="toplevel" select="('Online Resources','available')"/>                
+                <xsl:with-param name="topic" select="dct:subject,dct:spatial"/>
+                <xsl:with-param name="library" select="flub:setSubfield('L',$library)"/>
+            </xsl:call-template>          
            
             <xsl:call-template name="search">
                 <!-- @todo finne ut om vi har skos:altLabel også på dokument, eller flere titler enn en, lage sparql mapping addtitle,alttitle-->
-                <!--@todo? ta inn datorange og lage flere felt som xs:gYear*-->
+                <!--@todo? ta inn datorange og lage flere felt som xs:gYear*-->                
                 <xsl:with-param name="creationdate" select="$creation_date"/>
                 <xsl:with-param name="creatorcontrib" select="foaf:maker"/>
                 <xsl:with-param name="description" select="dct:description"/>
@@ -97,8 +109,9 @@
                 <xsl:with-param name="recordid" select="$recordid"/>
                 <xsl:with-param name="rsrctype" select="$rsrctype"/>
                 <xsl:with-param name="sourceid" select="$sourceid"/>
-                <xsl:with-param name="subject" select="dct:subject"/>
+                <xsl:with-param name="subject" select="dct:subject,dct:spatial"/>
                 <xsl:with-param name="title" select="$main_title"/>
+                <xsl:with-param name="addtitle" select="ubbont:collectionTitle"/>
                 <xsl:with-param name="scope" select="$scope"/>
                 <xsl:with-param name="searchscope" select="$searchscope"/>
             </xsl:call-template>
@@ -109,8 +122,8 @@
             </xsl:call-template>
             
             <xsl:call-template name="links">
-                <xsl:with-param name="thumbnail" select="flub:setSubfield('U',ubbont:hasThumbnail)"/>
-                <xsl:with-param name="linktorsrc" select="flub:subfieldSetDisplayAndUrl('lenke i marcus',@rdf:about)"/>
+                <xsl:with-param name="thumbnail" select="flub:setSubfield('U',ubbont:hasThumbnail[1])"/>
+                <xsl:with-param name="linktorsrc" select="flub:subfieldSetDisplayAndUrl('lenke til marcus',@rdf:about)"/>
             </xsl:call-template>
             
             <xsl:call-template name="sort">

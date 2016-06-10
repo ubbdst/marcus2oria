@@ -13,24 +13,37 @@
             <availlibrary>$$9ONLINE</availlibrary>
             <creator>Repslagerlauget i Bergen</creator>
             <identifier>ubb-ms-0167-09-103-a</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Laugsarkivet;Bergenske laugs-arkiver</subject>
+            <subject>Laugsarkivet; Bergenske laugs-arkiver</subject>
             <title>Repslagerlaugets privilegier 14.08.1753</title>
             <type>book</type>
-            <unititle>Repslagerlaugets privilegier 14.08.1753</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <collection>De bergenske Laugsarkiver</collection>
             <creatorcontrib>Repslagerlauget i Bergen</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Laugsarkivet</topic>
+            <topic>Bergenske laugs-arkiver</topic>
+            <topic>Bergen</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
+            <addtitle>De bergenske Laugsarkiver</addtitle>
             <creatorcontrib>Repslagerlauget i Bergen</creatorcontrib>
             <recordid>UBB-MARCUS/Manuskript/ubb-ms-0167-09-103-a</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Laugsarkivet</subject>
             <subject>Bergenske laugs-arkiver</subject>
+            <subject>Bergen</subject>
             <title>Repslagerlaugets privilegier 14.08.1753</title>
          </search>
          <delivery>
@@ -38,8 +51,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/manuscript/ubb-ms-0167-09-103-a</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-a/jpg/ubb-ms-0167-09-103-a_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/manuscript/ubb-ms-0167-09-103-a</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-a/jpg/ubb-ms-0167-09-103-a_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Repslagerlauget i Bergen</author>
@@ -59,22 +72,35 @@
             <description>Avskrift af Snorre Sturlassons Heimskringa</description>
             <identifier>ubb-ms-0199-a-08</identifier>
             <ispartof>ubb-ms-0199-a</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Bergen;Historisk-antikvariske notater;Historie;Vitenskapshistorie;Vitenskap;1800-tallet</subject>
+            <subject>Bergen; Historisk-antikvariske notater; Historie; Vitenskapshistorie; Vitenskap; 1800-tallet</subject>
             <title>Antegnelser - væsentlig Antikvariske 8</title>
             <type>book</type>
-            <unititle>Antegnelser - væsentlig Antikvariske 8</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creatorcontrib>Ukjent</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Bergen</topic>
+            <topic>Historisk-antikvariske notater</topic>
+            <topic>Historie</topic>
+            <topic>Vitenskapshistorie</topic>
+            <topic>Vitenskap</topic>
+            <topic>1800-tallet</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creatorcontrib>Ukjent</creatorcontrib>
             <description>Avskrift af Snorre Sturlassons Heimskringa</description>
             <recordid>UBB-MARCUS/Manuskript/ubb-ms-0199-a-08</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Bergen</subject>
             <subject>Historisk-antikvariske notater</subject>
@@ -89,8 +115,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/manuscript/ubb-ms-0199-a-08</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0199/ubb-ms-0199-a/ubb-ms-0199-a-08/jpg/ubb-ms-0199-a-08_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/manuscript/ubb-ms-0199-a-08</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0199/ubb-ms-0199-a/ubb-ms-0199-a-08/jpg/ubb-ms-0199-a-08_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Ukjent</author>
@@ -110,28 +136,43 @@
             <creator>Nikolai Astrup</creator>
             <identifier>ubb-ms-1201-29-1</identifier>
             <ispartof>ubb-ms-1201-29</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Kunst;Jølster;Maling;Vestlandet;Norge</subject>
+            <subject>Jølster; Maling; Vestlandet; Kunst; Norge</subject>
             <title>[Brev fra Nikolai Johannes Astrup til Haakon Shetelig, 1917]</title>
             <type>text_resource</type>
-            <unititle>[Brev fra Nikolai Johannes Astrup til Haakon Shetelig, 1917]</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Astrup-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1917</creationdate>
-            <creatorcontrib>Nikolai Astrup</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai Johannes</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Jølster</topic>
+            <topic>Maling</topic>
+            <topic>Vestlandet</topic>
+            <topic>Kunst</topic>
+            <topic>Norge</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Astrup-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1917</creationdate>
             <creatorcontrib>Nikolai Astrup</creatorcontrib>
             <recordid>UBB-MARCUS/Brev/ubb-ms-1201-29-1</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
-            <subject>Kunst</subject>
             <subject>Jølster</subject>
             <subject>Maling</subject>
             <subject>Vestlandet</subject>
+            <subject>Kunst</subject>
             <subject>Norge</subject>
             <title>[Brev fra Nikolai Johannes Astrup til Haakon Shetelig, 1917]</title>
          </search>
@@ -140,8 +181,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/letter/ubb-ms-1201-29-1</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1201/ubb-ms-1201-29/ubb-ms-1201-29-1/jpg/ubb-ms-1201-29-1_p001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/letter/ubb-ms-1201-29-1</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1201/ubb-ms-1201-29/ubb-ms-1201-29-1/jpg/ubb-ms-1201-29-1_p001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Nikolai Astrup</author>
@@ -162,23 +203,38 @@
             <creator>Nikolai Astrup</creator>
             <identifier>ubb-ms-1006-a</identifier>
             <ispartof>Astrup-samlingen</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Jølster;Vestlandet;Maling;Norge;Kunst</subject>
+            <subject>Jølster; Vestlandet; Maling; Norge; Kunst</subject>
             <title>[Brev fra Nikolai Johannes Astrup til Olav Georg Martinius Rusti, 1909]</title>
             <type>text_resource</type>
-            <unititle>[Brev fra Nikolai Johannes Astrup til Olav Georg Martinius Rusti, 1909]</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Astrup-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1909</creationdate>
-            <creatorcontrib>Nikolai Astrup</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai Johannes</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Jølster</topic>
+            <topic>Vestlandet</topic>
+            <topic>Maling</topic>
+            <topic>Norge</topic>
+            <topic>Kunst</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Astrup-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1909</creationdate>
             <creatorcontrib>Nikolai Astrup</creatorcontrib>
             <recordid>UBB-MARCUS/Brev/ubb-ms-1006-a</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Jølster</subject>
             <subject>Vestlandet</subject>
@@ -192,8 +248,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/letter/ubb-ms-1006-a</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1006/ubb-ms-1006-a/jpg/ubb-ms-1006-a_p001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/letter/ubb-ms-1006-a</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1006/ubb-ms-1006-a/jpg/ubb-ms-1006-a_p001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Nikolai Astrup</author>
@@ -211,19 +267,28 @@
          <display>
             <availlibrary>$$9ONLINE</availlibrary>
             <identifier>ubb-adr-bergen-1902</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
             <title>Griegs Adressekalender for Bergen 1902</title>
             <type>book</type>
-            <unititle>Griegs Adressekalender for Bergen 1902</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Bergensiana</collection>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Bergen</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Bergensiana</addtitle>
             <recordid>UBB-MARCUS/Bok/ubb-adr-bergen-1902</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
+            <subject>Bergen</subject>
             <title>Griegs Adressekalender for Bergen 1902</title>
          </search>
          <delivery>
@@ -231,8 +296,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/book/ubb-adr-bergen-1902</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-adr/ubb-adr-bergen/ubb-adr-bergen-1902/jpg/ubb-adr-bergen-1902_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/book/ubb-adr-bergen-1902</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-adr/ubb-adr-bergen/ubb-adr-bergen-1902/jpg/ubb-adr-bergen-1902_p0001_th.jpg</thumbnail>
          </links>
          <sort/>
       </metadata>
@@ -247,18 +312,25 @@
          <display>
             <availlibrary>$$9ONLINE</availlibrary>
             <identifier>ubb-adr-bergen-1903</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
             <title>Griegs Adressebog for Bergen 1903</title>
             <type>book</type>
-            <unititle>Griegs Adressebog for Bergen 1903</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Bergensiana</collection>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Bergensiana</addtitle>
             <recordid>UBB-MARCUS/Bok/ubb-adr-bergen-1903</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <title>Griegs Adressebog for Bergen 1903</title>
          </search>
@@ -267,8 +339,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/book/ubb-adr-bergen-1903</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-adr/ubb-adr-bergen/ubb-adr-bergen-1903/jpg/ubb-adr-bergen-1903_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/book/ubb-adr-bergen-1903</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-adr/ubb-adr-bergen/ubb-adr-bergen-1903/jpg/ubb-adr-bergen-1903_p0001_th.jpg</thumbnail>
          </links>
          <sort/>
       </metadata>
@@ -285,21 +357,37 @@
             <creator>Bakerlauget</creator>
             <identifier>ubb-ms-0167-01-01</identifier>
             <ispartof>ubb-ms-0167</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>1600-tallet;Bakerlauget;Bergens bakerlaug;1700-tallet;Laug;Laugsvesen;Bergen</subject>
+            <subject>1600-tallet; Bakerlauget; Bergens bakerlaug; 1700-tallet; Laug; Laugsvesen; Bergen</subject>
             <title>Bakerlaugets Forhandlingsprotokol 1683-1724 og Kopibok 1703-1767</title>
             <type>book</type>
-            <unititle>Bakerlaugets Forhandlingsprotokol 1683-1724 og Kopibok 1703-1767</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <collection>De bergenske Laugsarkiver</collection>
             <creatorcontrib>Bakerlauget</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>1600-tallet</topic>
+            <topic>Bakerlauget</topic>
+            <topic>Bergens bakerlaug</topic>
+            <topic>1700-tallet</topic>
+            <topic>Laug</topic>
+            <topic>Laugsvesen</topic>
+            <topic>Bergen</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
+            <addtitle>De bergenske Laugsarkiver</addtitle>
             <creatorcontrib>Bakerlauget</creatorcontrib>
             <recordid>UBB-MARCUS/Forhandlingsprotokoll/ubb-ms-0167-01-01</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>1600-tallet</subject>
             <subject>Bakerlauget</subject>
@@ -315,8 +403,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/bookofminutes/ubb-ms-0167-01-01</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-01/ubb-ms-0167-01-01/jpg/ubb-ms-0167-01-01_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/bookofminutes/ubb-ms-0167-01-01</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-01/ubb-ms-0167-01-01/jpg/ubb-ms-0167-01-01_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Bakerlauget</author>
@@ -335,22 +423,38 @@
             <creator>Bakerlauget</creator>
             <description>Pergamentsbind</description>
             <identifier>ubb-ms-0167-01-02-a</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>1700-tallet;Laugsvesen;Laug;Bergen;1800-tallet;Bakerlauget;Bergens bakerlaug</subject>
+            <subject>1700-tallet; Laugsvesen; Laug; Bergen; 1800-tallet; Bakerlauget; Bergens bakerlaug</subject>
             <title>Bakerlaugets Forhandlingsprotokol 1725-1749 og Kopibok 1814-1834</title>
             <type>book</type>
-            <unititle>Bakerlaugets Forhandlingsprotokol 1725-1749 og Kopibok 1814-1834</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <collection>De bergenske Laugsarkiver</collection>
             <creatorcontrib>Bakerlauget</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>1700-tallet</topic>
+            <topic>Laugsvesen</topic>
+            <topic>Laug</topic>
+            <topic>Bergen</topic>
+            <topic>1800-tallet</topic>
+            <topic>Bakerlauget</topic>
+            <topic>Bergens bakerlaug</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
+            <addtitle>De bergenske Laugsarkiver</addtitle>
             <creatorcontrib>Bakerlauget</creatorcontrib>
             <description>Pergamentsbind</description>
             <recordid>UBB-MARCUS/Forhandlingsprotokoll/ubb-ms-0167-01-02-a</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>1700-tallet</subject>
             <subject>Laugsvesen</subject>
@@ -366,8 +470,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/bookofminutes/ubb-ms-0167-01-02-a</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-01/ubb-ms-0167-01-02/ubb-ms-0167-01-02-a/jpg/ubb-ms-0167-01-02-a_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/bookofminutes/ubb-ms-0167-01-02-a</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-01/ubb-ms-0167-01-02/ubb-ms-0167-01-02-a/jpg/ubb-ms-0167-01-02-a_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Bakerlauget</author>
@@ -387,22 +491,42 @@
             <description>Løse innlegg</description>
             <identifier>ubb-ms-0664-02</identifier>
             <ispartof>ubb-ms-0664</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Harmonien;Kulturliv;Symfoniorkester;1800-tallet;Bergen Filharmoniske Orkester;Musikk;Det Harmoniske Selskab;Kulturhistorie;Bergen;Musikkhistorie</subject>
+            <subject>Harmonien; Kulturliv; Symfoniorkester; 1800-tallet; Bergen Filharmoniske Orkester; Musikk; Det Harmoniske Selskab; Kulturhistorie; Bergen; Musikkhistorie</subject>
             <title>Kassabok for  Selskab i Bergen (Harmonien) 1845.</title>
             <type>book</type>
-            <unititle>Kassabok for  Selskab i Bergen (Harmonien) 1845.</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <collection>Harmonien-samlingen</collection>
             <creationdate>1845</creationdate>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Harmonien</topic>
+            <topic>Kulturliv</topic>
+            <topic>Symfoniorkester</topic>
+            <topic>1800-tallet</topic>
+            <topic>Bergen Filharmoniske Orkester</topic>
+            <topic>Musikk</topic>
+            <topic>Det Harmoniske Selskab</topic>
+            <topic>Kulturhistorie</topic>
+            <topic>Bergen</topic>
+            <topic>Musikkhistorie</topic>
+            <topic>Bergen</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
+            <addtitle>Harmonien-samlingen</addtitle>
             <creationdate>1845</creationdate>
             <description>Løse innlegg</description>
             <recordid>UBB-MARCUS/Kassebok/ubb-ms-0664-02</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Harmonien</subject>
             <subject>Kulturliv</subject>
@@ -414,6 +538,7 @@
             <subject>Kulturhistorie</subject>
             <subject>Bergen</subject>
             <subject>Musikkhistorie</subject>
+            <subject>Bergen</subject>
             <title>Kassabok for  Selskab i Bergen (Harmonien) 1845.</title>
          </search>
          <delivery>
@@ -421,8 +546,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/cashbook/ubb-ms-0664-02</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0664/ubb-ms-0664-02/jpg/ubb-ms-0664-02_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/cashbook/ubb-ms-0664-02</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0664/ubb-ms-0664-02/jpg/ubb-ms-0664-02_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <creationdate>1845</creationdate>
@@ -442,22 +567,38 @@
             <description>Olaf Håkonsson på Fitje i Gloppen kunngjør at han har solgt til Jetmund Simonsson 4 månedsmatbol i Åland i Utvik og mottatt betalingen.</description>
             <identifier>ubb-1570</identifier>
             <ispartof>Diplomsamlingen</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Salg ; (jord);Jord, kjøp og salg;Kunngjøring;Eiendomshandel;Betaling;Gård</subject>
+            <subject>Salg ; (jord); Jord, kjøp og salg; Kunngjøring; Eiendomshandel; Betaling; Gård</subject>
             <title>1570, uten dato Sogn og Fjordane, Gloppen kunngjøring ; (salg)</title>
             <type>text_resource</type>
-            <unititle>1570, uten dato Sogn og Fjordane, Gloppen kunngjøring ; (salg)</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Diplomsamlingen</collection>
             <creationdate>1570</creationdate>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Salg ; (jord)</topic>
+            <topic>Jord, kjøp og salg</topic>
+            <topic>Kunngjøring</topic>
+            <topic>Eiendomshandel</topic>
+            <topic>Betaling</topic>
+            <topic>Gård</topic>
+            <topic>Gloppen</topic>
+            <topic>Åland</topic>
+            <topic>Fitje</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Diplomsamlingen</addtitle>
             <creationdate>1570</creationdate>
             <description>Olaf Håkonsson på Fitje i Gloppen kunngjør at han har solgt til Jetmund Simonsson 4 månedsmatbol i Åland i Utvik og mottatt betalingen.</description>
             <recordid>UBB-MARCUS/Diplom/ubb-1570</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Salg ; (jord)</subject>
             <subject>Jord, kjøp og salg</subject>
@@ -465,6 +606,9 @@
             <subject>Eiendomshandel</subject>
             <subject>Betaling</subject>
             <subject>Gård</subject>
+            <subject>Gloppen</subject>
+            <subject>Åland</subject>
+            <subject>Fitje</subject>
             <title>1570, uten dato Sogn og Fjordane, Gloppen kunngjøring ; (salg)</title>
          </search>
          <delivery>
@@ -472,8 +616,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/charter/ubb-1570</linktorsrc>
-            <thumbnail>http://marcus.uib.no/files/spesial/ubb/diplom/smaa/UBB-1570/UBB-1570_thumb.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/charter/ubb-1570</linktorsrc>
+            <thumbnail>$$Uhttp://marcus.uib.no/files/spesial/ubb/diplom/smaa/UBB-1570/UBB-1570_thumb.jpg</thumbnail>
          </links>
          <sort>
             <creationdate>1570</creationdate>
@@ -493,22 +637,36 @@
             <description>Skjøte på Åland i Innvik.</description>
             <identifier>sab-1570</identifier>
             <ispartof>Diplomsamlingen</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Salg ; (gård);Skjøte ;;Gård;Eiendomshandel;Skjøte;Skjøte)</subject>
+            <subject>Salg ; (gård); Skjøte ;; Gård; Eiendomshandel; Skjøte; Skjøte)</subject>
             <title>1570 Sogn og Fjordane, Innvik, Åland skjøte</title>
             <type>text_resource</type>
-            <unititle>1570 Sogn og Fjordane, Innvik, Åland skjøte</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Diplomsamlingen</collection>
             <creationdate>1570</creationdate>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Salg ; (gård)</topic>
+            <topic>Skjøte ;</topic>
+            <topic>Gård</topic>
+            <topic>Eiendomshandel</topic>
+            <topic>Skjøte</topic>
+            <topic>Skjøte)</topic>
+            <topic>Åland</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Diplomsamlingen</addtitle>
             <creationdate>1570</creationdate>
             <description>Skjøte på Åland i Innvik.</description>
             <recordid>UBB-MARCUS/Diplom/sab-1570</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Salg ; (gård)</subject>
             <subject>Skjøte ;</subject>
@@ -516,6 +674,7 @@
             <subject>Eiendomshandel</subject>
             <subject>Skjøte</subject>
             <subject>Skjøte)</subject>
+            <subject>Åland</subject>
             <title>1570 Sogn og Fjordane, Innvik, Åland skjøte</title>
          </search>
          <delivery>
@@ -523,8 +682,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/charter/sab-1570</linktorsrc>
-            <thumbnail>http://marcus.uib.no/files/spesial/ubb/diplom/smaa/SAB-1570/SAB-1570_1_thumb.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/charter/sab-1570</linktorsrc>
+            <thumbnail>$$Uhttp://marcus.uib.no/files/spesial/ubb/diplom/smaa/SAB-1570/SAB-1570_1_thumb.jpg</thumbnail>
          </links>
          <sort>
             <creationdate>1570</creationdate>
@@ -543,26 +702,39 @@
             <creationdate>1866</creationdate>
             <creator>Repslagerlauget i Bergen</creator>
             <identifier>ubb-ms-0167-09-103-b-01</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Repslager;Laugsarkivet</subject>
+            <subject>Repslager; Laugsarkivet</subject>
             <title>Repslagerlauget, Lære-Contract, 1866</title>
             <type>text_resource</type>
-            <unititle>Repslagerlauget, Lære-Contract, 1866</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <collection>De bergenske Laugsarkiver</collection>
             <creationdate>1866</creationdate>
             <creatorcontrib>Repslagerlauget i Bergen</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Repslager</topic>
+            <topic>Laugsarkivet</topic>
+            <topic>Møhlenpris</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
+            <addtitle>De bergenske Laugsarkiver</addtitle>
             <creationdate>1866</creationdate>
             <creatorcontrib>Repslagerlauget i Bergen</creatorcontrib>
             <recordid>UBB-MARCUS/Kontrakt/ubb-ms-0167-09-103-b-01</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Repslager</subject>
             <subject>Laugsarkivet</subject>
+            <subject>Møhlenpris</subject>
             <title>Repslagerlauget, Lære-Contract, 1866</title>
          </search>
          <delivery>
@@ -570,9 +742,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/contract/ubb-ms-0167-09-103-b-01</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-01/jpg/ubb-ms-0167-09-103-b-01_p0001_th.jpg</thumbnail>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-01/jpg/ubb-ms-0167-09-103-b-01_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/contract/ubb-ms-0167-09-103-b-01</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-01/jpg/ubb-ms-0167-09-103-b-01_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Repslagerlauget i Bergen</author>
@@ -592,27 +763,41 @@
             <creationdate>1865</creationdate>
             <creator>Repslagerlauget i Bergen</creator>
             <identifier>ubb-ms-0167-09-103-b-02</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Repslager;Bergenske laugs-arkiver;Laug</subject>
+            <subject>Repslager; Bergenske laugs-arkiver; Laug</subject>
             <title>Repslagerlauget, Lære-Contract, 1865</title>
             <type>text_resource</type>
-            <unititle>Repslagerlauget, Lære-Contract, 1865</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>De bergenske Laugsarkiver</collection>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1865</creationdate>
             <creatorcontrib>Repslagerlauget i Bergen</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Repslager</topic>
+            <topic>Bergenske laugs-arkiver</topic>
+            <topic>Laug</topic>
+            <topic>Sandviken</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>De bergenske Laugsarkiver</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1865</creationdate>
             <creatorcontrib>Repslagerlauget i Bergen</creatorcontrib>
             <recordid>UBB-MARCUS/Kontrakt/ubb-ms-0167-09-103-b-02</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Repslager</subject>
             <subject>Bergenske laugs-arkiver</subject>
             <subject>Laug</subject>
+            <subject>Sandviken</subject>
             <title>Repslagerlauget, Lære-Contract, 1865</title>
          </search>
          <delivery>
@@ -620,8 +805,8 @@
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/contract/ubb-ms-0167-09-103-b-02</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-02/jpg/ubb-ms-0167-09-103-b-02_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/contract/ubb-ms-0167-09-103-b-02</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0167/ubb-ms-0167-09/ubb-ms-0167-09-103/ubb-ms-0167-09-103-b/ubb-ms-0167-09-103-b-02/jpg/ubb-ms-0167-09-103-b-02_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Repslagerlauget i Bergen</author>
@@ -645,18 +830,37 @@ seaman who deserted from H. M. ship the Niger, when under my command in the year
 Journalen er beretningen om et sjørøvertogt i Middelhavet. Indbunden i smukt skindbind med 
 indskutte rene blader, der er fabrikert 1824</description>
             <identifier>ubb-ms-0008</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Pirater;Kapervirksomhet;Søvæsen vedk.;Journal of a priveteer;Reiseskildringer;England vedk.;Sørøvertogt;Tyrkia;Krigshistorie;Avskriftssamling fra 16- og 17-tallet;1700-tallet;Sjørøveri;Dagboksoptegnelser;Russland</subject>
+            <subject>Pirater; Kapervirksomhet; Søvæsen vedk.; Journal of a priveteer; Reiseskildringer; England vedk.; Sørøvertogt; Tyrkia; Krigshistorie; Avskriftssamling fra 16- og 17-tallet; 1700-tallet; Sjørøveri; Dagboksoptegnelser; Russland</subject>
             <title>Wm. Davidson’s Bloody Journal, 3/12-1788 – 6/9 1789.</title>
             <type>book</type>
-            <unititle>Wm. Davidson’s Bloody Journal, 3/12-1788 – 6/9 1789.</unititle>
          </display>
-         <facet>
-            <creatorcontrib>William Davidson</creatorcontrib>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <creatorcontrib>Davidson, William</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Pirater</topic>
+            <topic>Kapervirksomhet</topic>
+            <topic>Søvæsen vedk.</topic>
+            <topic>Journal of a priveteer</topic>
+            <topic>Reiseskildringer</topic>
+            <topic>England vedk.</topic>
+            <topic>Sørøvertogt</topic>
+            <topic>Tyrkia</topic>
+            <topic>Krigshistorie</topic>
+            <topic>Avskriftssamling fra 16- og 17-tallet</topic>
+            <topic>1700-tallet</topic>
+            <topic>Sjørøveri</topic>
+            <topic>Dagboksoptegnelser</topic>
+            <topic>Russland</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creatorcontrib>William Davidson</creatorcontrib>
             <description>Indeholder ”A Jurnall of a Priveteer”, hvorom der oplyses: ”The following journal was found in the Chest of Wm. Davidson a 
 seaman who deserted from H. M. ship the Niger, when under my command in the year 1793."
@@ -665,6 +869,8 @@ Journalen er beretningen om et sjørøvertogt i Middelhavet. Indbunden i smukt s
 indskutte rene blader, der er fabrikert 1824</description>
             <recordid>UBB-MARCUS/Dagbok/ubb-ms-0008</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Pirater</subject>
             <subject>Kapervirksomhet</subject>
@@ -687,8 +893,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/diary/ubb-ms-0008</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0008/jpg/ubb-ms-0008_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/diary/ubb-ms-0008</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0008/jpg/ubb-ms-0008_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>William Davidson</author>
@@ -708,23 +914,30 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creator>Abraham Lincoln</creator>
             <description>12. februar 1865, to måneder før han tragisk ble skutt i Fordteateret i Washington 15. april, skrev president Abraham Lincoln et håndskrevet notat til Senatet og Representantenes hus, der han informerte om den internasjonale fiskeriutstillingen som skulle holdes i Bergen, Norge, kommende sommer.   Han oversendte diplomatisk korrespondanse fra Utenriksdepartement og USAs representasjon i Stockholm om utstillingens program. Videre ba han Kongressen om å vurdere nødvendigheten av lovgivning på det aktuelle feltet. Orienteringen ble lest opp i utenrikskomiteen i Kongressen 14. februar og besluttet "trykket".  3. mars vedtok Kongressen en resolusjon der de påla presidenten å bekjentgjøre den internasjonale utstillingen for det amerikanske folk gjennom proklamasjon eller på annen måte han måtte ønske.  I notatet fra "Minister Resident of the United States of America at Stockholm" Mr. Campbell, til den Norsk-Svenske utenriksminister Grev Manderstrøm, ble det påpekt at utstillingens tema hadde stor betydning for verdiskaping og fremskritt i "New England"-statene i USA, såvel som for De forente kongeriker Sverige og Norge. Videre skrev Campbell at utstillingen umulig kunne mislykkes å bli av betydning og interesse for begge lands folk, og at det skulle bli en glede å gjøre hans eget lands regjering spesiell oppmerksom på et så interessant formål. Det vedlagte programmet var undertegnet C. Von Tangen på vegne av arrangørene.   Interessen for den "Den Internasjonale fiskeriudstilling i Bergen 1865» skulle altså vise seg å bli så stor at selveste president Lincoln og den amerikanske Kongressen engasjerte seg i saken.</description>
             <identifier>ubb-ms-utst-0016-c</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
             <title>Abraham Lincoln to U.S. Congress</title>
             <type>book</type>
-            <unititle>Abraham Lincoln to U.S. Congress</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>«Hvalfart» til Bergens Museum 1865</collection>
             <creationdate>1865</creationdate>
-            <creatorcontrib>Abraham Lincoln</creatorcontrib>
+            <creatorcontrib>Lincoln, Abraham</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>«Hvalfart» til Bergens Museum 1865</addtitle>
             <creationdate>1865</creationdate>
             <creatorcontrib>Abraham Lincoln</creatorcontrib>
             <description>12. februar 1865, to måneder før han tragisk ble skutt i Fordteateret i Washington 15. april, skrev president Abraham Lincoln et håndskrevet notat til Senatet og Representantenes hus, der han informerte om den internasjonale fiskeriutstillingen som skulle holdes i Bergen, Norge, kommende sommer.   Han oversendte diplomatisk korrespondanse fra Utenriksdepartement og USAs representasjon i Stockholm om utstillingens program. Videre ba han Kongressen om å vurdere nødvendigheten av lovgivning på det aktuelle feltet. Orienteringen ble lest opp i utenrikskomiteen i Kongressen 14. februar og besluttet "trykket".  3. mars vedtok Kongressen en resolusjon der de påla presidenten å bekjentgjøre den internasjonale utstillingen for det amerikanske folk gjennom proklamasjon eller på annen måte han måtte ønske.  I notatet fra "Minister Resident of the United States of America at Stockholm" Mr. Campbell, til den Norsk-Svenske utenriksminister Grev Manderstrøm, ble det påpekt at utstillingens tema hadde stor betydning for verdiskaping og fremskritt i "New England"-statene i USA, såvel som for De forente kongeriker Sverige og Norge. Videre skrev Campbell at utstillingen umulig kunne mislykkes å bli av betydning og interesse for begge lands folk, og at det skulle bli en glede å gjøre hans eget lands regjering spesiell oppmerksom på et så interessant formål. Det vedlagte programmet var undertegnet C. Von Tangen på vegne av arrangørene.   Interessen for den "Den Internasjonale fiskeriudstilling i Bergen 1865» skulle altså vise seg å bli så stor at selveste president Lincoln og den amerikanske Kongressen engasjerte seg i saken.</description>
             <recordid>UBB-MARCUS/Dokument/ubb-ms-utst-0016-c</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <title>Abraham Lincoln to U.S. Congress</title>
          </search>
@@ -733,8 +946,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/document/ubb-ms-utst-0016-c</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-utst/ubb-ms-utst-0016/ubb-ms-utst-0016-c/jpg/ubb-ms-utst-0016-c_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/document/ubb-ms-utst-0016-c</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-utst/ubb-ms-utst-0016/ubb-ms-utst-0016-c/jpg/ubb-ms-utst-0016-c_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Abraham Lincoln</author>
@@ -754,19 +967,35 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creator>Nikolai Astrup</creator>
             <identifier>ubb-ms-0972-i-27-b-1-2</identifier>
             <ispartof>Astrup-samlingen</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Vestlandet;Norge;Maling;Jølster;Kunst</subject>
+            <subject>Vestlandet; Norge; Maling; Jølster; Kunst</subject>
             <type>book</type>
          </display>
-         <facet>
-            <creatorcontrib>Nikolai Astrup</creatorcontrib>
+         <facets>
+            <collection>Astrup-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
+            <creatorcontrib>Astrup, Nikolai Johannes</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Vestlandet</topic>
+            <topic>Norge</topic>
+            <topic>Maling</topic>
+            <topic>Jølster</topic>
+            <topic>Kunst</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Astrup-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creatorcontrib>Nikolai Astrup</creatorcontrib>
             <recordid>UBB-MARCUS/Dokument/ubb-ms-0972-i-27-b-1-2</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Vestlandet</subject>
             <subject>Norge</subject>
@@ -779,8 +1008,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/document/ubb-ms-0972-i-27-b-1-2</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0972/ubb-ms-0972-i/ubb-ms-0972-i-27/ubb-ms-0972-i-27-b/ubb-ms-0972-i-27-b-1/ubb-ms-0972-i-27-b-1-2/jpg/ubb-ms-0972-i-27-b-1-2_p001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/document/ubb-ms-0972-i-27-b-1-2</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0972/ubb-ms-0972-i/ubb-ms-0972-i-27/ubb-ms-0972-i-27-b/ubb-ms-0972-i-27-b-1/ubb-ms-0972-i-27-b-1-2/jpg/ubb-ms-0972-i-27-b-1-2_p001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Nikolai Astrup</author>
@@ -798,21 +1027,29 @@ indskutte rene blader, der er fabrikert 1824</description>
             <availlibrary>$$9ONLINE</availlibrary>
             <creator>Ukjent</creator>
             <identifier>ubb-ras-ib-038</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
             <subject>Tegning</subject>
             <title>Portrait d`Ibsen en 1860 communique par M. Lugné-Poë</title>
             <type>image</type>
-            <unititle>Portrait d`Ibsen en 1860 communique par M. Lugné-Poë</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Fotografiske samlinger</collection>
             <creatorcontrib>Ukjent</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>Tegning</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Fotografiske samlinger</addtitle>
             <creatorcontrib>Ukjent</creatorcontrib>
             <recordid>UBB-MARCUS/Tegning/ubb-ras-ib-038</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Tegning</subject>
             <title>Portrait d`Ibsen en 1860 communique par M. Lugné-Poë</title>
@@ -822,8 +1059,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/drawing/ubb-ras-ib-038</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ras/ubb-ras-ib/ubb-ras-ib-038/jpg/ubb-ras-ib-038_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/drawing/ubb-ras-ib-038</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-ras/ubb-ras-ib/ubb-ras-ib-038/jpg/ubb-ras-ib-038_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Ukjent</author>
@@ -843,22 +1080,35 @@ indskutte rene blader, der er fabrikert 1824</description>
             <description>Tegning</description>
             <identifier>ubb-ms-0199-a-02</identifier>
             <ispartof>ubb-ms-0199-a</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Vitenskap;1800-tallet;Vitenskapshistorie;Bergen;Historie;Historisk-antikvariske notater</subject>
+            <subject>Vitenskap; 1800-tallet; Vitenskapshistorie; Bergen; Historie; Historisk-antikvariske notater</subject>
             <title>Antegnelser - væsentlig Antikvariske 2</title>
             <type>image</type>
-            <unititle>Antegnelser - væsentlig Antikvariske 2</unititle>
          </display>
-         <facet>
-            <creatorcontrib>Jacob Neumann</creatorcontrib>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <creatorcontrib>Neumann, Jacob</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>Vitenskap</topic>
+            <topic>1800-tallet</topic>
+            <topic>Vitenskapshistorie</topic>
+            <topic>Bergen</topic>
+            <topic>Historie</topic>
+            <topic>Historisk-antikvariske notater</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creatorcontrib>Jacob Neumann</creatorcontrib>
             <description>Tegning</description>
             <recordid>UBB-MARCUS/Tegning/ubb-ms-0199-a-02</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Vitenskap</subject>
             <subject>1800-tallet</subject>
@@ -873,8 +1123,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/drawing/ubb-ms-0199-a-02</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0199/ubb-ms-0199-a/ubb-ms-0199-a-02/jpg/ubb-ms-0199-a-02_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/drawing/ubb-ms-0199-a-02</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0199/ubb-ms-0199-a/ubb-ms-0199-a-02/jpg/ubb-ms-0199-a-02_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Jacob Neumann</author>
@@ -894,21 +1144,37 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creator>Nikolai Astrup</creator>
             <identifier>ubb-ms-1808-k-1-3</identifier>
             <ispartof>ubb-ms-1808-k-1</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Jølster;Vestlandet;Norge;Kunst;Maling</subject>
+            <subject>Jølster; Vestlandet; Norge; Kunst; Maling</subject>
             <type>book</type>
          </display>
-         <facet>
+         <facets>
+            <collection>Astrup-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1926</creationdate>
-            <creatorcontrib>Nikolai Astrup</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai Johannes</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Jølster</topic>
+            <topic>Vestlandet</topic>
+            <topic>Norge</topic>
+            <topic>Kunst</topic>
+            <topic>Maling</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Astrup-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1926</creationdate>
             <creatorcontrib>Nikolai Astrup</creatorcontrib>
             <recordid>UBB-MARCUS/Fragment/ubb-ms-1808-k-1-3</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Jølster</subject>
             <subject>Vestlandet</subject>
@@ -921,8 +1187,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/fragment/ubb-ms-1808-k-1-3</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1808/ubb-ms-1808-k/ubb-ms-1808-k-1/ubb-ms-1808-k-1-3/jpg/ubb-ms-1808-k-1-3_p001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/fragment/ubb-ms-1808-k-1-3</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1808/ubb-ms-1808-k/ubb-ms-1808-k-1/ubb-ms-1808-k-1-3/jpg/ubb-ms-1808-k-1-3_p001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Nikolai Astrup</author>
@@ -942,21 +1208,28 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creator>John Chester Buttre</creator>
             <description>Gravering laget av J. C. Buttre etter et fotografi av den kjente amerikanske fotografen Mathew Brady. (Reminiscences of Abraham Lincoln : by distinguised men of his time, Rice, Allen Thorndike, 1886) </description>
             <identifier>ubb-ms-utst-0016-d</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
             <title>Portrett av Abraham Lincoln.</title>
             <type>image</type>
-            <unititle>Portrett av Abraham Lincoln.</unititle>
          </display>
-         <facet>
-            <creatorcontrib>John Chester Buttre</creatorcontrib>
+         <facets>
+            <collection>«Hvalfart» til Bergens Museum 1865</collection>
+            <creatorcontrib>Buttre, John Chester</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>«Hvalfart» til Bergens Museum 1865</addtitle>
             <creatorcontrib>John Chester Buttre</creatorcontrib>
             <description>Gravering laget av J. C. Buttre etter et fotografi av den kjente amerikanske fotografen Mathew Brady. (Reminiscences of Abraham Lincoln : by distinguised men of his time, Rice, Allen Thorndike, 1886) </description>
             <recordid>UBB-MARCUS/Grafikk/ubb-ms-utst-0016-d</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <title>Portrett av Abraham Lincoln.</title>
          </search>
@@ -965,8 +1238,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/graphicart/ubb-ms-utst-0016-d</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-utst/ubb-ms-utst-0016/ubb-ms-utst-0016-d/jpg/ubb-ms-utst-0016-d_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/graphicart/ubb-ms-utst-0016-d</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-ms/ubb-ms-utst/ubb-ms-utst-0016/ubb-ms-utst-0016-d/jpg/ubb-ms-utst-0016-d_th.jpg</thumbnail>
          </links>
          <sort>
             <author>John Chester Buttre</author>
@@ -975,42 +1248,61 @@ indskutte rene blader, der er fabrikert 1824</description>
       <metadata>
          <control>
             <sourceid>UBB-MARCUS</sourceid>
-            <sourcerecordid>Grafikk/ubb-bs-fol-01460-000</sourcerecordid>
-            <recordid>UBB-MARCUS/Grafikk/ubb-bs-fol-01460-000</recordid>
+            <sourcerecordid>Grafikk/ubb-bs-ok-19854</sourcerecordid>
+            <recordid>UBB-MARCUS/Grafikk/ubb-bs-ok-19854</recordid>
             <sourceformat>PNX</sourceformat>
             <sourcesystem>Marcus</sourcesystem>
          </control>
          <display>
             <availlibrary>$$9ONLINE</availlibrary>
-            <description>Omslag til plansjene. Illustrasjoner til Daniel Cornelius Danielssen og Carl Wilhelm Boecks monografi "Om Spedalskhed" utgitt i 1847</description>
-            <identifier>ubb-bs-fol-01460-000</identifier>
+            <creator>Ukjent</creator>
+            <description>Etter fotografi av. Fra Illustreret Nyhedsblad side 176, årgang 1863</description>
+            <identifier>ubb-bs-ok-19854</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Lepra</subject>
-            <title>Atlas colorie de spedalskhed.</title>
+            <subject>Lue; Xylografi; Mann; Kortspill</subject>
+            <title>Et Spille-parti.</title>
             <type>image</type>
-            <unititle>Atlas colorie de spedalskhed.</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Fotografiske samlinger</collection>
+            <creatorcontrib>Ukjent</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>Lue</topic>
+            <topic>Xylografi</topic>
+            <topic>Mann</topic>
+            <topic>Kortspill</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
-            <description>Omslag til plansjene. Illustrasjoner til Daniel Cornelius Danielssen og Carl Wilhelm Boecks monografi "Om Spedalskhed" utgitt i 1847</description>
-            <recordid>UBB-MARCUS/Grafikk/ubb-bs-fol-01460-000</recordid>
+            <addtitle>Fotografiske samlinger</addtitle>
+            <creatorcontrib>Ukjent</creatorcontrib>
+            <description>Etter fotografi av. Fra Illustreret Nyhedsblad side 176, årgang 1863</description>
+            <recordid>UBB-MARCUS/Grafikk/ubb-bs-ok-19854</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
-            <subject>Lepra</subject>
-            <title>Atlas colorie de spedalskhed.</title>
+            <subject>Lue</subject>
+            <subject>Xylografi</subject>
+            <subject>Mann</subject>
+            <subject>Kortspill</subject>
+            <title>Et Spille-parti.</title>
          </search>
          <delivery>
             <delcategory>Online Resources</delcategory>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/graphicart/ubb-bs-fol-01460-000</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01460/ubb-bs-fol-01460-000/jpg/ubb-bs-fol-01460-000_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/graphicart/ubb-bs-ok-19854</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-ok/ubb-bs-ok-19854/jpg/ubb-bs-ok-19854_th.jpg</thumbnail>
          </links>
-         <sort/>
+         <sort>
+            <author>Ukjent</author>
+         </sort>
       </metadata>
       <metadata>
          <control>
@@ -1027,24 +1319,36 @@ indskutte rene blader, der er fabrikert 1824</description>
             <description>Avskrift av W. M. Schjelderup. Originalen tilhører dr. Christie, Kristiania.</description>
             <identifier>ubb-ms-0227-a</identifier>
             <ispartof>ubb-ms-0227</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Dagbok;1800-tallet;Historie;Kulturhistorie;Reiseskildring</subject>
+            <subject>Dagbok; 1800-tallet; Historie; Kulturhistorie; Reiseskildring</subject>
             <title>Dagbog paa Udenlandsreisen 1823</title>
             <type>book</type>
-            <unititle>Dagbog paa Udenlandsreisen 1823</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1823</creationdate>
-            <creatorcontrib>Wilhelm Frimann Koren Christie</creatorcontrib>
+            <creatorcontrib>Christie, Wilhelm Frimann Koren</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Dagbok</topic>
+            <topic>1800-tallet</topic>
+            <topic>Historie</topic>
+            <topic>Kulturhistorie</topic>
+            <topic>Reiseskildring</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1823</creationdate>
             <creatorcontrib>Wilhelm Frimann Koren Christie</creatorcontrib>
             <description>Avskrift av W. M. Schjelderup. Originalen tilhører dr. Christie, Kristiania.</description>
             <recordid>UBB-MARCUS/Reisedagbok/ubb-ms-0227-a</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Dagbok</subject>
             <subject>1800-tallet</subject>
@@ -1058,8 +1362,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/journeylog/ubb-ms-0227-a</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0227/ubb-ms-0227-a/jpg/ubb-ms-0227-a_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/journeylog/ubb-ms-0227-a</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0227/ubb-ms-0227-a/jpg/ubb-ms-0227-a_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Wilhelm Frimann Koren Christie</author>
@@ -1081,24 +1385,41 @@ indskutte rene blader, der er fabrikert 1824</description>
             <description>Avskrift av W. M. Schjelderup. Originalen tilhører dr. Christie, Kristiania.</description>
             <identifier>ubb-ms-0227-b</identifier>
             <ispartof>ubb-ms-0227</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Norge;Historie;Kulturhistorie;Reiseskildring;Dagbok;1800-tallet</subject>
+            <subject>Norge; Historie; Kulturhistorie; Reiseskildring; Dagbok; 1800-tallet</subject>
             <title>Dagbog paa Reise til Søndfjord, Sogn og Nordfjord Sommeren 1846</title>
             <type>book</type>
-            <unititle>Dagbog paa Reise til Søndfjord, Sogn og Nordfjord Sommeren 1846</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1846</creationdate>
-            <creatorcontrib>Wilhelm Frimann Koren Christie</creatorcontrib>
+            <creatorcontrib>Christie, Wilhelm Frimann Koren</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Norge</topic>
+            <topic>Historie</topic>
+            <topic>Kulturhistorie</topic>
+            <topic>Reiseskildring</topic>
+            <topic>Dagbok</topic>
+            <topic>1800-tallet</topic>
+            <topic>Nordfjord</topic>
+            <topic>Sogn</topic>
+            <topic>Søndfjord</topic>
+            <topic>Sunnfjord</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1846</creationdate>
             <creatorcontrib>Wilhelm Frimann Koren Christie</creatorcontrib>
             <description>Avskrift av W. M. Schjelderup. Originalen tilhører dr. Christie, Kristiania.</description>
             <recordid>UBB-MARCUS/Reisedagbok/ubb-ms-0227-b</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Norge</subject>
             <subject>Historie</subject>
@@ -1106,6 +1427,10 @@ indskutte rene blader, der er fabrikert 1824</description>
             <subject>Reiseskildring</subject>
             <subject>Dagbok</subject>
             <subject>1800-tallet</subject>
+            <subject>Nordfjord</subject>
+            <subject>Sogn</subject>
+            <subject>Søndfjord</subject>
+            <subject>Sunnfjord</subject>
             <title>Dagbog paa Reise til Søndfjord, Sogn og Nordfjord Sommeren 1846</title>
          </search>
          <delivery>
@@ -1113,8 +1438,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/journeylog/ubb-ms-0227-b</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0227/ubb-ms-0227-b/jpg/ubb-ms-0227-b_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/journeylog/ubb-ms-0227-b</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0227/ubb-ms-0227-b/jpg/ubb-ms-0227-b_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Wilhelm Frimann Koren Christie</author>
@@ -1134,27 +1459,49 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creationdate>1818</creationdate>
             <identifier>ubb-ms-0994-3</identifier>
             <ispartof>ubb-ms-0994</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>1800-tallet;Eiendomshistorie;Historie;Bergen;Eiendomshandel</subject>
+            <subject>1800-tallet; Eiendomshistorie; Historie; Bergen; Eiendomshandel</subject>
             <title>Oppmåling av tomten, dat. 3.12. 1818.</title>
             <type>text_resource</type>
-            <unititle>Oppmåling av tomten, dat. 3.12. 1818.</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1818</creationdate>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>1800-tallet</topic>
+            <topic>Eiendomshistorie</topic>
+            <topic>Historie</topic>
+            <topic>Bergen</topic>
+            <topic>Eiendomshandel</topic>
+            <topic>Vetrlidsalmenning</topic>
+            <topic>Bergen</topic>
+            <topic>Rodenummer 33.</topic>
+            <topic>Hollendergaten</topic>
+            <topic>Rode 20.</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1818</creationdate>
             <recordid>UBB-MARCUS/Oppmålingsdokument/ubb-ms-0994-3</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>1800-tallet</subject>
             <subject>Eiendomshistorie</subject>
             <subject>Historie</subject>
             <subject>Bergen</subject>
             <subject>Eiendomshandel</subject>
+            <subject>Vetrlidsalmenning</subject>
+            <subject>Bergen</subject>
+            <subject>Rodenummer 33.</subject>
+            <subject>Hollendergaten</subject>
+            <subject>Rode 20.</subject>
             <title>Oppmåling av tomten, dat. 3.12. 1818.</title>
          </search>
          <delivery>
@@ -1162,8 +1509,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/landsurvey/ubb-ms-0994-3</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-3/jpg/ubb-ms-0994-3_p001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/landsurvey/ubb-ms-0994-3</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-3/jpg/ubb-ms-0994-3_p001_th.jpg</thumbnail>
          </links>
          <sort>
             <creationdate>1818</creationdate>
@@ -1182,25 +1529,44 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creator>Det Private Kontor for Opmaalings og Kartarbeider</creator>
             <description>Opmaalt og lithografert af Det Private Kontor for Opmaalings og Kartarbeider i Kristiania 1883</description>
             <identifier>ubb-bs-fol-01808-002</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Litografi;Kart</subject>
+            <subject>Litografi; Kart</subject>
             <title>Kart over Bergen i maalestok 1:5000 af sand störrelse</title>
             <type>map</type>
-            <unititle>Kart over Bergen i maalestok 1:5000 af sand störrelse</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Kart over Bergen i maalestok 1:5000 af sand störrelse</collection>
+            <collection>Bergensiana</collection>
             <creatorcontrib>Det Private Kontor for Opmaalings og Kartarbeider</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>maps</prefilter>
             <rsrctype>maps</rsrctype>
+            <topic>Litografi</topic>
+            <topic>Kart</topic>
+            <topic>Byfjellene</topic>
+            <topic>Nygårdstangen</topic>
+            <topic>Bergen</topic>
+            <topic>Store Lungegårdsvann</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Kart over Bergen i maalestok 1:5000 af sand störrelse</addtitle>
+            <addtitle>Bergensiana</addtitle>
             <creatorcontrib>Det Private Kontor for Opmaalings og Kartarbeider</creatorcontrib>
             <description>Opmaalt og lithografert af Det Private Kontor for Opmaalings og Kartarbeider i Kristiania 1883</description>
             <recordid>UBB-MARCUS/Kart/ubb-bs-fol-01808-002</recordid>
             <rsrctype>maps</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Litografi</subject>
             <subject>Kart</subject>
+            <subject>Byfjellene</subject>
+            <subject>Nygårdstangen</subject>
+            <subject>Bergen</subject>
+            <subject>Store Lungegårdsvann</subject>
             <title>Kart over Bergen i maalestok 1:5000 af sand störrelse</title>
          </search>
          <delivery>
@@ -1208,8 +1574,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/map/ubb-bs-fol-01808-002</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01808/ubb-bs-fol-01808-002/jpg/ubb-bs-fol-01808-002_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/map/ubb-bs-fol-01808-002</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01808/ubb-bs-fol-01808-002/jpg/ubb-bs-fol-01808-002_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Det Private Kontor for Opmaalings og Kartarbeider</author>
@@ -1228,25 +1594,38 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creator>Det Private Kontor for Opmaalings og Kartarbeider</creator>
             <description>Opmaalt og lithografert af Det Private Kontor for Opmaalings og Kartarbeider i Kristiania 1883</description>
             <identifier>ubb-bs-fol-01808-001</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Kart;Litografi</subject>
+            <subject>Litografi; Kart</subject>
             <title>Kart over Bergen i maalestok 1:5000 af sand störrelse</title>
             <type>map</type>
-            <unititle>Kart over Bergen i maalestok 1:5000 af sand störrelse</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Bergensiana</collection>
+            <collection>Kart over Bergen i maalestok 1:5000 af sand störrelse</collection>
             <creatorcontrib>Det Private Kontor for Opmaalings og Kartarbeider</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>maps</prefilter>
             <rsrctype>maps</rsrctype>
+            <topic>Litografi</topic>
+            <topic>Kart</topic>
+            <topic>Bergen</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Bergensiana</addtitle>
+            <addtitle>Kart over Bergen i maalestok 1:5000 af sand störrelse</addtitle>
             <creatorcontrib>Det Private Kontor for Opmaalings og Kartarbeider</creatorcontrib>
             <description>Opmaalt og lithografert af Det Private Kontor for Opmaalings og Kartarbeider i Kristiania 1883</description>
             <recordid>UBB-MARCUS/Kart/ubb-bs-fol-01808-001</recordid>
             <rsrctype>maps</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
-            <subject>Kart</subject>
             <subject>Litografi</subject>
+            <subject>Kart</subject>
+            <subject>Bergen</subject>
             <title>Kart over Bergen i maalestok 1:5000 af sand störrelse</title>
          </search>
          <delivery>
@@ -1254,8 +1633,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/map/ubb-bs-fol-01808-001</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01808/ubb-bs-fol-01808-001/jpg/ubb-bs-fol-01808-001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/map/ubb-bs-fol-01808-001</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01808/ubb-bs-fol-01808-001/jpg/ubb-bs-fol-01808-001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Det Private Kontor for Opmaalings og Kartarbeider</author>
@@ -1274,21 +1653,36 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creator>Nikolai Astrup</creator>
             <identifier>ubb-ms-0972-i-27-a</identifier>
             <ispartof>ubb-ms-0972-i-27</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Kunst;Vestlandet;Maling;Norge;Jølster</subject>
+            <subject>Kunst; Vestlandet; Maling; Norge; Jølster</subject>
             <title>[Notat av Nikolai Johannes Astrup]</title>
             <type>text_resource</type>
-            <unititle>[Notat av Nikolai Johannes Astrup]</unititle>
          </display>
-         <facet>
-            <creatorcontrib>Nikolai Astrup</creatorcontrib>
+         <facets>
+            <collection>Astrup-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
+            <creatorcontrib>Astrup, Nikolai</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai Johannes</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Kunst</topic>
+            <topic>Vestlandet</topic>
+            <topic>Maling</topic>
+            <topic>Norge</topic>
+            <topic>Jølster</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Astrup-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creatorcontrib>Nikolai Astrup</creatorcontrib>
             <recordid>UBB-MARCUS/Notat/ubb-ms-0972-i-27-a</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Kunst</subject>
             <subject>Vestlandet</subject>
@@ -1302,8 +1696,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/note/ubb-ms-0972-i-27-a</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0972/ubb-ms-0972-i/ubb-ms-0972-i-27/ubb-ms-0972-i-27-a/jpg/ubb-ms-0972-i-27-a_p1588_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/note/ubb-ms-0972-i-27-a</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0972/ubb-ms-0972-i/ubb-ms-0972-i-27/ubb-ms-0972-i-27-a/jpg/ubb-ms-0972-i-27-a_p1588_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Nikolai Astrup</author>
@@ -1322,20 +1716,31 @@ indskutte rene blader, der er fabrikert 1824</description>
             <description>Oversikt over mynter</description>
             <identifier>ubb-ms-0198-b-03</identifier>
             <ispartof>ubb-ms-0198-b</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>1800-tallet;Museumshistorie;Bergen;Historie</subject>
+            <subject>1800-tallet; Museumshistorie; Bergen; Historie</subject>
             <title>Noticer vedk. Bergens Museum i Tiden ca 1830 - 1840. 003</title>
             <type>text_resource</type>
-            <unititle>Noticer vedk. Bergens Museum i Tiden ca 1830 - 1840. 003</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>1800-tallet</topic>
+            <topic>Museumshistorie</topic>
+            <topic>Bergen</topic>
+            <topic>Historie</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <description>Oversikt over mynter</description>
             <recordid>UBB-MARCUS/Notat/ubb-ms-0198-b-03</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>1800-tallet</subject>
             <subject>Museumshistorie</subject>
@@ -1348,8 +1753,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/note/ubb-ms-0198-b-03</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0198/ubb-ms-0198-b/ubb-ms-0198-b-03/jpg/ubb-ms-0198-b-03_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/note/ubb-ms-0198-b-03</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0198/ubb-ms-0198-b/ubb-ms-0198-b-03/jpg/ubb-ms-0198-b-03_p0001_th.jpg</thumbnail>
          </links>
          <sort/>
       </metadata>
@@ -1366,27 +1771,40 @@ indskutte rene blader, der er fabrikert 1824</description>
             <creator>Ukjent</creator>
             <description>Huset ble senere påbygd en ekstra etasje og hoveddøren flyttet.</description>
             <identifier>ubb-bs-ok-19374</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Jente;Trapp;Bolighus;Barn</subject>
+            <subject>Jente; Trapp; Bolighus; Barn</subject>
             <title>[Strandgaten, Sandnes]</title>
             <type>image</type>
-            <unititle>[Strandgaten, Sandnes]</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>[Strandgaten, Sandnes]</collection>
             <creatorcontrib>Ukjent</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>Jente</topic>
+            <topic>Trapp</topic>
+            <topic>Bolighus</topic>
+            <topic>Barn</topic>
+            <topic>Sandnes</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>[Strandgaten, Sandnes]</addtitle>
             <creatorcontrib>Ukjent</creatorcontrib>
             <description>Huset ble senere påbygd en ekstra etasje og hoveddøren flyttet.</description>
             <recordid>UBB-MARCUS/Fotografi/ubb-bs-ok-19374</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Jente</subject>
             <subject>Trapp</subject>
             <subject>Bolighus</subject>
             <subject>Barn</subject>
+            <subject>Sandnes</subject>
             <title>[Strandgaten, Sandnes]</title>
          </search>
          <delivery>
@@ -1394,8 +1812,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/photograph/ubb-bs-ok-19374</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-ok/ubb-bs-ok-19374/jpg/ubb-bs-ok-19374_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/photograph/ubb-bs-ok-19374</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-ok/ubb-bs-ok-19374/jpg/ubb-bs-ok-19374_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Ukjent</author>
@@ -1413,27 +1831,45 @@ indskutte rene blader, der er fabrikert 1824</description>
             <availlibrary>$$9ONLINE</availlibrary>
             <creator>Astrid Monssen</creator>
             <identifier>ubb-bs-fol-01797-015-a</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Trebygning;Kjole;Gjerde;Kvinne;Hoteller</subject>
+            <subject>Trebygning; Kjole; Gjerde; Kvinne; Hoteller</subject>
             <title>Dombaas 1923.</title>
             <type>image</type>
-            <unititle>Dombaas 1923.</unititle>
          </display>
-         <facet>
-            <creatorcontrib>Astrid Monssen</creatorcontrib>
+         <facets>
+            <collection>Familiealbum Monssen 1922-30</collection>
+            <collection>Fotografiske samlinger</collection>
+            <creatorcontrib>Monssen, Astrid</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>Trebygning</topic>
+            <topic>Kjole</topic>
+            <topic>Gjerde</topic>
+            <topic>Kvinne</topic>
+            <topic>Hoteller</topic>
+            <topic>Dombås</topic>
+            <topic>Dombås Turisthotell</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Familiealbum Monssen 1922-30</addtitle>
+            <addtitle>Fotografiske samlinger</addtitle>
             <creatorcontrib>Astrid Monssen</creatorcontrib>
             <recordid>UBB-MARCUS/Fotografi/ubb-bs-fol-01797-015-a</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Trebygning</subject>
             <subject>Kjole</subject>
             <subject>Gjerde</subject>
             <subject>Kvinne</subject>
             <subject>Hoteller</subject>
+            <subject>Dombås</subject>
+            <subject>Dombås Turisthotell</subject>
             <title>Dombaas 1923.</title>
          </search>
          <delivery>
@@ -1441,8 +1877,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/photograph/ubb-bs-fol-01797-015-a</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01797/ubb-bs-fol-01797-015/ubb-bs-fol-01797-015-a/jpg/ubb-bs-fol-01797-015-a_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/photograph/ubb-bs-fol-01797-015-a</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-fol/ubb-bs-fol-01797/ubb-bs-fol-01797-015/ubb-bs-fol-01797-015-a/jpg/ubb-bs-fol-01797-015-a_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Astrid Monssen</author>
@@ -1460,26 +1896,41 @@ indskutte rene blader, der er fabrikert 1824</description>
             <availlibrary>$$9ONLINE</availlibrary>
             <creator>Ukjent</creator>
             <identifier>ubb-bs-pkb-00167</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Apotek;Postkort;Gate;By- og småsteder</subject>
+            <subject>Apotek; Postkort; Gate; By- og småsteder</subject>
             <title>Nygaardsgaden. Bergen</title>
             <type>image</type>
-            <unititle>Nygaardsgaden. Bergen</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Fotografiske samlinger</collection>
             <creatorcontrib>Ukjent</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>Apotek</topic>
+            <topic>Postkort</topic>
+            <topic>Gate</topic>
+            <topic>By- og småsteder</topic>
+            <topic>Nygårdsgaten</topic>
+            <topic>Apoteket Ørnen, Nygårdsgaten 2</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Fotografiske samlinger</addtitle>
             <creatorcontrib>Ukjent</creatorcontrib>
             <recordid>UBB-MARCUS/Postkort/ubb-bs-pkb-00167</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Apotek</subject>
             <subject>Postkort</subject>
             <subject>Gate</subject>
             <subject>By- og småsteder</subject>
+            <subject>Nygårdsgaten</subject>
+            <subject>Apoteket Ørnen, Nygårdsgaten 2</subject>
             <title>Nygaardsgaden. Bergen</title>
          </search>
          <delivery>
@@ -1487,8 +1938,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/postcard/ubb-bs-pkb-00167</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-pkb/ubb-bs-pkb-00167/jpg/ubb-bs-pkb-00167_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/postcard/ubb-bs-pkb-00167</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-pkb/ubb-bs-pkb-00167/jpg/ubb-bs-pkb-00167_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Ukjent</author>
@@ -1506,27 +1957,43 @@ indskutte rene blader, der er fabrikert 1824</description>
             <availlibrary>$$9ONLINE</availlibrary>
             <creator>Ukjent</creator>
             <identifier>ubb-bs-pkb-00161</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Folkeliv;Hestekjøretøy;By- og småsteder;Postkort;Allmenning</subject>
+            <subject>Folkeliv; Hestekjøretøy; By- og småsteder; Postkort; Allmenning</subject>
             <title>Torvet med Christies Støtte</title>
             <type>image</type>
-            <unititle>Torvet med Christies Støtte</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Fotografiske samlinger</collection>
             <creatorcontrib>Ukjent</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>Folkeliv</topic>
+            <topic>Hestekjøretøy</topic>
+            <topic>By- og småsteder</topic>
+            <topic>Postkort</topic>
+            <topic>Allmenning</topic>
+            <topic>Torgallmenningen</topic>
+            <topic>Nedre Torget</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Fotografiske samlinger</addtitle>
             <creatorcontrib>Ukjent</creatorcontrib>
             <recordid>UBB-MARCUS/Postkort/ubb-bs-pkb-00161</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Folkeliv</subject>
             <subject>Hestekjøretøy</subject>
             <subject>By- og småsteder</subject>
             <subject>Postkort</subject>
             <subject>Allmenning</subject>
+            <subject>Torgallmenningen</subject>
+            <subject>Nedre Torget</subject>
             <title>Torvet med Christies Støtte</title>
          </search>
          <delivery>
@@ -1534,8 +2001,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/postcard/ubb-bs-pkb-00161</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-pkb/ubb-bs-pkb-00161/jpg/ubb-bs-pkb-00161_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/postcard/ubb-bs-pkb-00161</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-bs/ubb-bs-pkb/ubb-bs-pkb-00161/jpg/ubb-bs-pkb-00161_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Ukjent</author>
@@ -1553,23 +2020,33 @@ indskutte rene blader, der er fabrikert 1824</description>
             <availlibrary>$$9ONLINE</availlibrary>
             <creator>Luc Dall'Armellina</creator>
             <identifier>ubb-uib-ela-002</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
             <subject>E-poetry</subject>
             <title>E-poetry (2007)</title>
             <type>image</type>
-            <unititle>E-poetry (2007)</unititle>
          </display>
-         <facet>
-            <creatorcontrib>Luc Dall'Armellina</creatorcontrib>
+         <facets>
+            <collection>Electronic Literature - posters</collection>
+            <creatorcontrib>Dall'Armellina, Luc</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>E-poetry</topic>
+            <topic>University Paris 8</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Electronic Literature - posters</addtitle>
             <creatorcontrib>Luc Dall'Armellina</creatorcontrib>
             <recordid>UBB-MARCUS/Plakat/ubb-uib-ela-002</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>E-poetry</subject>
+            <subject>University Paris 8</subject>
             <title>E-poetry (2007)</title>
          </search>
          <delivery>
@@ -1577,8 +2054,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/poster/ubb-uib-ela-002</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-002/jpg/ubb-uib-ela-002_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/poster/ubb-uib-ela-002</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-002/jpg/ubb-uib-ela-002_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Luc Dall'Armellina</author>
@@ -1596,23 +2073,33 @@ indskutte rene blader, der er fabrikert 1824</description>
             <availlibrary>$$9ONLINE</availlibrary>
             <creator>Christina Malitius </creator>
             <identifier>ubb-uib-ela-003</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
             <subject>Electronic Literature Collection</subject>
             <title>Electronic Literature Collection. Volume 2 : Launch at the Bergen Public Library</title>
             <type>image</type>
-            <unititle>Electronic Literature Collection. Volume 2 : Launch at the Bergen Public Library</unititle>
          </display>
-         <facet>
-            <creatorcontrib>Christina Malitius </creatorcontrib>
+         <facets>
+            <collection>Electronic Literature - posters</collection>
+            <creatorcontrib>Malitius , Christina </creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>images</prefilter>
             <rsrctype>images</rsrctype>
+            <topic>Electronic Literature Collection</topic>
+            <topic>Bergen offentlige Bibliotek</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Electronic Literature - posters</addtitle>
             <creatorcontrib>Christina Malitius </creatorcontrib>
             <recordid>UBB-MARCUS/Plakat/ubb-uib-ela-003</recordid>
             <rsrctype>images</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Electronic Literature Collection</subject>
+            <subject>Bergen offentlige Bibliotek</subject>
             <title>Electronic Literature Collection. Volume 2 : Launch at the Bergen Public Library</title>
          </search>
          <delivery>
@@ -1620,8 +2107,8 @@ indskutte rene blader, der er fabrikert 1824</description>
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/poster/ubb-uib-ela-003</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-003/jpg/ubb-uib-ela-003_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/poster/ubb-uib-ela-003</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/bs/ubb/ubb-uib/ubb-uib-ela/ubb-uib-ela-003/jpg/ubb-uib-ela-003_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Christina Malitius </author>
@@ -1644,17 +2131,39 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
 ”Style is clearly Rouen. Use is clearly Rouen. Ms was intended for a woman.
 (figure in the margin at the beginning of the hours)”</description>
             <identifier>ubb-ms-0504</identifier>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Liturgi;Sang, kirkelig;Religiøse skrifter m.m.;1470-årene;Frankrike;Frankrike vedk.;Middelalderen;Musikk;Bønnebøker (gamle);Bønn;Fransk;Sang;Teologi;1480-årene;Religion vedk</subject>
+            <subject>Liturgi; Sang, kirkelig; Religiøse skrifter m.m.; 1470-årene; Frankrike; Frankrike vedk.; Middelalderen; Musikk; Bønnebøker (gamle); Bønn; Fransk; Sang; Teologi; 1480-årene; Religion vedk</subject>
             <title>Bønnebok paa Pergament skrevet i Frankrike ca. 1350 (paa latin)</title>
             <type>book</type>
-            <unititle>Bønnebok paa Pergament skrevet i Frankrike ca. 1350 (paa latin)</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Liturgi</topic>
+            <topic>Sang, kirkelig</topic>
+            <topic>Religiøse skrifter m.m.</topic>
+            <topic>1470-årene</topic>
+            <topic>Frankrike</topic>
+            <topic>Frankrike vedk.</topic>
+            <topic>Middelalderen</topic>
+            <topic>Musikk</topic>
+            <topic>Bønnebøker (gamle)</topic>
+            <topic>Bønn</topic>
+            <topic>Fransk</topic>
+            <topic>Sang</topic>
+            <topic>Teologi</topic>
+            <topic>1480-årene</topic>
+            <topic>Religion vedk</topic>
+            <topic>Rouen</topic>
+            <topic>Frankrike</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <description>Bønnebok paa Pergament skrevet i Frankrik ca. 1350 (paa latin)
 Begynder med en kalender, der er paa fransk, og viser tydelig manuskriptets herkomst. 8°. 86
 beskrevne blader. H.
@@ -1663,6 +2172,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
 (figure in the margin at the beginning of the hours)”</description>
             <recordid>UBB-MARCUS/Bønnebok/ubb-ms-0504</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Liturgi</subject>
             <subject>Sang, kirkelig</subject>
@@ -1679,6 +2190,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <subject>Teologi</subject>
             <subject>1480-årene</subject>
             <subject>Religion vedk</subject>
+            <subject>Rouen</subject>
+            <subject>Frankrike</subject>
             <title>Bønnebok paa Pergament skrevet i Frankrike ca. 1350 (paa latin)</title>
          </search>
          <delivery>
@@ -1686,8 +2199,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/prayerbook/ubb-ms-0504</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0504/jpg/ubb-ms-0504_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/prayerbook/ubb-ms-0504</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0504/jpg/ubb-ms-0504_p0001_th.jpg</thumbnail>
          </links>
          <sort/>
       </metadata>
@@ -1704,20 +2217,42 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <description>Gave i 1914 fra hr. redaktør Kyrre Grepp, som i sin tid havde faaet manuskriptet hos JohanBøgh, der igjen havde det fra sin bror Christopher B. I hans besiddelse blev det noget medtataf ildebrand, som udbrød, mens han som politimester var i Skien.Manuskriptet indeholder beretninger om Harmoniens samlinger og beslutninger etc. Kjendesikke av forf. der har tidligere behandlet selskapets historie.F. 90 beskrevne blader</description>
             <identifier>ubb-ms-0527-a</identifier>
             <ispartof>ubb-ms-0527</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Symfoniorkester;Det Harmoniske Selskab;1700-tallet;Musikk;Bergen;Bergen Filharmoniske Orkester;Harmonien;Musikkhistorie;Kulturliv;1800-tallet;Kulturhistorie</subject>
+            <subject>Symfoniorkester; Det Harmoniske Selskab; 1700-tallet; Musikk; Bergen; Bergen Filharmoniske Orkester; Harmonien; Musikkhistorie; Kulturliv; 1800-tallet; Kulturhistorie</subject>
             <title>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</title>
             <type>book</type>
-            <unititle>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Harmonien-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Symfoniorkester</topic>
+            <topic>Det Harmoniske Selskab</topic>
+            <topic>1700-tallet</topic>
+            <topic>Musikk</topic>
+            <topic>Bergen</topic>
+            <topic>Bergen Filharmoniske Orkester</topic>
+            <topic>Harmonien</topic>
+            <topic>Musikkhistorie</topic>
+            <topic>Kulturliv</topic>
+            <topic>1800-tallet</topic>
+            <topic>Kulturhistorie</topic>
+            <topic>Bergen</topic>
+            <topic>Skien</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Harmonien-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <description>Gave i 1914 fra hr. redaktør Kyrre Grepp, som i sin tid havde faaet manuskriptet hos JohanBøgh, der igjen havde det fra sin bror Christopher B. I hans besiddelse blev det noget medtataf ildebrand, som udbrød, mens han som politimester var i Skien.Manuskriptet indeholder beretninger om Harmoniens samlinger og beslutninger etc. Kjendesikke av forf. der har tidligere behandlet selskapets historie.F. 90 beskrevne blader</description>
             <recordid>UBB-MARCUS/Protokoll/ubb-ms-0527-a</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Symfoniorkester</subject>
             <subject>Det Harmoniske Selskab</subject>
@@ -1730,6 +2265,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <subject>Kulturliv</subject>
             <subject>1800-tallet</subject>
             <subject>Kulturhistorie</subject>
+            <subject>Bergen</subject>
+            <subject>Skien</subject>
             <title>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</title>
          </search>
          <delivery>
@@ -1737,8 +2274,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/protocol/ubb-ms-0527-a</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0527/ubb-ms-0527-a/jpg/ubb-ms-0527-a_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/protocol/ubb-ms-0527-a</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0527/ubb-ms-0527-a/jpg/ubb-ms-0527-a_p0001_th.jpg</thumbnail>
          </links>
          <sort/>
       </metadata>
@@ -1755,20 +2292,40 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <description>Gave fra kjøbmand Vilhelm Behrens i 1920</description>
             <identifier>ubb-ms-0664-01</identifier>
             <ispartof>ubb-ms-0664</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Symfoniorkester;Kulturliv;Musikkhistorie;1800-tallet;Bergen Filharmoniske Orkester;Harmonien;Musikk;Det Harmoniske Selskab;Kulturhistorie;Bergen</subject>
+            <subject>Symfoniorkester; Kulturliv; Musikkhistorie; 1800-tallet; Bergen Filharmoniske Orkester; Harmonien; Musikk; Det Harmoniske Selskab; Kulturhistorie; Bergen</subject>
             <title>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</title>
             <type>book</type>
-            <unititle>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <collection>Harmonien-samlingen</collection>
+            <library>$$L1120109</library>
+            <prefilter>books</prefilter>
             <rsrctype>books</rsrctype>
+            <topic>Symfoniorkester</topic>
+            <topic>Kulturliv</topic>
+            <topic>Musikkhistorie</topic>
+            <topic>1800-tallet</topic>
+            <topic>Bergen Filharmoniske Orkester</topic>
+            <topic>Harmonien</topic>
+            <topic>Musikk</topic>
+            <topic>Det Harmoniske Selskab</topic>
+            <topic>Kulturhistorie</topic>
+            <topic>Bergen</topic>
+            <topic>Bergen</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
+            <addtitle>Harmonien-samlingen</addtitle>
             <description>Gave fra kjøbmand Vilhelm Behrens i 1920</description>
             <recordid>UBB-MARCUS/Protokoll/ubb-ms-0664-01</recordid>
             <rsrctype>books</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Symfoniorkester</subject>
             <subject>Kulturliv</subject>
@@ -1780,6 +2337,7 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <subject>Det Harmoniske Selskab</subject>
             <subject>Kulturhistorie</subject>
             <subject>Bergen</subject>
+            <subject>Bergen</subject>
             <title>Protocol for Det Harmoniske Selskab i Bergen (Harmonien) 1769-1830.</title>
          </search>
          <delivery>
@@ -1787,8 +2345,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/protocol/ubb-ms-0664-01</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0664/ubb-ms-0664-01/jpg/ubb-ms-0664-01_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/protocol/ubb-ms-0664-01</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0664/ubb-ms-0664-01/jpg/ubb-ms-0664-01_p0001_th.jpg</thumbnail>
          </links>
          <sort/>
       </metadata>
@@ -1806,21 +2364,37 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creator>Nikolai Astrup</creator>
             <identifier>ubb-ms-1808-e-16</identifier>
             <ispartof>ubb-ms-1808-e</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Norge;Jølster;Maling;Kunst;Vestlandet</subject>
+            <subject>Norge; Jølster; Maling; Kunst; Vestlandet</subject>
             <type>text_resource</type>
          </display>
-         <facet>
+         <facets>
+            <collection>Astrup-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1920</creationdate>
-            <creatorcontrib>Nikolai Astrup</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai Johannes</creatorcontrib>
+            <creatorcontrib>Astrup, Nikolai</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Norge</topic>
+            <topic>Jølster</topic>
+            <topic>Maling</topic>
+            <topic>Kunst</topic>
+            <topic>Vestlandet</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Astrup-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1920</creationdate>
             <creatorcontrib>Nikolai Astrup</creatorcontrib>
             <recordid>UBB-MARCUS/Kvittering/ubb-ms-1808-e-16</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Norge</subject>
             <subject>Jølster</subject>
@@ -1833,8 +2407,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/receipt/ubb-ms-1808-e-16</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1808/ubb-ms-1808-e/ubb-ms-1808-e-16/jpg/ubb-ms-1808-e-16_p001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/receipt/ubb-ms-1808-e-16</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-1808/ubb-ms-1808-e/ubb-ms-1808-e-16/jpg/ubb-ms-1808-e-16_p001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Nikolai Astrup</author>
@@ -1855,23 +2429,33 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creator>Wilhelm Worsøe</creator>
             <identifier>ubb-ms-0198-a-010</identifier>
             <ispartof>ubb-ms-0198-a</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Historie;1800-tallet;Trondheim</subject>
+            <subject>Historie; 1800-tallet; Trondheim</subject>
             <title>Et brev fra en Samling Brever (ca 100 stk.) til Toldkasserer W. H. Christie vedk. Bergens Museum i Tiden 1833 - 1846. (Enkelte av brevene er til W. F. K. Christie). 011</title>
             <type>text_resource</type>
-            <unititle>Et brev fra en Samling Brever (ca 100 stk.) til Toldkasserer W. H. Christie vedk. Bergens Museum i Tiden 1833 - 1846. (Enkelte av brevene er til W. F. K. Christie). 011</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1835</creationdate>
-            <creatorcontrib>Wilhelm Worsøe</creatorcontrib>
+            <creatorcontrib>Worsøe, Wilhelm</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Historie</topic>
+            <topic>1800-tallet</topic>
+            <topic>Trondheim</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1835</creationdate>
             <creatorcontrib>Wilhelm Worsøe</creatorcontrib>
             <recordid>UBB-MARCUS/Kvittering/ubb-ms-0198-a-010</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Historie</subject>
             <subject>1800-tallet</subject>
@@ -1883,8 +2467,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/receipt/ubb-ms-0198-a-010</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0198/ubb-ms-0198-a/ubb-ms-0198-a-010/jpg/ubb-ms-0198-a-010_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/receipt/ubb-ms-0198-a-010</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0198/ubb-ms-0198-a/ubb-ms-0198-a-010/jpg/ubb-ms-0198-a-010_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Wilhelm Worsøe</author>
@@ -1904,27 +2488,49 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creationdate>1818</creationdate>
             <identifier>ubb-ms-0994-2</identifier>
             <ispartof>ubb-ms-0994</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Eiendomshandel;1800-tallet;Bergen;Eiendomshistorie;Historie</subject>
+            <subject>Eiendomshandel; 1800-tallet; Bergen; Eiendomshistorie; Historie</subject>
             <title>Johan Henrich Hesselmann kjøper eiendommen av Christen Hansen Maartmann. Skjøte dat. 2.6. 1818.</title>
             <type>text_resource</type>
-            <unititle>Johan Henrich Hesselmann kjøper eiendommen av Christen Hansen Maartmann. Skjøte dat. 2.6. 1818.</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1818</creationdate>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Eiendomshandel</topic>
+            <topic>1800-tallet</topic>
+            <topic>Bergen</topic>
+            <topic>Eiendomshistorie</topic>
+            <topic>Historie</topic>
+            <topic>Hollendergaten</topic>
+            <topic>Rode 20.</topic>
+            <topic>Rodenummer 33.</topic>
+            <topic>Bergen</topic>
+            <topic>Vetrlidsalmenning</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1818</creationdate>
             <recordid>UBB-MARCUS/Salgsskjøte/ubb-ms-0994-2</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Eiendomshandel</subject>
             <subject>1800-tallet</subject>
             <subject>Bergen</subject>
             <subject>Eiendomshistorie</subject>
             <subject>Historie</subject>
+            <subject>Hollendergaten</subject>
+            <subject>Rode 20.</subject>
+            <subject>Rodenummer 33.</subject>
+            <subject>Bergen</subject>
+            <subject>Vetrlidsalmenning</subject>
             <title>Johan Henrich Hesselmann kjøper eiendommen av Christen Hansen Maartmann. Skjøte dat. 2.6. 1818.</title>
          </search>
          <delivery>
@@ -1932,8 +2538,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/saledeed/ubb-ms-0994-2</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-2/jpg/ubb-ms-0994-2_p001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/saledeed/ubb-ms-0994-2</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-2/jpg/ubb-ms-0994-2_p001_th.jpg</thumbnail>
          </links>
          <sort>
             <creationdate>1818</creationdate>
@@ -1952,27 +2558,49 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creationdate>1724</creationdate>
             <identifier>ubb-ms-0994-1</identifier>
             <ispartof>ubb-ms-0994</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Bergen;Historie;Eiendomshandel;1700-tallet;Eiendomshistorie</subject>
+            <subject>Bergen; Historie; Eiendomshandel; 1700-tallet; Eiendomshistorie</subject>
             <title>Johann von Gulich selger eiendommen til Christen Hansen Maartmann. Skjøte dat. 1724.</title>
             <type>text_resource</type>
-            <unititle>Johann von Gulich selger eiendommen til Christen Hansen Maartmann. Skjøte dat. 1724.</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1724</creationdate>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Bergen</topic>
+            <topic>Historie</topic>
+            <topic>Eiendomshandel</topic>
+            <topic>1700-tallet</topic>
+            <topic>Eiendomshistorie</topic>
+            <topic>Vetrlidsalmenning</topic>
+            <topic>Rode 20.</topic>
+            <topic>Rodenummer 33.</topic>
+            <topic>Bergen</topic>
+            <topic>Hollendergaten</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1724</creationdate>
             <recordid>UBB-MARCUS/Salgsskjøte/ubb-ms-0994-1</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Bergen</subject>
             <subject>Historie</subject>
             <subject>Eiendomshandel</subject>
             <subject>1700-tallet</subject>
             <subject>Eiendomshistorie</subject>
+            <subject>Vetrlidsalmenning</subject>
+            <subject>Rode 20.</subject>
+            <subject>Rodenummer 33.</subject>
+            <subject>Bergen</subject>
+            <subject>Hollendergaten</subject>
             <title>Johann von Gulich selger eiendommen til Christen Hansen Maartmann. Skjøte dat. 1724.</title>
          </search>
          <delivery>
@@ -1980,8 +2608,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/saledeed/ubb-ms-0994-1</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-1/jpg/ubb-ms-0994-1_p001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/saledeed/ubb-ms-0994-1</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0994/ubb-ms-0994-1/jpg/ubb-ms-0994-1_p001_th.jpg</thumbnail>
          </links>
          <sort>
             <creationdate>1724</creationdate>
@@ -2001,23 +2629,33 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creator>Wilhelm Frimann Koren Christie</creator>
             <identifier>ubb-ms-0811-a-05-a</identifier>
             <ispartof>ubb-ms-0811-a-05</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>1800-tallet;Quodlibet;Tale</subject>
+            <subject>1800-tallet; Quodlibet; Tale</subject>
             <title>Stiftsamtmann W. F. K. Christies taler i klubbmøtene i tiden 1813 – 30/4 1827 [Daterte] - 01</title>
             <type>text_resource</type>
-            <unititle>Stiftsamtmann W. F. K. Christies taler i klubbmøtene i tiden 1813 – 30/4 1827 [Daterte] - 01</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1813</creationdate>
-            <creatorcontrib>Wilhelm Frimann Koren Christie</creatorcontrib>
+            <creatorcontrib>Christie, Wilhelm Frimann Koren</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>1800-tallet</topic>
+            <topic>Quodlibet</topic>
+            <topic>Tale</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1813</creationdate>
             <creatorcontrib>Wilhelm Frimann Koren Christie</creatorcontrib>
             <recordid>UBB-MARCUS/Tale/ubb-ms-0811-a-05-a</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>1800-tallet</subject>
             <subject>Quodlibet</subject>
@@ -2029,8 +2667,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/speech/ubb-ms-0811-a-05-a</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-05/ubb-ms-0811-a-05-a/jpg/ubb-ms-0811-a-05-a_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/speech/ubb-ms-0811-a-05-a</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-05/ubb-ms-0811-a-05-a/jpg/ubb-ms-0811-a-05-a_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Wilhelm Frimann Koren Christie</author>
@@ -2051,23 +2689,33 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creator>Wilhelm Frimann Koren Christie</creator>
             <identifier>ubb-ms-0811-a-05-b</identifier>
             <ispartof>ubb-ms-0811-a-05</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Tale;1800-tallet;Quodlibet</subject>
+            <subject>Tale; 1800-tallet; Quodlibet</subject>
             <title>Stiftsamtmann W. F. K. Christies taler i klubbmøtene i tiden 1813 – 30/4 1827 [Daterte] - 02</title>
             <type>text_resource</type>
-            <unititle>Stiftsamtmann W. F. K. Christies taler i klubbmøtene i tiden 1813 – 30/4 1827 [Daterte] - 02</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1819</creationdate>
-            <creatorcontrib>Wilhelm Frimann Koren Christie</creatorcontrib>
+            <creatorcontrib>Christie, Wilhelm Frimann Koren</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Tale</topic>
+            <topic>1800-tallet</topic>
+            <topic>Quodlibet</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1819</creationdate>
             <creatorcontrib>Wilhelm Frimann Koren Christie</creatorcontrib>
             <recordid>UBB-MARCUS/Tale/ubb-ms-0811-a-05-b</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Tale</subject>
             <subject>1800-tallet</subject>
@@ -2079,8 +2727,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/speech/ubb-ms-0811-a-05-b</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-05/ubb-ms-0811-a-05-b/jpg/ubb-ms-0811-a-05-b_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/speech/ubb-ms-0811-a-05-b</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-05/ubb-ms-0811-a-05-b/jpg/ubb-ms-0811-a-05-b_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Wilhelm Frimann Koren Christie</author>
@@ -2101,23 +2749,40 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creator>Christel Ebering</creator>
             <identifier>ubb-ms-0550-d-b-08</identifier>
             <ispartof>ubb-ms-0550-d-b</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Kulturhistorie;Harmonien;Bergen Filharmoniske Orkester;Symfoniorkester;Det Harmoniske Selskab;Bergen;1900-tallet;Musikkhistorie</subject>
+            <subject>Kulturhistorie; Harmonien; Bergen Filharmoniske Orkester; Symfoniorkester; Det Harmoniske Selskab; Bergen; 1900-tallet; Musikkhistorie</subject>
             <title>Arkivsaker vedk. Musikforeningen Harmonien 16</title>
             <type>text_resource</type>
-            <unititle>Arkivsaker vedk. Musikforeningen Harmonien 16</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Harmonien-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1901</creationdate>
-            <creatorcontrib>Christel Ebering</creatorcontrib>
+            <creatorcontrib>Ebering, Christel</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Kulturhistorie</topic>
+            <topic>Harmonien</topic>
+            <topic>Bergen Filharmoniske Orkester</topic>
+            <topic>Symfoniorkester</topic>
+            <topic>Det Harmoniske Selskab</topic>
+            <topic>Bergen</topic>
+            <topic>1900-tallet</topic>
+            <topic>Musikkhistorie</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Harmonien-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1901</creationdate>
             <creatorcontrib>Christel Ebering</creatorcontrib>
             <recordid>UBB-MARCUS/Telegram/ubb-ms-0550-d-b-08</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Kulturhistorie</subject>
             <subject>Harmonien</subject>
@@ -2134,8 +2799,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/telegram/ubb-ms-0550-d-b-08</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0550/ubb-ms-0550-d/ubb-ms-0550-d-b/ubb-ms-0550-d-b-08/jpg/ubb-ms-0550-d-b-08_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/telegram/ubb-ms-0550-d-b-08</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0550/ubb-ms-0550-d/ubb-ms-0550-d-b/ubb-ms-0550-d-b-08/jpg/ubb-ms-0550-d-b-08_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Christel Ebering</author>
@@ -2156,23 +2821,40 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creator>Christel Ebering</creator>
             <identifier>ubb-ms-0550-d-b-07</identifier>
             <ispartof>ubb-ms-0550-d-b</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>1900-tallet;Harmonien;Bergen Filharmoniske Orkester;Musikkhistorie;Symfoniorkester;Det Harmoniske Selskab;Kulturhistorie;Bergen</subject>
+            <subject>1900-tallet; Harmonien; Bergen Filharmoniske Orkester; Musikkhistorie; Symfoniorkester; Det Harmoniske Selskab; Kulturhistorie; Bergen</subject>
             <title>Arkivsaker vedk. Musikforeningen Harmonien 15</title>
             <type>text_resource</type>
-            <unititle>Arkivsaker vedk. Musikforeningen Harmonien 15</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Harmonien-samlingen</collection>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1901</creationdate>
-            <creatorcontrib>Christel Ebering</creatorcontrib>
+            <creatorcontrib>Ebering, Christel</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>1900-tallet</topic>
+            <topic>Harmonien</topic>
+            <topic>Bergen Filharmoniske Orkester</topic>
+            <topic>Musikkhistorie</topic>
+            <topic>Symfoniorkester</topic>
+            <topic>Det Harmoniske Selskab</topic>
+            <topic>Kulturhistorie</topic>
+            <topic>Bergen</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Harmonien-samlingen</addtitle>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1901</creationdate>
             <creatorcontrib>Christel Ebering</creatorcontrib>
             <recordid>UBB-MARCUS/Telegram/ubb-ms-0550-d-b-07</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>1900-tallet</subject>
             <subject>Harmonien</subject>
@@ -2189,8 +2871,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/telegram/ubb-ms-0550-d-b-07</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0550/ubb-ms-0550-d/ubb-ms-0550-d-b/ubb-ms-0550-d-b-07/jpg/ubb-ms-0550-d-b-07_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/telegram/ubb-ms-0550-d-b-07</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0550/ubb-ms-0550-d/ubb-ms-0550-d-b/ubb-ms-0550-d-b-07/jpg/ubb-ms-0550-d-b-07_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Christel Ebering</author>
@@ -2210,25 +2892,35 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creator>Dorothea Engelbrektsdatter</creator>
             <identifier>ubb-ms-0186-b-2</identifier>
             <ispartof>ubb-ms-0186-b</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Norge;Litteraturhistorie;1600-tallet</subject>
+            <subject>1600-tallet; Litteraturhistorie; Norge</subject>
             <title>Digt fra Dorthe Engelbrechtsdatter Hardenbeck.</title>
             <type>text_resource</type>
-            <unititle>Digt fra Dorthe Engelbrechtsdatter Hardenbeck.</unititle>
          </display>
-         <facet>
-            <creatorcontrib>Dorothea Engelbrektsdatter</creatorcontrib>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
+            <creatorcontrib>Engelbrektsdatter, Dorothea</creatorcontrib>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>1600-tallet</topic>
+            <topic>Litteraturhistorie</topic>
+            <topic>Norge</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creatorcontrib>Dorothea Engelbrektsdatter</creatorcontrib>
             <recordid>UBB-MARCUS/Transkripsjon/ubb-ms-0186-b-2</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
-            <subject>Norge</subject>
-            <subject>Litteraturhistorie</subject>
             <subject>1600-tallet</subject>
+            <subject>Litteraturhistorie</subject>
+            <subject>Norge</subject>
             <title>Digt fra Dorthe Engelbrechtsdatter Hardenbeck.</title>
          </search>
          <delivery>
@@ -2236,8 +2928,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/transcription/ubb-ms-0186-b-2</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0186/ubb-ms-0186-b/ubb-ms-0186-b-2/jpg/ubb-ms-0186-b-2_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/transcription/ubb-ms-0186-b-2</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0186/ubb-ms-0186-b/ubb-ms-0186-b-2/jpg/ubb-ms-0186-b-2_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <author>Dorothea Engelbrektsdatter</author>
@@ -2256,21 +2948,30 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <creationdate>1822</creationdate>
             <identifier>ubb-ms-0811-a-04-2-1</identifier>
             <ispartof>ubb-ms-0811-a-04-2</ispartof>
+            <publisher>$$IUBB</publisher>
             <source>Marcus</source>
-            <subject>Quodlibet;1800-tallet</subject>
+            <subject>Quodlibet; 1800-tallet</subject>
             <title>Quodlibet - Taler 01</title>
             <type>text_resource</type>
-            <unititle>Quodlibet - Taler 01</unititle>
          </display>
-         <facet>
+         <facets>
+            <collection>Manuskriptsamlingen</collection>
             <creationdate>1822</creationdate>
+            <library>$$L1120109</library>
+            <prefilter>text resources</prefilter>
             <rsrctype>text resources</rsrctype>
+            <topic>Quodlibet</topic>
+            <topic>1800-tallet</topic>
             <toplevel>Online Resources</toplevel>
-         </facet>
+            <toplevel>available</toplevel>
+         </facets>
          <search>
+            <addtitle>Manuskriptsamlingen</addtitle>
             <creationdate>1822</creationdate>
             <recordid>UBB-MARCUS/Transkripsjon/ubb-ms-0811-a-04-2-1</recordid>
             <rsrctype>text resources</rsrctype>
+            <scope>UBB_MARCUS</scope>
+            <searchscope>UBB_MARCUS</searchscope>
             <sourceid>UBB-MARCUS</sourceid>
             <subject>Quodlibet</subject>
             <subject>1800-tallet</subject>
@@ -2281,8 +2982,8 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             <institution>UBB</institution>
          </delivery>
          <links>
-            <linktorsrc>http://marcus.uib.no/instance/transcription/ubb-ms-0811-a-04-2-1</linktorsrc>
-            <thumbnail>https://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-04/ubb-ms-0811-a-04-2/ubb-ms-0811-a-04-2-1/jpg/ubb-ms-0811-a-04-2-1_p0001_th.jpg</thumbnail>
+            <linktorsrc>$$Dlenke til marcus$$Uhttp://marcus.uib.no/instance/transcription/ubb-ms-0811-a-04-2-1</linktorsrc>
+            <thumbnail>$$Uhttps://marcus.uib.no/files/manlib/ubb/ubb-ms/ubb-ms-0811/ubb-ms-0811-a/ubb-ms-0811-a-04/ubb-ms-0811-a-04-2/ubb-ms-0811-a-04-2-1/jpg/ubb-ms-0811-a-04-2-1_p0001_th.jpg</thumbnail>
          </links>
          <sort>
             <creationdate>1822</creationdate>

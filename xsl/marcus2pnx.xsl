@@ -31,7 +31,6 @@
     </xsl:template>
     
     <xsl:template match="rdf:Description">
-        <!-- collectiontitle ubbont:collectionTitle-->
         <metadata>
             <xsl:variable name="sourceid" select="'UBB-MARCUS'"/>
             <!-- kanskje bruke nytt felt ubbont:uuid her? noen dubletter av dct:identifier.-->

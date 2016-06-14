@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2" exclude-result-prefixes="xs">
-     <!--Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng 2016-06-09+02:00-->
+     <!--Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng 2016-06-14+02:00-->
  
      <!--     In some cases, the system will take only one of the following fields: 
             *All fields of the Control section.-->
@@ -120,7 +120,7 @@
            <xsl:param name="edition" as="xs:string?"/>
            <xsl:param name="format" as="xs:string?"/>
            <xsl:param name="identifier" as="xs:string?"/>
-           <xsl:param name="ispartof" as="xs:string?"/>
+           <xsl:param name="ispartof" as="xs:string+"/>
            <xsl:param name="language" as="xs:string?"/>
            <xsl:param name="oa" as="xs:string?"/>
            <xsl:param name="publisher" as="xs:string?"/>
@@ -270,11 +270,6 @@
                  </identifier>
            </xsl:for-each>
      
-           <!--The resource from which this resource is derived (for example, in
-                    an article from a journal - the journal is the source). Multiple occurrences are
-                    not concatenated. This type of relationship has been added as a specific
-                    relationship so it can be displayed as part of the brief results display.
-                    Example of source data: *MARC21: 773.-->           
            <xsl:for-each select="$ispartof[string(.)]">
                  <ispartof>
                        <xsl:value-of select="."/>

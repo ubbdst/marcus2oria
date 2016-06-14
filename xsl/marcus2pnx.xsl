@@ -74,7 +74,7 @@
                 <xsl:with-param name="format"/>-->
                 <xsl:with-param name="identifier" select="$identifier"/>
                 <!--?? Flere top collections? bruke top collection her? se winterton http://search.library.northwestern.edu/primo_library/libweb/action/display.do?tabs=detailsTab&showPnx=true&ct=display&fn=search&doc=01NWU_WTON37&indx=4&recIds=01NWU_WTON37&recIdxs=3&elementId=&renderMode=poppedOut&displayMode=full&http://search.library.northwestern.edu:80/primo_library/libweb/action/expand.do?gathStatTab=true&dscnt=0&mode=Basic&vid=NULV&rfnGrp=1&tab=default_tab&dstmp=1465498593567&frbg=&rfnGrpCounter=1&frbrVersion=2&tb=t&fctV=images&srt=rank&fctN=facet_rtype&dum=true&vl(freeText0)=winterton&fromTabHeaderButtonPopout=true -->
-                <xsl:with-param name="ispartof" select="dct:isPartOf[1]"/>
+                <xsl:with-param name="ispartof" select="dct:isPartOf,ubbont:collectionTitle"/>
                 <!--?? er dette riktig bruk av subfield for å få ut Universitetsbiblioteket i Bergen?--> 
                 <xsl:with-param name="publisher" select="$publisher"/>
                 <!--@todo legg til publisher i sparql spørring, eller bruker global parameter i.e universitetsbiblioteket uib?-->

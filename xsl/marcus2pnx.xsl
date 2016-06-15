@@ -13,6 +13,7 @@
     
     <xsl:strip-space elements="*"/>
     <!--parametre med uib default verdier-->
+    <xsl:param name="debug" as="xs:boolean" select="true()"/>
     <xsl:param name="library" select="'1120109'"  as="xs:string"/>
     <xsl:param name="institution" select="'UBB'"  as="xs:string"/>
     <!--?? opprette egen scope?-->
@@ -23,18 +24,25 @@
     <xsl:include href="lib/pnx.xsl"/>
     <xsl:include href="lib/types.xsl"/>
     <xsl:include href="lib/subfields.xsl"/>
+    
+    <xsl:variable name="sourceid" select="'UBB-MARCUS'"/>
+    <xsl:variable name="source-repository" select="'Marcus'"/>
+    <xsl:variable name="identifiers" select="'identifiers.xml'"/>
+    
     <xsl:template match="/">
         <OAI-PMH>
             <ListRecords>
-                <xsl:apply-templates/>
+                <xsl:apply-templates/>                
             </ListRecords>
         </OAI-PMH>
     </xsl:template>
     
+    
+    
+    
     <xsl:template match="rdf:Description">
         <xsl:variable name="identifier" select="dct:identifier"/>
-        <xsl:variable name="sourceid" select="'UBB-MARCUS'"/>
-        <xsl:variable name="source-repository" select="'Marcus'"/>
+        
         <xsl:variable name="sourcerecordid" select="concat(rdf:type,'/',$identifier)"/>
         <xsl:variable name="recordid" select="concat($sourceid,'/',$sourcerecordid)"/>
         <header>
@@ -56,11 +64,16 @@
             </xsl:call-template>
             <!-- variables for display section-->
             <xsl:variable name="display_maker" select="string-join(foaf:maker,'; ')"/>
-            <xsl:variable name="creation_date" select="tokenize(dct:created,'-')[1]"/>
+            <xsl:variable name="creation_date" select="tokenize(dct:created[1],'-')[1]"/>
             <xsl:variable name="subjects" select="dct:subject,dct:spatial"/>
             <xsl:variable name="display_subject" select="string-join($subjects,'; ')"/>
             <xsl:variable name="main_title" select="(rdfs:label[1],'[Uten Tittel]')[1]"/>
-            
+                <xsl:if test="$debug and not(dct:isPartOf) and not(ubbont:collectionTitle)">
+                <xsl:message><xsl:value-of select="$recordid"/> uten ispartof</xsl:message>
+            </xsl:if>
+                <xsl:if test="$debug and (count(dct:created) &gt; 1)">
+                    <xsl:message><xsl:value-of select="$recordid"/> <xsl:value-of select="dct:created"/> er mer enn en verdi</xsl:message>
+                </xsl:if>
             <!-- create display section-->
             <xsl:call-template name="display">                
                 <!-- ?? http://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide/Mapping_to_the_Normalized_Record/Adding_%24%249ONLINE_to_Library_Level_Availability#ww1157297-->

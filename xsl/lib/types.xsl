@@ -14,6 +14,7 @@
             <!-- mer en samling enn dokument, ignorer? <marcus-label primo-type="">Album</marcus-label>-->
             <marcus-label primo-type="book">Bok</marcus-label>
             <marcus-label primo-type="book">Forhandlingsprotokoll</marcus-label>
+            <marcus-label primo-type="book">Kopibok</marcus-label>
             <marcus-label primo-type="book">Kassebok</marcus-label>
             <marcus-label primo-type="text_resource">Diplom</marcus-label>
             <marcus-label primo-type="text_resource">Kontrakt</marcus-label>
@@ -41,6 +42,13 @@
         </types>
     </xsl:variable>
     
+    <!--<xsl:function name="flub:setPnxRecordId">
+        <xsl:param name="type"/>
+        <xsl:param name="identifer"/>
+        <xsl:param name="sourceId"/>
+        <xsl:value-of select=""/>
+    </xsl:function>
+    -->
     <xsl:function name="flub:getPrimoTypeFromRdfTypeLabel">
         <xsl:param name="rdfTypeLabel"/>
         <xsl:variable name="oria-type" select="key('primo-type-from-marcus',$rdfTypeLabel,$types-table)"/>

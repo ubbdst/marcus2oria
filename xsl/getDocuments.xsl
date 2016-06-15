@@ -11,6 +11,7 @@
          Bruker saxon:discard-document som er tilgjengelig i Saxon 9.1-B, men ikke nyere HE versjoner av Saxon. Kan også bruke PE og EE.
          -->
     <xsl:output method="xml" indent="yes"/>
+    <xsl:param name="debug" as="xs:boolean" select="true()"/>
     <xsl:include href="lib/types.xsl"/>
     <xsl:variable name="blacklist" select="'http://data.ub.uib.no/ontology/Album','http://data.ub.uib.no/ontology/Seal','http://data.ub.uib.no/ontology/Page'" as="xs:string*"/>
     <xsl:variable name="class-sparql-query">
@@ -40,9 +41,10 @@
             <xsl:for-each select="$types/descendant::*:binding[@name='class' and not(some $x in $blacklist satisfies $x =*/.)]">
             <xsl:call-template name="getDocumentsFromSparqlQuery">
                 <xsl:with-param name="class" select="*/."/>
-                <xsl:with-param name="limit" select="2"/>
-                <xsl:with-param name="max-documents-per-type" select="2"/>
-                            </xsl:call-template>
+                <xsl:with-param name="limit" select="100"/>
+                <!--<xsl:with-param name="max-documents-per-type" select="2"/>-->
+                            
+            </xsl:call-template>
         </xsl:for-each>
         </results>
     </xsl:template>
@@ -50,9 +52,10 @@
     <xsl:template name="getDocumentsFromSparqlQuery">
         <xsl:param name="offset" select="0" as="xs:integer"/>
         <xsl:param name="limit" select="200" as="xs:integer"/>
+        <xsl:param name="retry" select="0"/>
         <xsl:param name="class"/>
         <xsl:param name="max-documents-per-type" as="xs:integer?"/>
-        <xsl:variable name="document-without-image">
+        <xsl:variable name="document-query">
             <!-- namespace prefix-->
             PREFIX rdf:&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
             PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#> 
@@ -128,20 +131,25 @@
             }                 GRAPH ubbont:ubbont { &lt;<xsl:value-of select="$class"/>> rdfs:label ?classLabel . FILTER (langMatches(lang(?classLabel),"")) } 
             }         
         </xsl:variable>
-        <xsl:variable name="result" select="document(concat($sparql-endpoint,encode-for-uri($document-without-image),$sparql-output-suffix))" as="node()"/>
-         <xsl:choose>
-            <xsl:when test="not($result/descendant-or-self::rdf:RDF)">
-                <xsl:message terminate="yes">sparql endpoint returnerte ikke resultat. Avslutter.</xsl:message>
+        <xsl:variable name="result" select="document(concat($sparql-endpoint,encode-for-uri(replace($document-query,'(\s)\s+','$1')),$sparql-output-suffix))" as="node()?"/>
+        <xsl:if test="$debug">
+        <xsl:message>start of <xsl:value-of select="$class"/> offset: <xsl:value-of select="$offset"/></xsl:message>
+        </xsl:if>
+            <xsl:choose>
+            <xsl:when test="not($result/descendant-or-self::rdf:RDF) and $retry &lt; 5">            
+                <xsl:message terminate="yes">sparql endpoint returnerte ikke resultat. Avslutter.</xsl:message>        
             </xsl:when>
             <xsl:when test="not($result/descendant-or-self::rdf:RDF/*) and $offset = 0">
                 <xsl:message>Klasse <xsl:value-of select="."/> har ingen objekt å mappe.</xsl:message>
             </xsl:when>
             <xsl:when test="not($result/descendant-or-self::rdf:RDF/*)"></xsl:when>
             <xsl:otherwise>
+                <xsl:variable name="count-description" select="count($result/descendant-or-self::rdf:RDF/*)"/>
                 <xsl:sequence select="$result"/>       
-                <xsl:if test="$max-documents-per-type >$limit+$offset or not($max-documents-per-type)">
+                <xsl:if test="$max-documents-per-type >$limit+$offset or not($max-documents-per-type and $count-description &lt; $limit)">
                     <xsl:call-template name="getDocumentsFromSparqlQuery">
                         <xsl:with-param name="offset" select="$offset+$limit"/>
+                        <xsl:with-param name="limit" select="$limit"/>
                         <xsl:with-param name="class" select="$class"/>
                     </xsl:call-template>
                 </xsl:if>

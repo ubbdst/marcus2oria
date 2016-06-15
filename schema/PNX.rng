@@ -192,10 +192,10 @@
                     not concatenated. This type of relationship has been added as a specific
                     relationship so it can be displayed as part of the brief results display.
                     Example of source data: *MARC21: 773.</a:documentation>
-               <oneOrMore><element name="ispartof">
+               <zeroOrMore><element name="ispartof">
                     <text/>
                 </element>
-               </oneOrMore> 
+               </zeroOrMore> 
             </optional>
             <optional>
                 <a:documentation>The language of the resource. The language is stored in coded form

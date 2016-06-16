@@ -30,6 +30,9 @@
     <xsl:variable name="identifiers" select="'identifiers.xml'"/>
     
     <xsl:template match="/">
+         <!-- 
+            <xsl:apply-templates mode="identifier"/>               
+            -->       
         <OAI-PMH>
             <ListRecords>
                 <xsl:apply-templates/>                
@@ -45,16 +48,14 @@
         
         <xsl:variable name="sourcerecordid" select="concat(rdf:type,'/',$identifier)"/>
         <xsl:variable name="recordid" select="concat($sourceid,'/',$sourcerecordid)"/>
+        <record>
         <header>
+            <!-- kanskje bruke nytt felt ubbont:uuid her? noen dubletter av dct:identifier.-->           
             <identifier><xsl:value-of select="$recordid"/></identifier>
         </header>
-        <metadata>
-           
-            
-            <!-- kanskje bruke nytt felt ubbont:uuid her? noen dubletter av dct:identifier.-->
-          
+        <metadata>           
            <!-- create control section-->
-            <recordContainer>   
+            <recordContainer>       
             <xsl:call-template name="control">                
                 <xsl:with-param name="recordid" select="$recordid"/>
                 <xsl:with-param name="sourceformat" select="'PNX'"/>
@@ -156,11 +157,9 @@
             <xsl:call-template name="addata">
                 
             </xsl:call-template>
-            -->
-                
+            -->             
             </recordContainer>
         </metadata>
-    </xsl:template>
-    
-    
+        </record>
+    </xsl:template>    
 </xsl:stylesheet>

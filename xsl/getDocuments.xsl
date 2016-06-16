@@ -136,9 +136,20 @@
         <xsl:message>start of <xsl:value-of select="$class"/> offset: <xsl:value-of select="$offset"/></xsl:message>
         </xsl:if>
             <xsl:choose>
-            <xsl:when test="not($result/descendant-or-self::rdf:RDF) and $retry &lt; 5">            
-                <xsl:message terminate="yes">sparql endpoint returnerte ikke resultat. Avslutter.</xsl:message>        
+            <xsl:when test="not($result/descendant-or-self::rdf:RDF) and $retry &lt; 5">
+                <xsl:call-template name="getDocumentsFromSparqlQuery">
+                    <xsl:with-param name="class" select="$class"/>
+                    <xsl:with-param name="offset" select="$offset"/>
+                    <xsl:with-param name="limit" select="$limit"/>
+                    <xsl:with-param name="max-documents-per-type" select="$max-documents-per-type"/>
+                    <xsl:with-param name="retry" select="$retry+1"/>
+                </xsl:call-template>
             </xsl:when>
+                <xsl:when test="not($result/descendant-or-self::rdf:RDF)">
+                
+                <xsl:message terminate="yes">sparql endpoint returnerte ikke resultat. Avslutter.</xsl:message>        
+                
+                </xsl:when>
             <xsl:when test="not($result/descendant-or-self::rdf:RDF/*) and $offset = 0">
                 <xsl:message>Klasse <xsl:value-of select="."/> har ingen objekt å mappe.</xsl:message>
             </xsl:when>

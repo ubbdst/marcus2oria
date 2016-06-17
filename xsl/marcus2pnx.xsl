@@ -13,7 +13,7 @@
     
     <xsl:strip-space elements="*"/>
     <!--parametre med uib default verdier-->
-    <xsl:param name="debug" as="xs:boolean" select="true()"/>
+    <xsl:param name="debug" as="xs:boolean" select="false()"/>
     <xsl:param name="library" select="'1120109'"  as="xs:string"/>
     <xsl:param name="institution" select="'UBB'"  as="xs:string"/>
     <!--?? opprette egen scope?-->

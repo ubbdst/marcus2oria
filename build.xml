@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="marcus2oria" default="marcus2oria">
+    <property file="local.marcus2oria.properties"/>
+    <target name="marcus2oria" depends="queryMarcusForData,transformMarcus2oria,DivideAndPackageResults,copyAndCommitIdentifierFile"/>
+    
+    <target name="queryMarcusForData">
+        <xslt in="dummy.xml" style="xsl/getDocuments.xsl" out="${queryMarcusForData.out}">
+            <classpath path="lib/saxon9he.jar"/>
+        </xslt>                     
+    </target>
+    
+    <target name="transformMarcus2oria">
+        <xslt style="xsl/marcus2pnx.xsl" in="${queryMarcusForData.out}" out="${transformMarcus2oria.out}" >
+            <param name="library" expression="'1120109'"/>
+            <param name="institution" expression="'UBB'"/>
+            <param name="searchscope" expression="'UBB_MARCUS'"/>
+            <param name="scope" expression="'UBB_MARCUS'"/>
+            <param name="publisher" expression="'Universitetsbiblioteket i Bergen'"/>
+        </xslt>
+    </target>
+
+    <target name="copyAndCommitIdentifierFile">
+        <xslt in="${transformMarcus2oria.out}" style="xsl/updateIdentifiers.xsl" out="${updateIdentifiers.out}"/>        
+        <xslt in="${copyAndCommitIdentifierFile.out}" style="xsl/createDeleteRecordsOai.xsl" out="${createDeleteRecordsOai.out}"/>
+    </target>   
+    
+    <target name="DivideAndPackageResults">
+        <length file="${transformMarcus2oria.out}" property="pnx.length"/>
+        <echo message="${pnx.length}"/>        
+        <xslt in="${transformMarcus2oria.out}" style="xsl/divideRecordsToChunks.xsl" out="${dummy.out}">
+            <param name="file-size-in-kb" expression="${pnx.length}"/>
+        </xslt>
+        <tar compression="gzip" basedir="output/pnx/" destfile="${marcus.oai.archive}"/>     
+    </target>
+    
+    
+    
+    
+  
+</project>

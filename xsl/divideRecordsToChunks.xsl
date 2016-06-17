@@ -20,14 +20,15 @@
     </xsl:variable>
     
     <xsl:variable name="xml-name" select="replace(tokenize(base-uri(),'/')[last()],'\.^\.+','')"/>
-    <xsl:variable name="xsl-base-uri" select="string-join(tokenize(base-uri($dummy),'/')[position()=1 to last()-1],'/')"/>
+    <!--assumes xsl position is in xsl folder-->
+    <xsl:variable name="project-base-uri" select="string-join(tokenize(base-uri($dummy),'/')[position()=1 to last()-2],'/')"/>
     
     <xsl:key name="record-per-xml" match="*:record" use="flub:round_up((count(preceding-sibling::record)+1) div $number-per-xml)"/>
     <xsl:strip-space elements="*"/>
     <xsl:output method="xml" indent="yes"></xsl:output>
     <xsl:template match="/">
       <xsl:for-each select="1 to $number-of-files-each-file">
-            <xsl:result-document href="{$xsl-base-uri}/output/{$xml-name}_{.}{replace(string(current-dateTime()),'[+:]','_')}.xml">
+            <xsl:result-document href="{$project-base-uri}/output/pnx/{$xml-name}_{.}{replace(string(current-dateTime()),'[+:]','_')}.xml">
                 <OAI-PMH>
                     <listRecords>
                 <xsl:apply-templates select="key('record-per-xml',.,$current)"/> 

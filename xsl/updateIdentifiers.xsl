@@ -71,7 +71,6 @@
 
             <xsl:value-of select="$newline"/>
             <xsl:apply-templates select="$identifier-doc" mode="update-identifiers"/>
-            <xsl:value-of select="$newline"/>
             <xsl:apply-templates/>
         </identifiers>
     </xsl:template>

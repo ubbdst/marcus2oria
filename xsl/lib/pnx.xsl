@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2" exclude-result-prefixes="xs">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://data.ub.uib.no/ns/" version="2" exclude-result-prefixes="xs">
      <!--Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng 2016-06-15+02:00-->
  
      <!--     In some cases, the system will take only one of the following fields: 

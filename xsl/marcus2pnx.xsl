@@ -7,6 +7,7 @@
     xmlns:flub="http://data.ub.uib.no/ns/function-library/"
     xmlns:ubbont="http://data.ub.uib.no/ontology/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns="http://www.openarchives.org/OAI/2.0/"
     exclude-result-prefixes="ubbont xs flub foaf rdfs dct rdf"
     
     version="2.0">
@@ -33,7 +34,7 @@
          <!-- 
             <xsl:apply-templates mode="identifier"/>               
             -->       
-        <OAI-PMH>
+        <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
             <ListRecords>
                 <xsl:apply-templates/>                
             </ListRecords>
@@ -55,7 +56,7 @@
         </header>
         <metadata>           
            <!-- create control section-->
-            <recordContainer>       
+            <recordContainer xmlns="http://data.ub.uib.no/ns/">       
             <xsl:call-template name="control">                
                 <xsl:with-param name="recordid" select="$recordid"/>
                 <xsl:with-param name="sourceformat" select="'PNX'"/>

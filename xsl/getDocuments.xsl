@@ -12,6 +12,8 @@
          -->
     <xsl:output method="xml" indent="yes"/>
     <xsl:param name="debug" as="xs:boolean" select="true()"/>
+    <xsl:param name="limit" select="100"/>
+    <xsl:param name="test-run" as="xs:boolean" select="true()"/>
     <xsl:include href="lib/types.xsl"/>
     <xsl:variable name="blacklist" select="'http://data.ub.uib.no/ontology/Album','http://data.ub.uib.no/ontology/Seal','http://data.ub.uib.no/ontology/Page'" as="xs:string*"/>
     <xsl:variable name="class-sparql-query">
@@ -41,8 +43,12 @@
             <xsl:for-each select="$types/descendant::*:binding[@name='class' and not(some $x in $blacklist satisfies $x =*/.)]">
             <xsl:call-template name="getDocumentsFromSparqlQuery">
                 <xsl:with-param name="class" select="*/."/>
-                <xsl:with-param name="limit" select="100"/>
-                <!--<xsl:with-param name="max-documents-per-type" select="2"/>-->
+                <xsl:with-param name="limit" select="$limit"/> 
+                <xsl:with-param name="max-documents-per-type" select="if ($test-run) then 2 else ()">
+                   
+                    
+                </xsl:with-param> 
+                
                             
             </xsl:call-template>
         </xsl:for-each>
@@ -157,7 +163,11 @@
             <xsl:otherwise>
                 <xsl:variable name="count-description" select="count($result/descendant-or-self::rdf:RDF/*)"/>
                 <xsl:sequence select="$result"/>       
-                <xsl:if test="$max-documents-per-type >$limit+$offset or not($max-documents-per-type and $count-description &lt; $limit)">
+                <xsl:if test="$max-documents-per-type &lt;$limit+$offset 
+                    or 
+                    (not($max-documents-per-type)
+                    and 
+                    $count-description &lt; $limit)">
                     <xsl:call-template name="getDocumentsFromSparqlQuery">
                         <xsl:with-param name="offset" select="$offset+$limit"/>
                         <xsl:with-param name="limit" select="$limit"/>

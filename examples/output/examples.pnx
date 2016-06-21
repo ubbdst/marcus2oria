@@ -3,7 +3,7 @@
    <ListRecords>
       <record>
          <header>
-            <identifier>UBB-MARCUS/Manuskript/ubb-ms-0167-09-103-a</identifier>
+            <identifier>aaUBB-MARCUS/Manuskript/ubb-ms-0167-09-103-a</identifier>
          </header>
          <metadata>
             <recordContainer>
@@ -69,7 +69,7 @@
       </record>
       <record>
          <header>
-            <identifier>UBB-MARCUS/Manuskript/ubb-ms-0199-a-08</identifier>
+            <identifier>aUBB-MARCUS/Manuskript/ubb-ms-0199-a-08</identifier>
          </header>
          <metadata>
             <recordContainer>
@@ -2504,7 +2504,7 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             </recordContainer>
          </metadata>
       </record>
-      <record>
+   <!--   <record>
          <header>
             <identifier>UBB-MARCUS/Protokoll/ubb-ms-0527-a</identifier>
          </header>
@@ -2588,7 +2588,7 @@ Datering 1470-1480 (David Ganz, Mara Hofmann, England)
             </recordContainer>
          </metadata>
       </record>
-      <record>
+   -->   <record>
          <header>
             <identifier>UBB-MARCUS/Protokoll/ubb-ms-0664-01</identifier>
          </header>

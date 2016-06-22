@@ -24,8 +24,8 @@
         select="string-join(tokenize(base-uri($dummy), '/'), '/')[1 to position() = last() - 1]"/>
     <!-- opprett en property for harvested dato i ant og sett inn som parameter-->
     <!--<xsl:key name="identifier" match="record/header/identifier" use="."/>-->
-    <xsl:key name="identifier" match="identifier" use="@id"/>
-    <xsl:key name="oai-identifier" match="record" use="*:header/*:identifier"/>
+    <xsl:key name="identifier" match="*:identifier" use="@id"/>
+    <xsl:key name="oai-identifier" match="*:record" use="*:header/*:identifier"/>
     <!--<xsl:key name="not-in-mapping" match=""/>-->
     <xsl:variable name="oai-pmh" select="/"/>
     <xsl:variable name="identifier-doc"
@@ -94,7 +94,9 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:copy>
+            <xsl:value-of select="$newline"/>
         </xsl:if>
+        
     </xsl:template>
 
    

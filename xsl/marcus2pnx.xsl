@@ -56,7 +56,7 @@
         </header>
         <metadata>           
            <!-- create control section-->
-            <recordContainer xmlns="http://data.ub.uib.no/ns/">       
+            <recordContainer xmlns="">       
             <xsl:call-template name="control">                
                 <xsl:with-param name="recordid" select="$recordid"/>
                 <xsl:with-param name="sourceformat" select="'PNX'"/>

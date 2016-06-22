@@ -13,7 +13,7 @@
     <xsl:output method="xml" indent="yes"/>
     <xsl:param name="debug" as="xs:boolean" select="true()"/>
     <xsl:param name="limit" select="100"/>
-    <xsl:param name="test-run" as="xs:boolean" select="true()"/>
+    <xsl:param name="test-run" as="xs:boolean" select="false()"/>
     <xsl:include href="lib/types.xsl"/>
     <xsl:variable name="blacklist" select="'http://data.ub.uib.no/ontology/Album','http://data.ub.uib.no/ontology/Seal','http://data.ub.uib.no/ontology/Page'" as="xs:string*"/>
     <xsl:variable name="class-sparql-query">
@@ -165,9 +165,8 @@
                 <xsl:sequence select="$result"/>       
                 <xsl:if test="$max-documents-per-type &lt;$limit+$offset 
                     or 
-                    (not($max-documents-per-type)
-                    and 
-                    $count-description &lt; $limit)">
+                    (not(string(($max-documents-per-type)))
+                    and not($count-description &lt; $limit))">
                     <xsl:call-template name="getDocumentsFromSparqlQuery">
                         <xsl:with-param name="offset" select="$offset+$limit"/>
                         <xsl:with-param name="limit" select="$limit"/>

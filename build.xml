@@ -7,8 +7,8 @@
    
     <target name="queryMarcusForData">
         <xslt in="dummy.xml" style="xsl/getDocuments.xsl" force="yes" out="${queryMarcusForData.out}">
-            <param name="limit" expression="2" type="INT"/>
-            <param name="test-run" expression="1"/>
+            <param name="limit" expression="200" type="INT"/>
+            <!--<param name="test-run" expression="0"/>-->
             <classpath path="lib/saxon9he.jar"/>
         </xslt>                     
     </target>
@@ -40,7 +40,7 @@
         
         <length file="${transformMarcus2oria.out}" property="pnx.length"/>
         <echo message="${pnx.length}"/>        
-        <xslt in="${transformMarcus2oria.out}" style="xsl/divideRecordsToChunks.xsl" out="${dummy.out}">
+        <xslt in="${transformMarcus2oria.out}" style="xsl/divideRecordsToChunks.xsl" out="${dummy.out}" force="yes">
             <param name="file-size-in-bytes" expression="${pnx.length}"/>
             <classpath path="lib/saxon9he.jar"/>
         </xslt>

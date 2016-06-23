@@ -7,17 +7,17 @@
         with comments when fields are used which are not yet documented in the Technical
         guide.</a:documentation>
     <start>
-        <element name="OAI-PMH">
-            <element name="ListRecords">
-                <oneOrMore>
+        <element name="OAI-PMH" ns="http://www.openarchives.org/OAI/2.0/">
+            <element name="ListRecords" ns="http://www.openarchives.org/OAI/2.0/">
+                <zeroOrMore>
                     <ref name="record"/>
-                </oneOrMore>
+                </zeroOrMore>
             </element>
         </element>
     </start>
 
     <define name="record">
-        <element name="record">
+        <element name="record" ns="http://www.openarchives.org/OAI/2.0/">
             <choice>
                 <ref name="deleted"/>
                 <ref name="exists"/>
@@ -26,7 +26,7 @@
     </define>
 
     <define name="deleted">
-        <element name="header">
+        <element name="header" ns="http://www.openarchives.org/OAI/2.0/">
             <attribute name="status">
                 <value>deleted</value>
             </attribute>
@@ -40,13 +40,14 @@
     </define>
 
     <define name="identifier">
-        <element name="identifier">
+        <element name="identifier" ns="http://www.openarchives.org/OAI/2.0/">
             <text/>
         </element>
     </define>
 
     <define name="metadata">
-        <element name="metadata">
+        <element name="metadata" ns="http://www.openarchives.org/OAI/2.0/">
+            <element name="recordContainer" ns="">
             <ref name="control"/>
             <ref name="display"/>
             <ref name="facets"/>
@@ -56,6 +57,7 @@
             <ref name="sort"/>
             <ref name="addata"/>
             <ref name="ranking"/>
+            </element>
         </element>
     </define>
 
@@ -322,6 +324,7 @@
 
     <a:documentation>*All fields of the Ranking section. 0-1.</a:documentation>
     <define name="ranking">
+       
         <element name="ranking">
         <optional>
             <a:documentation>The amount of boost that is applied to a record. By default, no boost
@@ -1122,7 +1125,9 @@
     </define>
 
     <define name="addata">
-        <element name="addata">
+        
+        <optional>
+            <element name="addata">
             <zeroOrMore>
                 <a:documentation>orcidid</a:documentation>
                 <element name="orcidid">
@@ -1504,10 +1509,11 @@
                 </element>
             </zeroOrMore>
         </element>
+        </optional>
     </define>
 
     <define name="header">
-        <element name="header">
+        <element name="header" ns="http://www.openarchives.org/OAI/2.0/">
             <ref name="identifier"/>
         </element>
     </define>

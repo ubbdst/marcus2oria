@@ -20,13 +20,14 @@
    
     <xsl:variable name="current" select="/"/>
     <xsl:variable name="records" select="$current/*:OAI-PMH/*:ListRecords/*:record"/>
-    <xsl:variable name="identifiers" select="document(concat($project-base-uri,'/identifiers.xml'))"/>
+    <xsl:variable name="xml-name" select="replace(tokenize(base-uri(),'/')[last()],'\.[^\.]+','')"/>
+    <xsl:variable name="identifiers" select="document(concat($project-base-uri,'/',$xml-name,'_identifiers.xml'))"/>
     <xsl:variable name="dummy">
         <root/>
     </xsl:variable>
     
     
-    <xsl:variable name="xml-name" select="replace(tokenize(base-uri(),'/')[last()],'\.^\.+','')"/>
+    
     <!--assumes xsl position is in xsl folder-->
     <xsl:variable name="project-base-uri" select="string-join(tokenize(base-uri($dummy),'/')[position()=1 to last()-2],'/')"/>
     

@@ -154,7 +154,10 @@
                 <xsl:with-param name="title" select="rdf:label[1]"/>
                 <xsl:with-param name="creationdate" select="$creation_date[1]"/>
             </xsl:call-template>
-            <!-- @todo kan mappe noe inn her i adddata, avventer og ser
+            <xsl:call-template name="ranking">
+                <xsl:with-param name="booster1" select="'1'"/>
+            </xsl:call-template>
+                <!-- @todo kan mappe noe inn her i adddata, avventer og ser
             <xsl:call-template name="addata">
                 
             </xsl:call-template>

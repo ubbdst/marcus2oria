@@ -5,13 +5,13 @@
     version="2.0">
     
     <xsl:template match="/">
-        <xsl:if test="exists(*:identifiers/*:identifier[@status='deleted'][1])">
+     
         <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
             <ListRecords>
                 <xsl:apply-templates select="*:identifiers/*:identifier[@status='deleted']"/>
             </ListRecords>
         </OAI-PMH>
-        </xsl:if>
+        
     </xsl:template>
     
     <xsl:template match="*:identifier[@status='deleted']">

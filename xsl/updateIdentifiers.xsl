@@ -4,6 +4,9 @@
     exclude-result-prefixes="xs flub" version="2.0">
     <xsl:include href="lib/md5.xsl"/>
     <xsl:strip-space elements="*"/>
+    <xsl:param name="identifiers" as="xs:string"/>
+    
+   
     <xsl:output method="xml"/>
     <!-- kjør ut en rest på dokumenter som skal slettes (i -->
     <!-- dersom i xml men ikke -->
@@ -28,8 +31,9 @@
     <xsl:key name="oai-identifier" match="*:record" use="*:header/*:identifier"/>
     <!--<xsl:key name="not-in-mapping" match=""/>-->
     <xsl:variable name="oai-pmh" select="/"/>
+    <!-- if not identifiers already exists, lookup key in dummy record-->
     <xsl:variable name="identifier-doc"
-        select="document(concat($base-xsl-uri, '../identifiers.xml'))"/>
+        select="(document(concat($base-xsl-uri, '../',$identifiers)),$dummy)[1]"/>
 
     <xsl:template match="*:record" priority="1.9">
         <xsl:message>test</xsl:message>
@@ -90,7 +94,7 @@
                     <xsl:otherwise>
                         <xsl:attribute name="id" select="@id"/>
                         <xsl:attribute name="status" select="'deleted'"/>
-                        <xsl:attribute name="modified" select="format-dateTime(current-dateTime(),'[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')"/>
+                        <xsl:attribute name="modified" select="format-dateTime(adjust-dateTime-to-timezone(current-dateTime(),xs:dayTimeDuration('PT0H')),'[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01][Z]')"/>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:copy>

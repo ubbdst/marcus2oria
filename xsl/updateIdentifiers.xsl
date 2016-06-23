@@ -45,14 +45,14 @@
         <!-- if status is deleted or md5 value has changed, boolean to update modified-->
         <xsl:variable name="isDifferent"
             select="$identifier/@status = 'deleted' or $identifier/@md5 != $md5"/>
-
+       <xsl:value-of select="ad"/>
         <identifier id="{*:header/*:identifier}" status="active">
             <xsl:attribute name="modified"
                 select="
                     if ($isDifferent or
                     not(string($identifier/@modified)))
-                    then
-                    format-dateTime(current-dateTime(),'[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')
+                    then 
+                    format-dateTime(adjust-dateTime-to-timezone(current-dateTime(),xs:dayTimeDuration('PT0H')),'[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01][Z]')
                     else
                         $identifier/@modified"/>
             <xsl:attribute name="md5" select="$md5"/>

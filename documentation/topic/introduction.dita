@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_drg_5yz_jw">
+  <title>Digitale fulltekstarkiv integrasjon søk - Marcus2oria - introduksjon</title>
+  <prolog><author>Øyvind Liland Gjesdal</author>
+  </prolog>
+  <body>
+    <p>Digitale fulltekstarkiv integrasjon søk (<b>NB 2014/377</b>) er en fortsettelse på <xref
+        href="https://www.nb.no/content/download/8323/81962/file/Digitale%2520fulltekstarkiv.pdf"
+        format="pdf">Digitale fulltekstarkiv</xref> med den hensikt å få  Universitetsbiblioteket i Bergen sin sin
+      digitale satsing <xref format="html" href="http://marcus.uib.no">Marcus</xref> til
+      inn i<xref href="https://oria.no" format="html"> Oria</xref>, den nasjonalt driftede søkemotoren for Bibys konsortiet.</p>
+    <p>Søknaden spesisiferte også at prosjektet skulle gjøre det lettere for andre å ta inn sine
+      lokale samlinger i Oria. Dette er reflektert i dokumentasjonen av prosjektet, samt i hvordan
+      enkeltmodulene prosjektet består av kan gjenbrukes hver for seg.</p>
+    <p>Prosjektet består av en <term>ant</term> fil som kjører modulene,
+      et <term>RelaxNG</term> skjema, som beskriver Primo Normalized XML (PNX), og som vi bruker for validering og kode-generering, et sett med xslt 2.0 stilark som gjør enkeltoppgavene:
+       spørre etter data fra marcus sitt <xref href="http://sparql.ub.uib.no" format="html">åpne endpoint</xref>,
+      kjøre ut resultatet av spørringen som PNX, sjekke forskjeller mellom høstinger og oppdeling av resultat til mindre xml-filer som kan håndteres av Primo.</p>
+    <p>En demonstrasjon av kode kan klones fra <xref
+        href="https://bitbucket.org/ubbdst/marcus2oria" format="html" scope="external">bitbucket
+      </xref>. og kjøres på et system der ant er installert.</p>
+    <p>For å gjennomføre prosjektet har vi brukt følgende bibliotek fra åpen kildekode som ligger i <codeblock>./lib</codeblock>:
+      <xref href="http://www.thaiopensource.com/relaxng/jing-ant.html" format="html">jing ant task </xref> som er en task for validering av xml basert på RelaxNG, <xref href="http://www.saxonica.com/products/PD9.6/HE.pdf" format="pdf">Saxon9.6 HE</xref>, og Saxon9B (for refleksiv bruk av java i xslt for sammenligning av poster).
+      </p>
+  </body>
+  
+  
+  
+</topic>

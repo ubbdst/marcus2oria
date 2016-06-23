@@ -55,7 +55,7 @@
         <move file="${copyAndCommitIdentifierFile.out}" tofile="./${copyAndCommitIdentifierFile.identifier}"/>        
     </target>  
        
-    <target name="DivideAndPackageResults">        
+    <target name="DivideAndPackageResults" depends="">        
         <length file="${transformMarcus2oria.out}" property="pnx.length"/>
         <echo message="${pnx.length}"/>        
         <xslt in="${transformMarcus2oria.out}" style="xsl/divideRecordsToChunks.xsl" out="${dummy.out}" force="yes">
@@ -63,9 +63,9 @@
             <classpath path="lib/saxon9he.jar"/>
         </xslt>
          
-        <tar  basedir="output/pnx/"  destfile="./output/${name}${DSTAMP}.tar" compression="gzip"/> 
+        <tar  basedir="output/pnx/"  destfile="./output/${name}${DSTAMP}.tar.gz" compression="gzip"/> 
        <!-- <gzip src="./output/${name}${DSTAMP}.tar" destfile="./output/${name}${DSTAMP}.tar"></gzip>
-       --> <delete dir="output/pnx/"/>
+       --> <!--<delete dir="output/pnx/"/>-->
         <!--
         <gzip destfile="./output/${name}${DSTAMP}.tar.gz" src="output/pnx/" ></gzip>-->
     

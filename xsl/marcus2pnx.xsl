@@ -69,7 +69,7 @@
             <xsl:variable name="creation_date" select="tokenize(dct:created[1],'-')[1]"/>
             <xsl:variable name="subjects" select="dct:subject,dct:spatial"/>
             <xsl:variable name="display_subject" select="string-join($subjects,'; ')"/>
-            <xsl:variable name="main_title" select="(rdfs:label[1],'[Uten Tittel]')[1]"/>
+            <xsl:variable name="main_title" select="(rdfs:label[string(.)][1],'[Uten tittel]')[1]"/>
                 <xsl:if test="$debug and not(dct:isPartOf) and not(ubbont:collectionTitle)">
                 <xsl:message><xsl:value-of select="$recordid"/> uten ispartof</xsl:message>
             </xsl:if>
@@ -84,7 +84,7 @@
                 <!-- kanskje ta med fornavn etternavn og slå sammen? lastname, firstname, så bruke -->
                 <xsl:with-param name="creator" select="$display_maker"/>
                 <!--?? Multiple occurrences are not concatenated. Betyr dette at vi kan ha flere beskrivelsesfelt eller at man kun har en beskrivelse? står mange steder-->
-                <xsl:with-param name="description" select="dct:description[1]"/>
+                <xsl:with-param name="description" select="dct:description,dct:alternative"/>
                 <!--@todo ta inn physdesc, dct:extent i spørring? og ta concat?
                 <xsl:with-param name="format"/>-->
                 <xsl:with-param name="identifier" select="$identifier"/>
@@ -126,10 +126,10 @@
                 <!--@todo? ta inn datorange og lage flere felt som xs:gYear*-->                
                 <xsl:with-param name="creationdate" select="$creation_date"/>
                 <xsl:with-param name="creatorcontrib" select="foaf:maker"/>
-                <xsl:with-param name="description" select="dct:description"/>
+                <xsl:with-param name="description" select="dct:description,dct:alternative"/>
                 <!--@todo enddate startdate date range må inn i sparql spørring-->
                 <!--@todo legg inn publisher på general og i sparql spørring<xsl:with-param name="general"/>-->
-                <xsl:with-param name="recordid" select="$recordid"/>
+                <xsl:with-param name="recordid" select="$recordid"/>                
                 <xsl:with-param name="rsrctype" select="$rsrctype"/>
                 <xsl:with-param name="sourceid" select="$sourceid"/>
                 <xsl:with-param name="subject" select="$subjects"/>
@@ -154,7 +154,8 @@
                 <xsl:with-param name="title" select="rdf:label[1]"/>
                 <xsl:with-param name="creationdate" select="$creation_date[1]"/>
             </xsl:call-template>
-            <xsl:call-template name="ranking">
+          
+                <xsl:call-template name="ranking">
                 <xsl:with-param name="booster1" select="'1'"/>
             </xsl:call-template>
                 <!-- @todo kan mappe noe inn her i adddata, avventer og ser

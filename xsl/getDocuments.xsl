@@ -87,6 +87,7 @@
             ?sR  &lt;http://data.ub.uib.no/ontology/hasThumbnail> ?thumb.
             ?sR &lt;http://data.ub.uib.no/ontology/invertedName> ?invMaker.
             ?sR &lt;http://data.ub.uib.no/ontology/collectionTitle> ?colLabel.
+            ?sR &lt;http://purl.org/dc/terms/alternative> ?alternative.
             } 
             WHERE {
             { GRAPH  &lt;urn:x-arq:UnionGraph> 
@@ -115,11 +116,12 @@
             ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/firstName> ?firstNameMaker. 
             ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/familyName> ?familyNameMaker.
             }
+            OPTIONAL {?s &lt;http://purl.org/dc/terms/alternative> ?alternative .}
             <!-- top collection name start, for construct ?sR ?colLabel1-->
             OPTIONAL {?s (dct:isPartOf)* ?topCollection.
             NOT EXISTS {?topCollection dct:isPartOf ?part}}
             OPTIONAL {?topCollection rdfs:label ?colLabel0.}
-            OPTIONAL {          ?topCollection dct:title ?colLabel1.}
+            OPTIONAL {?topCollection dct:title ?colLabel1.}
             BIND (
             COALESCE(?colLabel0,?colLabel1)
             as ?colLabel)

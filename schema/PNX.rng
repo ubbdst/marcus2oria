@@ -143,7 +143,7 @@
                     <text/>
                 </element>
             </optional>
-            <optional>
+            <zeroOrMore>
                 <a:documentation>The description is any information that describes the content of
                     the resource. This can be an abstract, contents notes, summary, and so forth.
                     Multiple occurrences are not concatenated. Example of source data: *MARC21: 502,
@@ -151,7 +151,7 @@
                 <element name="description">
                     <text/>
                 </element>
-            </optional>
+            </zeroOrMore>
             <optional>
                 <a:documentation>Course reserve information.</a:documentation>
                 <element name="crsinfo">

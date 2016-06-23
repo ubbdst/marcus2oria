@@ -14,7 +14,7 @@
         
     <xsl:variable name="number-of-files-each-file" select="if ($file-size-in-bytes &gt; $file-size-limit) then flub:round_up(($file-size-in-bytes div $file-size-limit)+$extra-number) else 1"/>
     <xsl:variable name="number-of-posts" select="count(/*:OAI-PMH/*:ListRecords/*:record)"/>
-    <xsl:variable name="number-per-xml" select="$number-of-posts div $number-of-files-each-file"/>
+    <xsl:variable name="number-per-xml" select="flub:round_up($number-of-posts div $number-of-files-each-file)" as="xs:integer"/>
     
    <xsl:key name="identifier" match="*:identifier" use="@id"/>    
    
@@ -49,14 +49,23 @@
              <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
                     <responseDate><xsl:value-of select="current-dateTime()"/></responseDate>
                     <request/>
+
                  <xsl:variable name="position-end" select="($number-per-xml*.)"/>
-                 <xsl:variable name="position-start" select="$position-end -$number-per-xml+1"/>
+                 <xsl:variable name="position-start" select="$position-end - $number-per-xml+1" />
                 
                  <xsl:variable name="counter" select="."/>
                     <ListRecords>
-                        <xsl:apply-templates select="$records[position()=$position-start to $position-end]">
-                    <xsl:with-param name="counter" select="."/>
-                </xsl:apply-templates> 
+                        <xsl:choose>
+                            <xsl:when test="$number != $number-of-files-each-file">
+                                <xsl:apply-templates select="$records[position()=$position-start to $position-end]"/>
+                                 
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:apply-templates select="$records[position()=$position-start to last()]"/>
+                                
+                            </xsl:otherwise>
+                        </xsl:choose>
+                   
                     </ListRecords>
             </OAI-PMH>
         </xsl:result-document>
@@ -95,9 +104,7 @@
     </xsl:template>
     
     <xsl:template match="*:record">
-        <xsl:param name="counter"/>
-      
-        <xsl:message><xsl:value-of select="current-dateTime()"/></xsl:message>
+           <xsl:message><xsl:value-of select="current-dateTime()"/></xsl:message>
         <xsl:copy>
             <xsl:copy-of select="@*"/>
              <xsl:apply-templates mode="copy"/>

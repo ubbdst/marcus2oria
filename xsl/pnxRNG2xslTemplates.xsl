@@ -26,7 +26,7 @@
             
        <xsl:value-of select="$newline,$newline"/>
         
-    <xsl:for-each select="//rng:element[@name='metadata']/rng:ref">
+    <xsl:for-each select="//rng:element[@name='metadata']/*:element[@name='recordContainer']/rng:ref">
         <xsl:apply-templates select="key('define-from-name',@name)" mode="template"/>
     </xsl:for-each>
         </xsl:element>
@@ -39,14 +39,15 @@
         </xsl:if>       
         <xsl:value-of select="$newline"/>
         <xsl:value-of select="$indent"/>
+        <xsl:variable name="rng:element" select="(rng:element,rng:optional/rng:element)[1]"/>
         <xsl:element name="xsl:template">
-            <xsl:attribute name="name" select="rng:element/@name"/>
+            <xsl:attribute name="name" select="$rng:element/@name"/>
           
             <xsl:value-of select="$newline"/>
-            <xsl:apply-templates select="rng:element/*" mode="parameters"/>
+            <xsl:apply-templates select="$rng:element/*" mode="parameters"/>
             <xsl:value-of select="$indent,$indent"/>
-            <xsl:element name="{rng:element/@name}">
-            <xsl:apply-templates select="rng:element/*"  mode="createTemplateBody"/>
+            <xsl:element name="{$rng:element/@name}">
+            <xsl:apply-templates select="$rng:element/*"  mode="createTemplateBody"/>
                 <xsl:value-of select="$indent"/>
             </xsl:element>
             <xsl:value-of select="$newline"/>

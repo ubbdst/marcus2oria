@@ -52,7 +52,7 @@
 
                  <xsl:variable name="position-end" select="($number-per-xml*.)"/>
                  <xsl:variable name="position-start" select="$position-end - $number-per-xml+1" />
-                
+                <xsl:message>start: <xsl:value-of select="$position-start"/> end: <xsl:value-of select="$position-end"/></xsl:message>
                  <xsl:variable name="counter" select="."/>
                     <ListRecords>
                         <xsl:choose>
@@ -104,8 +104,8 @@
     </xsl:template>
     
     <xsl:template match="*:record">
-           <xsl:message><xsl:value-of select="current-dateTime()"/></xsl:message>
-        <xsl:copy>
+<!--           <xsl:message><xsl:value-of select="current-dateTime()"/></xsl:message>
+-->        <xsl:copy>
             <xsl:copy-of select="@*"/>
              <xsl:apply-templates mode="copy"/>
         </xsl:copy>

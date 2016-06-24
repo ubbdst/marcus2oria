@@ -65,7 +65,7 @@
          
         <tar  basedir="output/pnx/"  destfile="./output/${name}${DSTAMP}.tar.gz" compression="gzip"/> 
        <!-- <gzip src="./output/${name}${DSTAMP}.tar" destfile="./output/${name}${DSTAMP}.tar"></gzip>
-       --> <!--<delete dir="output/pnx/"/>-->
+       --> <delete dir="output/pnx/"/>
         <!--
         <gzip destfile="./output/${name}${DSTAMP}.tar.gz" src="output/pnx/" ></gzip>-->
     

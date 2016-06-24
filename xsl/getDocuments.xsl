@@ -111,7 +111,9 @@
             OPTIONAL { ?s  &lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?label } 
             OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://data.ub.uib.no/ontology/invertedName> ?invName } 
             OPTIONAL { ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/name> ?maker. }             
-            OPTIONAL { ?s  &lt;http://purl.org/dc/terms/isPartOf>/&lt;http://www.w3.org/2000/01/rdf-schema#label> ?collection}
+            OPTIONAL { ?s  &lt;http://purl.org/dc/terms/isPartOf>/&lt;http://www.w3.org/2000/01/rdf-schema#label> ?collection0}
+            OPTIONAL { ?s  &lt;dct:isPartOf>/&lt;dct:title> ?collection1}
+            OPTIONAL { bind (COALESCE(?collection0,?collection1) AS ?collection) }
             OPTIONAL {  
             ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/firstName> ?firstNameMaker. 
             ?s  &lt;http://xmlns.com/foaf/0.1/maker>/&lt;http://xmlns.com/foaf/0.1/familyName> ?familyNameMaker.

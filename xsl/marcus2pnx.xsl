@@ -116,7 +116,7 @@
                 <xsl:with-param name="creatorcontrib" select="ubbont:invertedName"/>
                 <xsl:with-param name="rsrctype" select="$rsrctype"/>
                 <xsl:with-param name="prefilter" select="$rsrctype"/>
-                <xsl:with-param name="toplevel" select="('Online Resources','available')"/>                
+                <xsl:with-param name="toplevel" select="('online_resources','available')"/>                
                 <xsl:with-param name="topic" select="$subjects"/>
                 <xsl:with-param name="library" select="flub:setSubfield('L',$library)"/>
             </xsl:call-template>          

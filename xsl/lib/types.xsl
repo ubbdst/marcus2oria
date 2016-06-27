@@ -7,6 +7,7 @@
     version="2.0">
     
     <xsl:key name="primo-type-from-marcus" match="@primo-type" use="parent::marcus-label/text()"/>
+    
     <xsl:variable name="types-table">
         <types>
             <marcus-label primo-type="book">Manuskript</marcus-label>
@@ -42,13 +43,6 @@
         </types>
     </xsl:variable>
     
-    <!--<xsl:function name="flub:setPnxRecordId">
-        <xsl:param name="type"/>
-        <xsl:param name="identifer"/>
-        <xsl:param name="sourceId"/>
-        <xsl:value-of select=""/>
-    </xsl:function>
-    -->
     <xsl:function name="flub:getPrimoTypeFromRdfTypeLabel">
         <xsl:param name="rdfTypeLabel"/>
         <xsl:variable name="oria-type" select="key('primo-type-from-marcus',$rdfTypeLabel,$types-table)"/>

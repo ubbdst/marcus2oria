@@ -126,7 +126,7 @@
                 <!--@todo? ta inn datorange og lage flere felt som xs:gYear*-->                
                 <xsl:with-param name="creationdate" select="$creation_date"/>
                 <xsl:with-param name="creatorcontrib" select="foaf:maker"/>
-                <xsl:with-param name="description" select="dct:description,dct:alternative"/>
+                <xsl:with-param name="description" select="dct:description,dct:alternative"/>                
                 <!--@todo enddate startdate date range må inn i sparql spørring-->
                 <!--@todo legg inn publisher på general og i sparql spørring<xsl:with-param name="general"/>-->
                 <xsl:with-param name="recordid" select="$recordid"/>                
@@ -141,7 +141,7 @@
             
             <xsl:call-template name="delivery">
                 <xsl:with-param name="institution" select="$institution"/>
-                <xsl:with-param name="delcategory" select="'Online Resources'"/>                
+                <xsl:with-param name="delcategory" select="'Online Resource'"/>                
             </xsl:call-template>
             
             <xsl:call-template name="links">
@@ -151,7 +151,7 @@
             
             <xsl:call-template name="sort">
                 <xsl:with-param name="author" select="foaf:maker[1]"/>
-                <xsl:with-param name="title" select="rdf:label[1]"/>
+                <xsl:with-param name="title" select="$main_title"/>
                 <xsl:with-param name="creationdate" select="$creation_date[1]"/>
             </xsl:call-template>
           

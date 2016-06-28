@@ -20,14 +20,17 @@
     </xsl:variable>
     
     <xsl:template match ="/">
-        <xsl:value-of select="$newline"/><xsl:element name="xsl:stylesheet">
+        <xsl:value-of select="$newline"/>
+        <xsl:comment>Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng <xsl:value-of select="current-date()"/></xsl:comment>
+        <xsl:value-of select="$newline"/>
+        <xsl:element name="xsl:stylesheet">
             <xsl:namespace name="xsl" select="'http://www.w3.org/1999/XSL/Transform'"/>
             <xsl:namespace name="xs" select="'http://www.w3.org/2001/XMLSchema'"/>
             <xsl:attribute name="version" select="2.0"/>
             <xsl:attribute name="exclude-result-prefixes" select="'xs'"/>
             <xsl:value-of select="$newline"/>
             <xsl:value-of select="$indent"/>
-            <xsl:comment>Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng <xsl:value-of select="current-date()"/></xsl:comment>
+            
             
        <xsl:value-of select="$newline,$newline"/>
             

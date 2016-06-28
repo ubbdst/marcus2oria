@@ -27,7 +27,8 @@
 				'uB_T_sortS_libpnx.xsl', 
 				'uB_T_rankingS_libpnx.xsl');
 
-        var docBoxes= new Array('dS_T_controlS_libpnx.xsl');
+        var docBoxes= new Array('dS_libpnx.xsl', 
+				'dS_T_controlS_libpnx.xsl');
 
         var sourceBoxes= new Array('src_T_controlS_libpnx.xsl', 
 				'src_T_displayS_libpnx.xsl', 
@@ -384,6 +385,18 @@
                   <tbody>
                      <tr>
                         <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_libpnx.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_libpnx.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_libpnx.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng 2016-06-28+02:00</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
                            <div class="flL">Included from</div>
                            <div class="flR"><input id="bt_icF_libpnx.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('icF_libpnx.xsl');" class="control" /></div>
                         </td>
@@ -436,7 +449,7 @@
                         <td>
                            <div id="dS_T_controlS_libpnx.xsl" style="display:block">
                               <div>
-                                 <h3>Description</h3><pre>Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng 2016-06-23+02:00</pre><pre>     In some cases, the system will take only one of the following fields: 
+                                 <h3>Description</h3><pre>     In some cases, the system will take only one of the following fields: 
             *All fields of the Control section.</pre></div>
                            </div>
                         </td>

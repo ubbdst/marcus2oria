@@ -4,7 +4,7 @@
   <title>Digitale fulltekstarkiv integrasjon søk - Marcus2oria</title>
   <prolog><author>Øyvind Liland Gjesdal</author>
   </prolog>
-  <body>
+  <body >
     <p>Digitale fulltekstarkiv integrasjon søk (<b>NB 2014/377</b>) er en fortsettelse på <xref
         href="https://www.nb.no/content/download/8323/81962/file/Digitale%2520fulltekstarkiv.pdf"
         format="pdf">Digitale fulltekstarkiv</xref> med den hensikt å få  Universitetsbiblioteket i Bergen sin
@@ -19,21 +19,22 @@
        spørre etter data fra marcus sitt <xref href="http://sparql.ub.uib.no" format="html">åpne endpoint</xref>,
       kjøre ut resultatet av spørringen som PNX, sjekke forskjeller mellom høstinger og oppdeling av resultat til mindre xml-filer som kan håndteres av Primo.</p>
     <p>En demonstrasjon av kode kan klones fra <xref
-        href="https://github.com/ubbdst/marcus2oria" format="html" scope="external">bitbucket
+        href="https://github.com/ubbdst/marcus2oria" format="html" scope="external">github
     </xref>. og kjøres på et system der <xref href="http://ant.apache.org/" format="html">ant</xref> er installert.</p>
     <p></p>
-    <p>For å gjennomføre prosjektet har vi brukt disse bibliotekene som ligger i<i>./lib</i>:
+    <p>For å gjennomføre prosjektet har vi brukt følgende biblioteker som ligger i<i>./lib</i>:
       <xref href="http://www.thaiopensource.com/relaxng/jing-ant.html" format="html">jing ant task </xref> som er en task for validering av xml basert på RelaxNG, <xref href="http://www.saxonica.com/products/PD9.6/HE.pdf" format="pdf">Saxon9.6 HE</xref>, og Saxon9B (for refleksiv bruk av java i xslt for sammenligning av poster).
       </p>
   </body>
-  <related-links>
-    <linkpool role="descendant">
-    <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/getDocuments.html" ><linktext>getDocuments.xsl</linktext></link>
-    <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/divideRecordsToChunks.html" ><linktext>divideRecordsToChunks.xsl</linktext></link>
-    <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" ><linktext>marcus2pnx.xsl</linktext></link>
-    <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" ><linktext>updateIdentifiers.xsl</linktext></link>
-    <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" ><linktext>pnxRNG2xslTemplates.xsl</linktext></link>
-    </linkpool>
+  <related-links>    
+    <linklist role="descendant">
+       <desc>Lenker til Oxygen generert dokumentasjon av hovedstilarkene:</desc>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/getDocuments.html" ><linktext>getDocuments.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/divideRecordsToChunks.html" ><linktext>divideRecordsToChunks.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" ><linktext>marcus2pnx.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" ><linktext>updateIdentifiers.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" ><linktext>pnxRNG2xslTemplates.xsl</linktext></link>
+    </linklist>
   </related-links>
 
 </topic>

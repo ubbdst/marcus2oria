@@ -7,10 +7,10 @@
   <body>
     <p>Digitale fulltekstarkiv integrasjon søk (<b>NB 2014/377</b>) er en fortsettelse på <xref
         href="https://www.nb.no/content/download/8323/81962/file/Digitale%2520fulltekstarkiv.pdf"
-        format="pdf">Digitale fulltekstarkiv</xref> med den hensikt å få  Universitetsbiblioteket i Bergen sin sin
+        format="pdf">Digitale fulltekstarkiv</xref> med den hensikt å få  Universitetsbiblioteket i Bergen sin
       digitale satsing <xref format="html" href="http://marcus.uib.no">Marcus</xref>
       inn i<xref href="https://oria.no" format="html"> Oria</xref>, søkemotor for Bibsys konsortiet.</p>
-    <p>Søknaden spesisiferte også at prosjektet skulle gjøre det lettere for andre å ta inn sine
+    <p>Søknaden spesisiferer også at prosjektet skal gjøre det lettere for andre å ta inn sine
       lokale samlinger i Oria. Dette er reflektert i dokumentasjonen av prosjektet, samt i hvordan
       enkeltmodulene prosjektet består av kan gjenbrukes hver for seg.</p>
     <p>Deltagere i prosjektet er Seksjon for Digitale System og Tjenester ved Universitetsbiblioteket i Bergen og Bibsys.</p>
@@ -19,7 +19,7 @@
        spørre etter data fra marcus sitt <xref href="http://sparql.ub.uib.no" format="html">åpne endpoint</xref>,
       kjøre ut resultatet av spørringen som PNX, sjekke forskjeller mellom høstinger og oppdeling av resultat til mindre xml-filer som kan håndteres av Primo.</p>
     <p>En demonstrasjon av kode kan klones fra <xref
-        href="https://bitbucket.org/ubbdst/marcus2oria" format="html" scope="external">bitbucket
+        href="https://github.com/ubbdst/marcus2oria" format="html" scope="external">bitbucket
     </xref>. og kjøres på et system der <xref href="http://ant.apache.org/" format="html">ant</xref> er installert.</p>
     <p></p>
     <p>For å gjennomføre prosjektet har vi brukt disse bibliotekene som ligger i<i>./lib</i>:
@@ -31,8 +31,8 @@
     <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/getDocuments.html" ><linktext>getDocuments.xsl</linktext></link>
     <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/divideRecordsToChunks.html" ><linktext>divideRecordsToChunks.xsl</linktext></link>
     <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" ><linktext>marcus2pnx.xsl</linktext></link>
-      <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" ><linktext>updateIdentifiers.xsl</linktext></link>
-      <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" ><linktext>pnxRNG2xslTemplates.xsl</linktext></link>
+    <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" ><linktext>updateIdentifiers.xsl</linktext></link>
+    <link format="html" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" ><linktext>pnxRNG2xslTemplates.xsl</linktext></link>
     </linkpool>
   </related-links>
 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_zp1_zdm_lw">
+  <title>Primo Normalized Xml RelaxNg schema</title>
+  <body>
+    <p>For å lage et skjema for <term>Primo Normalized XML</term> (PNX), tok vi utgangspunkt i Primo sin dokumentasjon av PNX som finnes i <xref href="https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide"  format="html" scope="external">Technical Guide</xref>.
+    En PNX er delt opp i seksjonene <term>adddata</term>, <term>browse</term>, <term>control</term>, <term>delivery</term>, <term>display</term>, <term>dedup</term>, <term>enrichment</term>, <term>facets</term>, 
+    <term>frbr</term>, <term>links</term>, <term>ranking</term>,<term>search</term> og <term>sort</term>.
+    Med hjelp fra bibsys som identifiserte hvilke seksjoner og felter som bør være med i en post, tok vi utgangspunkt i å generere skjemaet basert på tabellene som Ex-libris har på de tekniske hjelpsidene.
+    Skjemaet er egentlig en definisjon på en <term>OAI-PMH</term> post, med ListRecords og så en PNX definisjon inne i hver enkelt Record.
+    Vi kopierte da tabellene for hver enkelt seksjon og tok et regex-søk for å dele opp i elementnavn og dokumentasjon for feltnavn. 
+    </p>
+    <p>I utgangspunktet er restriksjonene i skjemaet ganske myke, da vi har hatt en gjennomgang av dokumentasjonen for å basere oss hva som er forventet i mappingen til PNX.
+      For eksempel ble verdiene i display seksjonen definert som optional(0 eller 1), da Ex-libris dokumentasjonen spesifiserer at seksjonen skal  slå sammen felter til ett i seksjonen.
+      Se utdrag: <codeblock>&lt;optional>
+        &lt;a:documentation>The contributor is an entity that is responsible for making a
+          contribution to the content of the resource. Multiple occurrences are
+          concatenated with a semicolon. Example of source data: *MARC21: 700/710/711
+          fields, stripping subfield $$d, and stripping from subfield $$t to the end. It
+          is possible to reverse the author's last and first name by using a special
+          routine (for example, Stephans, Mary to Mary Stephans). *The display form of the
+          contributor also serves as a hyperlink to search for additional records. It is
+          important that all the strings in the display also be added to the
+          creatorcontrib field in the Search section.&lt;/a:documentation>
+        &lt;element name="contributor">
+          &lt;text/>
+        &lt;/element>
+      &lt;/optional>
+      </codeblock>
+      De aller fleste av definisjonene våre i Relax NG har den myke definisjonen <i>&lt;zeroOrMore></i>, hvor vi kun forventer noe av type <i>&lt;text></i>. 
+      Det ville også vært fornuftig å definere faste verdier, der Primo forventer et spesifikt sett av tekststrenger, som for pre-filter: <codeblock>  
+        &lt;zeroOrMore>
+        &lt;a:documentation>The search pre-filter that is available in the Primo UI and
+          must be mapped as a facet. The default list of pre-filters is based on the
+          Resource Type field in the display: *Book -> Books (books) *Journal ->
+          Journals (journals) *Article -> Articles (articles) *Text Resource -> Books
+          (books) *Image -> Images (images) *Video -> Audio-Video (audio-video) *Audio
+          -> Audio-Video (audio-video) *Maps -> Maps (maps) *Score -> Scores
+          (scores)&lt;/a:documentation>
+        &lt;element name="prefilter">
+          &lt;text/>
+        &lt;/element>
+      &lt;/zeroOrMore></codeblock>
+      Men det går utenfor rammen av prosjektet, og er noe en kan forbedre senere.</p>
+    <p>Skjemaet brukes for to formål i dette prosjektet:
+      Det brukes til å <xref href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" scope="external" format="html">generere  named templates</xref> for enkeltseksjonene, som brukes til å <xref href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" format="html" scope="external">mappe input-data til PNX</xref>.
+      Det brukes også til validering av output mot skjemaet fra marcus2oria.</p>      
+  </body>
+  <related-links>
+    <link href="https://github.com/ubbdst/marcus2oria/blob/master/schema/PNX.rng" format="html"
+      scope="external">
+      <linktext>PNX.rng på github</linktext>
+    </link>
+    <linklist>
+      <desc>Relaterte xsl-stilark:</desc>
+      <link
+        href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html"
+        format="html" scope="external">
+        <linktext>pnxRNG2xslTemplates.xsl</linktext>
+      </link>
+      <link href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html"
+        format="html" scope="external">
+        <linktext>marcus2pnx.xsl</linktext>
+      </link>
+      <link
+        href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx1.html#libpnx.xsl"
+        format="html" scope="external">
+        <linktext>...libpnx.xsl</linktext>
+      </link>
+    </linklist>
+  </related-links>
+</topic>

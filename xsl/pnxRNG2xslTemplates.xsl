@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Stilark som tar pnx.rng som input og genererer named templates for alle de overordnede elementer i PNX:
+    display, facets, sort etc.
+    Tar også med inn kommentarer fra ex-libris supplert med bibsys med forklaringer på enkeltfelt-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:rng="http://relaxng.org/ns/structure/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -6,8 +9,10 @@
     xmlns:flub="http://data.ub.uib.no/ns/function-library"
     exclude-result-prefixes="xs rng a flub"
     version="2.0">
-    <xsl:key name="define-from-name" match="rng:define" use="@name"/>
     
+    <xsl:key name="define-from-name" match="rng:define" use="@name"/>
+    <!--bruker egen indentering istedenfor å bruke output, slik at output xsl har lignende 
+        form som brukt ellers i koden-->
     <xsl:variable name="indent"><xsl:text>     </xsl:text></xsl:variable>
     <xsl:variable name="newline">
     <xsl:text>
@@ -25,14 +30,16 @@
             <xsl:comment>Automatically generated xsl library with templates for creating the different pnx sections based on PNX.rng <xsl:value-of select="current-date()"/></xsl:comment>
             
        <xsl:value-of select="$newline,$newline"/>
-        
+            
+    <!-- Gjennomgang av alle overordnede referanser under elementet med navneattributt recordContainer-->    
     <xsl:for-each select="//rng:element[@name='metadata']/*:element[@name='recordContainer']/rng:ref">
         <xsl:apply-templates select="key('define-from-name',@name)" mode="template"/>
     </xsl:for-each>
         </xsl:element>
-    </xsl:template>
+    </xsl:template>    
     
     <xsl:template match="*" mode="template">
+       <!-- tar med dokumentasjon dersom den finnes-->
         <xsl:if test="a:documentation">
            <xsl:value-of select="$indent"/><xsl:comment><xsl:value-of select="$indent"/><xsl:value-of select="a:documentation"/></xsl:comment>
         <xsl:value-of select="$newline"/>
@@ -41,8 +48,8 @@
         <xsl:value-of select="$indent"/>
         <xsl:variable name="rng:element" select="(rng:element,rng:optional/rng:element)[1]"/>
         <xsl:element name="xsl:template">
-            <xsl:attribute name="name" select="$rng:element/@name"/>
-          
+            <xsl:attribute name="name" select="$rng:element/@name"/>          
+            
             <xsl:value-of select="$newline"/>
             <xsl:apply-templates select="$rng:element/*" mode="parameters"/>
             <xsl:value-of select="$indent,$indent"/>
@@ -50,15 +57,14 @@
             <xsl:apply-templates select="$rng:element/*"  mode="createTemplateBody"/>
                 <xsl:value-of select="$indent"/>
             </xsl:element>
-            <xsl:value-of select="$newline"/>
-            
+            <xsl:value-of select="$newline"/>            
             </xsl:element>
-        <xsl:value-of select="$newline"/>
-        
+        <xsl:value-of select="$newline"/>        
     </xsl:template>
     
-    
     <xsl:template match="text()" mode="parameters createTemplateBody"></xsl:template>
+    
+    <!-- kjører ut paremeter navn og type restriksjoner basert på verdier i RNG-->
     <xsl:template match="rng:element" mode="parameters">
        <xsl:value-of select="$indent,$indent"/> <xsl:element name="xsl:param">
             <xsl:attribute name="name" select="@name"/>
@@ -67,6 +73,7 @@
         <xsl:value-of select="$newline"/>        
     </xsl:template>
     
+    <!-- tar med kommentar og oppretting av element (og innhold) for gjeldende relax NG element-->
     <xsl:template match="rng:element" mode="createTemplateBody">
         <xsl:variable name="variable-name" select="concat('$',@name,'[string(.)]')"/>
         <xsl:value-of select="$newline"/>
@@ -78,6 +85,7 @@
             <xsl:value-of select="$newline"/>
             <xsl:value-of select="$indent,$indent"/>
         </xsl:if>
+        
         <xsl:element name="xsl:for-each">
             <xsl:attribute name="select" select="$variable-name"/>
             <xsl:value-of select="$newline"/>
@@ -97,13 +105,13 @@
         </xsl:element>
         <xsl:value-of select="$newline"/>
         <xsl:value-of select="$indent"/>
-    </xsl:template>
+    </xsl:template>       
     
-    
-    
+    <!-- funksjon for å sette xml-type for parametre, er for øyeblikket kun definert forskjellig xs:string 
+        basert på om et objekt er optional, zeroOrMore, ingen definisjon(exactlyOne) eller oneOrMore-->
     <xsl:function name="flub:getRestrictionsFromRNGElement">
         <xsl:param name="element" as="node()"/>
-        <xsl:variable name="datatype" select="'xs:string'"></xsl:variable>
+        <xsl:variable name="datatype" select="'xs:string'"/>
         <xsl:variable name="parent-name" select="$element/parent::node()/name()"/>
         <xsl:choose>
             <xsl:when test="$parent-name='optional'">

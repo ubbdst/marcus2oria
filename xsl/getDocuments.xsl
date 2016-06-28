@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--sparql spørringer for å få ut eksempler til mapping, tar først en spørring etter alle subklasser av bibo dokument,
+        og gjør så en sparql construct spørring (fra marcus elasticsearch mapping, litt omskrevet.) på hver klasse
+         Begynner med et lite antall per type for å ha noe å teste mappingen på. 
+         Denne spørringen er i utgangspunktet skreddersydd for marcus sin datamodell 
+         (http://marcus.uib.no/ontology/ubbont.owl) og det er tenkt at uthenting av data fra eget system lages uavhengig av denne xsl-fil-->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:saxon="http://saxon.sf.net/"
@@ -6,12 +12,7 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     exclude-result-prefixes="xs"
     version="2.0">
-    <!--sparql spørringer for å få ut eksempler til mapping, tar først en spørring etter alle subklasser av bibo dokument,
-        og gjør så en sparql construct spørring (fra marcus elasticsearch mapping, litt omskrevet.) på hver klasse
-         Begynner med et lite antall per type for å ha noe å teste mappingen på. 
-         Denne spørringen er i utgangspunktet skreddersydd for marcus sin datamodell 
-         (http://marcus.uib.no/ontology/ubbont.owl) og det er tenkt at uthenting av data fra eget lages uavhengig av denne-->
-                      
+            
     <!--Tar på messages som er kjøres ut for debugging av kode.-->
     <xsl:param name="debug" as="xs:boolean" select="true()"/>
     <!--Antall objekter som hentes ad gangen i sparql spørring.-->
@@ -47,8 +48,8 @@
     <!-- get sparql spørring etter typer--> 
     <xsl:variable name="types" select="document(concat($sparql-endpoint,encode-for-uri($class-sparql-query),$sparql-output-suffix))"/>   
     
+    <!-- main template match som kjører type spørring fra sparql endpoint, kaller så named template getDocummentsFromSparqlQuery-->
     <xsl:template match="/">
-
         <results>
             <!-- gå igjennom alle typer som ikke er i blacklist og kjør sparql spørring etter dokumenter for hver type-->
             <xsl:for-each

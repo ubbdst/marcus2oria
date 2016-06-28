@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Stilark som står for mapping fra sparql resultatet fra getDocuments.xsl for marcus
+     Lager et OAI resultat med PNX-mapping, hvor en bruker named templates generert fra relaxNG skjema for PNX -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -12,14 +14,17 @@
     
     version="2.0">
     
-    <xsl:strip-space elements="*"/>
-    <!--parametre med uib default verdier-->
+    <xsl:strip-space elements="*"/>    
     <xsl:param name="debug" as="xs:boolean" select="false()"/>
+    <!-- bibliotek som global parameter for å velge tilhørighet til andre bibliotek-->
     <xsl:param name="library" select="'1120109'"  as="xs:string"/>
+    <!--instusjonsnavn i Oria-->
     <xsl:param name="institution" select="'UBB'"  as="xs:string"/>
-    <!--?? opprette egen scope?-->
+    <!--bruke scopenavn som avtales med bibsys-->
     <xsl:param name="searchscope" select="'UBB_MARCUS'"  as="xs:string"/>    
+    <!--bruke scopenavn som avtales med bibsys-->
     <xsl:param name="scope" select="'UBB_MARCUS'"  as="xs:string"/>
+    <!--overstyrer denne inn i oria-->
     <xsl:param name="publisher" as="xs:string" select="'Universitetsbiblioteket i Bergen'"/>
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     <xsl:include href="lib/pnx.xsl"/>
@@ -28,12 +33,9 @@
     
     <xsl:variable name="sourceid" select="'UBB-MARCUS'"/>
     <xsl:variable name="source-repository" select="'Marcus'"/>
-    <xsl:variable name="identifiers" select="'identifiers.xml'"/>
     
-    <xsl:template match="/">
-         <!-- 
-            <xsl:apply-templates mode="identifier"/>               
-            -->       
+    <!-- tar inn OAI toppelement og listrecord på main template -->
+    <xsl:template match="/">        
         <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
             <ListRecords>
                 <xsl:apply-templates/>                
@@ -41,22 +43,20 @@
         </OAI-PMH>
     </xsl:template>
     
-    
-    
-    
+    <!-- håndtering av hvert enkelt resultat (dokument) fra sparql spørringen-->
     <xsl:template match="rdf:Description">
-        <xsl:variable name="identifier" select="dct:identifier"/>
-        
+        <xsl:variable name="identifier" select="dct:identifier"/>        
         <xsl:variable name="sourcerecordid" select="concat(rdf:type,'/',$identifier)"/>
         <xsl:variable name="recordid" select="concat($sourceid,'/',$sourcerecordid)"/>
         <record>
         <header>
-            <!-- kanskje bruke nytt felt ubbont:uuid her? noen dubletter av dct:identifier.-->           
+            <!--?? kanskje bruke nytt felt ubbont:uuid her? noen dubletter av dct:identifier.-->           
             <identifier><xsl:value-of select="$recordid"/></identifier>
         </header>
         <metadata>           
-           <!-- create control section-->
-            <recordContainer xmlns="">       
+          
+            <recordContainer xmlns="">
+             <!-- create control section-->
             <xsl:call-template name="control">                
                 <xsl:with-param name="recordid" select="$recordid"/>
                 <xsl:with-param name="sourceformat" select="'PNX'"/>
@@ -67,7 +67,8 @@
             <!-- variables for display section-->
             <xsl:variable name="display_maker" select="string-join(foaf:maker,'; ')"/>
             <xsl:variable name="creation_date" select="tokenize(dct:created[1],'-')[1]"/>
-            <xsl:variable name="subjects" select="dct:subject,dct:spatial"/>
+                <!-- tar med distinct values siden man har labels for steder også i subject, slik at en ikke får dubletter på feks bergen.-->
+            <xsl:variable name="subjects" select="distinct-values(dct:subject,dct:spatial)"/>
             <xsl:variable name="display_subject" select="string-join($subjects,'; ')"/>
             <xsl:variable name="main_title" select="(rdfs:label[string(.)][1],'[Uten tittel]')[1]"/>
                 <xsl:if test="$debug and not(dct:isPartOf) and not(ubbont:collectionTitle)">
@@ -81,9 +82,7 @@
                 <!-- ?? http://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide/Mapping_to_the_Normalized_Record/Adding_%24%249ONLINE_to_Library_Level_Availability#ww1157297-->
                 <xsl:with-param name="availlibrary" select="'$$9ONLINE'"/>
                 <xsl:with-param name="creationdate" select="$creation_date"/>
-                <!-- kanskje ta med fornavn etternavn og slå sammen? lastname, firstname, så bruke -->
                 <xsl:with-param name="creator" select="$display_maker"/>
-                <!--?? Multiple occurrences are not concatenated. Betyr dette at vi kan ha flere beskrivelsesfelt eller at man kun har en beskrivelse? står mange steder-->
                 <xsl:with-param name="description" select="dct:description,dct:alternative"/>
                 <!--@todo ta inn physdesc, dct:extent i spørring? og ta concat?
                 <xsl:with-param name="format"/>-->
@@ -92,8 +91,6 @@
                 <xsl:with-param name="ispartof" select="dct:isPartOf,ubbont:collectionTitle"/>
                 <!--?? er dette riktig bruk av subfield for å få ut Universitetsbiblioteket i Bergen?--> 
                 <xsl:with-param name="publisher" select="$publisher"/>
-                <!--@todo legg til publisher i sparql spørring, eller bruker global parameter i.e universitetsbiblioteket uib?-->
-                <!--@todo gjenbruke en global rights string i påvente av at det finnes internt i marcus?-->
                 <xsl:with-param name="source" select="$source-repository"/>
                 <xsl:with-param name="subject" select="$display_subject"/>
                 <xsl:with-param name="title" select="$main_title"/>
@@ -158,6 +155,7 @@
                 <xsl:call-template name="ranking">
                 <xsl:with-param name="booster1" select="'1'"/>
             </xsl:call-template>
+                
                 <!-- @todo kan mappe noe inn her i adddata, avventer og ser
             <xsl:call-template name="addata">
                 

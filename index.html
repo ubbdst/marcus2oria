@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2016" />
+<meta name="DC.rights.owner" content="(C) Copyright 2016" />
+<meta name="DC.Type" content="topic" />
+<meta name="DC.Title" content="Digitale fulltekstarkiv integrasjon søk - Marcus2oria" />
+<meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/getDocuments.html" />
+<meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/divideRecordsToChunks.html" />
+<meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" />
+<meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" />
+<meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" />
+<meta name="DC.Creator" content="Øyvind Liland Gjesdal" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="topic_drg_5yz_jw" />
+<link rel="stylesheet" type="text/css" href="commonltr.css" />
+<title>Digitale fulltekstarkiv integrasjon søk - Marcus2oria</title>
+</head>
+<body id="topic_drg_5yz_jw">
+
+  <h1 class="title topictitle1" id="ariaid-title1">Digitale fulltekstarkiv integrasjon søk - Marcus2oria</h1>
+
+  
+  <div class="body">
+    <p class="p">Digitale fulltekstarkiv integrasjon søk (<strong class="ph b">NB 2014/377</strong>) er en fortsettelse på <a class="xref" href="https://www.nb.no/content/download/8323/81962/file/Digitale%2520fulltekstarkiv.pdf" target="_blank">Digitale fulltekstarkiv</a> med den hensikt å få  Universitetsbiblioteket i Bergen sin sin
+      digitale satsing <a class="xref" href="http://marcus.uib.no">Marcus</a>
+      inn i<a class="xref" href="https://oria.no"> Oria</a>, søkemotor for Bibsys konsortiet.</p>
+
+    <p class="p">Søknaden spesisiferte også at prosjektet skulle gjøre det lettere for andre å ta inn sine
+      lokale samlinger i Oria. Dette er reflektert i dokumentasjonen av prosjektet, samt i hvordan
+      enkeltmodulene prosjektet består av kan gjenbrukes hver for seg.</p>
+
+    <p class="p">Deltagere i prosjektet er Seksjon for Digitale System og Tjenester ved Universitetsbiblioteket i Bergen og Bibsys.</p>
+
+    <p class="p">Prosjektet består av en <dfn class="term">ant</dfn> fil som kjører modulene,
+      et <dfn class="term">RelaxNG</dfn> skjema, som beskriver Primo Normalized XML (PNX), som vi også bruker for validering av poster samt kode-generering og et sett med xslt 2.0 stilark som gjør enkeltoppgavene:
+       spørre etter data fra marcus sitt <a class="xref" href="http://sparql.ub.uib.no">åpne endpoint</a>,
+      kjøre ut resultatet av spørringen som PNX, sjekke forskjeller mellom høstinger og oppdeling av resultat til mindre xml-filer som kan håndteres av Primo.</p>
+
+    <p class="p">En demonstrasjon av kode kan klones fra <a class="xref" href="https://bitbucket.org/ubbdst/marcus2oria" target="_blank">bitbucket
+    </a>. og kjøres på et system der <a class="xref" href="http://ant.apache.org/">ant</a> er installert.</p>
+
+    <p class="p"></p>
+
+    <p class="p">For å gjennomføre prosjektet har vi brukt disse bibliotekene som ligger i<em class="ph i">./lib</em>:
+      <a class="xref" href="http://www.thaiopensource.com/relaxng/jing-ant.html">jing ant task </a> som er en task for validering av xml basert på RelaxNG, <a class="xref" href="http://www.saxonica.com/products/PD9.6/HE.pdf" target="_blank">Saxon9.6 HE</a>, og Saxon9B (for refleksiv bruk av java i xslt for sammenligning av poster).
+      </p>
+
+  </div>
+
+  <div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/getDocuments.html">getDocuments.xsl</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/divideRecordsToChunks.html">divideRecordsToChunks.xsl</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html">marcus2pnx.xsl</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html">updateIdentifiers.xsl</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html">pnxRNG2xslTemplates.xsl</a></strong><br />
+</li>
+</ul>
+</div>
+
+</body>
+</html>

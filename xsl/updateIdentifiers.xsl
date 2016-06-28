@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Stilark for å fange opp om objekter har blitt slettet fra høsting til høsting
-     Tar inn en identifier.xml fil og kjører gjennom, og 
+     Tar inn en identifier.xml fil, kopierer poster der hvor md5 av hele enkeltposten er identisk (uten elementnavn)
+     Oppdaterer modified date, der md5 er endret siden tidligere.
+     Legger til ny identifier post, dersom OAI post ikke er i identifier.xml.
+     Det endrer også status på poster som finnes i identifier.xml men som ikke finnes i oai til deleted.
      Er avhengig av Saxon9B (eller betalingsversjonene PE, EE for bruk av refleksiv java (md5 for sammenligning av poster))-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:flub="http://data.ub.uib.no/ns/function-library"
@@ -11,8 +14,7 @@
     <xsl:param name="identifiers" as="xs:string"/>
 
     <xsl:output method="xml"/>
-    <!-- kjør ut en rest på dokumenter som skal slettes (i -->
-    <!-- dersom i xml men ikke -->
+   <!-- dummy xml for bruk av keys uten ..._identifier.xml-->
     <xsl:variable name="dummy">
         <node/>
     </xsl:variable>
@@ -37,7 +39,7 @@
     <xsl:variable name="identifier-doc"
         select="(document(concat($base-xsl-uri, '../',$identifiers)),$dummy)[1]"/>
 
-    <!-- handling all matches in listRecords-->
+    <!-- håndterer alle treff under listRecords i OAI input-->
     <xsl:template match="*:record" priority="2.0">
         <xsl:value-of select="$indent"/>
         <xsl:variable name="md5" select="flub:md5String(string(.))"/>

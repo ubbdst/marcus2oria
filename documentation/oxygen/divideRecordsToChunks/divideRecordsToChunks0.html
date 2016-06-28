@@ -1,0 +1,2231 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Stylesheet documentation for: divideRecordsToChunks.xsl</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        
+        var parametersBoxes= new Array('prs_T_datestampS_divideRecordsToChunks.xsl', 
+				'prs_F_round_upS_divideRecordsToChunks.xsl');
+
+        
+        var usedByBoxes= new Array('uB_T_datestampS_divideRecordsToChunks.xsl', 
+				'uB_P_file-size-in-bytesS_divideRecordsToChunks.xsl', 
+				'uB_V_file-size-limitS_divideRecordsToChunks.xsl', 
+				'uB_V_number-of-files-each-fileS_divideRecordsToChunks.xsl', 
+				'uB_V_number-of-postsS_divideRecordsToChunks.xsl', 
+				'uB_V_number-per-xmlS_divideRecordsToChunks.xsl', 
+				'uB_V_currentS_divideRecordsToChunks.xsl', 
+				'uB_V_recordsS_divideRecordsToChunks.xsl', 
+				'uB_V_xml-nameS_divideRecordsToChunks.xsl', 
+				'uB_V_identifiersS_divideRecordsToChunks.xsl', 
+				'uB_V_dummyS_divideRecordsToChunks.xsl', 
+				'uB_V_project-base-uriS_divideRecordsToChunks.xsl', 
+				'uB_F_round_upS_divideRecordsToChunks.xsl', 
+				'uB_K_identifierS_divideRecordsToChunks.xsl');
+
+        var docBoxes= new Array('dS_divideRecordsToChunks.xsl', 
+				'dS_M_S_divideRecordsToChunks.xsl', 
+				'dS_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl', 
+				'dS_M_datestampS_divideRecordsToChunks.xsl', 
+				'dS_T_datestampS_divideRecordsToChunks.xsl', 
+				'dS_M_recordS_divideRecordsToChunks.xsl', 
+				'dS_P_file-size-in-bytesS_divideRecordsToChunks.xsl', 
+				'dS_V_file-size-limitS_divideRecordsToChunks.xsl', 
+				'dS_V_project-base-uriS_divideRecordsToChunks.xsl', 
+				'dS_F_round_upS_divideRecordsToChunks.xsl', 
+				'dS_K_identifierS_divideRecordsToChunks.xsl');
+
+        var sourceBoxes= new Array('src_M_S_divideRecordsToChunks.xsl', 
+				'src_M_M_copyS_divideRecordsToChunks.xsl', 
+				'src_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl', 
+				'src_M_datestampS_divideRecordsToChunks.xsl', 
+				'src_T_datestampS_divideRecordsToChunks.xsl', 
+				'src_M_recordS_divideRecordsToChunks.xsl', 
+				'src_P_file-size-in-bytesS_divideRecordsToChunks.xsl', 
+				'src_V_file-size-limitS_divideRecordsToChunks.xsl', 
+				'src_V_number-of-files-each-fileS_divideRecordsToChunks.xsl', 
+				'src_V_number-of-postsS_divideRecordsToChunks.xsl', 
+				'src_V_number-per-xmlS_divideRecordsToChunks.xsl', 
+				'src_V_currentS_divideRecordsToChunks.xsl', 
+				'src_V_recordsS_divideRecordsToChunks.xsl', 
+				'src_V_xml-nameS_divideRecordsToChunks.xsl', 
+				'src_V_identifiersS_divideRecordsToChunks.xsl', 
+				'src_V_dummyS_divideRecordsToChunks.xsl', 
+				'src_V_project-base-uriS_divideRecordsToChunks.xsl', 
+				'src_F_round_upS_divideRecordsToChunks.xsl', 
+				'src_O_S_divideRecordsToChunks.xsl', 
+				'src_K_identifierS_divideRecordsToChunks.xsl');
+
+        
+        
+        var referencesBoxes= new Array('refs_M_S_divideRecordsToChunks.xsl', 
+				'refs_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl', 
+				'refs_M_datestampS_divideRecordsToChunks.xsl', 
+				'refs_T_datestampS_divideRecordsToChunks.xsl', 
+				'refs_V_number-of-files-each-fileS_divideRecordsToChunks.xsl', 
+				'refs_V_number-per-xmlS_divideRecordsToChunks.xsl', 
+				'refs_V_recordsS_divideRecordsToChunks.xsl', 
+				'refs_V_identifiersS_divideRecordsToChunks.xsl', 
+				'refs_V_project-base-uriS_divideRecordsToChunks.xsl');
+
+        
+        
+        
+        
+        var button_prefix = 'bt_';
+        
+        /**
+        * Get all DIV elements with a specified class name.
+        *
+        * @param className The class name. 
+        */
+        function getElementsByClassName(className) {
+            var results = [];
+    
+             if (document.getElementsByClassName == undefined) {
+                var allElements = document.getElementsByTagName("div");
+                var element;
+                for (var i = 0; i < allElements.length; i++) {
+                    var element = allElements[i];
+                	var elementClass = element.className;
+                	if (elementClass == className) { 
+                		results.push(element);
+                	}
+                }
+             } else {
+                results = document.getElementsByClassName(className);
+             }
+    
+            return results;
+        }
+            
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+
+       /**
+        * Switch between the compact list representation and the clasic list representation.
+        */
+       function switchMode(checkBox) {
+            if (checkBox == null) {
+                // Checkbox not found
+            } else if (checkBox.checked == 1) {
+                // Compact mode
+                var divs = getElementsByClassName('refItemBlock');
+                for (var i = 0; i < divs.length; i ++) {
+                    divs[i].style.display = "inline";
+                    var children = divs[i].children;
+                    var refItemSep = children[children.length - 1];
+                    if (refItemSep.className == "refItemSep") {
+                        children[children.length - 1].style.display = "inline";
+                    }
+                }
+            } else {
+                // Expanded mode
+                var divs = getElementsByClassName('refItemBlock');
+                for (var i = 0; i < divs.length; i ++) {
+                    divs[i].style.display = "block";
+                    var children = divs[i].children;
+                    var refItemSep = children[children.length - 1];
+                    if (refItemSep.className == "refItemSep") {
+                        children[children.length - 1].style.display = "none";
+                    }
+                }
+            }
+        }
+
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updPT(message) {
+            top.document.title = "Stylesheet documentation for: " + message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id){
+         var selectIds = new Array('toc_group_by_location', 'toc_group_by_component_type', 'toc_group_by_namespace', 'toc_group_by_mode');
+            // Make all the tabs invisible.
+            for (i = 0; i < 4; i++){
+               var tab = getElementObject(selectIds[i]);
+               tab.style.display = 'none';
+            }
+            var selTab = getElementObject(id);
+            selTab.style.display = 'block';            
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cTL"></td>
+               <td class="rt_lT"></td>
+               <td class="rt_cTR"></td>
+            </tr>
+            <tr>
+               <td class="rt_lL"></td>
+               <td class="rt_cnt">
+                  <h3>Mode:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchMode(this);" class="control" /></span><span class="globalControlName">Compact lists</span></td>
+                     </tr>
+                  </table>
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, docBoxes);" class="control" /></span><span class="globalControlName">Documentation
+                              </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, parametersBoxes);" class="control" /></span><span class="globalControlName">Parameters </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, referencesBoxes);" class="control" /></span><span class="globalControlName">References </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lR"></td>
+            </tr>
+            <tr>
+               <td class="rt_cBL"></td>
+               <td class="rt_lB"></td>
+               <td class="rt_cBR"></td>
+            </tr>
+         </table>
+      </div><a id="divideRecordsToChunks.xsl"></a><div class="cmpT">Main stylesheet
+         <span class="qname">divideRecordsToChunks.xsl</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre> Dette stilarket tar inn en OAI-PMH resultatfil  
+    og deler opp i nye filer basert på en utregning av total lengde i bytes, delt på $file-size-limit 
+    Den tar også inn modified date fra  ${current_filename}_identifier.xml dersom den finnes.
+    @todo ta ut funksjonaliteten for oppdatering av modified date til eget stilark</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Stylesheet version</td>
+                        <td>2.0</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_S_divideRecordsToChunks.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">/</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_S_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_S_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_S_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>Oppdeling</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>/</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_S_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_S_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_S_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-of-files-each-fileS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-of-files-each-file</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-per-xmlS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-per-xml</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_project-base-uriS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">project-base-uri</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_recordsS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">records</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_xml-nameS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">xml-name</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_S_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_S_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_S_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"/"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:for-each</span><span class="tAN"> select=</span><span class="tAV">"1 to $number-of-files-each-file"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"number"</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:result-document</span><span class="tAN"> href=</span><span class="tAV">"{$project-base-uri}/output/pnx/{$xml-name}_{$number}{replace(string(current-dateTime()),'[+:]','_')}.xml"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;OAI-PMH</span><span class="tAN"> xmlns=</span><span class="tAV">"http://www.openarchives.org/OAI/2.0/"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;responseDate</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"current-dateTime()"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/responseDate&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;request</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"position-end"</span><span class="tAN"> select=</span><span class="tAV">"($number-per-xml * .)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"position-start"</span><span class="tAN"> select=</span><span class="tAV">"$position-end - $number-per-xml + 1"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:message</span><span class="tXSLEl">&gt;</span><span class="tT">start: </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$position-start"</span><span class="tXSLEl">/&gt;</span><span class="tT"> end: </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$position-end"</span><span class="tXSLEl">/&gt;</span><span class="tXSLEl">&lt;/xsl:message&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"counter"</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;ListRecords</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:choose</span><span class="tXSLEl">&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"$number != $number-of-files-each-file"</span><span class="tXSLEl">&gt;</span><span class="tI">
+              </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"$records[position() = $position-start to $position-end]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:otherwise</span><span class="tXSLEl">&gt;</span><span class="tI">
+              </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"$records[position() = $position-start to last()]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;/xsl:otherwise&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;/xsl:choose&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/ListRecords&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/OAI-PMH&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:result-document&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:for-each&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_M_copyS_divideRecordsToChunks.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">*</span><span class="titleTemplateMode">copy</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>*</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>copy</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_M_copyS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_M_copyS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_M_copyS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"*"</span><span class="tAN"> mode=</span><span class="tAV">"copy"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"@*"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> mode=</span><span class="tAV">"copy"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:copy&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_headernotdatestampM_copyS_divideRecordsToChunks.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">*:header[not(*:datestamp)]</span><span class="titleTemplateMode">copy</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>Oppdatering av datestamp,hvor datestamp ikke finnes.</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>*:header[not(*:datestamp)]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>copy</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#T_datestampS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="nRf">datestamp</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_headernotdatestampM_copyS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"*:header[not(*:datestamp)]"</span><span class="tAN"> mode=</span><span class="tAV">"copy"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"@*"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> mode=</span><span class="tAV">"copy"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"datestamp"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"identifier"</span><span class="tAN"> select=</span><span class="tAV">"*:identifier"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:call-template&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:copy&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_datestampS_divideRecordsToChunks.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">*:datestamp</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_datestampS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_datestampS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_datestampS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>Oppdatering av datestamp der datestamp finnes</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>*:datestamp</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_datestampS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_datestampS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_datestampS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#T_datestampS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="nRf">datestamp</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_datestampS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_datestampS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_datestampS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"*:datestamp"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"datestamp"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"identifier"</span><span class="tAN"> select=</span><span class="tAV">"preceding-sibling::*:identifier"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:call-template&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:copy&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="T_datestampS_divideRecordsToChunks.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateName">datestamp</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_T_datestampS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_T_datestampS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_T_datestampS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>Oppslag i datestamp</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_T_datestampS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_T_datestampS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_T_datestampS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Templates</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#M_datestampS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="mRf">*:datestamp</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#M_headernotdatestampM_copyS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="mRf">*:header[not(*:datestamp)]</span><span class="mdRf">copy</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_T_datestampS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_T_datestampS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_T_datestampS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_identifiersS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">identifiers</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Key</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#K_identifierS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">identifier</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Parameters</div>
+                           <div class="flR"><input id="bt_prs_T_datestampS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('prs_T_datestampS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="prs_T_datestampS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th>Namespace</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="fCol">identifier</td>
+                                    <td>No namespace</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_T_datestampS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_T_datestampS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_T_datestampS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"datestamp"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"identifier"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"modified"</span><span class="tAN"> select=</span><span class="tAV">"key('identifier', $identifier, $identifiers)/@modified"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:if</span><span class="tAN"> test=</span><span class="tAV">"not($modified)"</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:message</span><span class="tAN"> terminate=</span><span class="tAV">"yes"</span><span class="tXSLEl">&gt;</span><span class="tT" style="white-space:normal">header datestamp error, identifier</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$identifier"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:message&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:if&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;datestamp</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$modified"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/datestamp&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="M_recordS_divideRecordsToChunks.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">*:record</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_recordS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_recordS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_recordS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre> kopi-templat</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>*:record</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_recordS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_recordS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_recordS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"*:record"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:copy</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:copy-of</span><span class="tAN"> select=</span><span class="tAV">"@*"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> mode=</span><span class="tAV">"copy"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:copy&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="P_file-size-in-bytesS_divideRecordsToChunks.xsl"></a><div class="cmpT">Parameter
+         <span class="qname">file-size-in-bytes</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_P_file-size-in-bytesS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_P_file-size-in-bytesS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_P_file-size-in-bytesS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>length fra ant property task</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>178036</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Type</td>
+                        <td>xs:integer</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_P_file-size-in-bytesS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_P_file-size-in-bytesS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_P_file-size-in-bytesS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-of-files-each-fileS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-of-files-each-file</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_P_file-size-in-bytesS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_P_file-size-in-bytesS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_P_file-size-in-bytesS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"file-size-in-bytes"</span><span class="tAN"> as=</span><span class="tAV">"xs:integer"</span><span class="tAN"> select=</span><span class="tAV">"178036"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_file-size-limitS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">file-size-limit</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_V_file-size-limitS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_V_file-size-limitS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_V_file-size-limitS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre> total lengde på fil i bytes som er endel mindre enn 10 mb</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>10000000</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_file-size-limitS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_file-size-limitS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_file-size-limitS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-of-files-each-fileS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-of-files-each-file</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_file-size-limitS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_file-size-limitS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_file-size-limitS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"file-size-limit"</span><span class="tAN"> select=</span><span class="tAV">"10000000"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_number-of-files-each-fileS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">number-of-files-each-file</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>             if ($file-size-in-bytes &gt; $file-size-limit) then                 flub:round_up(($file-size-in-bytes
+                           div $file-size-limit) + 1)             else                 1
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_number-of-files-each-fileS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_number-of-files-each-fileS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_number-of-files-each-fileS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#M_S_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-per-xmlS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-per-xml</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_V_number-of-files-each-fileS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_V_number-of-files-each-fileS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_V_number-of-files-each-fileS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Parameter</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#P_file-size-in-bytesS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">file-size-in-bytes</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_file-size-limitS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">file-size-limit</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Function</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#F_round_upS_divideRecordsToChunks.xsl" target="_self" title="http://data.ub.uib.no/ns/function-library/" onclick="updPT('divideRecordsToChunks.xsl')"><span>round_up (</span><span class="fParams">value</span><span>)</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_number-of-files-each-fileS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_number-of-files-each-fileS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_number-of-files-each-fileS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"number-of-files-each-file"</span><span class="tAN"> select=</span><span class="tAV">"             if ($file-size-in-bytes &gt; $file-size-limit) then                 flub:round_up(($file-size-in-bytes div $file-size-limit) + 1)             else                 1"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_number-of-postsS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">number-of-posts</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>count(/*:OAI-PMH/*:ListRecords/*:record)</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_number-of-postsS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_number-of-postsS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_number-of-postsS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-per-xmlS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-per-xml</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_number-of-postsS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_number-of-postsS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_number-of-postsS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"number-of-posts"</span><span class="tAN"> select=</span><span class="tAV">"count(/*:OAI-PMH/*:ListRecords/*:record)"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_number-per-xmlS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">number-per-xml</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>flub:round_up($number-of-posts div $number-of-files-each-file)</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Type</td>
+                        <td>xs:integer</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_number-per-xmlS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_number-per-xmlS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_number-per-xmlS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#M_S_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_V_number-per-xmlS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_V_number-per-xmlS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_V_number-per-xmlS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-of-files-each-fileS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-of-files-each-file</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-of-postsS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-of-posts</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Function</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#F_round_upS_divideRecordsToChunks.xsl" target="_self" title="http://data.ub.uib.no/ns/function-library/" onclick="updPT('divideRecordsToChunks.xsl')"><span>round_up (</span><span class="fParams">value</span><span>)</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_number-per-xmlS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_number-per-xmlS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_number-per-xmlS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"number-per-xml"</span><span class="tAN"> select=</span><span class="tAV">"flub:round_up($number-of-posts div $number-of-files-each-file)"</span><span class="tAN"> as=</span><span class="tAV">"xs:integer"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_currentS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">current</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>/</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_currentS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_currentS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_currentS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_recordsS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">records</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_currentS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_currentS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_currentS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"current"</span><span class="tAN"> select=</span><span class="tAV">"/"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_recordsS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">records</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>$current/*:OAI-PMH/*:ListRecords/*:record</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_recordsS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_recordsS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_recordsS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#M_S_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_V_recordsS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_V_recordsS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_V_recordsS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_currentS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">current</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_recordsS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_recordsS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_recordsS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"records"</span><span class="tAN"> select=</span><span class="tAV">"$current/*:OAI-PMH/*:ListRecords/*:record"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_xml-nameS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">xml-name</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>replace(tokenize(base-uri(), '/')[last()], '\.[^\.]+', '')</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_xml-nameS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_xml-nameS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_xml-nameS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#M_S_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_identifiersS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">identifiers</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_xml-nameS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_xml-nameS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_xml-nameS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"xml-name"</span><span class="tAN"> select=</span><span class="tAV">"replace(tokenize(base-uri(), '/')[last()], '\.[^\.]+', '')"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_identifiersS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">identifiers</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>document(concat($project-base-uri, '/', $xml-name, '_identifiers.xml'))</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_identifiersS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_identifiersS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_identifiersS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#T_datestampS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="nRf">datestamp</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_V_identifiersS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_V_identifiersS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_V_identifiersS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_project-base-uriS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">project-base-uri</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_xml-nameS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">xml-name</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_identifiersS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_identifiersS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_identifiersS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"identifiers"</span><span class="tAN"> select=</span><span class="tAV">"document(concat($project-base-uri, '/', $xml-name, '_identifiers.xml'))"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_dummyS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">dummy</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_dummyS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_dummyS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_dummyS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_project-base-uriS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">project-base-uri</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_dummyS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_dummyS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_dummyS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"dummy"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;root</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:variable&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_project-base-uriS_divideRecordsToChunks.xsl"></a><div class="cmpT">Variable
+         <span class="qname">project-base-uri</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_V_project-base-uriS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_V_project-base-uriS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_V_project-base-uriS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>assumes xsl position is in xsl folder</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>string-join(tokenize(base-uri($dummy), '/')[position() = 1 to last() - 2], '/')</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_project-base-uriS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_project-base-uriS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_project-base-uriS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#M_S_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_identifiersS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">identifiers</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_V_project-base-uriS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_V_project-base-uriS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_V_project-base-uriS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_dummyS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">dummy</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_project-base-uriS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_project-base-uriS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_project-base-uriS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"project-base-uri"</span><span class="tAN"> select=</span><span class="tAV">"string-join(tokenize(base-uri($dummy), '/')[position() = 1 to last() - 2], '/')"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="F_round_upS_divideRecordsToChunks.xsl"></a><div class="cmpT">Function
+         <span class="qname">flub:round_up (<span class="fParams">value</span>)</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_F_round_upS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_F_round_upS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_F_round_upS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre>funksjon for å gå opp til helt nummer fra en double</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>http://data.ub.uib.no/ns/function-library/</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_F_round_upS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_F_round_upS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_F_round_upS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-of-files-each-fileS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-of-files-each-file</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#V_number-per-xmlS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')">number-per-xml</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Parameters</div>
+                           <div class="flR"><input id="bt_prs_F_round_upS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('prs_F_round_upS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="prs_F_round_upS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th>Namespace</th>
+                                       <th>Type</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="fCol">value</td>
+                                    <td>No namespace</td>
+                                    <td>xs:double</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_F_round_upS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_F_round_upS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_F_round_upS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:function</span><span class="tAN"> name=</span><span class="tAV">"flub:round_up"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"value"</span><span class="tAN"> as=</span><span class="tAV">"xs:double"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"negative-number"</span><span class="tAN"> select=</span><span class="tAV">"                 if ($value &lt; 0) then                     true()                 else                     false()"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"fractionHasValue"</span><span class="tAN"> as=</span><span class="tAV">"xs:boolean"</span><span class="tAN"> select=</span><span class="tAV">"                 if (contains(string($value), '.')) then                     true()                 else                     false()"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:sequence</span><span class="tAN"> select=</span><span class="tAV">"                 if ($fractionHasValue and not($negative-number)) then                     xs:integer(substring-before(string($value), '.')) + 1                 else                     xs:integer($value)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:function&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="O_S_divideRecordsToChunks.xsl"></a><div class="cmpT">Output
+         <span class="qname">(default)</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Output properties</div>
+                           <div class="flR"><input id="bt_o_" type="image" src="img/btM.gif" value="-" onclick="switchState('o_');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="o_" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>method</th>
+                                       <th>indent</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td>xml</td>
+                                    <td>yes</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_O_S_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_O_S_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_O_S_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:output</span><span class="tAN"> method=</span><span class="tAV">"xml"</span><span class="tAN"> indent=</span><span class="tAV">"yes"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="K_identifierS_divideRecordsToChunks.xsl"></a><div class="cmpT">Key
+         <span class="qname">identifier</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_K_identifierS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_K_identifierS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_K_identifierS_divideRecordsToChunks.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3><pre> nøkkel for å sjekke id i identifier fil for oppslag av modified</pre></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>*:identifier</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Use</td>
+                        <td>@id</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_K_identifierS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_K_identifierS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_K_identifierS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="divideRecordsToChunks0.html#T_datestampS_divideRecordsToChunks.xsl" target="_self" title="No namespace" onclick="updPT('divideRecordsToChunks.xsl')"><span class="nRf">datestamp</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_K_identifierS_divideRecordsToChunks.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_K_identifierS_divideRecordsToChunks.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_K_identifierS_divideRecordsToChunks.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:key</span><span class="tAN"> name=</span><span class="tAV">"identifier"</span><span class="tAN"> match=</span><span class="tAV">"*:identifier"</span><span class="tAN"> use=</span><span class="tAV">"@id"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="footer">
+         <hr />
+         <div align="center">Stylesheet documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div><script type="text/javascript">
+         <!--
+                    // The namespace is the selected option in the TOC combo.
+                    
+                    // The corresponding div is already visible conf. to its style attr.                     
+                    
+                            var selectToc = getElementObject('selectTOC');
+                            if(selectToc != null){
+                            // It can be null when having chunking, the combo of the TOC is in another frame.
+                            selectToc.selectedIndex = 0;
+                            }
+                        
+                    
+                    // Floats the toolbar.
+                    var globalControls = getElementObject("global_controls"); 
+                    
+                    if(globalControls != null){
+                    var browser=navigator.appName;
+                    var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+                    
+                    var IE6 = false;
+                    if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+                    IE6 = true;
+                    }
+                    
+                    //alert (IE6 + " |V| " + version);
+                    
+                    if(IE6){
+                    // On IE 6 the 'fixed' property is not supported. We must use javascript. 
+                    globalControls.style.position='absolute';                         
+                    // The global controls will do not exist in the TOC frame, when chunking.
+                    findAndFloat("global_controls", 225, 30);    
+                    } else {
+                    globalControls.style.position='fixed';                     	
+                    }
+                    
+                    globalControls.style.right='0';                       
+                    }
+                //--></script></body>
+</html>

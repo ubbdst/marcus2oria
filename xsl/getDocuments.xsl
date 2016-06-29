@@ -96,51 +96,51 @@
             PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#> 
             PREFIX ubbont: &lt;http://data.ub.uib.no/ontology/> 
             <!-- construct fields-->
-            CONSTRUCT { ?sR a ?classLabel . ?sR 
-            &lt;dct:identifier> ?identifier . 
-            ?sR &lt;rdfs:label> ?label .
-            ?sR &lt;dct:isPartOf> ?collection .
-            ?sR &lt;dct:description> ?description .
-            ?sR &lt;foaf:maker> ?maker . 
-            ?sR &lt;dct:spatial> ?spatial.
-            ?sR &lt;dct:created> ?created.
-            ?sR  &lt;dct:subject> ?topic.
-            ?sR  &lt;dct:relation> ?relation.
-            ?sR  &lt;ubbont:hasThumbnail> ?thumb.
-            ?sR &lt;ubbont:invertedName> ?invMaker.
-            ?sR &lt;ubbont:collectionTitle> ?colLabel.
-            ?sR &lt;dct:alternative> ?alternative.
+            CONSTRUCT { ?sR a ?classLabel . 
+            ?sR dct:identifier ?identifier . 
+            ?sR rdfs:label ?label .
+            ?sR dct:isPartOf ?collection .
+            ?sR dct:description ?description .
+            ?sR foaf:maker ?maker . 
+            ?sR dct:spatial ?spatial.
+            ?sR dct:created ?created.
+            ?sR  dct:subject ?topic.
+            ?sR  dct:relation ?relation.
+            ?sR  ubbont:hasThumbnail ?thumb.
+            ?sR ubbont:invertedName ?invMaker.
+            ?sR ubbont:collectionTitle ?colLabel.
+            ?sR dct:alternative ?alternative.
             } 
             WHERE {
             { GRAPH  &lt;urn:x-arq:UnionGraph> 
             {   {
             SELECT ?s {?s a &lt;<xsl:value-of select="$class"/>>.
-            FILTER  EXISTS{?s  &lt;ubbont:hasThumbnail> ?thumbN.
+            FILTER  EXISTS{?s  ubbont:hasThumbnail ?thumbN.
             ?s dct:identifier ?id.}
             
             } LIMIT <xsl:value-of select="$limit"/> OFFSET <xsl:value-of select="$offset"/>}
-            OPTIONAL { ?s  &lt;dct:identifier> ?identifier }
-            {?s  &lt;ubbont:hasThumbnail> ?thumbnail.}
+            OPTIONAL { ?s  dct:identifier ?identifier }
+            {?s  ubbont:hasThumbnail ?thumbnail.}
             <!--Skriv om thumbnail til https://-->
             BIND (REPLACE(str(?thumbnail),"http://data.ub.","https://marcus.","i") AS ?thumb)
-            OPTIONAL { ?s  &lt;dct:created> ?created0 } 
-            OPTIONAL { ?s  &lt;dct:title> ?label } 
-            OPTIONAL { ?s  &lt;rdfs:label> ?label } 
-            OPTIONAL { ?s  &lt;dct:spatial>/&lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?spatial } 
-            OPTIONAL { ?s  &lt;dct:relation>/&lt;foaf:name> ?relation } 
-            OPTIONAL { ?s  &lt;dct:subject>/ &lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?topic }
-            OPTIONAL { ?s  &lt;dct:description> ?description } 
+            OPTIONAL { ?s  dct:created ?created0 } 
+            OPTIONAL { ?s  dct:title ?label } 
+            OPTIONAL { ?s  rdfs:label ?label } 
+            OPTIONAL { ?s  dct:spatial/&lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?spatial } 
+            OPTIONAL { ?s  dct:relation/foaf:name ?relation } 
+            OPTIONAL { ?s  dct:subject/ &lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?topic }
+            OPTIONAL { ?s  dct:description ?description } 
             OPTIONAL { ?s  &lt;http://www.w3.org/2004/02/skos/core#prefLabel> ?label } 
-            OPTIONAL { ?s  &lt;foaf:maker>/&lt;ubbont:invertedName> ?invName } 
-            OPTIONAL { ?s  &lt;foaf:maker>/&lt;foaf:name> ?maker. }             
-            OPTIONAL { ?s  &lt;dct:isPartOf>/&lt;rdfs:label> ?collection0}
-            OPTIONAL { ?s  &lt;dct:isPartOf>/&lt;dct:title> ?collection1}
+            OPTIONAL { ?s  foaf:maker/ubbont:invertedName ?invName } 
+            OPTIONAL { ?s  foaf:maker/foaf:name ?maker. }             
+            OPTIONAL { ?s  dct:isPartOf/rdfs:label ?collection0}
+            OPTIONAL { ?s  dct:isPartOf/dct:title ?collection1}
             OPTIONAL { bind (COALESCE(?collection0,?collection1) AS ?collection) }
             OPTIONAL {  
-            ?s  &lt;foaf:maker>/&lt;foaf:firstName> ?firstNameMaker. 
-            ?s  &lt;foaf:maker>/&lt;foaf:familyName> ?familyNameMaker.
+            ?s  foaf:maker/foaf:firstName ?firstNameMaker. 
+            ?s  foaf:maker/foaf:familyName ?familyNameMaker.
             }
-            OPTIONAL {?s &lt;dct:alternative> ?alternative .}
+            OPTIONAL {?s dct:alternative ?alternative .}
             <!-- top collection name start, for construct ?sR ?colLabel1-->
             OPTIONAL {?s (dct:isPartOf)* ?topCollection.
             NOT EXISTS {?topCollection dct:isPartOf ?part}}

@@ -1,6 +1,5 @@
 
 // Auto generated index for searching.
-w["få"]="2*27";
 w["færre"]="0*0";
 w["følgende"]="2*0";
 w["følger"]="0*0";
@@ -42,7 +41,7 @@ w["her"]="0*0";
 w["hjelp"]="3*0";
 w["hjelpsidene"]="3*0";
 w["home"]="0*26";
-w["host"]="0*2";
+w["host"]="0*1";
 w["hovedstilarkene"]="0*0,2*0";
 w["html"]="1*0";
 w["https"]="1*0,2*0";
@@ -197,4 +196,6 @@ w["overføre"]="0*0";
 w["oxygen"]="0*0,1*0,2*0";
 w["oxygenxml"]="1*0";
 w["pakkes"]="0*0";
+w["param"]="0*8";
+w["parameter"]="0*2";
 

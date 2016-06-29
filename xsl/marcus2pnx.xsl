@@ -68,7 +68,7 @@
             <xsl:variable name="display_maker" select="string-join(foaf:maker,'; ')"/>
             <xsl:variable name="creation_date" select="tokenize(dct:created[1],'-')[1]"/>
                 <!-- tar med distinct values siden man har labels for steder også i subject, slik at en ikke får dubletter på feks bergen.-->
-            <xsl:variable name="subjects" select="distinct-values(dct:subject,dct:spatial)"/>
+            <xsl:variable name="subjects" select="distinct-values((dct:subject,dct:spatial))"/>
             <xsl:variable name="display_subject" select="string-join($subjects,'; ')"/>
             <xsl:variable name="main_title" select="(rdfs:label[string(.)][1],'[Uten tittel]')[1]"/>
                 <xsl:if test="$debug and not(dct:isPartOf) and not(ubbont:collectionTitle)">

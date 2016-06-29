@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_wtx_xcq_lw">
+  <title>Kjør Ant build</title>
+  <body><p>Vår build bruker optional task <i>scp</i>, denne trenger å legge inn jar fil i ant sin lib. Denne kan kopieres fra \lib mappen, ellers kan alle optional tasks lastes ned: <q>Optionally, from the ANT_HOME directory run ant -f fetch.xml -Ddest=system to get the library dependencies of most of the Ant tasks that require them. If you don't do this, many of the dependent Ant tasks will not be available. See Optional Tasks for details and other options for the -Ddest parameter.</q></p>
+    <p>Default target for vår ant-build er <apiname>test</apiname> som laster inn test-properties, og så kjører <apiname>main</apiname> target, som inneholder <codeblock>&lt;target name="main" depends="queryMarcusForData,transformMarcus2oria,copyAndCommitIdentifierFile,DivideAndPackageResults,copyAndCommitIdentifierFile,validateByRNG"/></codeblock>
+  For <apiname>test</apiname> konfigureres det for færre objekter, og istedenfor å bruke offset i spørringen, går den ut etter første spørring. Den kjører heller ikke target for opplasting til bibsys.</p>
+    <p>For å konfigurere ant build må to property filer fylles ut. <codeblock>cp properties/local.bibsys.properties properties/bibsys.properties</codeblock> og fyll så ut brukernavn passord og url for opplasting til bibsys.
+    Sjekk at konfigurasjonsfil ikke er med i <term>git</term>. (Skal være i <term>.gitignore</term>)</p>
+    <codeblock>bibsys.host=
+bibsys.password=
+bibsys.user=</codeblock>
+    <p>De andre propertyfilene <i>example.properties</i> og <i>marcus.properties</i> inneholder properties som kan byttes ut for andre bibliotek eller avdelinger.
+      <codeblock>name=examples
+queryMarcusForData.limit=2
+queryMarcusForData.test-run=1
+queryMarcusForData.out=input/${name}.xml
+transformMarcus2oria.out=output/${name}.pnx
+dummy.out=./output/dummy.xml
+transformMarcus2oria.library=1120109
+transformMarcus2oria.institution=UBB
+transformMarcus2oria.searchscope=UBB_MARCUS
+transformMarcus2oria.scope=UBB_MARCUS
+transformMarcus2oria.publisher=Universitetsbiblioteket i Bergen
+</codeblock>
+    </p>
+    
+    
+    <p>Den andre target som kan kjøres i prosjektet, kalles ved <codeph>ant marcus</codeph> og laster inn properties for marcus, fulgt av main.
+      Den tar også inn inn bibsys.properties, og kjører så target <apiname>uploadToBibsys</apiname> for å overføre postene til bibsys.</p>
+    <p>Her følger en gjennomgang av Targets som brukes brukes:</p>
+    <p><apiname>queryMarcusForData</apiname> kjører sparql-spørring for å hente data i marcus.
+      Se getDocuments for dokumentasjon av hentingen av data.
+      <codeblock>
+        &lt;target name="queryMarcusForData">          
+          &lt;xslt in="dummy.xml" style="xsl/getDocuments.xsl" force="yes" out="${queryMarcusForData.out}">
+            &lt;param name="limit" expression="${queryMarcusForData.limit}" type="INT"/>
+            &lt;param name="test-run" expression="${queryMarcusForData.test-run}"/>
+            &lt;classpath path="lib/saxon9he.jar"/>
+            &lt;/xslt>                     
+        &lt;/target>
+      </codeblock></p>
+    <!--queryMarcusForData,transformMarcus2oria,copyAndCommitIdentifierFile,DivideAndPackageResults,copyAndCommitIdentifierFile,validateByRNG-->
+    <p><apiname>transformMarcus2Oria</apiname>
+    <codeblock>
+      &lt;xslt style="xsl/marcus2pnx.xsl" in="${queryMarcusForData.out}" out="${transformMarcus2oria.out}">
+        &lt;param name="library" expression="${transformMarcus2oria.library}"/>
+        &lt;param name="institution" expression="${transformMarcus2oria.institution}"/>
+        &lt;param name="searchscope" expression="${transformMarcus2oria.searchscope}"/>
+        &lt;param name="scope" expression="${transformMarcus2oria.scope}"/>
+        &lt;param name="publisher" expression="${transformMarcus2oria.publisher}"/>
+        &lt;classpath path="lib/saxon9he.jar"/>            
+      &lt;/xslt>
+    </codeblock>
+    </p>
+    <p><apiname>copyAndCommitIdentifierFile</apiname> tar resultatfilen fra <b>transformMarcus2Oria</b>
+      som input, og tar en tidligere identifier fil som input-parameter. 
+      Genererer md5 hash for streng-innhold av hver post, og oppdaterer modified på de som er endret.
+      Kjører også igjennom en transformasjon for å generere poster som skal slettes.
+      Så erstattes den gamle identifier filen, med den nye.
+      <codeblock>
+      &lt;target name="copyAndCommitIdentifierFile">        
+        &lt;property name="copyAndCommitIdentifierFile.out" value="./${name}_identifiers.tmp" />
+        &lt;property name="copyAndCommitIdentifierFile.identifier" value="${name}_identifiers.xml"/>
+        &lt;xslt in="${transformMarcus2oria.out}" force="yes" style="xsl/updateIdentifiers.xsl" out="${copyAndCommitIdentifierFile.out}">
+          &lt;param name="identifiers" expression="${copyAndCommitIdentifierFile.identifier}"/>
+          &lt;!--SaxonB-->
+          &lt;classpath path="lib/saxon9.jar"/>
+        &lt;/xslt>
+        &lt;tstamp/>        
+        &lt;xslt in="${copyAndCommitIdentifierFile.out}" style="xsl/createDeleteRecordsOai.xsl" out="./output/${name}_deleted_${DSTAMP}.xml">
+          &lt;classpath path="lib/saxon9he.jar"/>
+        &lt;/xslt>
+        &lt;move file="${copyAndCommitIdentifierFile.out}" tofile="./${copyAndCommitIdentifierFile.identifier}"/>        
+      &lt;/target>  
+    </codeblock></p>
+    <p>
+      <apiname>DivideAndPackageResults</apiname> tar inn marcus2Oria output-fil, lengden i byte tas også inn som parameter, og xsl-stilark returnerer flere outputfiler basert på lengden til input fil.
+Output filer pakkes så ned, og output mappe for pnx slettes.
+      <codeblock>
+        &lt;target name="DivideAndPackageResults" depends="">        
+          &lt;length file="${transformMarcus2oria.out}" property="pnx.length"/>
+          &lt;echo message="${pnx.length}"/>        
+          &lt;xslt in="${transformMarcus2oria.out}" style="xsl/divideRecordsToChunks.xsl" out="${dummy.out}" force="yes">
+            &lt;param name="file-size-in-bytes" expression="${pnx.length}"/>
+            &lt;classpath path="lib/saxon9he.jar"/>
+            &lt;/xslt>
+          &lt;property name="archive" value="./output/${name}${DSTAMP}.tar.gz"/>
+          &lt;tar  basedir="output/pnx/"  destfile="${archive}" compression="gzip"/> 
+          &lt;delete dir="output/pnx/"/>       
+        &lt;/target>
+      </codeblock>
+    </p>
+    
+    <p><apiname>validateByRNG</apiname>
+    <codeblock>      
+      &lt;target name="validateByRNG">
+        &lt;jing rngfile="schema/PNX.rng" >
+          &lt;fileset file="${transformMarcus2oria.out}"/>
+          &lt;/jing>
+      &lt;/target>
+    </codeblock></p>
+          <p>
+            <apiname>uploadToBibsys</apiname> 
+            <codeblock>
+              &lt;target name="uploadToBibsys">
+                &lt;scp host="bibsys.host" file="${archive}" password="bibsys.password" username="bibsys.username"/>
+              &lt;/target>
+            </codeblock>
+          </p>
+  </body>
+  <related-links>    
+    <linklist role="descendant">
+      <desc>Lenker til Oxygen generert dokumentasjon av hovedstilarkene:</desc>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/getDocuments.html" ><linktext>getDocuments.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/divideRecordsToChunks.html" ><linktext>divideRecordsToChunks.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" ><linktext>marcus2pnx.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" ><linktext>updateIdentifiers.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" ><linktext>pnxRNG2xslTemplates.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/createDeleteRecordsOai.html" ><linktext>createDeleteRecordsOai.xsl</linktext></link>
+    </linklist>
+  </related-links>
+</topic>

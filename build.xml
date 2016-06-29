@@ -70,11 +70,7 @@
     
     <target name="uploadToBibsys">
         <property file="properties/bibsys.properties"/>
-        <property environment="env"/>
-        <echo message="${env.ANT_HOME}"/>
-        <scp  localfile="" file="${archive}" localtofile="${bibsys.user}:${bibsys.password}@${bibsys.host}:~/${archive}" trust="yes" >
-            
-        </scp>
+        <scp  file="${archive}"  remotefile="${bibsys.user}:${bibsys.password}@${bibsys.host}:~/${archive}" trust="yes" />       
     </target>
     
     <target name="validateByRNG">

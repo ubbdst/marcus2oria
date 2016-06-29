@@ -104,7 +104,8 @@ Output filer pakkes så ned, og output mappe for pnx slettes.
             <apiname>uploadToBibsys</apiname> 
             <codeblock>
               &lt;target name="uploadToBibsys">
-                &lt;scp host="bibsys.host" file="${archive}" password="bibsys.password" username="bibsys.username"/>
+                &lt;property file="properties/bibsys.properties"/>
+                &lt;scp  file="${archive}"  remotefile="${bibsys.user}:${bibsys.password}@${bibsys.host}:~/${archive}" trust="yes" />       
               &lt;/target>
             </codeblock>
           </p>

@@ -37,6 +37,8 @@ ant</codeblock> en vil da få ut 2 dokumenter av hver klasse i marcus som kjøre
       <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" ><linktext>marcus2pnx.xsl</linktext></link>
       <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" ><linktext>updateIdentifiers.xsl</linktext></link>
       <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" ><linktext>pnxRNG2xslTemplates.xsl</linktext></link>
+      <link format="html" scope="external" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/createDeleteRecordsOai.html" ><linktext>createDeleteRecordsOai.xsl</linktext></link>
+      
     </linklist>
   </related-links>
 

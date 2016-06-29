@@ -3,12 +3,13 @@
 <topic id="topic_zp1_zdm_lw">
   <title>Primo Normalized Xml RelaxNg schema</title>
   <body>
-    <p>For å lage et skjema for <term>Primo Normalized XML</term> (PNX), tok vi utgangspunkt i Primo sin dokumentasjon av PNX som finnes i <xref href="https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide"  format="html" scope="external">Technical Guide</xref>.
+    <p>For å lage et skjema for <term>Primo Normalized XML</term> (PNX), er det tatt utgangspunkt i Primo sin dokumentasjon av PNX som finnes i <xref href="https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide"  format="html" scope="external">Technical Guide</xref>.
     En PNX er delt opp i seksjonene <term>adddata</term>, <term>browse</term>, <term>control</term>, <term>delivery</term>, <term>display</term>, <term>dedup</term>, <term>enrichment</term>, <term>facets</term>, 
     <term>frbr</term>, <term>links</term>, <term>ranking</term>,<term>search</term> og <term>sort</term>.
-    Med hjelp fra bibsys som identifiserte hvilke seksjoner og felter som bør være med i en post, tok vi utgangspunkt i å generere skjemaet basert på tabellene som Ex-libris har på de tekniske hjelpsidene.
+    Med hjelp fra bibsys som identifiserte hvilke seksjoner og felter som bør være med i en post, er det tatt utgangspunkt i å generere skjemaet basert på tabellene som Ex-libris har på de tekniske hjelpsidene.
+    For å generere skjemaet har vi valgt å bruke <xref href="http://relaxng.org/" format="html" scope="external">RelaxNG</xref> og xml-syntaks utgaven av denne.
     Skjemaet er egentlig en definisjon på en <term>OAI-PMH</term> post, med ListRecords og så en PNX definisjon inne i hver enkelt Record.
-    Vi kopierte da tabellene for hver enkelt seksjon og tok et regex-søk for å dele opp i elementnavn og dokumentasjon for feltnavn. 
+    Vi kopierte da tabellene for hver enkelt seksjon og har tatt et regex-søk for å dele opp i elementnavn og dokumentasjon for feltnavn. 
     </p>
     <p>I utgangspunktet er restriksjonene i skjemaet ganske myke, da vi har hatt en gjennomgang av dokumentasjonen for å basere oss hva som er forventet i mappingen til PNX.
       For eksempel ble verdiene i display seksjonen definert som optional(0 eller 1), da Ex-libris dokumentasjonen spesifiserer at seksjonen skal  slå sammen felter til ett i seksjonen.

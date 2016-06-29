@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_drg_5yz_jw">
-  <title>Digitale fulltekstarkiv integrasjon søk - Marcus2oria</title>
+  <title>Om Marcus2Oria</title>
   <prolog><author>Øyvind Liland Gjesdal</author>
   </prolog>
   <body >
@@ -20,8 +20,11 @@
       kjøre ut resultatet av spørringen som PNX, sjekke forskjeller mellom høstinger og oppdeling av resultat til mindre xml-filer som kan håndteres av Primo.</p>
     <p>En demonstrasjon av kode kan klones fra <xref
         href="https://github.com/ubbdst/marcus2oria" format="html" scope="external">github
-    </xref>. og kjøres på et system der <xref href="http://ant.apache.org/" format="html">ant</xref> er installert.</p>
-    <p></p>
+    </xref>. og kjøres på et system der <xref href="http://ant.apache.org/" format="html">ant</xref> er installert. <codeblock>git clone https://github.com/ubbdst/marcus2oria.git
+cd marcus2oria
+ant</codeblock> en vil da få ut 2 dokumenter av hver klasse i marcus som kjøres igjennom hele systemet og returnerer ut en <term>tar.gz</term> fil. 
+</p>
+   
     <p>For å gjennomføre prosjektet har vi brukt følgende biblioteker som ligger i<i>./lib</i>:
       <xref href="http://www.thaiopensource.com/relaxng/jing-ant.html" format="html">jing ant task </xref> som er en task for validering av xml basert på RelaxNG, <xref href="http://www.saxonica.com/products/PD9.6/HE.pdf" format="pdf">Saxon9.6 HE</xref>, og Saxon9B (for refleksiv bruk av java i xslt for sammenligning av poster).
       </p>

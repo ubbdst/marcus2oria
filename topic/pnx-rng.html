@@ -1,0 +1,76 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="For å lage et skjema for Primo Normalized XML (PNX), er det tatt utgangspunkt i Primo sin dokumentasjon av PNX som finnes i Technical Guide . En PNX er delt opp i seksjonene adddata , browse , control ..." /><meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="topic" /><meta name="DC.Title" content="Primo Normalized Xml RelaxNg schema" /><meta name="DC.Relation" scheme="URI" content="https://github.com/ubbdst/marcus2oria/blob/master/schema/PNX.rng" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx1.html#libpnx.xsl" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="topic_zp1_zdm_lw" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Primo Normalized Xml RelaxNg schema</title><!--  Generated with Oxygen version 18.0, build number 2016042012.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_zp1_zdm_lw">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Primo Normalized Xml RelaxNg schema</h1>
+
+  <div class="body">
+    <p class="p">For å lage et skjema for <dfn class="term">Primo Normalized XML</dfn> (PNX), er det tatt utgangspunkt i Primo sin dokumentasjon av PNX som finnes i <a class="xref" href="https://knowledge.exlibrisgroup.com/Primo/Product_Documentation/Technical_Guide" target="_blank">Technical Guide</a>.
+    En PNX er delt opp i seksjonene <dfn class="term">adddata</dfn>, <dfn class="term">browse</dfn>, <dfn class="term">control</dfn>, <dfn class="term">delivery</dfn>, <dfn class="term">display</dfn>, <dfn class="term">dedup</dfn>, <dfn class="term">enrichment</dfn>, <dfn class="term">facets</dfn>, 
+    <dfn class="term">frbr</dfn>, <dfn class="term">links</dfn>, <dfn class="term">ranking</dfn>,<dfn class="term">search</dfn> og <dfn class="term">sort</dfn>.
+    Med hjelp fra bibsys som identifiserte hvilke seksjoner og felter som bør være med i en post, er det tatt utgangspunkt i å generere skjemaet basert på tabellene som Ex-libris har på de tekniske hjelpsidene.
+    Skjemaet er egentlig en definisjon på en <dfn class="term">OAI-PMH</dfn> post, med ListRecords og så en PNX definisjon inne i hver enkelt Record.
+    Vi kopierte da tabellene for hver enkelt seksjon og har tatt et regex-søk for å dele opp i elementnavn og dokumentasjon for feltnavn. 
+    </p>
+
+    <div class="p">I utgangspunktet er restriksjonene i skjemaet ganske myke, da vi har hatt en gjennomgang av dokumentasjonen for å basere oss hva som er forventet i mappingen til PNX.
+      For eksempel ble verdiene i display seksjonen definert som optional(0 eller 1), da Ex-libris dokumentasjonen spesifiserer at seksjonen skal  slå sammen felter til ett i seksjonen.
+      Se utdrag: <pre class="pre codeblock"><code>&lt;optional&gt;
+        &lt;a:documentation&gt;The contributor is an entity that is responsible for making a
+          contribution to the content of the resource. Multiple occurrences are
+          concatenated with a semicolon. Example of source data: *MARC21: 700/710/711
+          fields, stripping subfield $$d, and stripping from subfield $$t to the end. It
+          is possible to reverse the author's last and first name by using a special
+          routine (for example, Stephans, Mary to Mary Stephans). *The display form of the
+          contributor also serves as a hyperlink to search for additional records. It is
+          important that all the strings in the display also be added to the
+          creatorcontrib field in the Search section.&lt;/a:documentation&gt;
+        &lt;element name="contributor"&gt;
+          &lt;text/&gt;
+        &lt;/element&gt;
+      &lt;/optional&gt;
+      </code></pre>
+      De aller fleste av definisjonene våre i Relax NG har den myke definisjonen <em class="ph i">&lt;zeroOrMore&gt;</em>, hvor vi kun forventer noe av type <em class="ph i">&lt;text&gt;</em>. 
+      Det ville også vært fornuftig å definere faste verdier, der Primo forventer et spesifikt sett av tekststrenger, som for pre-filter: <pre class="pre codeblock"><code>  
+        &lt;zeroOrMore&gt;
+        &lt;a:documentation&gt;The search pre-filter that is available in the Primo UI and
+          must be mapped as a facet. The default list of pre-filters is based on the
+          Resource Type field in the display: *Book -&gt; Books (books) *Journal -&gt;
+          Journals (journals) *Article -&gt; Articles (articles) *Text Resource -&gt; Books
+          (books) *Image -&gt; Images (images) *Video -&gt; Audio-Video (audio-video) *Audio
+          -&gt; Audio-Video (audio-video) *Maps -&gt; Maps (maps) *Score -&gt; Scores
+          (scores)&lt;/a:documentation&gt;
+        &lt;element name="prefilter"&gt;
+          &lt;text/&gt;
+        &lt;/element&gt;
+      &lt;/zeroOrMore&gt;</code></pre>
+      Men det går utenfor rammen av prosjektet, og er noe en kan forbedre senere.</div>
+
+    <p class="p">Skjemaet brukes for to formål i dette prosjektet:
+      Det brukes til å <a class="xref" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" target="_blank">generere  named templates</a> for enkeltseksjonene, som brukes til å <a class="xref" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" target="_blank">mappe input-data til PNX</a>.
+      Det brukes også til validering av output mot skjemaet fra marcus2oria.</p>
+      
+  </div>
+
+  
+<nav role="navigation" class="related-links">
+<div class="linklist linklist relinfo"><strong>Related information</strong><br />
+
+<div class="related_link"><a class="navheader_parent_path" href="https://github.com/ubbdst/marcus2oria/blob/master/schema/PNX.rng" target="_blank" title="PNX.rng på github">PNX.rng på github</a></div></div>
+
+<div class="linklist linklist">Relaterte xsl-stilark:<br />
+
+<div class="related_link"><a class="navheader_parent_path" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" target="_blank" title="pnxRNG2xslTemplates.xsl">pnxRNG2xslTemplates.xsl</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" target="_blank" title="marcus2pnx.xsl">marcus2pnx.xsl</a></div>
+<div class="related_link"><a class="navheader_parent_path" href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx1.html#libpnx.xsl" target="_blank" title="...libpnx.xsl">...libpnx.xsl</a></div></div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div><div class="footer" id="webhelp_copyright_information">WebHelp output generated by<a class="oxyFooter" href="http://www.oxygenxml.com" target="_blank">
+                            &lt;oXygen/&gt; XML Author
+                        </a></div></footer></body>
+</html>

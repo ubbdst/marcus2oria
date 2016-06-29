@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_eyj_bgs_lw">
+  <title>Gjenbruk av moduler</title>
+  <body>
+    <p>I utgangspunktet tror jeg at mapping-konstruksjonen vi bruker, hvor en benytter seg av fill-in-the blanks fra en enkelt rad, er den mest gjenbrukbare delen, sammen med oppdelingen av oai-pmh postene.
+Derfor har vi opprettet en kopi av marcus2pnx, der våre verdier er tatt ut og en kan fylle inn egne verdier for hva en ønsker å mappe.
+Om en bruker en XML-IDE som oxygenXML, vil det være grei autocompletion på hva som kan legges til av felter m.m. 
+</p>
+   
+  </body>
+  <related-links>
+    <linklist>
+      <desc>Lenker til relaterte ressurser:</desc>
+      <link href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/template2pnx.html" format="html" scope="external"> </link>
+    </linklist>
+  </related-links>
+</topic>

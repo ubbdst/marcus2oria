@@ -1,0 +1,159 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Vår build bruker optional task scp , denne trenger å legge inn jar fil i ant sin lib. Denne kan kopieres fra \lib mappen, ellers kan alle optional tasks lastes ned: &#34;Optionally, from the ANT_HOME ..." /><meta name="copyright" content="(C) Copyright 2016" /><meta name="DC.rights.owner" content="(C) Copyright 2016" /><meta name="DC.Type" content="topic" /><meta name="DC.Title" content="Kjør Ant build" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/getDocuments.html" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/divideRecordsToChunks.html" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" /><meta name="DC.Relation" scheme="URI" content="https://ubbdst.github.io/marcus2oria/documentation/oxygen/createDeleteRecordsOai.html" /><meta name="DC.Format" content="XHTML" /><meta name="DC.Identifier" content="topic_wtx_xcq_lw" /><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Kjør Ant build</title><!--  Generated with Oxygen version 18.0, build number 2016042012.  --><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css" /><script type="text/javascript"><!--
+            
+            var prefix = "../index.html";
+            
+            --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.11.3.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_wtx_xcq_lw">
+<header role="banner"><table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><span class="topic_breadcrumb_links"></span></td><td><span id="topic_navigation_links" class="navheader"></span></td></tr></tbody></table></header><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Kjør Ant build</h1>
+
+  <div class="body"><p class="p">Vår build bruker optional task <em class="ph i">scp</em>, denne trenger å legge inn jar fil i ant sin lib. Denne kan kopieres fra \lib mappen, ellers kan alle optional tasks lastes ned: <span class="q">"Optionally, from the ANT_HOME directory run ant -f fetch.xml -Ddest=system to get the library dependencies of most of the Ant tasks that require them. If you don't do this, many of the dependent Ant tasks will not be available. See Optional Tasks for details and other options for the -Ddest parameter."</span></p>
+
+    <div class="p">Default target for vår ant-build er <span class="keyword apiname">test</span> som laster inn test-properties, og så kjører <span class="keyword apiname">main</span> target, som inneholder <pre class="pre codeblock"><code>&lt;target name="main" depends="queryMarcusForData,transformMarcus2oria,copyAndCommitIdentifierFile,DivideAndPackageResults,copyAndCommitIdentifierFile,validateByRNG"/&gt;</code></pre>
+  For <span class="keyword apiname">test</span> konfigureres det for færre objekter, og istedenfor å bruke offset i spørringen, går den ut etter første spørring. Den kjører heller ikke target for opplasting til bibsys.</div>
+
+    <div class="p">For å konfigurere ant build må to property filer fylles ut. <pre class="pre codeblock"><code>cp properties/local.bibsys.properties properties/bibsys.properties</code></pre> og fyll så ut brukernavn passord og url for opplasting til bibsys.
+    Sjekk at konfigurasjonsfil ikke er med i <dfn class="term">git</dfn>. (Skal være i <dfn class="term">.gitignore</dfn>)</div>
+
+    <pre class="pre codeblock"><code>bibsys.host=
+bibsys.password=
+bibsys.user=</code></pre>
+    <div class="p">De andre propertyfilene <em class="ph i">example.properties</em> og <em class="ph i">marcus.properties</em> inneholder properties som kan byttes ut for andre bibliotek eller avdelinger.
+      <pre class="pre codeblock"><code>name=examples
+queryMarcusForData.limit=2
+queryMarcusForData.test-run=1
+queryMarcusForData.out=input/${name}.xml
+transformMarcus2oria.out=output/${name}.pnx
+dummy.out=./output/dummy.xml
+transformMarcus2oria.library=1120109
+transformMarcus2oria.institution=UBB
+transformMarcus2oria.searchscope=UBB_MARCUS
+transformMarcus2oria.scope=UBB_MARCUS
+transformMarcus2oria.publisher=Universitetsbiblioteket i Bergen
+</code></pre>
+    </div>
+
+    
+    
+    <p class="p">Den andre target som kan kjøres i prosjektet, kalles ved <code class="ph codeph">ant marcus</code> og laster inn properties for marcus, fulgt av main.
+      Den tar også inn inn bibsys.properties, og kjører så target <span class="keyword apiname">uploadToBibsys</span> for å overføre postene til bibsys.</p>
+
+    <p class="p">Her følger en gjennomgang av Targets som brukes brukes:</p>
+
+    <div class="p"><span class="keyword apiname">queryMarcusForData</span> kjører sparql-spørring for å hente data i marcus.
+      Se getDocuments for dokumentasjon av hentingen av data.
+      <pre class="pre codeblock"><code>
+        &lt;target name="queryMarcusForData"&gt;          
+          &lt;xslt in="dummy.xml" style="xsl/getDocuments.xsl" force="yes" out="${queryMarcusForData.out}"&gt;
+            &lt;param name="limit" expression="${queryMarcusForData.limit}" type="INT"/&gt;
+            &lt;param name="test-run" expression="${queryMarcusForData.test-run}"/&gt;
+            &lt;classpath path="lib/saxon9he.jar"/&gt;
+            &lt;/xslt&gt;                     
+        &lt;/target&gt;
+      </code></pre></div>
+
+    
+    <div class="p"><span class="keyword apiname">transformMarcus2Oria</span>
+    <pre class="pre codeblock"><code>
+      &lt;xslt style="xsl/marcus2pnx.xsl" in="${queryMarcusForData.out}" out="${transformMarcus2oria.out}"&gt;
+        &lt;param name="library" expression="${transformMarcus2oria.library}"/&gt;
+        &lt;param name="institution" expression="${transformMarcus2oria.institution}"/&gt;
+        &lt;param name="searchscope" expression="${transformMarcus2oria.searchscope}"/&gt;
+        &lt;param name="scope" expression="${transformMarcus2oria.scope}"/&gt;
+        &lt;param name="publisher" expression="${transformMarcus2oria.publisher}"/&gt;
+        &lt;classpath path="lib/saxon9he.jar"/&gt;            
+      &lt;/xslt&gt;
+    </code></pre>
+    </div>
+
+    <div class="p"><span class="keyword apiname">copyAndCommitIdentifierFile</span> tar resultatfilen fra <strong class="ph b">transformMarcus2Oria</strong>
+      som input, og tar en tidligere identifier fil som input-parameter. 
+      Genererer md5 hash for streng-innhold av hver post, og oppdaterer modified på de som er endret.
+      Kjører også igjennom en transformasjon for å generere poster som skal slettes.
+      Så erstattes den gamle identifier filen, med den nye.
+      <pre class="pre codeblock"><code>
+      &lt;target name="copyAndCommitIdentifierFile"&gt;        
+        &lt;property name="copyAndCommitIdentifierFile.out" value="./${name}_identifiers.tmp" /&gt;
+        &lt;property name="copyAndCommitIdentifierFile.identifier" value="${name}_identifiers.xml"/&gt;
+        &lt;xslt in="${transformMarcus2oria.out}" force="yes" style="xsl/updateIdentifiers.xsl" out="${copyAndCommitIdentifierFile.out}"&gt;
+          &lt;param name="identifiers" expression="${copyAndCommitIdentifierFile.identifier}"/&gt;
+          &lt;!--SaxonB--&gt;
+          &lt;classpath path="lib/saxon9.jar"/&gt;
+        &lt;/xslt&gt;
+        &lt;tstamp/&gt;        
+        &lt;xslt in="${copyAndCommitIdentifierFile.out}" style="xsl/createDeleteRecordsOai.xsl" out="./output/${name}_deleted_${DSTAMP}.xml"&gt;
+          &lt;classpath path="lib/saxon9he.jar"/&gt;
+        &lt;/xslt&gt;
+        &lt;move file="${copyAndCommitIdentifierFile.out}" tofile="./${copyAndCommitIdentifierFile.identifier}"/&gt;        
+      &lt;/target&gt;  
+    </code></pre></div>
+
+    <div class="p">
+      <span class="keyword apiname">DivideAndPackageResults</span> tar inn marcus2Oria output-fil, lengden i byte tas også inn som parameter, og xsl-stilark returnerer flere outputfiler basert på lengden til input fil.
+Output filer pakkes så ned, og output mappe for pnx slettes.
+      <pre class="pre codeblock"><code>
+        &lt;target name="DivideAndPackageResults" depends=""&gt;        
+          &lt;length file="${transformMarcus2oria.out}" property="pnx.length"/&gt;
+          &lt;echo message="${pnx.length}"/&gt;        
+          &lt;xslt in="${transformMarcus2oria.out}" style="xsl/divideRecordsToChunks.xsl" out="${dummy.out}" force="yes"&gt;
+            &lt;param name="file-size-in-bytes" expression="${pnx.length}"/&gt;
+            &lt;classpath path="lib/saxon9he.jar"/&gt;
+            &lt;/xslt&gt;
+          &lt;property name="archive" value="./output/${name}${DSTAMP}.tar.gz"/&gt;
+          &lt;tar  basedir="output/pnx/"  destfile="${archive}" compression="gzip"/&gt; 
+          &lt;delete dir="output/pnx/"/&gt;       
+        &lt;/target&gt;
+      </code></pre>
+    </div>
+
+    
+    <div class="p"><span class="keyword apiname">validateByRNG</span>
+    <pre class="pre codeblock"><code>      
+      &lt;target name="validateByRNG"&gt;
+        &lt;jing rngfile="schema/PNX.rng" &gt;
+          &lt;fileset file="${transformMarcus2oria.out}"/&gt;
+          &lt;/jing&gt;
+      &lt;/target&gt;
+    </code></pre></div>
+
+          <div class="p">
+            <span class="keyword apiname">uploadToBibsys</span> 
+            <pre class="pre codeblock"><code>
+              &lt;target name="uploadToBibsys"&gt;
+                &lt;scp host="bibsys.host" file="${archive}" password="bibsys.password" username="bibsys.username"/&gt;
+              &lt;/target&gt;
+            </code></pre>
+          </div>
+
+  </div>
+
+  
+<nav role="navigation" class="related-links">
+<div class="linklist linklistwithchild">Lenker til Oxygen generert dokumentasjon av hovedstilarkene:<br />
+
+<div class="link ulchildlink related_link"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/getDocuments.html" target="_blank">getDocuments.xsl</a></strong><br />
+</div>
+
+<div class="link ulchildlink related_link"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/divideRecordsToChunks.html" target="_blank">divideRecordsToChunks.xsl</a></strong><br />
+</div>
+
+<div class="link ulchildlink related_link"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/marcus2pnx.html" target="_blank">marcus2pnx.xsl</a></strong><br />
+</div>
+
+<div class="link ulchildlink related_link"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/updateIdentifiers.html" target="_blank">updateIdentifiers.xsl</a></strong><br />
+</div>
+
+<div class="link ulchildlink related_link"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/pnxRNG2xslTemplates.html" target="_blank">pnxRNG2xslTemplates.xsl</a></strong><br />
+</div>
+
+<div class="link ulchildlink related_link"><strong><a href="https://ubbdst.github.io/marcus2oria/documentation/oxygen/createDeleteRecordsOai.html" target="_blank">createDeleteRecordsOai.xsl</a></strong><br />
+</div>
+</div>
+</nav></article></main><footer role="contentinfo"><div class="navfooter"><!----></div><div class="footer" id="webhelp_copyright_information">WebHelp output generated by<a class="oxyFooter" href="http://www.oxygenxml.com" target="_blank">
+                            &lt;oXygen/&gt; XML Author
+                        </a></div></footer></body>
+</html>

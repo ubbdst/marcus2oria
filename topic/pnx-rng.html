@@ -16,6 +16,7 @@
     En PNX er delt opp i seksjonene <dfn class="term">adddata</dfn>, <dfn class="term">browse</dfn>, <dfn class="term">control</dfn>, <dfn class="term">delivery</dfn>, <dfn class="term">display</dfn>, <dfn class="term">dedup</dfn>, <dfn class="term">enrichment</dfn>, <dfn class="term">facets</dfn>, 
     <dfn class="term">frbr</dfn>, <dfn class="term">links</dfn>, <dfn class="term">ranking</dfn>,<dfn class="term">search</dfn> og <dfn class="term">sort</dfn>.
     Med hjelp fra bibsys som identifiserte hvilke seksjoner og felter som bør være med i en post, er det tatt utgangspunkt i å generere skjemaet basert på tabellene som Ex-libris har på de tekniske hjelpsidene.
+    For å generere skjemaet har vi valgt å bruke <a class="xref" href="http://relaxng.org/" target="_blank">RelaxNG</a> og xml-syntaks utgaven av denne.
     Skjemaet er egentlig en definisjon på en <dfn class="term">OAI-PMH</dfn> post, med ListRecords og så en PNX definisjon inne i hver enkelt Record.
     Vi kopierte da tabellene for hver enkelt seksjon og har tatt et regex-søk for å dele opp i elementnavn og dokumentasjon for feltnavn. 
     </p>

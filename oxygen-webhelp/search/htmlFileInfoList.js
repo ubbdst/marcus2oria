@@ -1,3 +1,5 @@
 fil = new Array();
-fil["0"]= "topic/index.html@@@Om Marcus2Oria@@@Digitale fulltekstarkiv integrasjon søk ( NB 2014/377 ) er en fortsettelse på Digitale fulltekstarkiv med den hensikt å få Universitetsbiblioteket i Bergen sin digitale satsing Marcus inn i Ori...";
-fil["1"]= "topic/pnx-rng.html@@@Primo Normalized Xml RelaxNg schema@@@For å lage et skjema for Primo Normalized XML (PNX), er det tatt utgangspunkt i Primo sin dokumentasjon av PNX som finnes i Technical Guide . En PNX er delt opp i seksjonene adddata , browse , control...";
+fil["0"]= "topic/ant.html@@@Kjør Ant build@@@Vår build bruker optional task scp , denne trenger å legge inn jar fil i ant sin lib. Denne kan kopieres fra \\lib mappen, ellers kan alle optional tasks lastes ned:  Optionally, from the ANT_HOME...";
+fil["1"]= "topic/gjenbruk.html@@@Gjenbruk av moduler@@@I utgangspunktet tror jeg at mapping-konstruksjonen vi bruker, hvor en benytter seg av fill-in-the blanks fra en enkelt rad, er den mest gjenbrukbare delen, sammen med oppdelingen av oai-pmh postene...";
+fil["2"]= "topic/index.html@@@Om Marcus2Oria@@@Digitale fulltekstarkiv integrasjon søk ( NB 2014/377 ) er en fortsettelse på Digitale fulltekstarkiv med den hensikt å få Universitetsbiblioteket i Bergen sin digitale satsing Marcus inn i Ori...";
+fil["3"]= "topic/pnx-rng.html@@@Primo Normalized Xml RelaxNg schema@@@For å lage et skjema for Primo Normalized XML (PNX), er det tatt utgangspunkt i Primo sin dokumentasjon av PNX som finnes i Technical Guide . En PNX er delt opp i seksjonene adddata , browse , control...";

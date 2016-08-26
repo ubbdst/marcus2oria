@@ -28,11 +28,13 @@
             <marcus-label primo-type="text_resource">Oppmålingsdokument</marcus-label>
             <marcus-label primo-type="map">Kart</marcus-label>
             <marcus-label primo-type="text_resource">Notat</marcus-label>
+            <marcus-label primo-type="text_resource">Regnskap</marcus-label>
             <marcus-label primo-type="image">Fotografi</marcus-label>
             <marcus-label primo-type="image">Postkort</marcus-label>
             <marcus-label primo-type="image">Plakat</marcus-label>
             <marcus-label primo-type="book">Bønnebok</marcus-label>
             <marcus-label primo-type="book">Protokoll</marcus-label>
+
             <marcus-label primo-type="text_resource">Kvittering</marcus-label>
             <marcus-label primo-type="text_resource">Salgsskjøte</marcus-label>
             <marcus-label primo-type="text_resource">Tale</marcus-label>

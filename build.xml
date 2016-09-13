@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." name="marcus2oria" default="test">
     <fileset dir="./lib/jsch-0.1.53.jar"></fileset>
-   
-    <taskdef name="jing" classname="com.thaiopensource.relaxng.util.JingTask" classpath="./lib/jing.jar">
-        
-    </taskdef>
-    <property file="local.marcus2oria.properties"/>
-       
+    <taskdef name="jing" classname="com.thaiopensource.relaxng.util.JingTask" classpath="./lib/jing.jar"/>
+    <property file="properties/marcus.properties"/>
+
     <target name="main" depends="queryMarcusForData,transformMarcus2oria,copyAndCommitIdentifierFile,DivideAndPackageResults,copyAndCommitIdentifierFile,validateByRNG"/>
-        
+
     <target name="testProperty">
         <property file="properties/example.properties"/>
     </target>
-    
+
     <target name="marcusProperty">
         <property file="properties/marcus.properties"/>
     </target>
-    
+
     <target name="test" depends="testProperty,main"/>
-    
     <target name="marcus" depends="marcusProperty,main,uploadToBibsys"/>
-    
+
     <target name="queryMarcusForData">
-      
         <xslt in="dummy.xml" style="xsl/getDocuments.xsl" force="yes" out="${queryMarcusForData.out}">
             <param name="limit" expression="${queryMarcusForData.limit}" type="INT"/>
             <param name="test-run" expression="${queryMarcusForData.test-run}"/>
             <classpath path="lib/saxon9he.jar"/>
-        </xslt>                     
+        </xslt>
     </target>
-    
+
     <target name="transformMarcus2oria">
         <xslt style="xsl/marcus2pnx.xsl" in="${queryMarcusForData.out}" out="${transformMarcus2oria.out}">
             <param name="library" expression="${transformMarcus2oria.library}"/>
@@ -37,46 +32,49 @@
             <param name="searchscope" expression="${transformMarcus2oria.searchscope}"/>
             <param name="scope" expression="${transformMarcus2oria.scope}"/>
             <param name="publisher" expression="${transformMarcus2oria.publisher}"/>
-            <classpath path="lib/saxon9he.jar"/>            
+            <classpath path="lib/saxon9he.jar"/>
         </xslt>
     </target>
-       <classloader ></classloader>
-    <target name="copyAndCommitIdentifierFile">        
-        <property name="copyAndCommitIdentifierFile.out" value="./${name}_identifiers.tmp" />
+    <classloader></classloader>
+    <target name="copyAndCommitIdentifierFile">
+        <property name="copyAndCommitIdentifierFile.out" value="./${name}_identifiers.tmp"/>
         <property name="copyAndCommitIdentifierFile.identifier" value="${name}_identifiers.xml"/>
-        <xslt in="${transformMarcus2oria.out}" force="yes" style="xsl/updateIdentifiers.xsl" out="${copyAndCommitIdentifierFile.out}">
+        <xslt in="${transformMarcus2oria.out}" force="yes" style="xsl/updateIdentifiers.xsl"
+              out="${copyAndCommitIdentifierFile.out}">
             <param name="identifiers" expression="${copyAndCommitIdentifierFile.identifier}"/>
             <!--SaxonB-->
             <classpath path="lib/saxon9.jar"/>
         </xslt>
-        <tstamp/>        
-               <xslt in="${copyAndCommitIdentifierFile.out}" style="xsl/createDeleteRecordsOai.xsl" out="./output/pnx/${name}_deleted_${DSTAMP}.xml">
-                   <classpath path="lib/saxon9he.jar"/>
-               </xslt>
-        <move file="${copyAndCommitIdentifierFile.out}" tofile="./${copyAndCommitIdentifierFile.identifier}"/>        
-    </target>  
-       
-    <target name="DivideAndPackageResults" depends="">        
+        <tstamp/>
+        <xslt in="${copyAndCommitIdentifierFile.out}" style="xsl/createDeleteRecordsOai.xsl"
+              out="./output/pnx/${name}_deleted_${DSTAMP}.xml">
+            <classpath path="lib/saxon9he.jar"/>
+        </xslt>
+        <move file="${copyAndCommitIdentifierFile.out}" tofile="./${copyAndCommitIdentifierFile.identifier}"/>
+    </target>
+
+    <target name="DivideAndPackageResults" depends="">
         <length file="${transformMarcus2oria.out}" property="pnx.length"/>
-        <echo message="${pnx.length}"/>        
+        <echo message="${pnx.length}"/>
         <xslt in="${transformMarcus2oria.out}" style="xsl/divideRecordsToChunks.xsl" out="${dummy.out}" force="yes">
             <param name="file-size-in-bytes" expression="${pnx.length}"/>
             <classpath path="lib/saxon9he.jar"/>
         </xslt>
-        <property name="archive" value="./output/${name}${DSTAMP}.tar.gz"/>
-        <tar  basedir="output/pnx/"  destfile="${archive}" compression="gzip"/> 
-        <delete dir="output/pnx/"/>       
+        <property name="archive" value="./output/${name}-${searchServiceName}-${DSTAMP}.tar.gz"/>
+        <tar basedir="output/pnx/" destfile="${archive}" compression="gzip"/>
+        <delete dir="output/pnx/"/>
     </target>
-    
+
     <target name="uploadToBibsys">
-        <property file="properties/bibsys.properties"/>
-        <scp  file="${archive}"  remotefile="${bibsys.user}:${bibsys.password}@${bibsys.host}:~/${archive}" trust="yes" />       
+        <property file="properties/local.bibsys.properties"/>
+        <echo message="Uploading file to Bibsys import server ..."/>
+        <!--scp file="${archive}" remotefile="${bibsys.user}:${bibsys.password}@${bibsys.host}:~/${archive}" trust="yes"/-->
+        <scp file="${archive}" todir="${bibsys.user}:${bibsys.password}@${bibsys.host}:~/${name}-${searchServiceName}-${DSTAMP}.tar.gz" trust="yes"/>
     </target>
-    
+
     <target name="validateByRNG">
-        <jing rngfile="schema/PNX.rng" >
+        <jing rngfile="schema/PNX.rng">
             <fileset file="${transformMarcus2oria.out}"/>
         </jing>
     </target>
-  
 </project>

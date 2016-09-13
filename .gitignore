@@ -3,3 +3,5 @@ all.xml
 output/
 input/
 bibsys.properties
+.idea/
+marcus_identifiers.xml

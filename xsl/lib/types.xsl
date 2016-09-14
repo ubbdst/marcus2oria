@@ -49,9 +49,9 @@
         <xsl:param name="rdfTypeLabel"/>
         <xsl:variable name="oria-type" select="key('primo-type-from-marcus',$rdfTypeLabel,$types-table)"/>
         <xsl:if test="not($oria-type)">
-            <xsl:message terminate="yes">flub:getPrimoTypeFromRdfTypeLabel(): <xsl:value-of select="$rdfTypeLabel"/> er ikke mappet</xsl:message>
+            <xsl:message>flub:getPrimoTypeFromRdfTypeLabel(): <xsl:value-of select="$rdfTypeLabel"/> er ikke mappet</xsl:message>
         </xsl:if>
-        <xsl:value-of select="$oria-type"/>
+        <xsl:value-of select="if (not($oria-type)) then 'text_resource' else $oria-type"/>
        </xsl:function>
     
     <xsl:function name="flub:getRsrcTypeFromRdfTypeLabel">

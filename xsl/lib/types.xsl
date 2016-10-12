@@ -10,7 +10,7 @@
     
     <xsl:variable name="types-table">
         <types>
-            <marcus-label primo-type="book">Manuskript</marcus-label>
+            <marcus-label primo-type="text_resource">Manuskript</marcus-label>
             <marcus-label primo-type="text_resource">Brev</marcus-label>
             <!-- mer en samling enn dokument, ignorer? <marcus-label primo-type="">Album</marcus-label>-->
             <marcus-label primo-type="book">Bok</marcus-label>
@@ -20,9 +20,9 @@
             <marcus-label primo-type="text_resource">Diplom</marcus-label>
             <marcus-label primo-type="text_resource">Kontrakt</marcus-label>
             <marcus-label primo-type="book">Dagbok</marcus-label>
-            <marcus-label primo-type="book">Dokument</marcus-label>
+            <marcus-label primo-type="text_resource">Dokument</marcus-label>
             <marcus-label primo-type="image">Tegning</marcus-label>
-            <marcus-label primo-type="book">Fragment</marcus-label>
+            <marcus-label primo-type="text_resource">Fragment</marcus-label>
             <marcus-label primo-type="image">Grafikk</marcus-label>
             <marcus-label primo-type="book">Reisedagbok</marcus-label>
             <marcus-label primo-type="text_resource">Oppmålingsdokument</marcus-label>
@@ -31,7 +31,7 @@
             <marcus-label primo-type="text_resource">Regnskap</marcus-label>
             <marcus-label primo-type="image">Fotografi</marcus-label>
             <marcus-label primo-type="image">Postkort</marcus-label>
-            <marcus-label primo-type="image">Plakat</marcus-label>
+            <marcus-label primo-type="text_resource">Plakat</marcus-label>
             <marcus-label primo-type="book">Bønnebok</marcus-label>
             <marcus-label primo-type="book">Protokoll</marcus-label>
 

@@ -69,7 +69,7 @@
         <property file="properties/local.bibsys.properties"/>
         <echo message="Uploading file to Bibsys import server ..."/>
         <!--scp file="${archive}" remotefile="${bibsys.user}:${bibsys.password}@${bibsys.host}:~/${archive}" trust="yes"/-->
-        <scp file="${archive}" todir="${bibsys.user}:${bibsys.password}@${bibsys.host}:~/${name}-${searchServiceName}-${DSTAMP}.tar.gz" trust="yes"/>
+        <scp sftp="true" file="${archive}" todir="${bibsys.user}:${bibsys.password}@${bibsys.host}:${name}-${searchServiceName}-${DSTAMP}.tar.gz" trust="yes"/>
     </target>
 
     <target name="validateByRNG">

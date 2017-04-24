@@ -46,7 +46,7 @@
     <!-- håndtering av hvert enkelt resultat (dokument) fra sparql spørringen-->
     <xsl:template match="rdf:Description">
         <xsl:variable name="identifier" select="dct:identifier"/>
-         <xsl:if test="count(rdf:type)>1">
+         <xsl:if test="count(rdf:type)>1 or count($identifier) > 1">
               <xsl:message terminate="yes"><xsl:value-of select="$identifier"/> has multiple types: <xsl:value-of select="rdf:type/rdf:resource"/>
               </xsl:message>             
          </xsl:if>
